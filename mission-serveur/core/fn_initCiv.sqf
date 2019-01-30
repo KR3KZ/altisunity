@@ -8,7 +8,7 @@
 */
 private _altisArray = ["Land_i_Shop_01_V1_F","Land_i_Shop_01_V2_F","Land_i_Shop_01_V3_F","Land_i_Shop_02_V1_F","Land_i_Shop_02_V2_F","Land_i_Shop_02_V3_F"];
 private _tanoaArray = ["Land_House_Small_01_F"];
-private _lythium = [];
+private _lythium = ["Land_jbad_House_c_10","Land_jbad_House_c_11","Land_jbad_House_c_3","land_ffaa_casa_urbana_4","land_ffaa_casa_urbana_7","land_ffaa_casa_urbana_5"];
 private _spawnBuildings = [[["Lythium", _lythium]]] call TON_fnc_terrainSort;
 
 civ_spawn_1 = nearestObjects[getMarkerPos  "civ_spawn_1", _spawnBuildings,350];
