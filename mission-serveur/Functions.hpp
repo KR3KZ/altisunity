@@ -372,3 +372,13 @@ class Life_Client_Core {
         class vInteractionMenu {};
     };
 };
+
+class Unity_Client_Core {
+    tag = "unity";
+
+	class Vehicle {
+		file = "unity\vehicle";
+		class check_vehicle {};
+		class repair_vehicle
+	};
+};
