@@ -379,6 +379,6 @@ class Unity_Client_Core {
 	class Vehicle {
 		file = "unity\vehicle";
 		class check_vehicle {};
-		class repair_vehicle
+		class repair_vehicle;
 	};
 };
