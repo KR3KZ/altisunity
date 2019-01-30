@@ -155,25 +155,20 @@ class WeaponShops {
             { "ItemGPS", "", 0, 0, "" },
             { "FirstAidKit", "", 0, 0, "" },
             { "NVGoggles", "", 0, 0, "" },
-            { "rhs_wheap_ak105", $STR_W_items_Flashbang, 0, 0, "call life_coplevel >= 1" },
-			{ "rhs_wheap_ak74m", $STR_W_items_Flashbang, 0, 0, "call life_coplevel >= 2" },
-			{ "rhs_wheap_ak 103", $STR_W_items_Flashbang, 0, 0, "call life_coplevel >= 3" },
-			{ "srifle_DMR_06_olive_F", $STR_W_items_Flashbang, 0, 0, "call life_coplevel >= 4" },
-			{ "rhs_wheap_pkp", $STR_W_items_Flashbang, 0, 0, "call life_coplevel >= 7" }
-
-			
-            
+            { "rhs_wheap_ak105", "", 0, 0, "call life_coplevel >= 1" },
+			{ "rhs_wheap_ak74m", "", 0, 0, "call life_coplevel >= 2" },
+			{ "rhs_wheap_ak 103", "", 0, 0, "call life_coplevel >= 3" },
+			{ "srifle_DMR_06_olive_F", "", 0, 0, "call life_coplevel >= 4" },
+			{ "rhs_wheap_pkp", "", 0, 0, "call life_coplevel >= 7" }
         };
         mags[] = {
             { "30Rnd_AK-103_57-N-231P_Mag", "", 0, 0, "call life_coplevel >= 3" },
 			{ "30Rnd_AK-74_7N10_Mag", "", 0, 0, "call life_coplevel >= 1" },
 			{ "7.62mm_20rnd_mag", "", 0, 0, "call life_coplevel >= 4" },
 			{ "100_PKM_57-N-323S_Mag", "", 0, 0, "call life_coplevel >= 7" }
-            
         };
         accs[] = {
             { "rhs_acc_pkas", "", 0, 0, "" }
-            
         };
     };
 
