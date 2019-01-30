@@ -332,6 +332,130 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
                 };
+				class ACE_unity_inspectVehicle {
+                    displayName = "Inspecter état";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {([_target] call life_fnc_isDamaged)}";
+                    statement = "[_target] spawn unity_fnc_check_vehicle";
+                    showDisabled = 0;
+                };
+				class ACE_unity_lockpick {
+                    displayName = "Crocheter le véhicule";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_lockpick > 0)}";
+                    statement = "[_target] spawn life_fnc_lockpick";
+                    showDisabled = 0;
+                };
+				class ACE_unity_unflipVehicle {
+                    displayName = "$STR_vInAct_Unflip";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {!(typeOf (_target) in [""C_Kart_01_Blu_F"",""C_Kart_01_Red_F"",""C_Kart_01_Fuel_F"",""C_Kart_01_Vrana_F""])} && {!(canMove _target)} && {count crew _target == 0}";
+                    statement = "_target setPos [getPos _target select 0, getPos _target select 1, (getPos _target select 2)+0.5];";
+                };
+				class Cop_vehInterraction {
+                    displayName = "Interaction Milice";
+                    condition = "(playerSide isEqualTo west) && alive _target";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 4.2;
+                    class Cop_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Cop_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                    class Cop_ForceUnlock {
+                        displayName = "Déverrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 2";
+                        statement = "[_target,0] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",false,true];";
+                    };
+                    class Cop_ForceLock {
+                        displayName = "Verrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 0";
+                        statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
+                    };
+                };
+				class Med_vehInteraction {
+                    displayName = "Interaction Médecin";
+                    condition = "playerSide isEqualTo independent && (alive _target)";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3;
+                    class Med_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Med_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                };
+				class Admin_vehInteraction {
+                    displayName = "Interaction Admin";
+                    condition = "(alive _target) && (!isNil ""life_adminlevel"") && {(call life_adminlevel) > 0}";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3;
+                    class AdminDriver {
+                        displayName = "Admin Driver";
+                        distance = 4.0;
+                        priority = 1.0;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInDriver"", _target]; _target lock true;";
+                    };
+                    class AdminPassenger {
+                        displayName = "Admin Passager";
+                        distance = 4.0;
+                        priority = 1.1;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInCargo"", _target]; _target lock true;";
+                    };
+                    class AdminGunner {
+                        displayName = "Admin Gunner";
+                        distance = 4.0;
+                        priority = 1.2;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInGunner"", _target]; _target lock true;";
+                    };
+                    class Admin_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        priority = 1.3;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Admin_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        priority = 1.4;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                    class Admin_ForceUnlock {
+                        displayName = "Déverrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 2";
+                        statement = "[_target,0] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",false,true];";
+                    };
+                    class Admin_ForceLock {
+                        displayName = "Verrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 0";
+                        statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
+                    };
+                };
             };
         };
 
@@ -363,6 +487,130 @@ class CfgVehicles {
                     displayName = CSTRING(Push);
                     condition = QUOTE(_target call FUNC(canPush));
                     statement = QUOTE(call FUNC(push));
+                };
+				class ACE_unity_inspectVehicle {
+                    displayName = "Inspecter état";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {([_target] call life_fnc_isDamaged)}";
+                    statement = "[_target] spawn unity_fnc_check_vehicle";
+                    showDisabled = 0;
+                };
+				class ACE_unity_lockpick {
+                    displayName = "Crocheter le véhicule";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_lockpick > 0)}";
+                    statement = "[_target] spawn life_fnc_lockpick";
+                    showDisabled = 0;
+                };
+				class ACE_unity_unflipVehicle {
+                    displayName = "$STR_vInAct_Unflip";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {!(typeOf (_target) in [""C_Kart_01_Blu_F"",""C_Kart_01_Red_F"",""C_Kart_01_Fuel_F"",""C_Kart_01_Vrana_F""])} && {!(canMove _target)} && {count crew _target == 0}";
+                    statement = "_target setPos [getPos _target select 0, getPos _target select 1, (getPos _target select 2)+0.5];";
+                };
+				class Cop_vehInterraction {
+                    displayName = "Interaction Milice";
+                    condition = "(playerSide isEqualTo west) && alive _target";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 4.2;
+                    class Cop_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Cop_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                    class Cop_ForceUnlock {
+                        displayName = "Déverrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 2";
+                        statement = "[_target,0] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",false,true];";
+                    };
+                    class Cop_ForceLock {
+                        displayName = "Verrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 0";
+                        statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
+                    };
+                };
+				class Med_vehInteraction {
+                    displayName = "Interaction Médecin";
+                    condition = "playerSide isEqualTo independent && (alive _target)";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3;
+                    class Med_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Med_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                };
+				class Admin_vehInteraction {
+                    displayName = "Interaction Admin";
+                    condition = "(alive _target) && (!isNil ""life_adminlevel"") && {(call life_adminlevel) > 0}";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3;
+                    class AdminDriver {
+                        displayName = "Admin Driver";
+                        distance = 4.0;
+                        priority = 1.0;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInDriver"", _target]; _target lock true;";
+                    };
+                    class AdminPassenger {
+                        displayName = "Admin Passager";
+                        distance = 4.0;
+                        priority = 1.1;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInCargo"", _target]; _target lock true;";
+                    };
+                    class AdminGunner {
+                        displayName = "Admin Gunner";
+                        distance = 4.0;
+                        priority = 1.2;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInGunner"", _target]; _target lock true;";
+                    };
+                    class Admin_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        priority = 1.3;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Admin_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        priority = 1.4;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                    class Admin_ForceUnlock {
+                        displayName = "Déverrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 2";
+                        statement = "[_target,0] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",false,true];";
+                    };
+                    class Admin_ForceLock {
+                        displayName = "Verrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 0";
+                        statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
+                    };
                 };
             };
         };
@@ -399,6 +647,130 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
                 };
+				class ACE_unity_inspectVehicle {
+                    displayName = "Inspecter état";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {([_target] call life_fnc_isDamaged)}";
+                    statement = "[_target] spawn unity_fnc_check_vehicle";
+                    showDisabled = 0;
+                };
+				class ACE_unity_lockpick {
+                    displayName = "Crocheter le véhicule";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_lockpick > 0)}";
+                    statement = "[_target] spawn life_fnc_lockpick";
+                    showDisabled = 0;
+                };
+				class ACE_unity_unflipVehicle {
+                    displayName = "$STR_vInAct_Unflip";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {!(typeOf (_target) in [""C_Kart_01_Blu_F"",""C_Kart_01_Red_F"",""C_Kart_01_Fuel_F"",""C_Kart_01_Vrana_F""])} && {!(canMove _target)} && {count crew _target == 0}";
+                    statement = "_target setPos [getPos _target select 0, getPos _target select 1, (getPos _target select 2)+0.5];";
+                };
+				class Cop_vehInterraction {
+                    displayName = "Interaction Milice";
+                    condition = "(playerSide isEqualTo west) && alive _target";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 4.2;
+                    class Cop_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Cop_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                    class Cop_ForceUnlock {
+                        displayName = "Déverrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 2";
+                        statement = "[_target,0] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",false,true];";
+                    };
+                    class Cop_ForceLock {
+                        displayName = "Verrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 0";
+                        statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
+                    };
+                };
+				class Med_vehInteraction {
+                    displayName = "Interaction Médecin";
+                    condition = "playerSide isEqualTo independent && (alive _target)";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3;
+                    class Med_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Med_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                };
+				class Admin_vehInteraction {
+                    displayName = "Interaction Admin";
+                    condition = "(alive _target) && (!isNil ""life_adminlevel"") && {(call life_adminlevel) > 0}";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3;
+                    class AdminDriver {
+                        displayName = "Admin Driver";
+                        distance = 4.0;
+                        priority = 1.0;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInDriver"", _target]; _target lock true;";
+                    };
+                    class AdminPassenger {
+                        displayName = "Admin Passager";
+                        distance = 4.0;
+                        priority = 1.1;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInCargo"", _target]; _target lock true;";
+                    };
+                    class AdminGunner {
+                        displayName = "Admin Gunner";
+                        distance = 4.0;
+                        priority = 1.2;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInGunner"", _target]; _target lock true;";
+                    };
+                    class Admin_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        priority = 1.3;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Admin_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        priority = 1.4;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                    class Admin_ForceUnlock {
+                        displayName = "Déverrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 2";
+                        statement = "[_target,0] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",false,true];";
+                    };
+                    class Admin_ForceLock {
+                        displayName = "Verrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 0";
+                        statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
+                    };
+                };
             };
         };
 
@@ -425,6 +797,130 @@ class CfgVehicles {
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+                };
+				class ACE_unity_inspectVehicle {
+                    displayName = "Inspecter état";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {([_target] call life_fnc_isDamaged)}";
+                    statement = "[_target] spawn unity_fnc_check_vehicle";
+                    showDisabled = 0;
+                };
+				class ACE_unity_lockpick {
+                    displayName = "Crocheter le véhicule";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_lockpick > 0)}";
+                    statement = "[_target] spawn life_fnc_lockpick";
+                    showDisabled = 0;
+                };
+				class ACE_unity_unflipVehicle {
+                    displayName = "$STR_vInAct_Unflip";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {!(typeOf (_target) in [""C_Kart_01_Blu_F"",""C_Kart_01_Red_F"",""C_Kart_01_Fuel_F"",""C_Kart_01_Vrana_F""])} && {!(canMove _target)} && {count crew _target == 0}";
+                    statement = "_target setPos [getPos _target select 0, getPos _target select 1, (getPos _target select 2)+0.5];";
+                };
+				class Cop_vehInterraction {
+                    displayName = "Interaction Milice";
+                    condition = "(playerSide isEqualTo west) && alive _target";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 4.2;
+                    class Cop_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Cop_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                    class Cop_ForceUnlock {
+                        displayName = "Déverrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 2";
+                        statement = "[_target,0] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",false,true];";
+                    };
+                    class Cop_ForceLock {
+                        displayName = "Verrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 0";
+                        statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
+                    };
+                };
+				class Med_vehInteraction {
+                    displayName = "Interaction Médecin";
+                    condition = "playerSide isEqualTo independent && (alive _target)";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3;
+                    class Med_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Med_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                };
+				class Admin_vehInteraction {
+                    displayName = "Interaction Admin";
+                    condition = "(alive _target) && (!isNil ""life_adminlevel"") && {(call life_adminlevel) > 0}";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3;
+                    class AdminDriver {
+                        displayName = "Admin Driver";
+                        distance = 4.0;
+                        priority = 1.0;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInDriver"", _target]; _target lock true;";
+                    };
+                    class AdminPassenger {
+                        displayName = "Admin Passager";
+                        distance = 4.0;
+                        priority = 1.1;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInCargo"", _target]; _target lock true;";
+                    };
+                    class AdminGunner {
+                        displayName = "Admin Gunner";
+                        distance = 4.0;
+                        priority = 1.2;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInGunner"", _target]; _target lock true;";
+                    };
+                    class Admin_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        priority = 1.3;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Admin_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        priority = 1.4;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                    class Admin_ForceUnlock {
+                        displayName = "Déverrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 2";
+                        statement = "[_target,0] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",false,true];";
+                    };
+                    class Admin_ForceLock {
+                        displayName = "Verrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 0";
+                        statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
+                    };
                 };
             };
         };
@@ -457,6 +953,130 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
                 };
+				class ACE_unity_inspectVehicle {
+                    displayName = "Inspecter état";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {([_target] call life_fnc_isDamaged)}";
+                    statement = "[_target] spawn unity_fnc_check_vehicle";
+                    showDisabled = 0;
+                };
+				class ACE_unity_lockpick {
+                    displayName = "Crocheter le véhicule";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_lockpick > 0)}";
+                    statement = "[_target] spawn life_fnc_lockpick";
+                    showDisabled = 0;
+                };
+				class ACE_unity_unflipVehicle {
+                    displayName = "$STR_vInAct_Unflip";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {!(typeOf (_target) in [""C_Kart_01_Blu_F"",""C_Kart_01_Red_F"",""C_Kart_01_Fuel_F"",""C_Kart_01_Vrana_F""])} && {!(canMove _target)} && {count crew _target == 0}";
+                    statement = "_target setPos [getPos _target select 0, getPos _target select 1, (getPos _target select 2)+0.5];";
+                };
+				class Cop_vehInterraction {
+                    displayName = "Interaction Milice";
+                    condition = "(playerSide isEqualTo west) && alive _target";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 4.2;
+                    class Cop_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Cop_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                    class Cop_ForceUnlock {
+                        displayName = "Déverrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 2";
+                        statement = "[_target,0] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",false,true];";
+                    };
+                    class Cop_ForceLock {
+                        displayName = "Verrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 0";
+                        statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
+                    };
+                };
+				class Med_vehInteraction {
+                    displayName = "Interaction Médecin";
+                    condition = "playerSide isEqualTo independent && (alive _target)";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3;
+                    class Med_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Med_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                };
+				class Admin_vehInteraction {
+                    displayName = "Interaction Admin";
+                    condition = "(alive _target) && (!isNil ""life_adminlevel"") && {(call life_adminlevel) > 0}";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3;
+                    class AdminDriver {
+                        displayName = "Admin Driver";
+                        distance = 4.0;
+                        priority = 1.0;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInDriver"", _target]; _target lock true;";
+                    };
+                    class AdminPassenger {
+                        displayName = "Admin Passager";
+                        distance = 4.0;
+                        priority = 1.1;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInCargo"", _target]; _target lock true;";
+                    };
+                    class AdminGunner {
+                        displayName = "Admin Gunner";
+                        distance = 4.0;
+                        priority = 1.2;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInGunner"", _target]; _target lock true;";
+                    };
+                    class Admin_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        priority = 1.3;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Admin_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        priority = 1.4;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                    class Admin_ForceUnlock {
+                        displayName = "Déverrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 2";
+                        statement = "[_target,0] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",false,true];";
+                    };
+                    class Admin_ForceLock {
+                        displayName = "Verrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 0";
+                        statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
+                    };
+                };
             };
         };
 
@@ -484,6 +1104,130 @@ class CfgVehicles {
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+                };
+				class ACE_unity_inspectVehicle {
+                    displayName = "Inspecter état";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {([_target] call life_fnc_isDamaged)}";
+                    statement = "[_target] spawn unity_fnc_check_vehicle";
+                    showDisabled = 0;
+                };
+				class ACE_unity_lockpick {
+                    displayName = "Crocheter le véhicule";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_lockpick > 0)}";
+                    statement = "[_target] spawn life_fnc_lockpick";
+                    showDisabled = 0;
+                };
+				class ACE_unity_unflipVehicle {
+                    displayName = "$STR_vInAct_Unflip";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {!(typeOf (_target) in [""C_Kart_01_Blu_F"",""C_Kart_01_Red_F"",""C_Kart_01_Fuel_F"",""C_Kart_01_Vrana_F""])} && {!(canMove _target)} && {count crew _target == 0}";
+                    statement = "_target setPos [getPos _target select 0, getPos _target select 1, (getPos _target select 2)+0.5];";
+                };
+				class Cop_vehInterraction {
+                    displayName = "Interaction Milice";
+                    condition = "(playerSide isEqualTo west) && alive _target";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 4.2;
+                    class Cop_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Cop_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                    class Cop_ForceUnlock {
+                        displayName = "Déverrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 2";
+                        statement = "[_target,0] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",false,true];";
+                    };
+                    class Cop_ForceLock {
+                        displayName = "Verrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 0";
+                        statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
+                    };
+                };
+				class Med_vehInteraction {
+                    displayName = "Interaction Médecin";
+                    condition = "playerSide isEqualTo independent && (alive _target)";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3;
+                    class Med_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Med_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                };
+				class Admin_vehInteraction {
+                    displayName = "Interaction Admin";
+                    condition = "(alive _target) && (!isNil ""life_adminlevel"") && {(call life_adminlevel) > 0}";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3;
+                    class AdminDriver {
+                        displayName = "Admin Driver";
+                        distance = 4.0;
+                        priority = 1.0;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInDriver"", _target]; _target lock true;";
+                    };
+                    class AdminPassenger {
+                        displayName = "Admin Passager";
+                        distance = 4.0;
+                        priority = 1.1;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInCargo"", _target]; _target lock true;";
+                    };
+                    class AdminGunner {
+                        displayName = "Admin Gunner";
+                        distance = 4.0;
+                        priority = 1.2;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInGunner"", _target]; _target lock true;";
+                    };
+                    class Admin_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        priority = 1.3;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Admin_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        priority = 1.4;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                    class Admin_ForceUnlock {
+                        displayName = "Déverrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 2";
+                        statement = "[_target,0] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",false,true];";
+                    };
+                    class Admin_ForceLock {
+                        displayName = "Verrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 0";
+                        statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
+                    };
                 };
             };
         };
@@ -532,6 +1276,130 @@ class CfgVehicles {
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+                };
+				class ACE_unity_inspectVehicle {
+                    displayName = "Inspecter état";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {([_target] call life_fnc_isDamaged)}";
+                    statement = "[_target] spawn unity_fnc_check_vehicle";
+                    showDisabled = 0;
+                };
+				class ACE_unity_lockpick {
+                    displayName = "Crocheter le véhicule";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_lockpick > 0)}";
+                    statement = "[_target] spawn life_fnc_lockpick";
+                    showDisabled = 0;
+                };
+				class ACE_unity_unflipVehicle {
+                    displayName = "$STR_vInAct_Unflip";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {!(typeOf (_target) in [""C_Kart_01_Blu_F"",""C_Kart_01_Red_F"",""C_Kart_01_Fuel_F"",""C_Kart_01_Vrana_F""])} && {!(canMove _target)} && {count crew _target == 0}";
+                    statement = "_target setPos [getPos _target select 0, getPos _target select 1, (getPos _target select 2)+0.5];";
+                };
+				class Cop_vehInterraction {
+                    displayName = "Interaction Milice";
+                    condition = "(playerSide isEqualTo west) && alive _target";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 4.2;
+                    class Cop_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Cop_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                    class Cop_ForceUnlock {
+                        displayName = "Déverrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 2";
+                        statement = "[_target,0] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",false,true];";
+                    };
+                    class Cop_ForceLock {
+                        displayName = "Verrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 0";
+                        statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
+                    };
+                };
+				class Med_vehInteraction {
+                    displayName = "Interaction Médecin";
+                    condition = "playerSide isEqualTo independent && (alive _target)";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3;
+                    class Med_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Med_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                };
+				class Admin_vehInteraction {
+                    displayName = "Interaction Admin";
+                    condition = "(alive _target) && (!isNil ""life_adminlevel"") && {(call life_adminlevel) > 0}";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 3;
+                    class AdminDriver {
+                        displayName = "Admin Driver";
+                        distance = 4.0;
+                        priority = 1.0;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInDriver"", _target]; _target lock true;";
+                    };
+                    class AdminPassenger {
+                        displayName = "Admin Passager";
+                        distance = 4.0;
+                        priority = 1.1;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInCargo"", _target]; _target lock true;";
+                    };
+                    class AdminGunner {
+                        displayName = "Admin Gunner";
+                        distance = 4.0;
+                        priority = 1.2;
+                        condition = "";
+                        statement = "_target lock false; player action [""getInGunner"", _target]; _target lock true;";
+                    };
+                    class Admin_Impound {
+                        displayName = "$STR_vInAct_Impound";
+                        distance = 4.0;
+                        priority = 1.3;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_impoundAction";
+                    };
+                    class Admin_Info {
+                        displayName = "$STR_vInAct_Registration";
+                        distance = 4.0;
+                        priority = 1.4;
+                        condition = "";
+                        statement = "[_target] spawn life_fnc_searchVehAction";
+                    };
+                    class Admin_ForceUnlock {
+                        displayName = "Déverrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 2";
+                        statement = "[_target,0] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",false,true];";
+                    };
+                    class Admin_ForceLock {
+                        displayName = "Verrouiller";
+                        distance = 4.0;
+                        condition = "locked _target == 0";
+                        statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
+                    };
                 };
             };
         };
