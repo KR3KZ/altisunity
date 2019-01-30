@@ -74,8 +74,10 @@ class Clothing {
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
-            { "LOP_H_chDKZ_Beret", "", 0, "" },
-            { "H_PASGT_basic_black_F", "", 0, "call life_coplevel >= 1" }
+            { "LOP_H_chDKZ_Beret", "", 0, "call life_coplevel >= 4" },
+            { "H_PASGT_basic_black_F", "", 0, "call life_coplevel >= 3" },
+			{ "H_Watchcap_blk", "", 0, "call life_coplevel >= 1" },
+			{ "LOP_H_SLA_Beret", "", 0, "call life_coplevel >= 7" }
             
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
@@ -84,19 +86,17 @@ class Clothing {
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
-            { "LOP_V_CarrierLite_BLK", "", 0, "" },
-            { "LOP_V_CarrierRig_BLK", "", 0, "call life_coplevel >= 1" },
-            { "V_PlateCarrier1_blk", "", 0, "call life_coplevel >= 1" },
-            { "LOP_V_Chestrig_Black", "", 0, "call life_coplevel >= 2" },
-			{ "LOP_V_Carrier_BLK", "", 0, "call life_coplevel >= 2" }
+            { "LOP_V_CarrierLite_BLK", "", 0, "call life_coplevel >= 2" },
+            { "LOP_V_CarrierRig_BLK", "", 0, "call life_coplevel >= 3" },
+            { "V_PlateCarrier1_blk", "", 0, "call life_coplevel >= 4" },
+            { "LOP_V_Chestrig_Black", "", 0, "call life_coplevel >= 1" },
+			{ "LOP_V_Carrier_BLK", "", 0, "call life_coplevel >= 3" },
+			{ "V_PlateCarrier2_blk", "", 0, "call life_coplevel >= 5" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
-            { "B_FieldPack_cbr", "", 500, "" },
-            { "B_AssaultPack_cbr", "", 700, "" },
-            { "B_Kitbag_cbr", "", 800, "" },
-            { "B_Bergen_sgg", "", 2500, "" },
-            { "B_Carryall_cbr", "", 3500, "" }
+            { "B_Carryall_oucamo", "", 0, "" }
+            
         };
     };
 
