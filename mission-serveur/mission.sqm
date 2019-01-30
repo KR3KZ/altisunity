@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1177;
+		nextID=1185;
 	};
 	class MarkerIDProvider
 	{
-		nextID=222;
+		nextID=230;
 	};
 	class Camera
 	{
-		pos[]={-28.257835,1270.0621,20068.178};
-		dir[]={-0.86825258,-0.46956688,0.16026963};
-		up[]={-0.46176779,0.88289523,0.085236683};
-		aside[]={0.18152288,-6.4371852e-007,0.98340553};
+		pos[]={9690.668,168.24408,11318.188};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -27,13 +27,14 @@ addons[]=
 {
 	"A3_Characters_F",
 	"life_server",
-	"A3_Characters_F_Exp_Civil"
+	"A3_Characters_F_Exp_Civil",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -51,6 +52,13 @@ class AddonsMetaData
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -88,6 +96,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -102,24 +128,6 @@ class CustomAttributes
 						};
 					};
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -177,7 +185,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=104;
+		items=111;
 		class Item0
 		{
 			dataType="Group";
@@ -10760,6 +10768,68 @@ class Mission
 			{
 			};
 			id=1159;
+		};
+		class Item104
+		{
+			dataType="Marker";
+			position[]={11442.523,25.375,2854.5779};
+			name="civ_spawn_1";
+			type="Empty";
+			angle=55.982094;
+			id=1177;
+			atlOffset=0.00039482117;
+		};
+		class Item105
+		{
+			dataType="Marker";
+			position[]={13523.728,342.01038,17473.27};
+			name="civ_spawn_2";
+			type="Empty";
+			id=1179;
+		};
+		class Item106
+		{
+			dataType="Marker";
+			position[]={9264.1738,157.069,11597.638};
+			name="civ_spawn_3";
+			type="Empty";
+			id=1180;
+			atlOffset=-4.5776367e-005;
+		};
+		class Item107
+		{
+			dataType="Marker";
+			position[]={12187.783,341.95001,17289.014};
+			name="cop_spawn_1";
+			type="Empty";
+			angle=53.462555;
+			id=1181;
+		};
+		class Item108
+		{
+			dataType="Marker";
+			position[]={12271.054,33.422428,1965.0536};
+			name="cop_spawn_2";
+			type="Empty";
+			id=1182;
+		};
+		class Item109
+		{
+			dataType="Marker";
+			position[]={9690.5049,143.33104,11351.69};
+			name="cop_spawn_3";
+			type="Empty";
+			angle=207.46776;
+			id=1183;
+		};
+		class Item110
+		{
+			dataType="Marker";
+			position[]={13921.068,341.95001,17912.994};
+			name="medic_spawn_1";
+			type="Empty";
+			angle=249.41412;
+			id=1184;
 		};
 	};
 };
