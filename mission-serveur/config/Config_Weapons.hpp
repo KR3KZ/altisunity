@@ -160,6 +160,7 @@ class WeaponShops {
 			{ "rhs_wheap_ak 103", $STR_W_items_Flashbang, 0, 0, "call life_coplevel >= 3" },
 			{ "srifle_DMR_06_olive_F", $STR_W_items_Flashbang, 0, 0, "call life_coplevel >= 4" },
 			{ "rhs_wheap_pkp", $STR_W_items_Flashbang, 0, 0, "call life_coplevel >= 7" }
+
 			
             
         };
