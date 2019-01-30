@@ -151,39 +151,29 @@ class WeaponShops {
         side = "cop";
         conditions = "";
         items[] = {
-            { "Binocular", "", 150, 75, "" },
-            { "ItemGPS", "", 100, 50, "" },
-            { "FirstAidKit", "", 150, 75, "" },
-            { "NVGoggles", "", 2000, 1000, "" },
-            { "HandGrenade_Stone", $STR_W_items_Flashbang, 1700, 850, "" },
-            { "hgun_P07_snds_F", $STR_W_items_StunPistol, 2000, 1000, "" },
-            { "arifle_SDAR_F", $STR_W_items_TaserRifle, 20000, 10000, "" },
-            { "hgun_P07_F", "", 7500, 3750, "" },
-            { "hgun_P07_khk_F", "", 7500, 3750, "" }, //Apex DLC
-            { "hgun_Pistol_heavy_01_F", "", 9500, 4750, "call life_coplevel >= 1" },
-            { "SMG_02_ACO_F", "", 30000, 15000, "call life_coplevel >= 2" },
-            { "arifle_MX_F", "", 35000, 17500, "call life_coplevel >= 2" },
-            { "hgun_ACPC2_F", "", 17500, 8750, "call life_coplevel >= 3" },
-            { "arifle_MXC_F", "", 30000, 15000, "call life_coplevel >= 3" },
-            { "srifle_DMR_07_blk_F", "", 32000, 16000, "call life_coplevel >= 3" } //Apex DLC Sniper
+            { "Binocular", "", 0, 0, "" },
+            { "ItemGPS", "", 0, 0, "" },
+            { "FirstAidKit", "", 0, 0, "" },
+            { "NVGoggles", "", 0, 0, "" },
+            { "rhs_wheap_ak105", $STR_W_items_Flashbang, 0, 0, "call life_coplevel >= 1" },
+			{ "rhs_wheap_ak74m", $STR_W_items_Flashbang, 0, 0, "call life_coplevel >= 2" },
+			{ "rhs_wheap_ak 103", $STR_W_items_Flashbang, 0, 0, "call life_coplevel >= 3" },
+			{ "srifle_DMR_06_olive_F", $STR_W_items_Flashbang, 0, 0, "call life_coplevel >= 4" },
+			{ "rhs_wheap_pkp", $STR_W_items_Flashbang, 0, 0, "call life_coplevel >= 7" }
+
+			
+            
         };
         mags[] = {
-            { "16Rnd_9x21_Mag", "", 125, 60, "" },
-            { "20Rnd_556x45_UW_mag", $STR_W_mags_TaserRifle, 125, 60, "" },
-            { "11Rnd_45ACP_Mag", "", 130, 65, "call life_coplevel >= 1" },
-            { "30Rnd_65x39_caseless_mag", "", 130, 65, "call life_coplevel >= 2" },
-            { "30Rnd_9x21_Mag", "", 250, 125, "call life_coplevel >= 2" },
-            { "9Rnd_45ACP_Mag", "", 200, 100, "call life_coplevel >= 3" },
-            { "20Rnd_650x39_Cased_Mag_F", "", 200, 100, "call life_coplevel >= 3" } //Apex DLC
+            { "30Rnd_AK-103_57-N-231P_Mag", "", 0, 0, "call life_coplevel >= 3" },
+			{ "30Rnd_AK-74_7N10_Mag", "", 0, 0, "call life_coplevel >= 1" },
+			{ "7.62mm_20rnd_mag", "", 0, 0, "call life_coplevel >= 4" },
+			{ "100_PKM_57-N-323S_Mag", "", 0, 0, "call life_coplevel >= 7" }
+            
         };
         accs[] = {
-            { "muzzle_snds_L", "", 650, 325, "" },
-            { "optic_MRD", "", 2750, 1375, "call life_coplevel >= 1" },
-            { "acc_flashlight_pistol", "", 250, 125, "call life_coplevel >= 1" },//Pistol Flashlight
-            { "acc_flashlight", "", 750, 375, "call life_coplevel >= 2" },
-            { "optic_Holosight", "", 1200, 600, "call life_coplevel >= 2" },
-            { "optic_Arco", "", 2500, 1250, "call life_coplevel >= 2" },
-            { "muzzle_snds_H", "", 2750, 1375, "call life_coplevel >= 2" }
+            { "rhs_acc_pkas", "", 0, 0, "" }
+            
         };
     };
 
