@@ -59,4 +59,8 @@ class Garages {
 
     };
 
+	class Lythium {
+
+	};
+
 };
