@@ -78,7 +78,7 @@ class Clothing {
             { "H_PASGT_basic_black_F", "", 0, "call life_coplevel >= 3" },
 			{ "H_Watchcap_blk", "", 0, "call life_coplevel >= 1" },
 			{ "LOP_H_SLA_Beret", "", 0, "call life_coplevel >= 7" }
-            
+        };    
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
             { "G_Aviator", "", 0, "" }
