@@ -8,11 +8,15 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1190;
+		nextID=1191;
 	};
 	class MarkerIDProvider
 	{
 		nextID=230;
+	};
+	class LayerIndexProvider
+	{
+		nextID=1;
 	};
 	class Camera
 	{
@@ -96,6 +100,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -110,24 +132,6 @@ class CustomAttributes
 						};
 					};
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -19253,7 +19257,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=111;
+		items=105;
 		class Item0
 		{
 			dataType="Group";
@@ -29839,65 +29843,77 @@ class Mission
 		};
 		class Item104
 		{
-			dataType="Marker";
-			position[]={11442.523,25.375,2854.5779};
-			name="civ_spawn_1";
-			type="Empty";
-			angle=55.982094;
-			id=1177;
-			atlOffset=0.00039482117;
-		};
-		class Item105
-		{
-			dataType="Marker";
-			position[]={13523.728,342.01038,17473.27};
-			name="civ_spawn_2";
-			type="Empty";
-			id=1179;
-		};
-		class Item106
-		{
-			dataType="Marker";
-			position[]={9264.1738,157.069,11597.638};
-			name="civ_spawn_3";
-			type="Empty";
-			id=1180;
-			atlOffset=-4.5776367e-005;
-		};
-		class Item107
-		{
-			dataType="Marker";
-			position[]={12187.783,341.95001,17289.014};
-			name="cop_spawn_1";
-			type="Empty";
-			angle=53.46254;
-			id=1181;
-		};
-		class Item108
-		{
-			dataType="Marker";
-			position[]={12271.054,33.422428,1965.0536};
-			name="cop_spawn_2";
-			type="Empty";
-			id=1182;
-		};
-		class Item109
-		{
-			dataType="Marker";
-			position[]={9690.5049,143.33104,11351.69};
-			name="cop_spawn_3";
-			type="Empty";
-			angle=207.46774;
-			id=1183;
-		};
-		class Item110
-		{
-			dataType="Marker";
-			position[]={13921.068,341.95001,17912.994};
-			name="medic_spawn_1";
-			type="Empty";
-			angle=249.41405;
-			id=1184;
+			dataType="Layer";
+			name="Spawns";
+			state=1;
+			class Entities
+			{
+				items=7;
+				class Item0
+				{
+					dataType="Marker";
+					position[]={11442.523,25.375,2854.5779};
+					name="civ_spawn_1";
+					type="Empty";
+					angle=55.982094;
+					id=1177;
+					atlOffset=0.00039482117;
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={13523.728,342.01038,17473.27};
+					name="civ_spawn_2";
+					type="Empty";
+					id=1179;
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={9264.1738,157.069,11597.638};
+					name="civ_spawn_3";
+					type="Empty";
+					id=1180;
+					atlOffset=-4.5776367e-005;
+				};
+				class Item3
+				{
+					dataType="Marker";
+					position[]={12187.783,341.95001,17289.014};
+					name="cop_spawn_1";
+					type="Empty";
+					angle=53.46254;
+					id=1181;
+				};
+				class Item4
+				{
+					dataType="Marker";
+					position[]={12271.054,33.422428,1965.0536};
+					name="cop_spawn_2";
+					type="Empty";
+					id=1182;
+				};
+				class Item5
+				{
+					dataType="Marker";
+					position[]={9690.5049,143.33104,11351.69};
+					name="cop_spawn_3";
+					type="Empty";
+					angle=207.46774;
+					id=1183;
+				};
+				class Item6
+				{
+					dataType="Marker";
+					position[]={13921.068,341.95001,17912.994};
+					name="medic_spawn_1";
+					type="Empty";
+					angle=249.41405;
+					id=1184;
+				};
+			};
+			id=1190;
+			atlOffset=-57.659332;
 		};
 	};
 };
