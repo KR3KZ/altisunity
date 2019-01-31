@@ -376,6 +376,11 @@ class Life_Client_Core {
 class Unity_Client_Core {
     tag = "unity";
 
+	class TaskForce {
+		file = "unity\taskforce";
+		class init_tfr {};
+	};
+
 	class Vehicle {
 		file = "unity\vehicle";
 		class check_vehicle {};
