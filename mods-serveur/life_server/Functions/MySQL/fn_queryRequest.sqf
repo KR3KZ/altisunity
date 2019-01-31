@@ -12,25 +12,25 @@
     STRING - The request had invalid handles or an unknown error and is logged to the RPT.
 */
 private ["_uid","_side","_query","_queryResult","_tickTime","_tmp"];
-_uid = [_this,0,"",[""]] call BIS_fnc_param;
-_side = [_this,1,sideUnknown,[civilian]] call BIS_fnc_param;
-_ownerID = [_this,2,objNull,[objNull]] call BIS_fnc_param;
+_uid 				= [_this,0,"",[""]] call BIS_fnc_param;
+_side 				= [_this,1,sideUnknown,[civilian]] call BIS_fnc_param;
+_ownerID 			= [_this,2,objNull,[objNull]] call BIS_fnc_param;
 
 if (isNull _ownerID) exitWith {};
-_ownerID = owner _ownerID;
+_ownerID 			= owner _ownerID;
 
 _query = switch (_side) do {
-    // West - 11 entries returned
-    case west: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, cop_licenses, coplevel, cop_gear, blacklist, cop_stats, playtime FROM players WHERE pid='%1'",_uid];};
+    // West - 15 entries returned
+    case west: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, cop_licenses, coplevel, cop_gear, blacklist, cop_stats, playtime, cop_alive, cop_position, blood FROM players WHERE pid='%1'",_uid];};
     // Civilian - 12 entries returned
-    case civilian: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, civ_licenses, arrested, civ_gear, civ_stats, civ_alive, civ_position, playtime FROM players WHERE pid='%1'",_uid];};
-    // Independent - 10 entries returned
-    case independent: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, med_licenses, mediclevel, med_gear, med_stats, playtime FROM players WHERE pid='%1'",_uid];};
+    case civilian: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, civ_licenses, arrested, civ_gear, civ_stats, civ_alive, civ_position, playtime, blood FROM players WHERE pid='%1'",_uid];};
+    // Independent - 14 entries returned
+    case independent: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, med_licenses, mediclevel, med_gear, med_stats, playtime, med_alive, med_position, blood FROM players WHERE pid='%1'",_uid];};
 };
-
+diag_log format ["QUERY: %1",_query];
 _tickTime = diag_tickTime;
 _queryResult = [_query,2] call DB_fnc_asyncCall;
-
+diag_log format ["Result: %1",_queryResult];
 if (EXTDB_SETTING(getNumber,"DebugMode") isEqualTo 1) then {
     diag_log "------------- Client Query Request -------------";
     diag_log format ["QUERY: %1",_query];
@@ -92,6 +92,18 @@ switch (_side) do {
             TON_fnc_playtime_values_request pushBack [_uid, _new];
         };
         [_uid,_new select 0] call TON_fnc_setPlayTime;
+
+		//Alive
+        _queryResult set[12,([_queryResult select 12,1] call DB_fnc_bool)];
+
+        //Position
+        _new = [(_queryResult select 13)] call DB_fnc_mresToArray;
+        if (_new isEqualType "") then {_new = call compile format ["%1", _new];};
+        _queryResult set[13,_new];
+
+        //Blood
+		_tmp = _queryResult select 14;
+		_queryResult set[14,[_tmp] call DB_fnc_numberSafe];
     };
 
     case civilian: {
@@ -102,9 +114,11 @@ switch (_side) do {
         if (_new isEqualType "") then {_new = call compile format ["%1", _new];};
         _queryResult set[9,_new];
 
-        //Position
+		//Alive
         _queryResult set[10,([_queryResult select 10,1] call DB_fnc_bool)];
-        _new = [(_queryResult select 11)] call DB_fnc_mresToArray;
+
+		//Position
+		_new = [(_queryResult select 11)] call DB_fnc_mresToArray;
         if (_new isEqualType "") then {_new = call compile format ["%1", _new];};
         _queryResult set[11,_new];
 
@@ -120,6 +134,10 @@ switch (_side) do {
             TON_fnc_playtime_values_request pushBack [_uid, _new];
         };
         [_uid,_new select 2] call TON_fnc_setPlayTime;
+
+		//Blood
+		_tmp = _queryResult select 13;
+		_queryResult set[13,[_tmp] call DB_fnc_numberSafe];
 
         /* Make sure nothing else is added under here */
         _houseData = _uid spawn TON_fnc_fetchPlayerHouses;
@@ -149,6 +167,18 @@ switch (_side) do {
             TON_fnc_playtime_values_request pushBack [_uid, _new];
         };
         [_uid,_new select 1] call TON_fnc_setPlayTime;
+
+		//Alive
+        _queryResult set[11,([_queryResult select 11,1] call DB_fnc_bool)];
+
+        //Position
+        _new = [(_queryResult select 12)] call DB_fnc_mresToArray;
+        if (_new isEqualType "") then {_new = call compile format ["%1", _new];};
+        _queryResult set[12,_new];
+
+        //Blood
+		_tmp = _queryResult select 13;
+		_queryResult set[13,[_tmp] call DB_fnc_numberSafe];
     };
 };
 

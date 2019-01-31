@@ -15,6 +15,7 @@ if (life_session_tries > 3) exitWith {cutText[localize "STR_Session_Error","BLAC
 
 0 cutText [localize "STR_Session_Received","BLACK FADED"];
 0 cutFadeOut 9999999;
+private _blood = 100;
 
 //Error handling and junk..
 if (isNil "_this") exitWith {[] call SOCK_fnc_insertPlayerInfo;};
@@ -55,8 +56,22 @@ switch (playerSide) do {
         if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
             life_hunger = ((_this select 10) select 0);
             life_thirst = ((_this select 10) select 1);
-            player setDamage ((_this select 10) select 2);
         };
+
+		//Alive & Position
+        if (LIFE_SETTINGS(getNumber,"save_civilian_position") isEqualTo 1) then {
+            life_is_alive = _this select 12;
+            life_position = _this select 13;
+            if (life_is_alive) then {
+                if (count life_position != 3) then {
+					diag_log format ["[requestReceived] Bad position received. Data: %1",life_position];
+					life_is_alive =false;
+				};
+            };
+        };
+
+		//Blood
+		_blood = parseNumber (_this select 14);
     };
 
     case civilian: {
@@ -67,7 +82,6 @@ switch (playerSide) do {
         if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
             life_hunger = ((_this select 9) select 0);
             life_thirst = ((_this select 9) select 1);
-            player setDamage ((_this select 9) select 2);
         };
 
         //Position
@@ -79,6 +93,9 @@ switch (playerSide) do {
                 if (life_civ_position distance (getMarkerPos "respawn_civilian") < 300) then {life_is_alive = false;};
             };
         };
+
+		//Blood
+		_blood = parseNumber (_this select 13);
 
         {
             _house = nearestObject [(call compile format ["%1",(_x select 0)]), "House"];
@@ -98,10 +115,27 @@ switch (playerSide) do {
         if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
             life_hunger = ((_this select 9) select 0);
             life_thirst = ((_this select 9) select 1);
-            player setDamage ((_this select 9) select 2);
         };
+
+		//Alive & Position
+        if (LIFE_SETTINGS(getNumber,"save_civilian_position") isEqualTo 1) then {
+            life_is_alive = _this select 11;
+            life_position = _this select 12;
+            if (life_is_alive) then {
+                if (count life_position != 3) then {
+					diag_log format ["[requestReceived] Bad position received. Data: %1",life_position];
+					life_is_alive =false;
+				};
+            };
+        };
+
+		//Blood
+		_blood = parseNumber (_this select 13);
     };
 };
+
+//Set the blood
+player setVariable["ACE_medical_bloodVolume",_blood,true];
 
 life_gear = _this select 8;
 call life_fnc_loadGear;
