@@ -68,7 +68,7 @@ class Clothing {
         side = "cop";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "LOP_U_AA_Fatigue_03", "", 0, "" },
+            { "LOP_U_AA_Fatigue_03", "", 0, "call life_coplevel >= 1" },
             { "LOP_U_AA_Fatigue_03_slv", "", 0, "call life_coplevel >= 1" }
 
         };
