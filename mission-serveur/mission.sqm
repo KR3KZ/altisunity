@@ -33874,6 +33874,7 @@ class Mission
 					class Attributes
 					{
 						init="call{this addAction[localize""STR_MAR_Clothing_Store"",life_fnc_clothingMenu,""civil""];}";
+						disableSimulation=1;
 					};
 					id=1307;
 					type="Land_CratesWooden_F";
