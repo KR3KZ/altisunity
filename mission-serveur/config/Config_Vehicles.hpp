@@ -20,13 +20,15 @@ class CarShops {
         side = "civ";
         conditions = "";
         vehicles[] = {
-            { "B_Quadbike_01_F", "" },
-            { "C_Hatchback_01_F", "" },
+            { "walker_a3_datsun", "" },
+            { "walker_a3_gaz", "" },
             { "C_Offroad_01_F", "" },
-            { "C_SUV_01_F", "" },
-            { "C_Hatchback_01_sport_F", "" },
-            { "C_Van_01_transport_F", "" },
-            { "C_Offroad_02_unarmed_F", "" } //Apex DLC
+            { "walker_a3_c_hilux", "" },
+            { "walker_a3_hilux", "" },
+            { "walker_a3_lada", "" },
+            { "LOP_AFR_Civ_Landrover", "" },
+            { "walker_a3_sedan", "" },
+            { "walker_a3_skodovka", "" }
         };
     };
 
@@ -122,7 +124,7 @@ class CarShops {
             { "C_Offroad_01_F", "" },
             { "rhs_btr70_vmf", "" },
 			{ "rhs_ural_msv_01", "" }
-            
+
         };
     };
 
@@ -197,30 +199,11 @@ class LifeCfgVehicles {
     };
 
     // Apex DLC
-    class C_Offroad_02_unarmed_F {
+    class LOP_AFR_Civ_Landrover {
         vItemSpace = 65;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 12500;
-        textures[] = {
-            { "Black", "civ", {
-                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa"
-            }, "" },
-            { "Blue", "civ", {
-                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_blue_co.paa"
-            }, "" },
-            { "Green", "civ", {
-                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa"
-            }, "" },
-            { "Orange", "civ", {
-                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_orange_co.paa"
-            }, "" },
-            { "Red", "civ", {
-                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_red_co.paa"
-            }, "" },
-            { "White", "civ", {
-                "\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_white_co.paa"
-            }, "" }
-        };
+        textures[] = {};
     };
 
     // Apex DLC
@@ -353,6 +336,20 @@ class LifeCfgVehicles {
         conditions = "";
         price = 45000;
         textures[] = {};
+    };
+
+    class walker_a3_sedan {
+        vItemSpace = 200;
+        conditions = "";
+        price = 45000;
+        textures[] = {};
+    };
+
+  class walker_a3_skodovka {
+      vItemSpace = 200;
+      conditions = "";
+      price = 45000;
+      textures[] = {};
     };
 
     class B_Truck_01_medical_F {
@@ -544,68 +541,18 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class C_Kart_01_Red_F : C_Kart_01_Blu_F{};
     class C_Kart_01_Vrana_F : C_Kart_01_Blu_F{};
 
-    class C_Hatchback_01_sport_F {
+    class walker_a3_gaz {
         vItemSpace = 45;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 40000;
-        textures[] = {
-            { "Red", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport01_co.paa"
-            }, "" },
-            { "Dark Blue", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport02_co.paa"
-            }, "" },
-            { "Orange", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa"
-            }, "" },
-            { "Black / White", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport04_co.paa"
-            }, "" },
-            { "Beige", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport05_co.paa"
-            }, "" },
-            { "Green", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport06_co.paa"
-            }, "" },
-            { "Police", "cop", {
-                "#(ai,64,64,1)Fresnel(1.3,7)"
-            }, "" }
-        };
+        textures[] = {};
     };
 
-    class B_Quadbike_01_F {
+    class walker_a3_datsun {
         vItemSpace = 25;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 2500;
-        textures[] = {
-            { "Brown", "cop", {
-                "\A3\Soft_F\Quadbike_01\Data\Quadbike_01_co.paa"
-            }, "" },
-            { "Digi Desert", "reb", {
-                "\A3\Soft_F\Quadbike_01\Data\quadbike_01_opfor_co.paa"
-            }, "" },
-            { "Black", "civ", {
-                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_black_co.paa"
-            }, "" },
-            { "Blue", "civ", {
-                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_blue_co.paa"
-            }, "" },
-            { "Red", "civ", {
-                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_red_co.paa"
-            }, "" },
-            { "White", "civ", {
-                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_white_co.paa"
-            }, "" },
-            { "Digi Green", "civ", {
-                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_indp_co.paa"
-            }, "" },
-            { "Hunter Camo", "civ", {
-                "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa"
-            }, "" },
-            { "Rebel Camo", "reb", {
-                "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa"
-            }, "" }
-        };
+        textures[] = {};
     };
 
     class I_Truck_02_covered_F {
@@ -645,70 +592,25 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
 
-    class C_Hatchback_01_F {
+    class walker_a3_hilux {
         vItemSpace = 40;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 9500;
-        textures[] = {
-            { "Beige", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base01_co.paa"
-            }, "" },
-            { "Green", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base02_co.paa"
-            }, "" },
-            { "Blue", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base03_co.paa"
-            }, "" },
-            { "Dark Blue", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base04_co.paa"
-            }, "" },
-            { "Yellow", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06_co.paa"
-            }, "" },
-            { "White", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07_co.paa"
-            }, "" },
-            { "Grey", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa"
-            }, "" },
-            { "Black", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa"
-            }, "" }
-        };
+        textures[] = {};
     };
 
-    class C_SUV_01_F {
+    class walker_a3_c_hilux {
         vItemSpace = 50;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 30000;
-        textures[] = {
-            { "Dark Red", "civ", {
-                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa"
-            }, "" },
-            { "Silver", "civ", {
-                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa"
-            }, "" },
-            { "Orange", "civ", {
-                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa"
-            }, "" },
-            { "Police", "cop", {
-                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa"
-            }, "" }
-        };
+        textures[] = {};
     };
 
-    class C_Van_01_transport_F {
+    class walker_a3_lada {
         vItemSpace = 100;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 45000;
-        textures[] = {
-            { "White", "civ", {
-                "\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa"
-            }, "" },
-            { "Red", "civ", {
-                "\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa"
-            }, "" }
-        };
+        textures[] = {};
     };
 
     class C_Van_01_box_F {
