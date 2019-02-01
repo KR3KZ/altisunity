@@ -378,6 +378,7 @@ class Unity_Client_Core {
 
 	class TaskForce {
 		file = "unity\taskforce";
+		class check_ts {};
 		class init_tfr {};
 	};
 

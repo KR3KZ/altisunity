@@ -16,3 +16,10 @@ TF_no_auto_long_range_radio 				= true;
 TF_same_dd_frequencies_for_side 			= false;
 TF_same_lr_frequencies_for_side 			= false;
 TF_same_sw_frequencies_for_side 			= false;
+
+serverts 									= [] call TFAR_fnc_getTeamSpeakServerName;
+channelts 									= [] call TFAR_fnc_getTeamSpeakChannelName;
+
+life_notTs 									= false;
+life_wrongChan 								= false;
+life_wrongTS 								= false;

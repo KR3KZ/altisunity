@@ -15,40 +15,40 @@
 *
 */
 class Clothing {
-    class bruce {
+    class civil {
         title = "STR_Shops_C_Bruce";
         conditions = "";
         side = "civ";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "LOP_U_CHR_Citizen_03", "", 0, "" },
-            { "LOP_U_CHR_Citizen_04", "", 0, "" },
-            { "LOP_U_CHR_Citizen_01", "", 0, "" },
-            { "LOP_U_CHR_Citizen_07", "", 0, "" },
-            { "LOP_U_CHR_Citizen_0", "", 0, "" },
-            { "LOP_U_CHR_Citizen_05", "", 0, "" },
-            { "LOP_U_CHR_Citizen_06", "", 0, "" },
-            { "LOP_U_TAK_Civ_Fatigue_06", "", 0, "" },
-            { "LOP_U_TAK_Civ_Fatigue_08", "", 0, "" },
-            { "LOP_U_TAK_Civ_Fatigue_07", "", 0, "" },
-            { "LOP_U_TAK_Civ_Fatigue_05", "", 0, "" },
-            { "LOP_U_TAK_Civ_Fatigue_01", "", 0, "" },
-            { "LOP_U_TAK_Civ_Fatigue_10", "", 0, "" },
-            { "LOP_U_TAK_Civ_Fatigue_02", "", 0, "" },
-            { "LOP_U_TAK_Civ_Fatigue_09", "", 0, "" },
-            { "LOP_U_TAK_Civ_Fatigue_11", "", 0, "" },
-            { "LOP_U_TAK_Civ_Fatigue_12", "", 0, "" },
-            { "LOP_U_TAK_Civ_Fatigue_04", "", 0, "" },
-            { "LOP_U_TAK_Civ_Fatigue_02", "", 0, "" },
-            { "LOP_U_CHR_Villager_01", "", 0, "" },
-            { "LOP_U_CHR_Villager_04", "", 0, "" },
-            { "LOP_U_CHR_Villager_03", "", 0, "" },
-            { "LOP_U_CHR_Villager_02", "", 0, "" }
+			{ "LOP_U_CHR_Citizen_03", "", 0, "" },
+			{ "LOP_U_CHR_Citizen_04", "", 0, "" },
+			{ "LOP_U_CHR_Citizen_01", "", 0, "" },
+			{ "LOP_U_CHR_Citizen_07", "", 0, "" },
+			{ "LOP_U_CHR_Citizen_02", "", 0, "" },
+			{ "LOP_U_CHR_Citizen_05", "", 0, "" },
+			{ "LOP_U_CHR_Citizen_06", "", 0, "" },
+			{ "LOP_U_TAK_Civ_Fatigue_06", "", 0, "" },
+			{ "LOP_U_TAK_Civ_Fatigue_08", "", 0, "" },
+			{ "LOP_U_TAK_Civ_Fatigue_07", "", 0, "" },
+			{ "LOP_U_TAK_Civ_Fatigue_05", "", 0, "" },
+			{ "LOP_U_TAK_Civ_Fatigue_01", "", 0, "" },
+			{ "LOP_U_TAK_Civ_Fatigue_10", "", 0, "" },
+			{ "LOP_U_TAK_Civ_Fatigue_02", "", 0, "" },
+			{ "LOP_U_TAK_Civ_Fatigue_09", "", 0, "" },
+			{ "LOP_U_TAK_Civ_Fatigue_11", "", 0, "" },
+			{ "LOP_U_TAK_Civ_Fatigue_12", "", 0, "" },
+			{ "LOP_U_TAK_Civ_Fatigue_04", "", 0, "" },
+			{ "LOP_U_TAK_Civ_Fatigue_02", "", 0, "" },
+			{ "LOP_U_CHR_Villager_01", "", 0, "" },
+			{ "LOP_U_CHR_Villager_04", "", 0, "" },
+			{ "LOP_U_CHR_Villager_03", "", 0, "" },
+			{ "LOP_U_CHR_Villager_02", "", 0, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
             { "LOP_H_Pakol", "", 0, "" },
-            { "LOP_H_Turba", "", 0, "" },
+            { "LOP_H_Turban", "", 0, "" },
             { "LOP_H_Worker_cap", "", 0, "" },
             { "H_Bandanna_sand", "", 0, "" }
         };
@@ -76,7 +76,7 @@ class Clothing {
 
     class cop {
         title = "STR_Shops_C_Police";
-        conditions = "";
+        conditions = "call life_coplevel >= 1";
         side = "cop";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
@@ -94,7 +94,6 @@ class Clothing {
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
             { "G_Aviator", "", 0, "" }
-
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
@@ -108,7 +107,6 @@ class Clothing {
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
             { "B_Carryall_oucamo", "", 0, "" }
-
         };
     };
 
