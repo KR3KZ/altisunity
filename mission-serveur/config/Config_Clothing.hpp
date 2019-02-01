@@ -74,7 +74,7 @@ class Clothing {
         };
     };
 
-    class cop {
+    class milice {
         title = "STR_Shops_C_Police";
         conditions = "call life_coplevel >= 1";
         side = "cop";
