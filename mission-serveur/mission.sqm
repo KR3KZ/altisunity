@@ -8,22 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1310;
+		nextID=1311;
 	};
 	class MarkerIDProvider
 	{
-		nextID=231;
+		nextID=232;
 	};
 	class LayerIndexProvider
 	{
-		nextID=21;
+		nextID=26;
 	};
 	class Camera
 	{
-		pos[]={13461.681,348.98291,17543.127};
-		dir[]={-0.29182562,-0.48378056,-0.82510251};
-		up[]={-0.16131341,0.8751893,-0.45609388};
-		aside[]={-0.94277024,-2.2351742e-007,0.33344296};
+		pos[]={12300.828,60.73671,1961.672};
+		dir[]={0.70690274,-0.54603547,0.44969913};
+		up[]={0.46073014,0.83774799,0.29309684};
+		aside[]={0.53677452,-1.0625081e-007,-0.84377819};
 	};
 };
 binarizationWanted=0;
@@ -137,24 +137,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -169,6 +151,24 @@ class CustomAttributes
 						};
 					};
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -29925,7 +29925,7 @@ class Mission
 				class Item4
 				{
 					dataType="Marker";
-					position[]={12271.054,33.422428,1965.0536};
+					position[]={12333.636,32.604176,1994.7122};
 					name="cop_spawn_2";
 					type="Empty";
 					id=1182;
@@ -29950,7 +29950,7 @@ class Mission
 				};
 			};
 			id=1190;
-			atlOffset=-57.659332;
+			atlOffset=-58.262482;
 		};
 		class Item105
 		{
