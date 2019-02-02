@@ -119,10 +119,12 @@ class CarShops {
         side = "cop";
         conditions = "";
         vehicles[] = {
-            { "C_Offroad_01_F", "" },
-            { "rhs_btr70_vmf", "" },
-			{ "rhs_ural_msv_01", "" }
-            
+            { "C_Offroad_01_F", "call life_coplevel >= 1" },
+            { "rhs_btr70_vmf", "call life_coplevel >= 7" },
+			{ "LOP_TKA_Ural", "call life_coplevel >= 3" },
+			{ "LOP_TKA_UAZ_DshKM", "call life_coplevel >= 4" },
+			{ "LOP_TKA_UAZ", "call life_coplevel >= 2" },
+			{ "rhs_tigr_msv", "call life_coplevel >= 4" }
         };
     };
 
@@ -130,8 +132,9 @@ class CarShops {
         side = "cop";
         conditions = "call life_coplevel >= 3";
         vehicles[] = {
-            { "B_Heli_Light_01_F", "" },
-            { "B_Heli_Transport_01_F", "call life_coplevel >= 4" }
+            { "B_Heli_Light_01_F", "call life_coplevel >= 2" },
+            { "B_Heli_Transport_01_F", "call life_coplevel >= 3" },
+			{ "LOP_SLA_Mi8MT_Cargo", "call life_coplevel >= 4" }
         };
     };
 
