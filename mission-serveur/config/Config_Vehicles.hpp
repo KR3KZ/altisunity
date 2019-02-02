@@ -48,16 +48,9 @@ class CarShops {
         conditions = "";
         vehicles[] = {
             { "C_Van_01_box_F", "" },
-            { "I_Truck_02_transport_F", "" },
+            { "C_Van_02_vehicle_F", "" },
             { "I_Truck_02_covered_F", "" },
-            { "B_Truck_01_transport_F", "" },
-            { "O_Truck_03_transport_F", "" },
-            { "O_Truck_03_covered_F", "" },
-            { "B_Truck_01_box_F", "" },
-            { "O_Truck_03_device_F", "" },
-            { "C_Van_01_fuel_F", "" },
-            { "I_Truck_02_fuel_F", "" },
-            { "B_Truck_01_fuel_F", "" }
+            { "RHS_Ural_MSV_01", "" }
         };
     };
 
@@ -400,20 +393,6 @@ class LifeCfgVehicles {
         textures[] = { };
     };
 
-    class O_Truck_03_transport_F {
-        vItemSpace = 285;
-        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 200000;
-        textures[] = { };
-    };
-
-    class O_Truck_03_device_F {
-        vItemSpace = 350;
-        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 450000;
-        textures[] = { };
-    };
-
     class Land_CargoBox_V1_F {
         vItemSpace = 5000;
         conditions = "";
@@ -460,20 +439,6 @@ class LifeCfgVehicles {
         vItemSpace = 85;
         conditions = "license_cop_cg || {!(playerSide isEqualTo west)}";
         price = 20000;
-        textures[] = { };
-    };
-
-    class B_Truck_01_box_F {
-        vItemSpace = 450;
-        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 350000;
-        textures[] = { };
-    };
-
-    class B_Truck_01_transport_F {
-        vItemSpace = 325;
-        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 275000;
         textures[] = { };
     };
 
@@ -570,19 +535,11 @@ will modify the virtual space and the price of the vehicle, but other informatio
         };
     };
 
-    class I_Truck_02_transport_F {
+    class C_Van_02_vehicle_F {
         vItemSpace = 200;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
         price = 75000;
-        textures[] = {
-            { "Orange", "civ", {
-                "\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa",
-                "\a3\soft_f_beta\Truck_02\data\truck_02_kuz_co.paa"
-            }, "" },
-            { "Black", "cop", {
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
-            }, "" }
-        };
+        textures[] = {};
     };
 
     class O_Truck_03_covered_F {
@@ -738,41 +695,11 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
 
-    class C_Van_01_fuel_F {
+    class RHS_Ural_MSV_01 {
         vItemSpace = 20;
         vFuelSpace = 19500;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
         price = 120000;
-        textures[] = {
-            { "White", "civ", {
-                "\A3\soft_f_gamma\Van_01\data\van_01_ext_co.paa",
-                "\A3\soft_f_gamma\Van_01\data\van_01_tank_co.paa"
-            }, "" },
-            { "Red", "civ", {
-                "\A3\soft_f_gamma\Van_01\data\van_01_ext_red_co.paa",
-                "\A3\soft_f_gamma\Van_01\data\van_01_tank_red_co.paa"
-            }, "" }
-        };
-    };
-
-    class I_Truck_02_fuel_F {
-        vItemSpace = 40;
-        vFuelSpace = 42000;
-        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 200000;
-        textures[] = {
-            { "White", "civ", {
-                "\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa",
-                "\A3\Soft_F_Beta\Truck_02\data\truck_02_fuel_co.paa"
-            }, "" }
-        };
-    };
-
-    class B_Truck_01_fuel_F {
-        vItemSpace = 50;
-        vFuelSpace = 50000;
-        conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 250000;
         textures[] = {};
     };
 };
