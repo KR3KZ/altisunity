@@ -50,7 +50,7 @@ class CarShops {
             { "C_Van_01_box_F", "" },
             { "C_Van_02_vehicle_F", "" },
             { "I_Truck_02_covered_F", "" },
-            { "RHS_Ural_MSV_01", "" }
+            { "RHS_Ural_Open_Civ_01", "" }
         };
     };
 
@@ -114,14 +114,13 @@ class CarShops {
         side = "cop";
         conditions = "";
         vehicles[] = {
-            { "LOP_AM_Offroad", "call life_coplevel >= 1" },
+            { "C_Offroad_01_F", "call life_coplevel >= 1" },
             { "rhs_btr70_vmf", "call life_coplevel >= 7" },
 			{ "LOP_TKA_Ural", "call life_coplevel >= 3" },
 			{ "LOP_TKA_UAZ_DshKM", "call life_coplevel >= 4" },
 			{ "LOP_TKA_UAZ", "call life_coplevel >= 2" },
 			{ "rhs_tigr_msv", "call life_coplevel >= 4" },
-			{ "rhs_ural_msv_01", "call life_coplevel >= 2" },
-			{ "LOP_TAKA_Landrover", "call life_coplevel >= 3" }
+			{ "rhs_ural_msv_01", "call life_coplevel >= 2" }
         };
     };
 
@@ -371,17 +370,39 @@ class LifeCfgVehicles {
         textures[] = {};
     };
 
-    class B_MRAP_01_hmg_F {
+    class rhs_btr70_vmf {
         vItemSpace = 100;
         conditions = "";
-        price = 750000;
-        textures[] = {
-            { "Black", "cop", {
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
-            }, "" }
-        };
+        price = 0;
+        textures[] = {};
+    };
+
+    class LOP_TKA_UAZ_DshKM {
+        vItemSpace = 100;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+    class LOP_TKA_UAZ {
+        vItemSpace = 100;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+    class rhs_tigr_msv {
+        vItemSpace = 100;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+    class rhs_ural_msv_01 {
+        vItemSpace = 100;
+        conditions = "";
+        price = 0;
+        textures[] = {};
     };
 
     class B_Boat_Armed_01_minigun_F {
@@ -589,16 +610,11 @@ will modify the virtual space and the price of the vehicle, but other informatio
         };
     };
 
-    class B_MRAP_01_F {
+    class LOP_TKA_Ural {
         vItemSpace = 65;
         conditions = "";
-        price = 30000;
-        textures[] = {
-            { "Black", "cop", {
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
-            }, "" }
-        };
+        price = 0;
+        textures[] = {};
     };
 
      class B_Heli_Light_01_stripped_F {
@@ -700,7 +716,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
 
-    class RHS_Ural_MSV_01 {
+    class RHS_Ural_Open_Civ_01 {
         vItemSpace = 20;
         vFuelSpace = 19500;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
