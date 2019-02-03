@@ -343,11 +343,25 @@ class LifeCfgVehicles {
         textures[] = {};
     };
 
-  class walker_a3_skodovka {
+    class walker_a3_skodovka {
       vItemSpace = 200;
       conditions = "";
       price = 45000;
       textures[] = {};
+    };
+
+    class LOP_AM_Offroad {
+        vItemSpace = 200;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+    class LOP_TAKA_Landrover {
+        vItemSpace = 200;
+        conditions = "";
+        price = 0;
+        textures[] = {};
     };
 
     class B_Truck_01_medical_F {
