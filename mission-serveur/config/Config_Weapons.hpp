@@ -148,8 +148,10 @@ class WeaponShops {
         items[] = {
             { "Binocular", "", 0, 0, "" },
             { "ItemGPS", "", 0, 0, "" },
-            { "FirstAidKit", "", 0, 0, "" },
-            { "NVGoggles", "", 0, 0, "" },
+            { "ACE_FieldDressing", "", 0, 0, "" },
+            { "ACE_morphine", "", 0, 0, "" },
+			{ "ACE_CableTie", "", 0, 0, "" },
+			{ "NVGoggles", "", 0, 0, "" },
             { "rhs_wheap_ak105", "", 0, 0, "call life_coplevel >= 1" },
 			{ "rhs_wheap_ak74m", "", 0, 0, "call life_coplevel >= 2" },
 			{ "rhs_wheap_ak 103", "", 0, 0, "call life_coplevel >= 3" },
