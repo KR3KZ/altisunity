@@ -26,25 +26,20 @@ class WeaponShops {
         side = "civ";
         conditions = "license_civ_gun";
         items[] = {
-            { "hgun_Rook40_F", "", 6500, 3250, "" },
-            { "hgun_Pistol_01_F", "", 7000, 3500, "" }, //Apex DLC
-            { "hgun_Pistol_heavy_02_F", "", 9850, 4925, "" },
-            { "hgun_ACPC2_F", "", 11500, 5750, "" },
-            { "SMG_05_F", "", 18000, 9000, "" }, //Apex DLC
-            { "hgun_PDW2000_F", "", 20000, 10000, "" }
+            { "rhs_weap_6p53", "", 0, 0, "" },
+            { "hgun_Pistol_01_F", "", 0, 0, "" }, //Apex DLC
+            { "hgun_Pistol_heavy_02_F", "", 0, 0, "" },
+            { "hgun_Rook40_F", "", 0, 0, "" },
+            { "rhs_weap_makarov_pm", "", 0, 0, "" }
         };
         mags[] = {
-            { "16Rnd_9x21_Mag", "", 125, 60, "" },
-            { "6Rnd_45ACP_Cylinder", "", 150, 75, "" },
-            { "9Rnd_45ACP_Mag", "", 200, 100, "" },
-            { "30Rnd_9x21_Mag", "", 250, 125, "" },
-            { "30Rnd_9x21_Mag_SMG_02", "", 250, 125, "" }, //Apex DLC
-            { "10Rnd_9x21_Mag", "", 250, 125, "" } //Apex DLC
+            { "rhs_18rnd_9x21mm_7N28", "", 0, 0, "" },
+            { "6Rnd_45ACP_Cylinder", "", 0, 0, "" },
+            { "16Rnd_9x21_Mag", "", 0, 0, "" },
+            { "10Rnd_9x21_Mag", "", 0, 0, "" },
+            { "rhs_mag_9x18_8_57N181S", "", 0, 0, "" }
         };
-        accs[] = {
-            { "acc_flashlight_pistol", "", 1000, 500, "" },//Pistol Flashlight
-            { "optic_ACO_grn_smg", "", 2500, 1250, "" }
-        };
+        accs[] = {};
     };
 
     class rebel {
