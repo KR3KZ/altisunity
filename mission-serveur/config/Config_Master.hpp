@@ -164,6 +164,11 @@ class Life_Settings {
     disableCommanderView = true; //false - Group leaders can access the commander view. true [default] - Group leaders cannot access the commander view.
                                  //Commander/tactical view is accessed via pressing . [NUM] by default. It raises the camera significantly higher and steeper above the player in order to give a boarder tactical view of the surrounding area.
 
+	/* Unity settings */
+	teamspeak = "Unity Roleplay";
+	channel = "TASK FORCE RADIO";
+	pass = "df546qf65d";
+
     /* Wanted System Settings *
     /* crimes[] = {String, Bounty, Code} */
     crimes[] = {

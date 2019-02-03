@@ -1,5 +1,11 @@
-tf_radio_channel_name 						= "TASK FORCE RADIO";
-tf_radio_channel_password 					= "Bvmv8BYXRO";
+#include "..\..\script_macros.hpp"
+
+private _ts 								= LIFE_SETTINGS(getText,"teamspeak");
+private _channel 							= LIFE_SETTINGS(getText,"channel");
+private _pass 								= LIFE_SETTINGS(getText,"pass");
+
+tf_radio_channel_name 						= _channel;
+tf_radio_channel_password 					= _pass;
 
 TF_terrain_interception_coefficient 		= 4.0;
 TF_default_radioVolume 						= 9;

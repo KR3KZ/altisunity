@@ -1,3 +1,9 @@
+#include "..\..\script_macros.hpp"
+
+private _ts 		= LIFE_SETTINGS(getText,"teamspeak");
+private _channel 	= LIFE_SETTINGS(getText,"channel");
+private _pass 		= LIFE_SETTINGS(getText,"pass");
+
 if(FETCH_CONST(life_adminlevel) < 1) then {
     [] spawn {
 		sleep 30;

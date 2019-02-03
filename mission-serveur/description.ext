@@ -104,6 +104,24 @@ class CfgDebriefing {
         picture = "";
         pictureColor[] = {0,0.3,0.6,1};
     };
+
+	class ServerTS {
+		title = "Task Force Radio";
+		subtitle = "Le TFR est obligatoire pour jouer !";
+		description = "Pour jouer, vous devez être sur le teamspeak d'Unity.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+
+	class ChanTS {
+		title = "Task Force Radio";
+		subtitle = "Vous devez être dans le channel TASK FORCE RADIO pour jouer !";
+		description = "Pour jouer, vous devez être sur le channel TASK FORCE RADIO !";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
 };
 
 class CfgNotifications {
