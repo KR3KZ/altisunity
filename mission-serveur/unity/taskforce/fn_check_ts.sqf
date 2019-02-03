@@ -1,4 +1,4 @@
-if(serverts != "Nolosha Roleplay - Altis Life") then {
+if(serverts != "Unity Roleplay") then {
 	life_wrongTS = true;
 } else {
 	life_wrongTS = false;

@@ -83,6 +83,13 @@ life_istazed 								= false;
 life_isknocked 								= false;
 life_vehicles 								= [];
 
+//Unity taskforce
+serverts = "";
+channelts = "";
+life_notTs = false;
+life_wrongChan = false;
+life_wrongTS = false;
+
 /*
     Master Array of items?
 */
