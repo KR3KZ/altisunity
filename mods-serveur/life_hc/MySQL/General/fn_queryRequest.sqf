@@ -13,25 +13,24 @@
     ARRAY - If array has 0 elements it should be handled as an error in client-side files.
     STRING - The request had invalid handles or an unknown error and is logged to the RPT.
 */
-private ["_uid","_side","_query","_queryResult","_tickTime","_tmp"];
-_uid = [_this,0,"",[""]] call BIS_fnc_param;
-_side = [_this,1,sideUnknown,[civilian]] call BIS_fnc_param;
-_ownerID = [_this,2,objNull,[objNull]] call BIS_fnc_param;
+
+private _uid = [_this,0,"",[""]] call BIS_fnc_param;
+private _side = [_this,1,sideUnknown,[civilian]] call BIS_fnc_param;
+private _ownerID = [_this,2,objNull,[objNull]] call BIS_fnc_param;
 
 if (isNull _ownerID) exitWith {};
 
-_query = switch (_side) do {
-    // West - 11 entries returned
-    case west: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, cop_licenses, coplevel, cop_gear, blacklist, cop_stats, playtime FROM players WHERE pid='%1'",_uid];};
+private _query = switch (_side) do {
+	// West - 15 entries returned
+    case west: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, cop_licenses, coplevel, cop_gear, blacklist, cop_stats, playtime, cop_alive, cop_position, blood FROM players WHERE pid='%1'",_uid];};
     // Civilian - 12 entries returned
-    case civilian: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, civ_licenses, arrested, civ_gear, civ_stats, civ_alive, civ_position, playtime FROM players WHERE pid='%1'",_uid];};
-    // Independent - 10 entries returned
-    case independent: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, med_licenses, mediclevel, med_gear, med_stats, playtime FROM players WHERE pid='%1'",_uid];};
+    case civilian: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, civ_licenses, arrested, civ_gear, civ_stats, civ_alive, civ_position, playtime, blood FROM players WHERE pid='%1'",_uid];};
+    // Independent - 14 entries returned
+    case independent: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, med_licenses, mediclevel, med_gear, med_stats, playtime, med_alive, med_position, blood FROM players WHERE pid='%1'",_uid];};
 };
 
-
-_tickTime = diag_tickTime;
-_queryResult = [_query,2] call HC_fnc_asyncCall;
+private _tickTime = diag_tickTime;
+private _queryResult = [_query,2] call HC_fnc_asyncCall;
 
 if (_queryResult isEqualType "") exitWith {
     [] remoteExecCall ["SOCK_fnc_insertPlayerInfo",_ownerID];
@@ -42,7 +41,7 @@ if (_queryResult isEqualTo []) exitWith {
 };
 
 //Blah conversion thing from a2net->extdb
-_tmp = _queryResult select 2;
+private _tmp = _queryResult select 2;
 _queryResult set[2,[_tmp] call HC_fnc_numberSafe];
 _tmp = _queryResult select 3;
 _queryResult set[3,[_tmp] call HC_fnc_numberSafe];
@@ -87,6 +86,18 @@ switch (_side) do {
         };
         _new = _new select 0;
         [_uid, _new] call HC_fnc_setPlayTime;
+
+		//Alive
+		_queryResult set[12,([_queryResult select 12,1] call HC_fnc_bool)];
+
+		//Position
+		_new = [(_queryResult select 13)] call HC_fnc_mresToArray;
+		if (_new isEqualType "") then {_new = call compile format ["%1", _new];};
+		_queryResult set[13,_new];
+
+		//Blood
+		_tmp = _queryResult select 14;
+		_queryResult set[14,[_tmp] call HC_fnc_numberSafe];
     };
 
     case civilian: {
@@ -117,6 +128,11 @@ switch (_side) do {
         _new = _new select 2;
         [_uid, _new] call HC_fnc_setPlayTime;
 
+		//Blood
+		_tmp = _queryResult select 13;
+		_queryResult set[13,[_tmp] call HC_fnc_numberSafe];
+
+		/* Make sure nothing else is added under here */
         _houseData = _uid spawn HC_fnc_fetchPlayerHouses;
         waitUntil {scriptDone _houseData};
         _queryResult pushBack (missionNamespace getVariable [format ["houses_%1",_uid],[]]);
@@ -144,6 +160,18 @@ switch (_side) do {
         };
         _new = _new select 1;
         [_uid, _new] call HC_fnc_setPlayTime;
+
+		//Alive
+        _queryResult set[11,([_queryResult select 11,1] call HC_fnc_bool)];
+
+        //Position
+        _new = [(_queryResult select 12)] call HC_fnc_mresToArray;
+        if (_new isEqualType "") then {_new = call compile format ["%1", _new];};
+        _queryResult set[12,_new];
+
+        //Blood
+		_tmp = _queryResult select 13;
+		_queryResult set[13,[_tmp] call HC_fnc_numberSafe];
     };
 };
 
