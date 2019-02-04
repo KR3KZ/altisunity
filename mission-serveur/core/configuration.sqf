@@ -89,6 +89,7 @@ channelts = "";
 life_notTs = false;
 life_wrongChan = false;
 life_wrongTS = false;
+life_tfr_plugin_disabled = false;
 
 /*
     Master Array of items?
