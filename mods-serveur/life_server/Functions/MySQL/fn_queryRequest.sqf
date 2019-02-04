@@ -11,15 +11,15 @@
     ARRAY - If array has 0 elements it should be handled as an error in client-side files.
     STRING - The request had invalid handles or an unknown error and is logged to the RPT.
 */
-private ["_uid","_side","_query","_queryResult","_tickTime","_tmp"];
-_uid 				= [_this,0,"",[""]] call BIS_fnc_param;
-_side 				= [_this,1,sideUnknown,[civilian]] call BIS_fnc_param;
-_ownerID 			= [_this,2,objNull,[objNull]] call BIS_fnc_param;
+
+private _uid 				= [_this,0,"",[""]] call BIS_fnc_param;
+private _side 				= [_this,1,sideUnknown,[civilian]] call BIS_fnc_param;
+private _ownerID 			= [_this,2,objNull,[objNull]] call BIS_fnc_param;
 
 if (isNull _ownerID) exitWith {};
-_ownerID 			= owner _ownerID;
+_ownerID 					= owner _ownerID;
 
-_query = switch (_side) do {
+private _query = switch (_side) do {
     // West - 15 entries returned
     case west: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, cop_licenses, coplevel, cop_gear, blacklist, cop_stats, playtime, cop_alive, cop_position, blood FROM players WHERE pid='%1'",_uid];};
     // Civilian - 12 entries returned
@@ -27,10 +27,10 @@ _query = switch (_side) do {
     // Independent - 14 entries returned
     case independent: {format ["SELECT pid, name, cash, bankacc, adminlevel, donorlevel, med_licenses, mediclevel, med_gear, med_stats, playtime, med_alive, med_position, blood FROM players WHERE pid='%1'",_uid];};
 };
-diag_log format ["QUERY: %1",_query];
-_tickTime = diag_tickTime;
-_queryResult = [_query,2] call DB_fnc_asyncCall;
-diag_log format ["Result: %1",_queryResult];
+
+private _tickTime 			= diag_tickTime;
+private _queryResult 		= [_query,2] call DB_fnc_asyncCall;
+
 if (EXTDB_SETTING(getNumber,"DebugMode") isEqualTo 1) then {
     diag_log "------------- Client Query Request -------------";
     diag_log format ["QUERY: %1",_query];
@@ -48,7 +48,7 @@ if (count _queryResult isEqualTo 0) exitWith {
 };
 
 //Blah conversion thing from a2net->extdb
-_tmp = _queryResult select 2;
+private _tmp = _queryResult select 2;
 _queryResult set[2,[_tmp] call DB_fnc_numberSafe];
 _tmp = _queryResult select 3;
 _queryResult set[3,[_tmp] call DB_fnc_numberSafe];

@@ -6,7 +6,6 @@
     Updates ALL player information in the database.
     Information gets passed here from the client side file: core\session\fn_updateRequest.sqf
 */
-private["_query"];
 
 private _uid 			= [_this,0,"",[""]] call BIS_fnc_param;
 private _name 			= [_this,1,"",[""]] call BIS_fnc_param;
@@ -62,7 +61,5 @@ switch (_side) do {
     case civilian: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', civ_licenses='%4', civ_gear='%5', arrested='%6', civ_stats='%7', civ_alive='%8', civ_position='%9', playtime='%10', blood='%11', online='1' WHERE pid='%12'",_name,_cash,_bank,_licenses,_gear,[_this select 11] call DB_fnc_bool,_stats,_alive,_position,_playtime_update,_blood,_uid];};
     case independent: {_query = format ["UPDATE players SET name='%1', cash='%2', bankacc='%3', med_licenses='%4', med_gear='%5', med_stats='%6', playtime='%7', med_alive='%8', med_position='%9', blood='%10', online='1'  WHERE pid='%11'",_name,_cash,_bank,_licenses,_gear,_stats,_playtime_update,_alive,_position,_blood,_uid];};
 };
-
-diag_log _query;
 
 _queryResult 			= [_query,1] call DB_fnc_asyncCall;
