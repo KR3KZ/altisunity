@@ -106,7 +106,8 @@ class Clothing {
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
-            { "B_Carryall_oucamo", "", 0, "" }
+            { "B_Carryall_oucamo", "", 0, "call life_coplevel >= 3" },
+			{ "B_FieldPack_blk", "", 0, "call life_coplevel >= 1" }
         };
     };
 
