@@ -185,22 +185,39 @@ class Clothing {
         side = "med";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "U_Rangemaster", "", 50, "" }
+            { "LOP_U_CHR_SchoolTeacher_01", "", 50, "" },
+            { "U_C_Scientist", "", 50, "" },
+            { "U_C_Paramedic_01_F", "", 50, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
-            { "H_Cap_blu", "", 10, "" }
+            { "H_WirelessEarpiece_F", "", 0, "" },
+            { "H_HeadBandage_bloody_F", "", 0, "" },
+            { "H_HeadBandage_stained_F", "", 0, "" },
+            { "H_HeadBandage_clean_F", "", 0, "" },
+            { "H_Hat_Safari_olive_F", "", 0, "" },
+            { "H_Hat_Safari_sand_F", "", 0, "" }
         };
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
-            { "G_Shades_Blue", "", 10, "" }
+            { "G_Respirator_white_F", "", 10, "" },
+            { "G_Respirator_blue_F", "", 10, "" },
+            { "G_Respirator_yellow_F", "", 10, "" },
+            { "G_EyeProtectors_F", "", 10, "" },
+            { "G_Spectacles", "", 10, "" },
+            { "G_Squares", "", 10, "" },
+            { "G_Lowprofile", "", 10, "" }
         };
         vests[] = {
-            { "NONE", $STR_C_Remove_vests, 0, "" }
+            { "NONE", $STR_C_Remove_vests, 0, "" },
+            { "V_Plain_crystal_F", "", 10, "" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
-            { "B_FieldPack_oli", "", 3000, "" }
+            { "B_Messenger_Coyote_F", "", 3000, "" },
+            { "B_Messenger_Gray_F", "", 3000, "" },
+            { "B_Messenger_Black_F", "", 3000, "" },
+            { "B_Messenger_Olive_F", "", 3000, "" }
         };
     };
 
