@@ -95,9 +95,9 @@ class CarShops {
         conditions = "";
         vehicles[] = {
             { "C_Offroad_01_F", "" },
-            { "I_Truck_02_medical_F", "" },
-            { "O_Truck_03_medical_F", "" },
-            { "B_Truck_01_medical_F", "" }
+            { "I_C_Offroad_02_unarmed_F", "" },
+            { "O_T_LSV_02_unarmed_F", "" },
+            { "rhsusf_m998_w_4dr", "" }
         };
     };
 
@@ -105,7 +105,7 @@ class CarShops {
         side = "med";
         conditions = "";
         vehicles[] = {
-            { "B_Heli_Light_01_F", "" },
+            { "RHS_UH60M_MEV", "" },
             { "O_Heli_Light_02_unarmed_F", "" }
         };
     };
@@ -322,14 +322,14 @@ class LifeCfgVehicles {
         };
     };
 
-    class I_Truck_02_medical_F {
+    class I_C_Offroad_02_unarmed_F {
         vItemSpace = 150;
         conditions = "";
         price = 25000;
         textures[] = {};
     };
 
-    class O_Truck_03_medical_F {
+    class O_T_LSV_02_unarmed_F {
         vItemSpace = 200;
         conditions = "";
         price = 45000;
@@ -364,7 +364,7 @@ class LifeCfgVehicles {
         textures[] = {};
     };
 
-    class B_Truck_01_medical_F {
+    class rhsusf_m998_w_4dr {
         vItemSpace = 250;
         conditions = "";
         price = 60000;
@@ -722,6 +722,13 @@ will modify the virtual space and the price of the vehicle, but other informatio
                 "#(argb,8,8,3)color(1,1,1,0.8)"
             }, "" }
         };
+    };
+
+    class RHS_UH60M_MEV {
+        vItemSpace = 65;
+        conditions = "license_med_mAir";
+        price = 0;
+        textures[] = {};
     };
 
     class B_SDV_01_F {
