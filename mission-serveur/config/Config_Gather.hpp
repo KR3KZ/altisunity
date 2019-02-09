@@ -94,6 +94,30 @@ Example 2:
             zoneSize = 30;
         };
 
+        class wood {
+            amount = 2;
+            zones[] = { "wood_mine" };
+            item = "pickaxe";
+            mined[] = { "wood" };
+            zoneSize = 30;
+        };
+
+        class corn {
+            amount = 2;
+            zones[] = { "wheat_field" };
+            item = "";
+            mined[] = { "corn" };
+            zoneSize = 30;
+        };
+
+        class fabric {
+            amount = 2;
+            zones[] = { "fabric_mine" };
+            item = "";
+            mined[] = { "fabric" };
+            zoneSize = 30;
+        };
+        
         class sand {
             amount = 2;
             zones[] = { "sand_mine" };
