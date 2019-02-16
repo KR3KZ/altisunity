@@ -43,7 +43,23 @@ class Clothing {
 			{ "LOP_U_CHR_Villager_01", "", 0, "" },
 			{ "LOP_U_CHR_Villager_04", "", 0, "" },
 			{ "LOP_U_CHR_Villager_03", "", 0, "" },
-			{ "LOP_U_CHR_Villager_02", "", 0, "" }
+			{ "LOP_U_CHR_Villager_02", "", 0, "" },
+      { "LOP_U_CHR_Profiteer_02", "", 0, "" },
+      { "LOP_U_CHR_Profiteer_03", "", 0, "" },
+      { "LOP_U_CHR_Profiteer_01", "", 0, "" },
+      { "LOP_U_CHR_Profiteer_04", "", 0, "" },
+      { "LOP_U_CHR_Profiteer_01", "", 0, "" },
+      { "LOP_U_CHR_Woodlander_01", "", 0, "" },
+      { "LOP_U_CHR_Woodlander_02", "", 0, "" },
+      { "LOP_U_CHR_Woodlander_03", "", 0, "" },
+      { "LOP_U_CHR_Woodlander_04", "", 0, "" },
+      { "LOP_U_CHR_Woodlander_05", "", 0, "" },
+      { "LOP_U_CHR_Worker_03", "", 0, "" },
+      { "LOP_U_CHR_Worker_04", "", 0, "" },
+      { "LOP_U_CHR_Worker_01", "", 0, "" },
+      { "U_I_C_Soldier_Bandit_5_F", "", 0, "" },
+      { "U_I_C_Soldier_Bandit_3_F", "", 0, "" },
+      { "U_C_Poor_1", "", 0, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
@@ -62,7 +78,10 @@ class Clothing {
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
             { "rhs_vest_commander", "", 0, "" },
-            { "rhs_vest_pistol_holster", "", 0, "" }
+            { "rhs_vest_pistol_holster", "", 0, "" },
+            { "V_LegStrapBag_coyote_F", "", 0, "" },
+            { "V_LegStrapBag_black_F", "", 0, "" },
+            { "V_LegStrapBag_olive_F", "", 0, "" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
