@@ -2,35 +2,56 @@ class CfgGather {
     class Resources {
         class apple {
             amount = 5;
-            zones[] = { "apple_1", "apple_2", "apple_3", "apple_4" };
+            zones[] = { "res_apple_1", "res_apple_2", "res_apple_3", "res_apple_4" };
             item = "";
             zoneSize = 30;
         };
 
         class peach {
             amount = 5;
-            zones[] = { "peaches_1", "peaches_2", "peaches_3", "peaches_4" };
+            zones[] = { "res_peaches_1", "res_peaches_2", "res_peaches_3", "res_peaches_4" };
             item = "";
             zoneSize = 30;
         };
 
         class heroin_unprocessed {
             amount = 3;
-            zones[] = { "heroin_1" };
+            zones[] = { "res_heroin_1" };
             item = "";
             zoneSize = 30;
         };
 
         class cocaine_unprocessed {
             amount = 3;
-            zones[] = { "cocaine_1" };
+            zones[] = { "res_cocaine_1" };
             item = "";
             zoneSize = 30;
         };
 
         class cannabis {
             amount = 3;
-            zones[] = { "weed_1" };
+            zones[] = { "res_weed_1" };
+            item = "";
+            zoneSize = 30;
+        };
+
+		class wood {
+            amount = 2;
+            zones[] = { "res_wood_1" };
+            item = "";
+            zoneSize = 30;
+        };
+
+        class corn {
+            amount = 2;
+            zones[] = { "res_corn_1" };
+            item = "";
+            zoneSize = 30;
+        };
+
+        class cotton {
+            amount = 2;
+            zones[] = { "res_cotton_1" };
             item = "";
             zoneSize = 30;
         };
@@ -94,30 +115,6 @@ Example 2:
             zoneSize = 30;
         };
 
-        class wood {
-            amount = 2;
-            zones[] = { "wood_mine" };
-            item = "pickaxe";
-            mined[] = { "wood" };
-            zoneSize = 30;
-        };
-
-        class corn {
-            amount = 2;
-            zones[] = { "wheat_field" };
-            item = "";
-            mined[] = { "corn" };
-            zoneSize = 30;
-        };
-
-        class fabric {
-            amount = 2;
-            zones[] = { "fabric_mine" };
-            item = "";
-            mined[] = { "fabric" };
-            zoneSize = 30;
-        };
-        
         class sand {
             amount = 2;
             zones[] = { "sand_mine" };

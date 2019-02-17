@@ -2593,6 +2593,22 @@
             <Original>Spike Strip</Original>
             <French>Herse</French>
         </Key>
+		<Key ID="STR_Item_Wood">
+            <Original>Bois</Original>
+            <French>Bois</French>
+        </Key>
+		<Key ID="STR_Item_Corn">
+            <Original>Maïs</Original>
+            <French>Maïs</French>
+        </Key>
+		<Key ID="STR_Item_Cotton">
+            <Original>Coton</Original>
+            <French>Coton</French>
+        </Key>
+		<Key ID="STR_Item_Fabric">
+            <Original>Tissu</Original>
+            <French>Tissu</French>
+        </Key>
     </Package>
     <Package name="Life_License">
         <Key ID="STR_License_Driver">

@@ -5,25 +5,25 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=6;
 	class ItemIDProvider
 	{
-		nextID=1335;
+		nextID=1352;
 	};
 	class MarkerIDProvider
 	{
-		nextID=234;
+		nextID=235;
 	};
 	class LayerIndexProvider
 	{
-		nextID=47;
+		nextID=68;
 	};
 	class Camera
 	{
-		pos[]={13218.309,392.36438,17814.787};
-		dir[]={0.034754712,-0.57081872,-0.82042754};
-		up[]={0.024159212,0.82106447,-0.57030243};
-		aside[]={-0.99916857,2.4787732e-007,-0.042326216};
+		pos[]={13023.229,236.05347,15456.165};
+		dir[]={-0.96809596,-0.2495725,-0.025969015};
+		up[]={-0.24953043,0.96833104,-0.006694037};
+		aside[]={-0.026819089,3.259629e-008,0.99972391};
 	};
 };
 binarizationWanted=0;
@@ -45,13 +45,15 @@ addons[]=
 	"A3_Structures_F_Furniture",
 	"A3_Structures_F_EPA_Mil_Scrapyard",
 	"A3_Structures_F_EPA_Civ_Constructions",
-	"Wall_L"
+	"Wall_L",
+	"A3_Structures_F_Civ_Accessories",
+	"A3_Structures_F_EPB_Civ_Accessories"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=10;
+		items=11;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -118,6 +120,13 @@ class AddonsMetaData
 		{
 			className="Wall_L";
 			name="Wall_L";
+		};
+		class Item10
+		{
+			className="A3_Structures_F_EPB";
+			name="Arma 3 Adapt Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -19310,7 +19319,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=114;
+		items=115;
 		class Item0
 		{
 			dataType="Group";
@@ -34024,7 +34033,7 @@ class Mission
 					position[]={12184.322,341.95001,17282.188};
 					name="veh_spawn_milice_kalaenoowi_1";
 					type="Empty";
-					angle=41.794983;
+					angle=41.794975;
 					id=1321;
 				};
 				class Item3
@@ -34033,7 +34042,7 @@ class Mission
 					position[]={12175.857,341.95001,17273.006};
 					name="veh_spawn_milice_kalaenoowi_2";
 					type="Empty";
-					angle=41.794979;
+					angle=41.794975;
 					id=1324;
 				};
 			};
@@ -34253,7 +34262,7 @@ class Mission
 					position[]={9677.5654,143.159,11340.122};
 					name="veh_spawn_milice_mikisfob";
 					type="Empty";
-					angle=327.06787;
+					angle=327.06781;
 					id=1319;
 					atlOffset=-0.00032043457;
 				};
@@ -34595,6 +34604,432 @@ class Mission
 			};
 			id=1332;
 			atlOffset=0.061491013;
+		};
+		class Item114
+		{
+			dataType="Layer";
+			name="Bois - Récolte Kalaenoowi";
+			state=1;
+			class Entities
+			{
+				items=11;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12987.578,231.26083,15471.64};
+						angles[]={0.0089884456,1.1891452,6.2232509};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1346;
+					type="Land_Timbers_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12995.794,230.41139,15452.31};
+						angles[]={6.2708979,0,6.2137909};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1338;
+					type="Land_WoodPile_large_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12998.312,230.21431,15452.28};
+						angles[]={0.024486968,3.468039,6.177279};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1339;
+					type="Land_WoodPile_large_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12999.22,230.03017,15455.855};
+						angles[]={0.024486968,4.5709472,6.177279};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1340;
+					type="Land_WoodPile_large_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12995.236,230.37779,15466.9};
+						angles[]={0.0079936078,2.5444107,6.1605062};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1341;
+					type="Land_WoodPile_large_F";
+					atlOffset=-1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12997.987,229.99696,15477.39};
+						angles[]={6.278595,5.0818753,6.1854997};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1342;
+					type="Land_WoodPile_large_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13006.63,229.83417,15461.444};
+						angles[]={0.0079936078,6.0569034,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1343;
+					type="Land_WoodPile_large_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12990.676,231.04001,15440.019};
+						angles[]={0.029496064,1.0830292,6.2238617};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1344;
+					type="Land_WoodPile_large_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12979.363,231.66745,15457.452};
+						angles[]={0.0090058986,0,6.2113123};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1345;
+					type="Land_WoodPile_large_F";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13001.367,230.32797,15452.435};
+						angles[]={0.024486968,4.069078,6.2760816};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						createAsSimpleObject=1;
+						disableSimulation=1;
+					};
+					id=1347;
+					type="Land_WoodenCart_F";
+					atlOffset=-0.0036773682;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item10
+				{
+					dataType="Marker";
+					position[]={12991.268,230.42999,15458.225};
+					name="res_wood_1";
+					text="Bois";
+					type="mil_triangle";
+					id=1349;
+					atlOffset=-1.5258789e-005;
+				};
+			};
+			id=1336;
+			atlOffset=0.021194458;
 		};
 	};
 };
