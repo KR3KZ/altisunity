@@ -8,22 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1310;
+		nextID=1335;
 	};
 	class MarkerIDProvider
 	{
-		nextID=231;
+		nextID=234;
 	};
 	class LayerIndexProvider
 	{
-		nextID=21;
+		nextID=47;
 	};
 	class Camera
 	{
-		pos[]={13461.681,348.98291,17543.127};
-		dir[]={-0.29182562,-0.48378056,-0.82510251};
-		up[]={-0.16131341,0.8751893,-0.45609388};
-		aside[]={-0.94277024,-2.2351742e-007,0.33344296};
+		pos[]={13218.309,392.36438,17814.787};
+		dir[]={0.034754712,-0.57081872,-0.82042754};
+		up[]={0.024159212,0.82106447,-0.57030243};
+		aside[]={-0.99916857,2.4787732e-007,-0.042326216};
 	};
 };
 binarizationWanted=0;
@@ -41,13 +41,17 @@ addons[]=
 	"ace_concertina_wire",
 	"A3_Structures_F_Mil_BagBunker",
 	"A3_Structures_F_Civ_Lamps",
-	"A3_Structures_F_Civ_Market"
+	"A3_Structures_F_Civ_Market",
+	"A3_Structures_F_Furniture",
+	"A3_Structures_F_EPA_Mil_Scrapyard",
+	"A3_Structures_F_EPA_Civ_Constructions",
+	"Wall_L"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=8;
+		items=10;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -103,6 +107,18 @@ class AddonsMetaData
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
+		class Item8
+		{
+			className="A3_Structures_F_EPA";
+			name="Arma 3 Survive Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item9
+		{
+			className="Wall_L";
+			name="Wall_L";
+		};
 	};
 };
 randomSeed=2639488;
@@ -137,24 +153,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -169,6 +167,24 @@ class CustomAttributes
 						};
 					};
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -19294,7 +19310,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=109;
+		items=114;
 		class Item0
 		{
 			dataType="Group";
@@ -33913,6 +33929,672 @@ class Mission
 				};
 			};
 			id=1308;
+		};
+		class Item109
+		{
+			dataType="Layer";
+			name="Equipements milice Kalaenoowi";
+			state=1;
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12172.054,342.90591,17313.197};
+						angles[]={0,0.75270814,6.282208};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];}";
+					};
+					id=1311;
+					type="Land_Rack_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12176.383,343.17441,17286.008};
+						angles[]={0,5.1786361,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""veh_spawn_milice_kalaenoowi_1"",""veh_spawn_milice_kalaenoowi_2""],""cop"",""Concessionnaire véhicules Milice""]];}";
+					};
+					id=1312;
+					type="Land_Scrap_MRAP_01_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={12184.322,341.95001,17282.188};
+					name="veh_spawn_milice_kalaenoowi_1";
+					type="Empty";
+					angle=41.794983;
+					id=1321;
+				};
+				class Item3
+				{
+					dataType="Marker";
+					position[]={12175.857,341.95001,17273.006};
+					name="veh_spawn_milice_kalaenoowi_2";
+					type="Empty";
+					angle=41.794979;
+					id=1324;
+				};
+			};
+			id=1310;
+			atlOffset=0.01751709;
+		};
+		class Item110
+		{
+			dataType="Layer";
+			name="Equipements milice Kinduf";
+			state=1;
+			class Entities
+			{
+				items=5;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12322.199,33.92556,2014.647};
+						angles[]={0,1.4639472,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];}";
+					};
+					id=1314;
+					type="Land_Rack_F";
+					atlOffset=0.68600082;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12283.738,33.837498,1964.167};
+						angles[]={0,4.6288924,6.2826962};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""veh_spawn_milice_kinduf_1"",""veh_spawn_milice_kinduf_2"",""veh_spawn_milice_kinduf_3""],""cop"",""Concessionnaire véhicules Milice""]];}";
+					};
+					id=1315;
+					type="Land_CashDesk_F";
+					atlOffset=0.28499985;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={12297.104,32.975929,1987.7015};
+					name="veh_spawn_milice_kinduf_1";
+					type="Empty";
+					angle=355.35995;
+					id=1320;
+				};
+				class Item3
+				{
+					dataType="Marker";
+					position[]={12288.234,33.002739,1987.4158};
+					name="veh_spawn_milice_kinduf_2";
+					type="Empty";
+					angle=355.35995;
+					id=1322;
+				};
+				class Item4
+				{
+					dataType="Marker";
+					position[]={12279.239,32.979305,1987.1313};
+					name="veh_spawn_milice_kinduf_3";
+					type="Empty";
+					angle=355.35995;
+					id=1323;
+				};
+			};
+			id=1313;
+			atlOffset=0.047107697;
+		};
+		class Item111
+		{
+			dataType="Layer";
+			name="Equipements milice MikisFob";
+			state=1;
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9676.1758,143.74672,11352.688};
+						angles[]={6.2736907,0,0.0031939524};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];}";
+					};
+					id=1317;
+					type="Land_Pallets_stack_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9673.3477,143.44595,11331.717};
+						angles[]={6.2717881,4.4133968,0.0020769418};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,""veh_spawn_milice_mikisfob"",""cop"",""Concessionnaire véhicules Milice""]];}";
+					};
+					id=1318;
+					type="Land_Pallet_MilBoxes_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={9677.5654,143.159,11340.122};
+					name="veh_spawn_milice_mikisfob";
+					type="Empty";
+					angle=327.06787;
+					id=1319;
+					atlOffset=-0.00032043457;
+				};
+			};
+			id=1316;
+			atlOffset=-0.0075683594;
+		};
+		class Item112
+		{
+			dataType="Layer";
+			name="Villa nord Gouv";
+			state=1;
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13231.655,343.366,17631.775};
+						angles[]={0,3.2310584,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1326;
+					type="jbad_Wall_L3_5m";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13223.54,346.00031,17633.287};
+						angles[]={0,0.096516714,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1327;
+					type="Land_BarGate_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13290.423,343.366,17706.555};
+						angles[]={0,3.1851037,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1328;
+					type="jbad_Wall_L3_5m";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13288.042,343.366,17706.656};
+						angles[]={0,3.1851037,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1329;
+					type="jbad_Wall_L3_5m";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13211.224,348.07385,17676.648};
+						angles[]={0,2.4340105,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1330;
+					type="Land_LampStreet_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13230.29,348.07385,17675.268};
+						angles[]={0,4.0195532,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1331;
+					type="Land_LampStreet_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			id=1325;
+		};
+		class Item113
+		{
+			dataType="Layer";
+			name="Villa Sud Gouv";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11642.979,28.04237,2845.1064};
+						angles[]={0,6.2551379,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1333;
+					type="Land_BarGate_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11677.369,29.648874,2825.8955};
+						angles[]={0,4.7173977,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1334;
+					type="Land_LampStreet_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			id=1332;
+			atlOffset=0.061491013;
 		};
 	};
 };

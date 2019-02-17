@@ -3601,6 +3601,10 @@
             <Original>Car Shop</Original>
             <French>Concessionnaire</French>
         </Key>
+		<Key ID="STR_MAR_Car_Shop_Milice">
+            <Original>Véhicules Milice</Original>
+            <French>Véhicules Milice</French>
+        </Key>
         <Key ID="STR_MAR_Hospital_Clinic">
             <Original>Hospital/Clinic</Original>
             <French>Clinique</French>
@@ -3819,7 +3823,11 @@
         </Key>
         <Key ID="STR_MAR_Clothing_Store">
             <Original>Clothing Store</Original>
-            <French>Vêtements</French>
+            <French>Magasin de Vêtements</French>
+        </Key>
+		<Key ID="STR_MAR_Clothing_Store_Milice">
+            <Original>Vêtements Milice</Original>
+            <French>Vêtements Milice</French>
         </Key>
         <Key ID="STR_MAR_Medical_Assistance">
             <Original>Medical Assistance</Original>

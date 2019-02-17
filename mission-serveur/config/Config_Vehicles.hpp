@@ -329,13 +329,6 @@ class LifeCfgVehicles {
         textures[] = {};
     };
 
-    class O_T_LSV_02_unarmed_F {
-        vItemSpace = 200;
-        conditions = "";
-        price = 45000;
-        textures[] = {};
-    };
-
     class walker_a3_sedan {
         vItemSpace = 200;
         conditions = "";
