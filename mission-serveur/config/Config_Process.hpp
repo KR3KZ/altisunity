@@ -96,4 +96,13 @@ class ProcessAction {
         //ScrollText = "Mix Cement";
         NoLicenseCost = 350;
     };
+
+	//Added by Unity
+	class paper {
+        MaterialsReq[] = {{"wood",1}};
+        MaterialsGive[] = {{"paper",1}};
+        Text = "STR_Process_Paper";
+        //ScrollText = "Mix Cement";
+        NoLicenseCost = 350;
+    };
 };

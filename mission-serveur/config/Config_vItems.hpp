@@ -855,4 +855,60 @@ class VirtualItems {
         edible = 100;
         icon = "icons\ico_muttonLeg.paa";
     };
+
+	//Added by Unity
+	class wood {
+		variable = "wood";
+		displayName = "STR_Item_Wood";
+		weight = 2;
+		buyPrice = 0;
+		sellPrice = 0;
+		illegal = false;
+		edible = 100;
+		icon = "icons\ico_muttonLeg.paa";
+	};
+
+	class corn {
+		variable = "corn";
+		displayName = "STR_Item_Corn";
+		weight = 2;
+		buyPrice = 0;
+		sellPrice = 0;
+		illegal = false;
+		edible = 100;
+		icon = "icons\ico_muttonLeg.paa";
+	};
+
+	class fabric {
+		variable = "fabric";
+		displayName = "STR_Item_Fabric";
+		weight = 2;
+		buyPrice = 0;
+		sellPrice = 0;
+		illegal = false;
+		edible = 100;
+		icon = "icons\ico_muttonLeg.paa";
+	};
+
+	class cotton {
+		variable = "cotton";
+		displayName = "STR_Item_Cotton";
+		weight = 2;
+		buyPrice = 0;
+		sellPrice = 0;
+		illegal = false;
+		edible = 100;
+		icon = "icons\ico_muttonLeg.paa";
+	};
+
+	class paper {
+		variable = "paper";
+		displayName = "STR_Item_Paper";
+		weight = 2;
+		buyPrice = 0;
+		sellPrice = 0;
+		illegal = false;
+		edible = 100;
+		icon = "icons\ico_muttonLeg.paa";
+	};
 };

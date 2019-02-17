@@ -117,7 +117,7 @@ Example 2:
 
         class sand {
             amount = 2;
-            zones[] = { "sand_mine" };
+            zones[] = { "res_sand_1" };
             item = "pickaxe";
             mined[] = { "sand" };
             zoneSize = 30;
@@ -125,7 +125,7 @@ Example 2:
 
         class diamond_uncut {
             amount = 2;
-            zones[] = { "diamond_mine" };
+            zones[] = { "res_diamond_1" };
             item = "pickaxe";
             mined[] = { "diamond_uncut" };
             zoneSize = 30;
@@ -133,7 +133,7 @@ Example 2:
 
         class rock {
             amount = 2;
-            zones[] = { "rock_quarry" };
+            zones[] = { "res_rock_1" };
             item = "pickaxe";
             mined[] = { "rock" };
             zoneSize = 30;
@@ -141,7 +141,7 @@ Example 2:
 
         class oil_unprocessed {
             amount = 2;
-            zones[] = { "oil_field_1", "oil_field_2" };
+            zones[] = { "res_oil_1", "res_oil_2" };
             item = "pickaxe";
             mined[] = { "oil_unprocessed" };
             zoneSize = 30;
