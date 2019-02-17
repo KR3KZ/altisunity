@@ -65,15 +65,11 @@ class CarShops {
         };
     };
 
-     class civ_ship {
+     class gouv {
         side = "civ";
         conditions = "";
         vehicles[] = {
-            { "C_Rubberboat", "" },
-            { "C_Boat_Civil_01_F", "" },
-            { "B_SDV_01_F", "" },
-            { "C_Boat_Transport_02_F", "" }, //Apex DLC
-            { "C_Scooter_Transport_01_F", "" } //Apex DLC
+            { "walker_a3_SUV", "" }
         };
     };
 
@@ -337,6 +333,13 @@ class LifeCfgVehicles {
     };
 
     class walker_a3_skodovka {
+      vItemSpace = 200;
+      conditions = "";
+      price = 45000;
+      textures[] = {};
+    };
+
+    class walker_a3_SUV {
       vItemSpace = 200;
       conditions = "";
       price = 45000;

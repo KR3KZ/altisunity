@@ -130,24 +130,27 @@ class Clothing {
         };
     };
 
-    class dive {
-        title = "STR_Shops_C_Diving";
-        conditions = "license_civ_dive";
+    class gouv {
+        title = "STR_Shops_C_Gouv";
+        conditions = "license_civ_gouv";
         side = "civ";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "U_B_Wetsuit", "", 2000, "" }
+            { "LOP_U_CHR_Functionary_01", "", 2000, "" },
+            { "LOP_U_CHR_Functionary_02", "", 2000, "" }
         };
         headgear[] = {
-            { "NONE", $STR_C_Remove_headgear, 0, "" }
+            { "NONE", $STR_C_Remove_headgear, 0, "" },
+            { "rhs_beret_milp", "", 2000, "" }
         };
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
-            { "G_Diving", "", 500, "" }
+            { "G_Squares_Tinted", "", 500, "" }
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
-            { "V_RebreatherB", "", 5000, "" }
+            { "rhs_vest_commander", "", 5000, "" },
+            { "rhs_vest_pistol_holster", "", 5000, "" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" }

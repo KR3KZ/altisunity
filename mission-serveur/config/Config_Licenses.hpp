@@ -48,9 +48,9 @@ class Licenses {
         side = "civ";
     };
 
-    class dive {
-        variable = "dive";
-        displayName = "STR_License_Diving";
+    class gouv {
+        variable = "gouv";
+        displayName = "STR_License_gouv";
         price = 2000;
         illegal = false;
         side = "civ";
