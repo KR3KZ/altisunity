@@ -905,9 +905,9 @@ class VirtualItems {
 		icon = "icons\ico_muttonLeg.paa";
 	};
 
-	class fabric {
-		variable = "fabric";
-		displayName = "STR_Item_Fabric";
+  class cotton {
+		variable = "cotton";
+		displayName = "STR_Item_Cotton";
 		weight = 2;
 		buyPrice = 0;
 		sellPrice = 0;
@@ -916,9 +916,9 @@ class VirtualItems {
 		icon = "icons\ico_muttonLeg.paa";
 	};
 
-	class cotton {
-		variable = "cotton";
-		displayName = "STR_Item_Cotton";
+	class fabric {
+		variable = "fabric";
+		displayName = "STR_Item_Fabric";
 		weight = 2;
 		buyPrice = 0;
 		sellPrice = 0;

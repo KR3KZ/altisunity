@@ -119,6 +119,10 @@
             <Original>Acheteur de Chocapic</Original>
             <French>Acheteur de Chocapic</French>
         </Key>
+        <Key ID="STR_Shops_Fabric">
+            <Original>Acheteur de Tissu</Original>
+            <French>Acheteur de Tissu</French>
+        </Key>
         <Key ID="STR_Shop_Station_Coffee">
             <Original>Fuel Station Coffee</Original>
             <French>Café de la Station service</French>
@@ -2606,8 +2610,8 @@
             <French>Bois</French>
         </Key>
 		<Key ID="STR_Item_Corn">
-            <Original>Maïs</Original>
-            <French>Maïs</French>
+            <Original>Blé</Original>
+            <French>Blé</French>
         </Key>
 		<Key ID="STR_Item_Cotton">
             <Original>Coton</Original>
@@ -2963,6 +2967,10 @@
             <Original>Transformation du Blé en Chocapic</Original>
             <French>Transformation du Blé en Chocapic</French>
         </Key>
+        <Key ID="STR_Process_Fabric">
+          <Original>Transformation du Coton en Tissu</Original>
+          <French>Transformation du Coton en Tissu</French>
+      </Key>
     </Package>
     <Package name="Medical_Strings">
         <Key ID="STR_Medic_Online">

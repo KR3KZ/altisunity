@@ -8,22 +8,22 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1393;
+		nextID=1414;
 	};
 	class MarkerIDProvider
 	{
-		nextID=242;
+		nextID=247;
 	};
 	class LayerIndexProvider
 	{
-		nextID=119;
+		nextID=142;
 	};
 	class Camera
 	{
-		pos[]={11492.615,26.865009,2590.7246};
-		dir[]={0.57759887,-0.73204035,0.36132798};
-		up[]={0.62061214,0.68125188,0.38823718};
-		aside[]={0.53036195,3.6496203e-007,-0.84780651};
+		pos[]={11495.497,48.212921,2566.759};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -52,13 +52,16 @@ addons[]=
 	"A3_Structures_F_Items_Tools",
 	"A3_Structures_F_Heli_Ind_Machines",
 	"A3_Props_F_Orange_Humanitarian_Supplies",
-	"A3_Structures_F_EPA_Items_Food"
+	"A3_Structures_F_EPA_Items_Food",
+	"RHS_US_A2_AirImport",
+	"Cargo_Cont",
+	"A3_Structures_F_EPB_Furniture"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=13;
+		items=15;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -148,6 +151,18 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item13
+		{
+			className="RHS_US_A2_AirImport";
+			name="RHSUSF A2 Air Ports";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item14
+		{
+			className="Cargo_Cont";
+			name="Cargo_Cont";
+		};
 	};
 };
 randomSeed=2639488;
@@ -182,6 +197,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -196,24 +229,6 @@ class CustomAttributes
 						};
 					};
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -19339,7 +19354,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=120;
+		items=123;
 		class Item0
 		{
 			dataType="Group";
@@ -30753,7 +30768,7 @@ class Mission
 					};
 					id=1274;
 					type="Land_HBarrier_3_F";
-					atlOffset=0.39832687;
+					atlOffset=0.39832878;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31309,7 +31324,7 @@ class Mission
 					};
 					id=1277;
 					type="Land_Mil_WallBig_4m_F";
-					atlOffset=-1.9073486e-006;
+					atlOffset=-3.8146973e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31350,7 +31365,6 @@ class Mission
 					};
 					id=1278;
 					type="Land_Mil_WallBig_4m_F";
-					atlOffset=1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31471,6 +31485,7 @@ class Mission
 					};
 					id=1282;
 					type="Land_Mil_WallBig_Corner_F";
+					atlOffset=1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -35288,6 +35303,7 @@ class Mission
 					};
 					id=1333;
 					type="Land_BarGate_F";
+					atlOffset=-1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -35354,7 +35370,7 @@ class Mission
 				};
 			};
 			id=1332;
-			atlOffset=0.061481476;
+			atlOffset=0.061479568;
 		};
 		class Item114
 		{
@@ -35806,7 +35822,7 @@ class Mission
 					};
 					id=1370;
 					type="Land_CratesPlastic_F";
-					atlOffset=0.00032043457;
+					atlOffset=0.00031280518;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -35889,6 +35905,7 @@ class Mission
 					};
 					id=1372;
 					type="Land_Timbers_F";
+					atlOffset=-7.6293945e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36221,15 +36238,16 @@ class Mission
 				class Item5
 				{
 					dataType="Marker";
-					position[]={12006.018,19.398687,6138.9819};
+					position[]={12006.018,19.399,6138.9819};
 					name="TRT_Bois";
 					text="Bois";
 					type="mil_box";
 					id=1367;
+					atlOffset=0.00031280518;
 				};
 			};
 			id=1364;
-			atlOffset=0.027189255;
+			atlOffset=0.027345657;
 		};
 		class Item117
 		{
@@ -36260,13 +36278,13 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=1;
+				items=2;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={17513.262,48.055695,2953.967};
+						position[]={17513.262,48.055706,2953.967};
 						angles[]={6.2798867,3.1486788,0.0032812189};
 					};
 					side="Empty";
@@ -36302,8 +36320,19 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={17513.246,46.890999,2953.97};
+					name="TRT_Corn";
+					text="Blé";
+					type="mil_box";
+					id=1408;
+					atlOffset=-0.0001335144;
+				};
 			};
 			id=1381;
+			atlOffset=-6.4849854e-005;
 		};
 		class Item119
 		{
@@ -36312,7 +36341,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
@@ -36370,7 +36399,7 @@ class Mission
 					};
 					id=1392;
 					type="Land_CerealsBox_F";
-					atlOffset=0.7689991;
+					atlOffset=0.77252007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36395,9 +36424,282 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={11495.32,23.215,2591.7749};
+					name="SLR_Corn";
+					text="Blé";
+					type="mil_end";
+					id=1413;
+					atlOffset=0.00029373169;
+				};
 			};
 			id=1384;
-			atlOffset=0.38451004;
+			atlOffset=0.19327354;
+		};
+		class Item120
+		{
+			dataType="Layer";
+			name="Coton - Récolte KalaeNoowi";
+			state=1;
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11988.07,342.07849,18076.035};
+						angles[]={0,3.8796225,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						lock="LOCKED";
+						disableSimulation=1;
+						reportOwnPosition=1;
+					};
+					id=1398;
+					type="RHS_C130J";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ammoBox";
+							expression="[_this,_value] call bis_fnc_initAmmoBox;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[2,20,4]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[30,8,2,2,4]],[[""ToolKit""],[1]],[[""B_Parachute""],[14]]],false]";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="door_1";
+							expression="_this animateDoor ['door_1',_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Ramp";
+							expression="_this animateSource ['Ramp',_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11997.082,343.15323,18082.605};
+						angles[]={0,6.1805902,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1402;
+					type="Jbad_Cargo2_int";
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={11988.1,341.944,18076.443};
+					name="res_cotton_1";
+					text="Coton";
+					type="mil_triangle";
+					id=1403;
+				};
+			};
+			id=1401;
+		};
+		class Item121
+		{
+			dataType="Layer";
+			name="Coton - Traitement Zarath";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={19279.84,33.842381,14431.274};
+						angles[]={0,1.5962781,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Process_Fabric"",life_fnc_processAction,""fabric"",0,false,false,"""",' life_inv_coton > 0 && !life_is_processing && !life_action_inUse'];}";
+						disableSimulation=1;
+					};
+					id=1405;
+					type="WaterPump_01_forest_F";
+					atlOffset=0.0055160522;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={19279.123,32.546001,14430.264};
+					name="TRT_Cotton";
+					text="Coton";
+					type="mil_box";
+					id=1407;
+					atlOffset=-0.00044250488;
+				};
+			};
+			id=1406;
+			atlOffset=0.11295319;
+		};
+		class Item122
+		{
+			dataType="Layer";
+			name="Coton - Acheteur Afsher";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={16469.432,28.80905,6854.5581};
+						angles[]={0,5.7558517,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Shops_Fabric"",life_fnc_virt_menu,""fabric""];}";
+						disableSimulation=1;
+					};
+					id=1411;
+					type="Land_ShelvesWooden_F";
+					atlOffset=0.00027084351;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={16469.412,28.149,6854.5801};
+					name="SLR_Cotton";
+					text="Coton";
+					type="mil_end";
+					id=1412;
+					atlOffset=-0.00026130676;
+				};
+			};
+			id=1410;
+			atlOffset=0.078868866;
 		};
 	};
 };
