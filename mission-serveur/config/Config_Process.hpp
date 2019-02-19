@@ -105,4 +105,11 @@ class ProcessAction {
         //ScrollText = "Mix Cement";
         NoLicenseCost = 350;
     };
+    class cereal {
+          MaterialsReq[] = {{"corn",1}};
+          MaterialsGive[] = {{"cereal",1}};
+          Text = "STR_Process_Cereal";
+          //ScrollText = "Mix Cement";
+          NoLicenseCost = 350;
+    };
 };

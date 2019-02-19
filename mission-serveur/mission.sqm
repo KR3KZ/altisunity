@@ -5,25 +5,25 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1368;
+		nextID=1393;
 	};
 	class MarkerIDProvider
 	{
-		nextID=238;
+		nextID=242;
 	};
 	class LayerIndexProvider
 	{
-		nextID=115;
+		nextID=119;
 	};
 	class Camera
 	{
-		pos[]={11330.146,296.72586,6485.6548};
-		dir[]={-0.62197226,-0.51128715,0.59324825};
-		up[]={-0.37001079,0.85937965,0.35291991};
-		aside[]={0.69026548,-1.9836589e-006,0.72369885};
+		pos[]={11492.615,26.865009,2590.7246};
+		dir[]={0.57759887,-0.73204035,0.36132798};
+		up[]={0.62061214,0.68125188,0.38823718};
+		aside[]={0.53036195,3.6496203e-007,-0.84780651};
 	};
 };
 binarizationWanted=0;
@@ -47,14 +47,18 @@ addons[]=
 	"Wall_L",
 	"A3_Structures_F_Civ_Accessories",
 	"A3_Structures_F_EPB_Civ_Accessories",
+	"A3_Props_F_Exp_Commercial_Market",
 	"A3_Structures_F_Civ_Constructions",
-	"A3_Structures_F_Items_Tools"
+	"A3_Structures_F_Items_Tools",
+	"A3_Structures_F_Heli_Ind_Machines",
+	"A3_Props_F_Orange_Humanitarian_Supplies",
+	"A3_Structures_F_EPA_Items_Food"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=10;
+		items=13;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -120,6 +124,27 @@ class AddonsMetaData
 		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item10
+		{
+			className="A3_Props_F_Exp";
+			name="Arma 3 Apex - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item11
+		{
+			className="A3_Structures_F_Heli";
+			name="Arma 3 Helicopters - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item12
+		{
+			className="A3_Props_F_Orange";
+			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -19314,7 +19339,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=116;
+		items=120;
 		class Item0
 		{
 			dataType="Group";
@@ -31485,7 +31510,7 @@ class Mission
 					};
 					id=1287;
 					type="Land_BagFence_Long_F";
-					atlOffset=0.89999962;
+					atlOffset=0.8238678;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31525,7 +31550,7 @@ class Mission
 					};
 					id=1288;
 					type="Land_BagFence_Long_F";
-					atlOffset=1.3309975;
+					atlOffset=1.2519989;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31565,7 +31590,7 @@ class Mission
 					};
 					id=1289;
 					type="Land_BagFence_Long_F";
-					atlOffset=1.2109985;
+					atlOffset=0.88536453;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31605,7 +31630,7 @@ class Mission
 					};
 					id=1290;
 					type="Land_BagFence_Long_F";
-					atlOffset=0.65799904;
+					atlOffset=0.32880211;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31632,7 +31657,7 @@ class Mission
 				};
 			};
 			id=1291;
-			atlOffset=0.84185028;
+			atlOffset=0.59384727;
 		};
 		class Item106
 		{
@@ -35760,6 +35785,232 @@ class Mission
 		class Item115
 		{
 			dataType="Layer";
+			name="Bois - Acheteur MikisFob";
+			state=1;
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10337.175,127.15063,10850.313};
+						angles[]={6.2799211,5.8571854,6.2804451};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1370;
+					type="Land_CratesPlastic_F";
+					atlOffset=0.00032043457;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10337.16,125.96162,10849.997};
+						angles[]={6.2799211,5.7526751,6.2804451};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Shops_Paper"",life_fnc_virt_menu,""paper""];}";
+						disableSimulation=1;
+					};
+					id=1369;
+					type="Land_WoodenCrate_01_stack_x5_F";
+					atlOffset=7.6293945e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10341.805,125.45956,10839.732};
+						angles[]={0,4.2084074,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1372;
+					type="Land_Timbers_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10333.774,125.46022,10835.508};
+						angles[]={0,4.1934328,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1373;
+					type="Land_Timbers_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10339.436,125.96889,10850.82};
+						angles[]={6.2695022,0,6.2764134};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1368;
+					type="Land_WoodenCrate_01_stack_x5_F";
+					atlOffset=7.6293945e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item5
+				{
+					dataType="Marker";
+					position[]={10339.035,125,10850.272};
+					name="SLR_wood";
+					text="Bois";
+					type="mil_end";
+					id=1377;
+					atlOffset=0.00067138672;
+				};
+			};
+			id=1374;
+			atlOffset=0.065086365;
+		};
+		class Item116
+		{
+			dataType="Layer";
 			name="Bois - Traitement Orcarif";
 			state=1;
 			class Entities
@@ -35777,7 +36028,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Traitement de Bois"",life_fnc_processAction,""paper"",0,false,false,"""",' life_inv_wood > 0 && !life_is_processing && !life_action_inUse'];}";
+						init="call{this addAction[localize""STR_Process_Paper"",life_fnc_processAction,""paper"",0,false,false,"""",' life_inv_wood > 0 && !life_is_processing && !life_action_inUse'];}";
 						disableSimulation=1;
 					};
 					id=1356;
@@ -35979,6 +36230,174 @@ class Mission
 			};
 			id=1364;
 			atlOffset=0.027189255;
+		};
+		class Item117
+		{
+			dataType="Layer";
+			name="Blé - Récolte GreenCampBase";
+			state=1;
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Marker";
+					position[]={11033.059,35.631001,7403.0698};
+					name="res_corn_1";
+					text="Blé";
+					type="mil_triangle";
+					id=1379;
+					atlOffset=0.00048828125;
+				};
+			};
+			id=1378;
+			atlOffset=0.00048828125;
+		};
+		class Item118
+		{
+			dataType="Layer";
+			name="Blé - Traitement Offar";
+			state=1;
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={17513.262,48.055695,2953.967};
+						angles[]={6.2798867,3.1486788,0.0032812189};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Process_Cereal"",life_fnc_processAction,""cereal"",0,false,false,"""",' life_inv_corn > 0 && !life_is_processing && !life_action_inUse'];}";
+						disableSimulation=1;
+					};
+					id=1380;
+					type="Land_JetEngineStarter_01_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			id=1381;
+		};
+		class Item119
+		{
+			dataType="Layer";
+			name="Blé - Acheteur Kinduf";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11495.501,23.685974,2591.7532};
+						angles[]={6.2707238,0,6.2741442};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Shops_Cereal"",life_fnc_virt_menu,""cereal""];}";
+						disableSimulation=1;
+					};
+					id=1390;
+					type="Land_FoodSacks_01_large_white_idap_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11495.073,24.143961,2591.728};
+						angles[]={0.020176006,1.4913489,4.933557};
+					};
+					side="Empty";
+					class Attributes
+					{
+						createAsSimpleObject=1;
+						disableSimulation=1;
+					};
+					id=1392;
+					type="Land_CerealsBox_F";
+					atlOffset=0.7689991;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			id=1384;
+			atlOffset=0.38451004;
 		};
 	};
 };

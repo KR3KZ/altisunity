@@ -115,6 +115,10 @@
             <Original>Acheteur de Papier</Original>
             <French>Acheteur de Papier</French>
         </Key>
+        <Key ID="STR_Shops_Cereal">
+            <Original>Acheteur de Chocapic</Original>
+            <French>Acheteur de Chocapic</French>
+        </Key>
         <Key ID="STR_Shop_Station_Coffee">
             <Original>Fuel Station Coffee</Original>
             <French>Café de la Station service</French>
@@ -2617,6 +2621,10 @@
             <Original>Papier</Original>
             <French>Papier</French>
         </Key>
+    <Key ID="STR_Item_Cereal">
+            <Original>Céréales</Original>
+            <French>Céréales</French>
+        </Key>
     </Package>
     <Package name="Life_License">
         <Key ID="STR_License_Driver">
@@ -2947,9 +2955,13 @@
             <Original>You have processed %1 into %2 for $%3</Original>
             <French>Vous avez traité %1 en %2 pour $%3</French>
         </Key>
-		<Key ID="STR_Process_Paper">
+		    <Key ID="STR_Process_Paper">
             <Original>Transformation du Bois en Papier</Original>
             <French>Transformation du Bois en Papier</French>
+        </Key>
+          <Key ID="STR_Process_Cereal">
+            <Original>Transformation du Blé en Chocapic</Original>
+            <French>Transformation du Blé en Chocapic</French>
         </Key>
     </Package>
     <Package name="Medical_Strings">

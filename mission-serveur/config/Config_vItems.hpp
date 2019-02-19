@@ -135,6 +135,13 @@ class VirtualShops {
         conditions = "";
         items[] = { "paper" };
     };
+
+    class cereal {
+        name = "STR_Shops_Cereal";
+        side = "civ";
+        conditions = "";
+        items[] = { "cereal" };
+    };
 };
 
 /*
@@ -879,6 +886,17 @@ class VirtualItems {
 	class corn {
 		variable = "corn";
 		displayName = "STR_Item_Corn";
+		weight = 2;
+		buyPrice = 0;
+		sellPrice = 0;
+		illegal = false;
+		edible = 100;
+		icon = "icons\ico_muttonLeg.paa";
+	};
+
+  class cereal {
+		variable = "cereal";
+		displayName = "STR_Item_Cereal";
 		weight = 2;
 		buyPrice = 0;
 		sellPrice = 0;
