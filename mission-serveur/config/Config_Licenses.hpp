@@ -186,6 +186,14 @@ class Licenses {
         side = "civ";
     };
 
+	class paper {
+        variable = "paper";
+        displayName = "STR_License_Paper";
+        price = 0;
+        illegal = false;
+        side = "civ";
+    };
+
     //Cop Licenses
     class cAir {
         variable = "cAir";

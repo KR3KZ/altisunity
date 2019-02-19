@@ -8,20 +8,20 @@
     Master handling for processing an item.
     NiiRoZz : Added multiprocess
 */
-private ["_vendor","_type","_itemInfo","_oldItem","_newItemWeight","_newItem","_oldItemWeight","_cost","_upp","_hasLicense","_itemName","_oldVal","_ui","_progress","_pgText","_cP","_materialsRequired","_materialsGiven","_noLicenseCost","_text","_filter","_totalConversions","_minimumConversions"];
-_vendor = [_this,0,objNull,[objNull]] call BIS_fnc_param;
-_type = [_this,3,"",[""]] call BIS_fnc_param;
+private ["_vendor","_type","_itemInfo","_oldItem","_newItemWeight","_newItem","_oldItemWeight","_cost","_upp","_hasLicense","_itemName","_oldVal","_ui","_progress","_pgText","_cP","_materialsRequired","_materialsGiven","_noLicenseCost","_text","_filter","_totalConversions","_minimumConversions","_processDuration"];
+_vendor 							= [_this,0,objNull,[objNull]] call BIS_fnc_param;
+_type 								= [_this,3,"",[""]] call BIS_fnc_param;
 //Error check
-if (isNull _vendor || _type isEqualTo "" || (player distance _vendor > 10)) exitWith {};
-life_action_inUse = true;//Lock out other actions during processing.
+if (isNull _vendor || _type isEqualTo "" || (player distance _vendor > 10) || vehicle player != player) exitWith {};
+life_action_inUse 					= true;//Lock out other actions during processing.
 
 if (isClass (missionConfigFile >> "ProcessAction" >> _type)) then {
-    _filter = false;
-    _materialsRequired = M_CONFIG(getArray,"ProcessAction",_type,"MaterialsReq");
-    _materialsGiven = M_CONFIG(getArray,"ProcessAction",_type,"MaterialsGive");
-    _noLicenseCost = M_CONFIG(getNumber,"ProcessAction",_type,"NoLicenseCost");
-    _text = M_CONFIG(getText,"ProcessAction",_type,"Text");
-} else {_filter = true;};
+    _filter 						= false;
+    _materialsRequired 				= M_CONFIG(getArray,"ProcessAction",_type,"MaterialsReq");
+    _materialsGiven 				= M_CONFIG(getArray,"ProcessAction",_type,"MaterialsGive");
+    _noLicenseCost 					= M_CONFIG(getNumber,"ProcessAction",_type,"NoLicenseCost");
+    _text 							= M_CONFIG(getText,"ProcessAction",_type,"Text");
+} else {_filter 					= true;};
 
 if (_filter) exitWith {life_action_inUse = false;};
 
@@ -29,16 +29,16 @@ _itemInfo = [_materialsRequired,_materialsGiven,_noLicenseCost,(localize format 
 if (count _itemInfo isEqualTo 0) exitWith {life_action_inUse = false;};
 
 //Setup vars.
-_oldItem = _itemInfo select 0;
-_newItem = _itemInfo select 1;
-_cost = _itemInfo select 2;
-_upp = _itemInfo select 3;
-_exit = false;
+_oldItem 							= _itemInfo select 0;
+_newItem 							= _itemInfo select 1;
+_cost 								= _itemInfo select 2;
+_upp 								= _itemInfo select 3;
+_exit 								= false;
 if (count _oldItem isEqualTo 0) exitWith {life_action_inUse = false;};
 
 _totalConversions = [];
 {
-    _var = ITEM_VALUE(_x select 0);
+    _var 							= ITEM_VALUE(_x select 0);
     if (_var isEqualTo 0) exitWith {_exit = true;};
     if (_var < (_x select 1)) exitWith {_exit = true;};
     _totalConversions pushBack (floor (_var/(_x select 1)));
@@ -46,11 +46,10 @@ _totalConversions = [];
 
 if (_exit) exitWith {life_is_processing = false; hint localize "STR_NOTF_NotEnoughItemProcess"; life_action_inUse = false;};
 
-_hasLicense = LICENSE_VALUE(_type,"civ");
+_hasLicense 						= LICENSE_VALUE(_type,"civ");
+_cost 								= _cost * (count _oldItem);
 
-_cost = _cost * (count _oldItem);
-
-_minimumConversions = _totalConversions call BIS_fnc_lowestNum;
+_minimumConversions 				= _totalConversions call BIS_fnc_lowestNum;
 _oldItemWeight = 0;
 {
     _weight = ([_x select 0] call life_fnc_itemWeight) * (_x select 1);
@@ -87,11 +86,21 @@ _pgText ctrlSetText format ["%2 (1%1)...","%",_upp];
 _progress progressSetPosition 0.01;
 _cP = 0.01;
 
+if(_hasLicense && !(LICENSE_ILLEGAL(_type) isEqualTo 1)) then {
+    _processDuration = (2 * _minimumConversions)/100;
+} else {
+    _processDuration = (5 * _minimumConversions)/100;
+};
+diag_log format["_hasLicense : %1",_hasLicense];
+diag_log format["_type : %1",_type];
+diag_log format["_minimumConversions : %1",_minimumConversions];
+diag_log format["_processDuration : %1",_processDuration];
+
 life_is_processing = true;
 
 if (_hasLicense) then {
     for "_i" from 0 to 1 step 0 do {
-        uiSleep  0.28;
+        sleep _processDuration;
         _cP = _cP + 0.01;
         _progress progressSetPosition _cP;
         _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_upp];
@@ -115,7 +124,7 @@ if (_hasLicense) then {
     if (CASH < _cost) exitWith {hint format [localize "STR_Process_License",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
 
     for "_i" from 0 to 1 step 0 do {
-        uiSleep  0.9;
+        sleep _processDuration;
         _cP = _cP + 0.01;
         _progress progressSetPosition _cP;
         _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_upp];
