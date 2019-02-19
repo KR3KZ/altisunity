@@ -53,24 +53,24 @@ _minimumConversions 				= _totalConversions call BIS_fnc_lowestNum;
 _oldItemWeight = 0;
 {
     _weight = ([_x select 0] call life_fnc_itemWeight) * (_x select 1);
-    _oldItemWeight = _oldItemWeight + _weight;
+    _oldItemWeight 					= _oldItemWeight + _weight;
 } count _oldItem;
 
 _newItemWeight = 0;
 {
     _weight = ([_x select 0] call life_fnc_itemWeight) * (_x select 1);
-    _newItemWeight = _newItemWeight + _weight;
+    _newItemWeight 					= _newItemWeight + _weight;
 } count _newItem;
 
 _exit = false;
 
 if (_newItemWeight > _oldItemWeight) then {
-    _netChange = _newItemWeight - _oldItemWeight;
-    _freeSpace = life_maxWeight - life_carryWeight;
+    _netChange 						= _newItemWeight - _oldItemWeight;
+    _freeSpace 						= life_maxWeight - life_carryWeight;
     if (_freeSpace < _netChange) exitWith {_exit = true;};
-    private _estConversions = floor(_freeSpace / _netChange);
+    private _estConversions 		= floor(_freeSpace / _netChange);
     if (_estConversions < _minimumConversions) then {
-        _minimumConversions = _estConversions;
+        _minimumConversions 		= _estConversions;
     };
 };
 
@@ -79,29 +79,25 @@ if (_exit) exitWith {hint localize "STR_Process_Weight"; life_is_processing = fa
 //Setup our progress bar.
 disableSerialization;
 "progressBar" cutRsc ["life_progress","PLAIN"];
-_ui = uiNamespace getVariable "life_progress";
-_progress = _ui displayCtrl 38201;
-_pgText = _ui displayCtrl 38202;
+_ui 								= uiNamespace getVariable "life_progress";
+_progress 							= _ui displayCtrl 38201;
+_pgText 							= _ui displayCtrl 38202;
 _pgText ctrlSetText format ["%2 (1%1)...","%",_upp];
 _progress progressSetPosition 0.01;
-_cP = 0.01;
+_cP 								= 0.01;
 
 if(_hasLicense && !(LICENSE_ILLEGAL(_type) isEqualTo 1)) then {
-    _processDuration = (2 * _minimumConversions)/100;
+    _processDuration 				= (2 * _minimumConversions)/100;
 } else {
-    _processDuration = (5 * _minimumConversions)/100;
+    _processDuration 				= (5 * _minimumConversions)/100;
 };
-diag_log format["_hasLicense : %1",_hasLicense];
-diag_log format["_type : %1",_type];
-diag_log format["_minimumConversions : %1",_minimumConversions];
-diag_log format["_processDuration : %1",_processDuration];
 
 life_is_processing = true;
 
 if (_hasLicense) then {
     for "_i" from 0 to 1 step 0 do {
         sleep _processDuration;
-        _cP = _cP + 0.01;
+        _cP 						= _cP + 0.01;
         _progress progressSetPosition _cP;
         _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_upp];
         if (_cP >= 1) exitWith {};
@@ -119,13 +115,13 @@ if (_hasLicense) then {
 
     "progressBar" cutText ["","PLAIN"];
     if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint localize "STR_NOTF_ItemProcess";} else {hint localize "STR_Process_Partial";};
-    life_is_processing = false; life_action_inUse = false;
+    life_is_processing 				= false; life_action_inUse = false;
 } else {
     if (CASH < _cost) exitWith {hint format [localize "STR_Process_License",[_cost] call life_fnc_numberText]; "progressBar" cutText ["","PLAIN"]; life_is_processing = false; life_action_inUse = false;};
 
     for "_i" from 0 to 1 step 0 do {
         sleep _processDuration;
-        _cP = _cP + 0.01;
+        _cP 						= _cP + 0.01;
         _progress progressSetPosition _cP;
         _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_upp];
         if (_cP >= 1) exitWith {};
@@ -145,8 +141,8 @@ if (_hasLicense) then {
 
     "progressBar" cutText ["","PLAIN"];
     if (_minimumConversions isEqualTo (_totalConversions call BIS_fnc_lowestNum)) then {hint localize "STR_NOTF_ItemProcess";} else {hint localize "STR_Process_Partial";};
-    CASH = CASH - _cost;
+    CASH 							= CASH - _cost;
     [0] call SOCK_fnc_updatePartial;
-    life_is_processing = false;
-    life_action_inUse = false;
+    life_is_processing 				= false;
+    life_action_inUse 				= false;
 };
