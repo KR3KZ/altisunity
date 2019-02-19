@@ -111,6 +111,10 @@
             <Original>Salt Trader</Original>
             <French>Acheteur de Sel</French>
         </Key>
+        <Key ID="STR_Shops_Paper">
+            <Original>Acheteur de Papier</Original>
+            <French>Acheteur de Papier</French>
+        </Key>
         <Key ID="STR_Shop_Station_Coffee">
             <Original>Fuel Station Coffee</Original>
             <French>Café de la Station service</French>

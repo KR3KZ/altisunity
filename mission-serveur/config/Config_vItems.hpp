@@ -127,6 +127,14 @@ class VirtualShops {
         conditions = "";
         items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit", "defibrillator" };
     };
+
+    // Added by Unity
+    class paper {
+        name = "STR_Shops_Paper";
+        side = "civ";
+        conditions = "";
+        items[] = { "paper" };
+    };
 };
 
 /*
