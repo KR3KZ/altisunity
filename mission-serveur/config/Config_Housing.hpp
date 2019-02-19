@@ -288,7 +288,16 @@ class Housing {
     };
 
 	class Lythium {
-
+		class Land_jbad_House_3_old {
+			price = 300000;
+			numberCrates = 1;
+			restrictedPos[] = {3,4};
+			canGarage = false;
+			garageSpawnPos[] = {};
+			garageSpawnDir = 0;
+			garageBlacklists[] = {};
+			lightPos[] = {0,0,0};
+		};
 	};
 
 };
