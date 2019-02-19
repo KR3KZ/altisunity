@@ -142,6 +142,13 @@ class VirtualShops {
         conditions = "";
         items[] = { "cereal" };
     };
+
+    class fabric {
+        name = "STR_Shops_Fabric";
+        side = "civ";
+        conditions = "";
+        items[] = { "fabric" };
+    };
 };
 
 /*
