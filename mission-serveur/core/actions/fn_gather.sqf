@@ -49,28 +49,39 @@ if (_requiredItem != "") then {
 
 if (_exit) exitWith {life_action_inUse = false;};
 
-_amount = round(random(_maxGather)) + 1;
-_diff = [_resource,_amount,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
-if (_diff isEqualTo 0) exitWith {
-    hint localize "STR_NOTF_InvFull";
-    life_action_inUse = false;
-};
+private _itemName = M_CONFIG(getText,"VirtualItems",_resource,"displayName");
+titleText[format["Récolte %1...",(localize _itemName)],"PLAIN"];
 
-switch (_requiredItem) do {
-    case "pickaxe": {[player,"mining",35,1] remoteExecCall ["life_fnc_say3D",RCLIENT]};
-    default {[player,"harvest",35,1] remoteExecCall ["life_fnc_say3D",RCLIENT]};
-};
+while {life_carryWeight < life_maxWeight} do {
+	if (!(alive player)) exitWith {};
+	if(vehicle player != player) exitWith {};
+	if (speed player > 1) exitWith {};
 
-for "_i" from 0 to 4 do {
+	_amount = round(random(_maxGather)) + 1;
+	_diff = [_resource,_amount,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
+	if (_diff isEqualTo 0) exitWith {
+	    hint localize "STR_NOTF_InvFull";
+	    life_action_inUse = false;
+	};
+
+	switch (_requiredItem) do {
+	    case "pickaxe": {[player,"mining",35,1] remoteExecCall ["life_fnc_say3D",RCLIENT]};
+	    default {[player,"harvest",35,1] remoteExecCall ["life_fnc_say3D",RCLIENT]};
+	};
+
     player playMoveNow "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-    waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-    sleep 0.5;
+    waitUntil{
+		sleep 0.1;
+		animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+    sleep 5;
+
+	if ([true,_resource,_diff] call life_fnc_handleInv) then {
+	    titleText[format [localize "STR_NOTF_Gather_Success",(localize _itemName),_diff],"PLAIN"];
+	};
+
+	if (life_carryWeight >= life_maxWeight) exitWith {
+		hint "Récole terminée","Votre sac est plein";
+	};
 };
 
-if ([true,_resource,_diff] call life_fnc_handleInv) then {
-    _itemName = M_CONFIG(getText,"VirtualItems",_resource,"displayName");
-    titleText[format [localize "STR_NOTF_Gather_Success",(localize _itemName),_diff],"PLAIN"];
-};
-
-sleep 1;
 life_action_inUse = false;
