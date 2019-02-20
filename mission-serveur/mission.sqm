@@ -8,22 +8,22 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1463;
+		nextID=1484;
 	};
 	class MarkerIDProvider
 	{
-		nextID=254;
+		nextID=259;
 	};
 	class LayerIndexProvider
 	{
-		nextID=186;
+		nextID=219;
 	};
 	class Camera
 	{
-		pos[]={10492.011,89.705315,9290.5889};
-		dir[]={0.66438597,-0.51898575,-0.53784961};
-		up[]={0.40338278,0.85477442,-0.32655644};
-		aside[]={-0.62921703,-9.444193e-008,-0.77725196};
+		pos[]={13912.821,343.64691,17898.471};
+		dir[]={-0.38802773,-0.2852208,0.87648582};
+		up[]={-0.11547443,0.95844108,0.26083559};
+		aside[]={0.91445976,-1.8889841e-007,0.40483555};
 	};
 };
 binarizationWanted=0;
@@ -221,24 +221,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -253,6 +235,24 @@ class CustomAttributes
 						};
 					};
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -19378,7 +19378,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=129;
+		items=135;
 		class Item0
 		{
 			dataType="Group";
@@ -34706,7 +34706,7 @@ class Mission
 				class Item1
 				{
 					dataType="Marker";
-					position[]={13457.051,341.95001,17526.672};
+					position[]={13457.05,341.95001,17526.672};
 					name="marker_230";
 					text="Vêtements";
 					type="hd_dot";
@@ -37010,7 +37010,7 @@ class Mission
 					};
 					id=1437;
 					type="Land_JetEngineStarter_01_F";
-					atlOffset=0.40097046;
+					atlOffset=0.400177;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37047,7 +37047,7 @@ class Mission
 				};
 			};
 			id=1439;
-			atlOffset=0.20046997;
+			atlOffset=0.20010376;
 		};
 		class Item125
 		{
@@ -37200,7 +37200,7 @@ class Mission
 					};
 					id=1456;
 					type="WaterPump_01_sand_F";
-					atlOffset=-0.0019989014;
+					atlOffset=-0.0020065308;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37237,7 +37237,7 @@ class Mission
 				};
 			};
 			id=1457;
-			atlOffset=-0.00035858154;
+			atlOffset=-0.00096893311;
 		};
 		class Item128
 		{
@@ -37264,7 +37264,7 @@ class Mission
 					};
 					id=1458;
 					type="Land_WoodenCounter_01_F";
-					atlOffset=-0.0039901733;
+					atlOffset=-0.003944397;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37301,7 +37301,364 @@ class Mission
 				};
 			};
 			id=1459;
-			atlOffset=-0.0020904541;
+			atlOffset=-0.0020675659;
+		};
+		class Item129
+		{
+			dataType="Layer";
+			name="Magasin Général - Kalaenoowi";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13187.964,341.95001,17402.66};
+						angles[]={0,3.1764991,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""genstore""];}";
+						disableSimulation=1;
+					};
+					id=1466;
+					type="Land_CashDesk_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={13187.34,341.95001,17403.039};
+					name="marker_255";
+					text="Magasin";
+					type="mil_dot";
+					id=1468;
+				};
+			};
+			id=1467;
+		};
+		class Item130
+		{
+			dataType="Layer";
+			name="Marché - Kalaenoowi";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13097.539,341.95001,17649.025};
+						angles[]={0,0.11697197,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market""];}";
+						disableSimulation=1;
+					};
+					id=1469;
+					type="Land_CashDesk_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={13097.554,341.95001,17649.014};
+					name="marker_256";
+					text="Marché";
+					type="mil_dot";
+					id=1471;
+				};
+			};
+			id=1470;
+		};
+		class Item131
+		{
+			dataType="Layer";
+			name="Magasin - Kinduf";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11489.887,23.912374,2713.2991};
+						angles[]={0,2.4545786,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""genstore""];}";
+						disableSimulation=1;
+					};
+					id=1472;
+					type="Land_CashDesk_F";
+					atlOffset=-0.0049991608;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={11489.892,23.917999,2713.3701};
+					name="marker_257";
+					text="Magasin";
+					type="mil_dot";
+					id=1475;
+					atlOffset=0.00011634827;
+				};
+			};
+			id=1473;
+			atlOffset=-137.93813;
+		};
+		class Item132
+		{
+			dataType="Layer";
+			name="Marché - Kinduf";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11461.512,24.118513,2742.821};
+						angles[]={0,4.0227919,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market""];}";
+						disableSimulation=1;
+					};
+					id=1476;
+					type="Land_CashDesk_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={11461.582,24.118,2742.7419};
+					name="marker_258";
+					text="Marché";
+					type="mil_dot";
+					id=1478;
+					atlOffset=-0.00034141541;
+				};
+			};
+			id=1477;
+			atlOffset=-0.00017166138;
+		};
+		class Item133
+		{
+			dataType="Layer";
+			name="Equipement medic - Kinduf";
+			state=1;
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10767.362,29.426926,2773.655};
+						angles[]={0,5.8296967,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize ""STR_MAR_EMS_Clothing_Shop"",life_fnc_clothingMenu,""medic""];}";
+						presence=0.7033211;
+						disableSimulation=1;
+					};
+					id=1480;
+					type="Land_PaperBox_closed_F";
+					atlOffset=0.00032043457;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			id=1481;
+			atlOffset=0.00032043457;
+		};
+		class Item134
+		{
+			dataType="Layer";
+			name="Equipement medic";
+			state=1;
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13910.732,343.31519,17901.57};
+						angles[]={0,2.9427822,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="call{this addAction[localize ""STR_MAR_EMS_Clothing_Shop"",life_fnc_clothingMenu,""medic""];}";
+						disableSimulation=1;
+					};
+					id=1482;
+					type="Land_PaperBox_closed_F";
+					atlOffset=0.72198486;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			id=1483;
+			atlOffset=0.72198486;
 		};
 	};
 };
