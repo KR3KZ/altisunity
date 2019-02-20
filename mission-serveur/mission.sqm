@@ -8,29 +8,28 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1414;
+		nextID=1463;
 	};
 	class MarkerIDProvider
 	{
-		nextID=247;
+		nextID=254;
 	};
 	class LayerIndexProvider
 	{
-		nextID=161;
+		nextID=186;
 	};
 	class Camera
 	{
-		pos[]={11495.497,48.212921,2566.759};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		pos[]={10492.011,89.705315,9290.5889};
+		dir[]={0.66438597,-0.51898575,-0.53784961};
+		up[]={0.40338278,0.85477442,-0.32655644};
+		aside[]={-0.62921703,-9.444193e-008,-0.77725196};
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
 	"A3_Characters_F",
-	"life_server",
 	"A3_Characters_F_Exp_Civil",
 	"A3_Ui_F",
 	"A3_Structures_F_Walls",
@@ -56,13 +55,16 @@ addons[]=
 	"A3_Structures_F_EPA_Items_Food",
 	"RHS_US_A2_AirImport",
 	"Cargo_Cont",
-	"A3_Structures_F_EPB_Furniture"
+	"A3_Structures_F_EPB_Furniture",
+	"A3_Structures_F_Ind_Cargo",
+	"ace_cargo",
+	"A3_Structures_F_Argo_Military_Fortifications"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=18;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -72,103 +74,118 @@ class AddonsMetaData
 		};
 		class Item1
 		{
-			className="life_server";
-			name="life_server";
-			author="Tonic";
-		};
-		class Item2
-		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item3
+		class Item2
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item4
+		class Item3
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item4
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item5
 		{
 			className="ace_logistics_wirecutter";
 			name="ACE3 - Logistics Wire Cutter";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item7
+		class Item6
 		{
 			className="ace_concertina_wire";
 			name="ACE3 - Concertina Wire";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item8
+		class Item7
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item9
+		class Item8
 		{
 			className="Wall_L";
 			name="Wall_L";
 		};
-		class Item10
+		class Item9
 		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item10
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item11
 		{
 			className="A3_Structures_F_Heli";
 			name="Arma 3 Helicopters - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item12
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item13
 		{
 			className="RHS_US_A2_AirImport";
 			name="RHSUSF A2 Air Ports";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item15
+		class Item14
 		{
 			className="Cargo_Cont";
 			name="Cargo_Cont";
+		};
+		class Item15
+		{
+			className="A3_Structures_F_Ind";
+			name="Arma 3 - Industrial Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item16
+		{
+			className="ace_cargo";
+			name="ACE3 - Cargo";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item17
+		{
+			className="A3_Structures_F_Argo";
+			name="Arma 3 Malden - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -204,6 +221,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -218,24 +253,6 @@ class CustomAttributes
 						};
 					};
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -19361,7 +19378,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=123;
+		items=129;
 		class Item0
 		{
 			dataType="Group";
@@ -36593,7 +36610,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={19279.84,33.842381,14431.274};
+						position[]={19279.84,33.842041,14431.274};
 						angles[]={0,1.5962781,0};
 					};
 					side="Empty";
@@ -36605,7 +36622,7 @@ class Mission
 					};
 					id=1405;
 					type="WaterPump_01_forest_F";
-					atlOffset=0.0045127869;
+					atlOffset=0.0051765442;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36642,7 +36659,7 @@ class Mission
 				};
 			};
 			id=1406;
-			atlOffset=0.11345291;
+			atlOffset=0.11278152;
 		};
 		class Item122
 		{
@@ -36707,6 +36724,584 @@ class Mission
 			};
 			id=1410;
 			atlOffset=0.078868866;
+		};
+		class Item123
+		{
+			dataType="Layer";
+			name="Sable -  Récolte Kalaenoowie";
+			state=1;
+			class Entities
+			{
+				items=7;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13943.108,343.27832,17746.328};
+						angles[]={0,5.5943913,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1424;
+					type="Land_Cargo40_sand_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13941.745,343.23575,17747.412};
+						angles[]={0,5.5444746,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1429;
+					type="Land_SandbagBarricade_01_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13943.405,342.61899,17748.955};
+						angles[]={0,5.5173001,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1428;
+					type="Land_SandbagBarricade_01_half_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13944.93,342.61899,17750.549};
+						angles[]={0,2.5507288,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1430;
+					type="Land_SandbagBarricade_01_half_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13940.595,342.76398,17744.445};
+						angles[]={0,6.0184016,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1432;
+					type="Land_SandbagBarricade_01_half_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13942.922,342.76398,17746.275};
+						angles[]={0,5.0665164,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1433;
+					type="Land_SandbagBarricade_01_half_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item6
+				{
+					dataType="Marker";
+					position[]={13943.805,341.95001,17747.164};
+					name="res_sand_1";
+					text="Sable";
+					type="mil_triangle";
+					id=1434;
+				};
+			};
+			id=1426;
+			atlOffset=0.054382324;
+		};
+		class Item124
+		{
+			dataType="Layer";
+			name="Sable - Traitement Kandar";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8083.6606,493.32715,16407.789};
+						angles[]={0,1.1207107,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Process_Sand"",life_fnc_processAction,""sand"",0,false,false,"""",' life_inv_sand > 0 && !life_is_processing && !life_action_inUse'];}";
+						disableSimulation=1;
+					};
+					id=1437;
+					type="Land_JetEngineStarter_01_F";
+					atlOffset=0.40097046;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={8083.627,491.763,16407.855};
+					name="TRT_Sand";
+					text="Sable";
+					type="mil_box";
+					id=1440;
+					atlOffset=3.0517578e-005;
+				};
+			};
+			id=1439;
+			atlOffset=0.20046997;
+		};
+		class Item125
+		{
+			dataType="Layer";
+			name="Sable - Acheteur Limari";
+			state=1;
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10668.996,107.17819,10112.31};
+						angles[]={0,0.78442079,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=1445;
+					type="Land_Sack_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10669.63,107.30113,10111.354};
+						angles[]={0,1.0780026,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Shops_Glass"",life_fnc_virt_menu,""glass""];}";
+						disableSimulation=1;
+					};
+					id=1443;
+					type="Land_FoodSacks_01_cargo_brown_F";
+					atlOffset=0.012001038;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={10669.428,106.775,10111.783};
+					name="SLR_Sand";
+					text="Sable";
+					type="mil_end";
+					id=1447;
+					atlOffset=7.6293945e-006;
+				};
+			};
+			id=1446;
+			atlOffset=0.0029983521;
+		};
+		class Item126
+		{
+			dataType="Layer";
+			name="Pétrole -  Récolte Arobster";
+			state=1;
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Marker";
+					position[]={17287.498,31.587,6471.748};
+					name="res_oil_1";
+					text="Pétrole";
+					type="mil_triangle";
+					id=1452;
+					atlOffset=8.5830688e-005;
+				};
+			};
+			id=1451;
+			atlOffset=8.5830688e-005;
+		};
+		class Item127
+		{
+			dataType="Layer";
+			name="Pétrole - Traitement KindufFactory";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15127.735,67.239075,439.59402};
+						angles[]={0,2.7248428,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Process_Oil"",life_fnc_processAction,""oil"",0,false,false,"""",' life_inv_oil > 0 && !life_is_processing && !life_action_inUse'];}";
+						disableSimulation=1;
+					};
+					id=1456;
+					type="WaterPump_01_sand_F";
+					atlOffset=-0.0019989014;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={15127.789,66.175003,439.89401};
+					name="TRT_Oil";
+					text="Pétrole";
+					type="mil_box";
+					id=1462;
+					atlOffset=6.8664551e-005;
+				};
+			};
+			id=1457;
+			atlOffset=-0.00035858154;
+		};
+		class Item128
+		{
+			dataType="Layer";
+			name="Pétrole - Acheteur GreenCampBase";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10492.774,88.44059,9288.5518};
+						angles[]={0,4.3907771,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Shops_Oil"",life_fnc_virt_menu,""oil""];}";
+						disableSimulation=1;
+					};
+					id=1458;
+					type="Land_WoodenCounter_01_F";
+					atlOffset=-0.0039901733;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={10492.799,87.969002,9288.624};
+					name="SLR_Oil";
+					text="Pétrole";
+					type="mil_end";
+					id=1461;
+					atlOffset=-0.00019073486;
+				};
+			};
+			id=1459;
+			atlOffset=-0.0020904541;
 		};
 	};
 };
