@@ -47,6 +47,7 @@ for "_i" from 0 to 1 step 0 do {
     if (life_istazed) exitWith {}; //Tazed
     if (life_isknocked) exitWith {}; //Knocked
     if (life_interrupted) exitWith {};
+	if (player getVariable ["ACE_captives_isHandcuffed",false]) exitWith {};
     if (player getVariable ["restrained",false]) exitWith {};
     if (player distance _target > 4) exitWith {_badDistance = true;};
     if (_target getVariable ["Revive",false]) exitWith {};

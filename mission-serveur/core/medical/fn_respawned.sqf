@@ -18,6 +18,21 @@ CASH = 0; //Make sure we don't get our cash back.
 life_respawned = false;
 player playMove "AmovPercMstpSnonWnonDnon";
 
+if (player getVariable ["ACE_captives_isHandcuffed", false]) then {
+	[player, false] call ACE_captives_setHandcuffed;
+};
+if (player getVariable ["ACE_captives_isSurrendering", false]) then {
+	[player, false] call ACE_captives_setSurrendered;
+};
+if (_unit getVariable ["ACE_captives_isEscorting", false]) then {
+	_unit setVariable["ACE_captives_isEscorting",false,true];
+};
+if (_unit getVariable ["ACE_isUnconscious", false]) then {
+	_unit setVariable["ACE_isUnconscious",false,true];
+};
+player setVariable["ACE_medical_bloodVolume",100,true];
+player setDamage 0;
+
 life_corpse setVariable ["Revive",nil,true];
 life_corpse setVariable ["name",nil,true];
 life_corpse setVariable ["Reviving",nil,true];
@@ -49,9 +64,10 @@ if (!isNull life_corpse) then {
     deleteVehicle life_corpse;
 };
 
-//Destroy our camera...
+/*Destroy our camera...
 life_deathCamera cameraEffect ["TERMINATE","BACK"];
 camDestroy life_deathCamera;
+*/
 
 //Bad boy
 if (life_is_arrested) exitWith {
@@ -61,7 +77,7 @@ if (life_is_arrested) exitWith {
     [] call SOCK_fnc_updateRequest;
 };
 
-//Johnny law got me but didn't let the EMS revive me, reward them half the bounty.
+/*Johnny law got me but didn't let the EMS revive me, reward them half the bounty.
 if (!isNil "life_copRecieve") then {
 
     if (life_HC_isActive) then {
@@ -83,6 +99,7 @@ if (life_removeWanted) then {
     };
 
 };
+*/
 
 [] call SOCK_fnc_updateRequest;
 [] call life_fnc_hudUpdate; //Request update of hud.

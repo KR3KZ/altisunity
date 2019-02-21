@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=312;
+		nextID=343;
 	};
 	class Camera
 	{
 		pos[]={13997.68,396.61108,17825.352};
-		dir[]={-0.7319783,-0.40780047,0.5459435};
-		up[]={-0.32690802,0.91304898,0.24382235};
-		aside[]={0.59790838,1.9348226e-007,0.80164564};
+		dir[]={-0.62557793,-0.32135886,0.71100461};
+		up[]={-0.21229874,0.94693547,0.24128847};
+		aside[]={0.75082016,-4.9825758e-008,0.66060585};
 	};
 };
 binarizationWanted=0;
@@ -228,24 +228,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -260,6 +242,24 @@ class CustomAttributes
 						};
 					};
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -31556,7 +31556,7 @@ class Mission
 					};
 					id=1287;
 					type="Land_BagFence_Long_F";
-					atlOffset=0.8238678;
+					atlOffset=0.89999962;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31596,7 +31596,7 @@ class Mission
 					};
 					id=1288;
 					type="Land_BagFence_Long_F";
-					atlOffset=1.2519989;
+					atlOffset=1.3309975;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31636,7 +31636,7 @@ class Mission
 					};
 					id=1289;
 					type="Land_BagFence_Long_F";
-					atlOffset=0.88536453;
+					atlOffset=1.2109985;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31676,7 +31676,7 @@ class Mission
 					};
 					id=1290;
 					type="Land_BagFence_Long_F";
-					atlOffset=0.32880211;
+					atlOffset=0.65799904;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31703,7 +31703,7 @@ class Mission
 				};
 			};
 			id=1291;
-			atlOffset=0.59384727;
+			atlOffset=0.84185028;
 		};
 		class Item106
 		{
@@ -36629,7 +36629,7 @@ class Mission
 					};
 					id=1405;
 					type="WaterPump_01_forest_F";
-					atlOffset=0.0041732788;
+					atlOffset=0.0051765442;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36666,7 +36666,7 @@ class Mission
 				};
 			};
 			id=1406;
-			atlOffset=0.11328506;
+			atlOffset=0.11278152;
 		};
 		class Item122
 		{
