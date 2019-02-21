@@ -376,6 +376,11 @@ class Life_Client_Core {
 class Unity_Client_Core {
     tag = "unity";
 
+	class General {
+		file = "unity\general";
+		class radioactive {};
+	};
+
 	class TaskForce {
 		file = "unity\taskforce";
 		class check_ts {};

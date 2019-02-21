@@ -18,21 +18,30 @@ if  !((vehicle _unit) isEqualTo _unit) then {
     _unit setPosATL [(getPosATL _unit select 0) + 3, (getPosATL _unit select 1) + 1, 0];
 };
 
-//Set some vars
+/*Set some vars
 _unit setVariable ["Revive",true,true];
-_unit setVariable ["name",profileName,true]; //Set my name so they can say my name.
 _unit setVariable ["restrained",false,true];
 _unit setVariable ["Escorting",false,true];
 _unit setVariable ["transporting",false,true];
 _unit setVariable ["playerSurrender",false,true];
+*/
+_unit setVariable ["name",profileName,true]; //Set my name so they can say my name.
 _unit setVariable ["steam64id",(getPlayerUID player),true]; //Set the UID.
 
-//close the esc dialog
-if (dialog) then {
-    closeDialog 0;
+if (_unit getVariable ["ACE_captives_isHandcuffed", false]) then {
+	[_unit, false] call ACE_captives_setHandcuffed;
+};
+if (_unit getVariable ["ACE_captives_isSurrendering", false]) then {
+	[_unit, false] call ACE_captives_setSurrendered;
+};
+if (_unit getVariable ["ACE_captives_isEscorting", false]) then {
+	_unit setVariable["ACE_captives_isEscorting",false,true];
+};
+if (_unit getVariable ["ACE_isUnconscious", false]) then {
+	_unit setVariable["ACE_isUnconscious",false,true];
 };
 
-//Setup our camera view
+/*Setup our camera view
 life_deathCamera  = "CAMERA" camCreate (getPosATL _unit);
 showCinemaBorder true;
 life_deathCamera cameraEffect ["Internal","Back"];
@@ -44,8 +53,9 @@ life_deathCamera camSetFocus [50,0];
 life_deathCamera camCommit 0;
 
 (findDisplay 7300) displaySetEventHandler ["KeyDown","if ((_this select 1) isEqualTo 1) then {true}"]; //Block the ESC menu
+*/
 
-//Create a thread for something?
+/*Create a thread for something?
 _unit spawn {
     private ["_maxTime","_RespawnBtn","_Timer"];
     disableSerialization;
@@ -129,17 +139,24 @@ if (side _killer isEqualTo west && !(playerSide isEqualTo west)) then {
 if (!isNull _killer && {!(_killer isEqualTo _unit)}) then {
     life_removeWanted = true;
 };
+*/
+
+cutText["","BLACK FADED"];
+0 cutFadeOut 9999999;
 
 [_unit] call life_fnc_dropItems;
 
-life_action_inUse = false;
-life_hunger = 100;
-life_thirst = 100;
-life_carryWeight = 0;
-CASH = 0;
-life_is_alive = false;
+life_action_inUse 				= false;
+life_hunger 					= 100;
+life_thirst 					= 100;
+life_carryWeight 				= 0;
+CASH 							= 0;
+life_is_alive 					= false;
 
 [] call life_fnc_hudUpdate; //Get our HUD updated.
+[] call SOCK_fnc_updateRequest;
+
+/*
 [player,life_settings_enableSidechannel,playerSide] remoteExecCall ["TON_fnc_manageSC",RSERV];
 
 [0] call SOCK_fnc_updatePartial;
@@ -147,3 +164,4 @@ life_is_alive = false;
 if (playerSide isEqualTo civilian) then {
     [4] call SOCK_fnc_updatePartial;
 };
+*/

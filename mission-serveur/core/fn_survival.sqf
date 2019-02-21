@@ -7,11 +7,10 @@
     All survival? things merged into one thread.
 */
 private ["_fnc_food","_fnc_water","_foodTime","_waterTime","_bp","_walkDis","_lastPos","_curPos"];
-_fnc_food =  {
+_fnc_food = {
     if (life_hunger < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";}
-    else
-    {
-        life_hunger = life_hunger - 10;
+    else {
+        life_hunger 				= life_hunger - 10;
         [] call life_fnc_hudUpdate;
         if (life_hunger < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";};
         switch (life_hunger) do {
@@ -27,9 +26,8 @@ _fnc_food =  {
 
 _fnc_water = {
     if (life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";}
-    else
-    {
-        life_thirst = life_thirst - 10;
+    else {
+        life_thirst 				= life_thirst - 10;
         [] call life_fnc_hudUpdate;
         if (life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";};
         switch (life_thirst) do  {
@@ -47,13 +45,13 @@ _fnc_water = {
 };
 
 //Setup the time-based variables.
-_foodTime = time;
-_waterTime = time;
-_walkDis = 0;
-_bp = "";
-_lastPos = visiblePosition player;
-_lastPos = (_lastPos select 0) + (_lastPos select 1);
-_lastState = vehicle player;
+_foodTime 							= time;
+_waterTime 							= time;
+_walkDis 							= 0;
+_bp 								= "";
+_lastPos 							= visiblePosition player;
+_lastPos 							= (_lastPos select 0) + (_lastPos select 1);
+_lastState 							= vehicle player;
 
 for "_i" from 0 to 1 step 0 do {
     /* Thirst / Hunger adjustment that is time based */
@@ -63,18 +61,18 @@ for "_i" from 0 to 1 step 0 do {
     /* Adjustment of carrying capacity based on backpack changes */
     if (backpack player isEqualTo "") then {
         life_maxWeight = LIFE_SETTINGS(getNumber,"total_maxWeight");
-        _bp = backpack player;
+        _bp 						= backpack player;
     } else {
         if (!(backpack player isEqualTo "") && {!(backpack player isEqualTo _bp)}) then {
-            _bp = backpack player;
-            life_maxWeight = LIFE_SETTINGS(getNumber,"total_maxWeight") + round(FETCH_CONFIG2(getNumber,"CfgVehicles",_bp,"maximumload") / 4);
+            _bp 					= backpack player;
+            life_maxWeight 			= LIFE_SETTINGS(getNumber,"total_maxWeight") + round(FETCH_CONFIG2(getNumber,"CfgVehicles",_bp,"maximumload") / 4);
         };
     };
 
     /* Check if the player's state changed? */
     if (!(vehicle player isEqualTo _lastState) || {!alive player}) then {
         [] call life_fnc_updateViewDistance;
-        _lastState = vehicle player;
+        _lastState 					= vehicle player;
     };
 
     /* Check if the weight has changed and the player is carrying to much */
@@ -90,22 +88,23 @@ for "_i" from 0 to 1 step 0 do {
 
     /* Travelling distance to decrease thirst/hunger which is captured every second so the distance is actually greater then 650 */
     if (!alive player || {life_god}) then {_walkDis = 0;} else {
-        _curPos = visiblePosition player;
-        _curPos = (_curPos select 0) + (_curPos select 1);
+        _curPos 					= visiblePosition player;
+        _curPos 					= (_curPos select 0) + (_curPos select 1);
         if (!(_curPos isEqualTo _lastPos) && {(isNull objectParent player)}) then {
-            _walkDis = _walkDis + 1;
+            _walkDis 				= _walkDis + 1;
             if (_walkDis isEqualTo 650) then {
-                _walkDis = 0;
-                life_thirst = life_thirst - 5;
-                life_hunger = life_hunger - 5;
+                _walkDis 			= 0;
+                life_thirst 		= life_thirst - 5;
+                life_hunger 		= life_hunger - 5;
                 [] call life_fnc_hudUpdate;
             };
         };
-        _lastPos = visiblePosition player;
-        _lastPos = (_lastPos select 0) + (_lastPos select 1);
+        _lastPos 					= visiblePosition player;
+        _lastPos 					= (_lastPos select 0) + (_lastPos select 1);
     };
 
 	[] call unity_fnc_check_ts;
+	[] spawn unity_fnc_radioactive;
 
     uiSleep 1;
 };
