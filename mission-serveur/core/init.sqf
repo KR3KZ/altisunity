@@ -241,6 +241,8 @@ if (life_HC_isActive) then {
 		time_respawn = time + (15 * 60);
 		createDialog "DeathScreen";
 
+		(findDisplay 7300) displaySetEventHandler ["KeyDown","if((_this select 1) == 1) then {true}"]; //Block the ESC menu
+
 		player spawn {
 			private ["_maxTime","_RespawnBtn","_Timer"];
 			disableSerialization;

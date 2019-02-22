@@ -6,8 +6,9 @@
     Handles stuff being displayed on the death screen while
     it is currently active.
 */
-private ["_medicsOnline","_medicsNear"];
+private ["_medicsOnline","_medicsNear","_unit"];
 disableSerialization;
+_unit = _this select 0;
 
 _medicsOnline = ((findDisplay 7300) displayCtrl 7304);
 _medicsNear = ((findDisplay 7300) displayCtrl 7305);
