@@ -378,6 +378,8 @@ class Unity_Client_Core {
 
 	class General {
 		file = "unity\general";
+		class autoUpdate {};
+		class deathScreen {};
 		class radioactive {};
 	};
 
