@@ -89,6 +89,14 @@ if (life_container_active) exitwith {
     true;
 };
 
+if (_code in(actionKeys "PersonView")) then {
+	if ((vehicle player != player && {driver (vehicle player) == player}) || (mode_combat == 0)) then {
+		_handled= false;
+	} else {
+		_handled= true;
+	};
+};
+
 switch (_code) do {
     // -- Disable commander/tactical view
     if (LIFE_SETTINGS(getNumber,"disableCommanderView") isEqualTo 1) then {

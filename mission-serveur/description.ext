@@ -1,4 +1,11 @@
-disableChannels[] = {{0,true,true},{1,true,true},{2,true,true}};    // Disabled text and voice for global, side, and command channels. Syntax: disableChannels[] = {{channelID<number>, disableChat<bool>, disableVoice<bool>}};
+disableChannels[]={
+	//{0,true,true},
+	{1,true,true},
+	{2,true,true},
+	{3,true,true},
+	{4,true,true},
+	{5,true,true}
+};    // Disabled text and voice for global, side, and command channels. Syntax: disableChannels[] = {{channelID<number>, disableChat<bool>, disableVoice<bool>}};
 overviewText = "$STR_MISC_overviewText";    // Text to be displayed below the overviewPicture on the mission selection screen when the mission is available to play.
 
 #include "config\Config_SpyGlass.hpp"

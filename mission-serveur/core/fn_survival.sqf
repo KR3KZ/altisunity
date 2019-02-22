@@ -8,28 +8,41 @@
 */
 private ["_fnc_food","_fnc_water","_foodTime","_waterTime","_bp","_walkDis","_lastPos","_curPos"];
 _fnc_food = {
-    if (life_hunger < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";}
-    else {
+	if (player getVariable ["ACE_isUnconscious", false]) exitWith {};
+    if (life_hunger < 2) then {
+		player setVariable ["ACE_isUnconscious", true, true];
+		hint localize "STR_NOTF_EatMSG_Death";
+	} else {
         life_hunger 				= life_hunger - 10;
         [] call life_fnc_hudUpdate;
-        if (life_hunger < 2) then {player setDamage 1; hint localize "STR_NOTF_EatMSG_Death";};
+        if (life_hunger < 2) then {
+			player setVariable ["ACE_isUnconscious", true, true];
+			hint localize "STR_NOTF_EatMSG_Death";
+		};
         switch (life_hunger) do {
             case 30: {hint localize "STR_NOTF_EatMSG_1";};
             case 20: {hint localize "STR_NOTF_EatMSG_2";};
             case 10: {
                 hint localize "STR_NOTF_EatMSG_3";
-                if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1) then {player setFatigue 1;};
+                if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1) then {
+					player setFatigue 1;
+				};
             };
         };
     };
 };
 
 _fnc_water = {
-    if (life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";}
-    else {
+    if (life_thirst < 2) then {
+		player setVariable ["ACE_isUnconscious", true, true];
+		hint localize "STR_NOTF_DrinkMSG_Death";
+	} else {
         life_thirst 				= life_thirst - 10;
         [] call life_fnc_hudUpdate;
-        if (life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";};
+        if (life_thirst < 2) then {
+			player setVariable ["ACE_isUnconscious", true, true];
+			hint localize "STR_NOTF_DrinkMSG_Death";
+		};
         switch (life_thirst) do  {
             case 30: {hint localize "STR_NOTF_DrinkMSG_1";};
             case 20: {
@@ -103,8 +116,16 @@ for "_i" from 0 to 1 step 0 do {
         _lastPos 					= (_lastPos select 0) + (_lastPos select 1);
     };
 
+	//Added by Unity
 	[] call unity_fnc_check_ts;
 	[] spawn unity_fnc_radioactive;
+
+	// Coma
+    if (player getVariable ["ACE_isUnconscious", false] && (life_thirst < 100 || life_hunger < 100)) then {
+        life_thirst = 100;
+        life_hunger = 100;
+        [] call life_fnc_hudUpdate;
+    };
 
     uiSleep 1;
 };

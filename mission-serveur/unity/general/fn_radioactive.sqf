@@ -1,7 +1,7 @@
 private _bodypart				= ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
 private _contaminationEffect  	= ppEffectCreate ["ColorCorrections",8510];
 
-if (player inArea "radioactive") then {
+if (player inArea "radioactive" && !(player getVariable ["ACE_isUnconscious", false])) then {
 	_blood              = player getVariable ["ACE_medical_bloodVolume",100];
 	_body               = _bodypart select floor random 6;
 	_contaminationEffect ppEffectEnable true;

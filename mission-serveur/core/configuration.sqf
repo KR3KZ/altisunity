@@ -84,12 +84,17 @@ life_isknocked 								= false;
 life_vehicles 								= [];
 
 //Unity taskforce
-serverts = "";
-channelts = "";
-life_notTs = false;
-life_wrongChan = false;
-life_wrongTS = false;
-life_tfr_plugin_disabled = false;
+serverts 									= "";
+channelts 									= "";
+life_notTs 									= false;
+life_wrongChan 								= false;
+life_wrongTS 								= false;
+life_tfr_plugin_disabled 					= false;
+
+//Combat mode
+mode_combat 								= 0;
+life_chemlist 								= ["Chemlight_red","Chemlight_yellow","Chemlight_green","Chemlight_blue","SmokeShell","SmokeShellRed","SmokeShellGreen","SmokeShellYellow","SmokeShellPurple","SmokeShellBlue","SmokeShellOrange","ACE_HandFlare_White","ACE_HandFlare_Red","ACE_HandFlare_Green","ACE_HandFlare_Yellow","DDOPP_B_Taser","fantasma_ammo_45ACP_MHP_medic","B_762x54_Ball"];
+player setVariable ["combat_mode", 0, false];
 
 /*
     Master Array of items?

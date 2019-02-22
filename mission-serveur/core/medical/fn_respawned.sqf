@@ -9,13 +9,13 @@
 private ["_handle"];
 //Reset our weight and other stuff
 
-life_action_inUse = false;
-life_use_atm = true;
-life_hunger = 100;
-life_thirst = 100;
-life_carryWeight = 0;
-CASH = 0; //Make sure we don't get our cash back.
-life_respawned = false;
+life_action_inUse 				= false;
+life_use_atm 					= true;
+life_hunger 					= 100;
+life_thirst 					= 100;
+life_carryWeight 				= 0;
+CASH 							= 0; //Make sure we don't get our cash back.
+life_respawned 					= false;
 player playMove "AmovPercMstpSnonWnonDnon";
 
 if (player getVariable ["ACE_captives_isHandcuffed", false]) then {
@@ -62,6 +62,7 @@ if (!isNull life_corpse) then {
     _containers = nearestObjects[life_corpse,["WeaponHolderSimulated"],5];
     {deleteVehicle _x;} forEach _containers; //Delete the containers.
     deleteVehicle life_corpse;
+	hideBody life_corpse;
 };
 
 /*Destroy our camera...
