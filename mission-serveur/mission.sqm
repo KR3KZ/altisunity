@@ -8,22 +8,22 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1544;
+		nextID=1548;
 	};
 	class MarkerIDProvider
 	{
-		nextID=293;
+		nextID=294;
 	};
 	class LayerIndexProvider
 	{
-		nextID=518;
+		nextID=558;
 	};
 	class Camera
 	{
-		pos[]={9888.7627,56.98917,282.18097};
-		dir[]={-0.020894708,-0.80858499,0.58802986};
-		up[]={-0.028713489,0.58837712,0.80807364};
-		aside[]={0.99938154,-3.2188473e-007,0.035512459};
+		pos[]={15793.165,438.64679,14369.569};
+		dir[]={0.26142547,-0.38269663,-0.88612139};
+		up[]={0.10829024,0.92387259,-0.36705762};
+		aside[]={-0.95913404,-1.6152626e-008,-0.28296649};
 	};
 };
 binarizationWanted=0;
@@ -62,13 +62,14 @@ addons[]=
 	"ace_cargo",
 	"A3_Structures_F_Argo_Military_Fortifications",
 	"Jbad_misc_interior",
-	"A3_Supplies_F_Heli_CargoNets"
+	"A3_Supplies_F_Heli_CargoNets",
+	"A3_Structures_F_Exp_Infrastructure_WaterSupply"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=22;
+		items=23;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -214,6 +215,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item22
+		{
+			className="A3_Structures_F_Exp_Infrastructure";
+			name="Arma 3 Apex - Infrastructure Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=2639488;
@@ -248,24 +256,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -280,6 +270,24 @@ class CustomAttributes
 						};
 					};
 					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -19405,7 +19413,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=145;
+		items=146;
 		class Item0
 		{
 			dataType="Group";
@@ -30578,7 +30586,7 @@ class Mission
 					position[]={11442.523,25.375,2854.5779};
 					name="civ_spawn_1";
 					type="Empty";
-					angle=55.981972;
+					angle=55.981964;
 					id=1177;
 					atlOffset=0.00039482117;
 				};
@@ -37049,18 +37057,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8083.6606,493.32715,16407.789};
+						position[]={8083.6606,493.32693,16407.789};
 						angles[]={0,1.1207107,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						init="call{this addAction[localize""STR_Process_Sand"",life_fnc_processAction,""sand"",0,false,false,"""",' life_inv_sand > 0 && !life_is_processing && !life_action_inUse'];}";
+						init="call{this addAction[localize""STR_Process_Sand"",life_fnc_processAction,""glass"",0,false,false,"""",' life_inv_sand > 0 && !life_is_processing && !life_action_inUse'];}";
 						disableSimulation=1;
 					};
 					id=1437;
 					type="Land_JetEngineStarter_01_F";
-					atlOffset=0.400177;
+					atlOffset=0.39996338;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37097,7 +37105,7 @@ class Mission
 				};
 			};
 			id=1439;
-			atlOffset=0.20010376;
+			atlOffset=0.20001221;
 		};
 		class Item125
 		{
@@ -37241,7 +37249,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15127.735,67.239075,439.59402};
+						position[]={15127.735,67.239082,439.59387};
 						angles[]={0,2.7248428,0};
 					};
 					side="Empty";
@@ -37253,7 +37261,7 @@ class Mission
 					};
 					id=1456;
 					type="WaterPump_01_sand_F";
-					atlOffset=-0.0020065308;
+					atlOffset=-0.0019989014;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37290,7 +37298,7 @@ class Mission
 				};
 			};
 			id=1457;
-			atlOffset=-0.00096893311;
+			atlOffset=-0.00096130371;
 		};
 		class Item128
 		{
@@ -37747,6 +37755,7 @@ class Mission
 			name="radioactive";
 			markerType="ELLIPSE";
 			type="ellipse";
+			colorName="default";
 			a=3000;
 			b=3000;
 			id=1486;
@@ -38206,7 +38215,7 @@ class Mission
 		class Item144
 		{
 			dataType="Layer";
-			name="Cannabis - Récole Zagun";
+			name="Cannabis - Récolte Zagun";
 			state=3;
 			class Entities
 			{
@@ -38219,12 +38228,78 @@ class Mission
 					text="Cannabis";
 					type="mil_triangle";
 					colorName="default";
+					alpha=0;
 					id=1542;
 					atlOffset=-0.0004119873;
 				};
 			};
 			id=1543;
 			atlOffset=-0.0004119873;
+		};
+		class Item145
+		{
+			dataType="Layer";
+			name="Cannabis - Traitement Anyakar";
+			state=3;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={18944.701,94.611229,10081.713};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Process_Marijuana"",life_fnc_processAction,""marijuana"",0,false,false,"""",' life_inv_cannabis > 0 && !life_is_processing && !life_action_inUse'];}";
+						disableSimulation=1;
+					};
+					id=1545;
+					type="Land_WaterTank_01_F";
+					atlOffset=0.072975159;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={18944.732,93.200996,10081.74};
+					name="TRT_Cannabis";
+					text="Cannabis";
+					type="mil_box";
+					colorName="default";
+					alpha=0;
+					id=1547;
+					atlOffset=-6.8664551e-005;
+				};
+			};
+			id=1546;
+			atlOffset=0.22595978;
 		};
 	};
 };

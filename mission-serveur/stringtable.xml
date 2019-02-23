@@ -35,6 +35,10 @@
             <Original>Steve's Diving Shop</Original>
             <French>Vêtements de plongée de Steve</French>
         </Key>
+        <Key ID="STR_Shops_C_Gouv">
+            <Original>Friperie gouvernement</Original>
+            <French>Friperie gouvernement</French>
+        </Key>
         <Key ID="STR_Shops_C_Gun">
             <Original>Billy Joe's Clothing</Original>
             <French>Vêtements de tir</French>
@@ -2931,9 +2935,9 @@
             <Original>Processing Coca Leaves</Original>
             <French>Traitement de Cocaïne</French>
         </Key>
-        <Key ID="STR_Process_Marijuana">
-            <Original>Processing Marijuana</Original>
-            <French>Traitement de Marijuana</French>
+        <Key ID="STR_Process_Cannabis">
+            <Original>Traitement de Cannabis</Original>
+            <French>Traitement de Cannabis</French>
         </Key>
         <Key ID="STR_Process_Cement">
             <Original>Mixing Cement</Original>
