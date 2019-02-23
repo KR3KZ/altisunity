@@ -2935,9 +2935,9 @@
             <Original>Processing Coca Leaves</Original>
             <French>Traitement de Cocaïne</French>
         </Key>
-        <Key ID="STR_Process_Cannabis">
-            <Original>Traitement de Cannabis</Original>
-            <French>Traitement de Cannabis</French>
+        <Key ID="STR_Process_Marijuana">
+            <Original>Processing Marijuana</Original>
+            <French>Traitement de Marijuana</French>
         </Key>
         <Key ID="STR_Process_Cement">
             <Original>Mixing Cement</Original>
