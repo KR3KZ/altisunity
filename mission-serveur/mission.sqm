@@ -8,22 +8,22 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1548;
+		nextID=1564;
 	};
 	class MarkerIDProvider
 	{
-		nextID=294;
+		nextID=301;
 	};
 	class LayerIndexProvider
 	{
-		nextID=558;
+		nextID=601;
 	};
 	class Camera
 	{
-		pos[]={15793.165,438.64679,14369.569};
-		dir[]={0.26142547,-0.38269663,-0.88612139};
-		up[]={0.10829024,0.92387259,-0.36705762};
-		aside[]={-0.95913404,-1.6152626e-008,-0.28296649};
+		pos[]={11672.153,61.950775,2749.7009};
+		dir[]={0,-0.70710677,0.70710683};
+		up[]={0,0.70710677,0.70710671};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -38,10 +38,10 @@ addons[]=
 	"ace_logistics_wirecutter",
 	"A3_Structures_F_Training",
 	"A3_Structures_F_Mil_BagFence",
+	"plp_markers",
 	"ace_concertina_wire",
 	"A3_Structures_F_Mil_BagBunker",
 	"A3_Structures_F_Civ_Lamps",
-	"plp_markers",
 	"A3_Structures_F_Civ_Market",
 	"A3_Structures_F_Furniture",
 	"A3_Structures_F_EPA_Mil_Scrapyard",
@@ -120,15 +120,15 @@ class AddonsMetaData
 		};
 		class Item7
 		{
+			className="plp_markers";
+			name="plp_markers";
+		};
+		class Item8
+		{
 			className="ace_concertina_wire";
 			name="ACE3 - Concertina Wire";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
-		};
-		class Item8
-		{
-			className="plp_markers";
-			name="plp_markers";
 		};
 		class Item9
 		{
@@ -256,6 +256,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -270,24 +288,6 @@ class CustomAttributes
 						};
 					};
 					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -19413,7 +19413,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=146;
+		items=149;
 		class Item0
 		{
 			dataType="Group";
@@ -30653,7 +30653,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=27;
+				items=28;
 				class Item0
 				{
 					dataType="Object";
@@ -31729,9 +31729,21 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item27
+				{
+					dataType="Marker";
+					position[]={12316.602,33.196999,1957.817};
+					name="marker_297";
+					type="plp_mark_as_police";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
+					id=1557;
+					atlOffset=0.00031661987;
+				};
 			};
 			id=1291;
-			atlOffset=0.59384727;
+			atlOffset=72.165787;
 		};
 		class Item106
 		{
@@ -31740,7 +31752,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=34;
+				items=35;
 				class Item0
 				{
 					dataType="Object";
@@ -33102,6 +33114,17 @@ class Mission
 						};
 						nAttributes=1;
 					};
+				};
+				class Item34
+				{
+					dataType="Marker";
+					position[]={12161.564,341.95001,17254.887};
+					name="marker_298";
+					type="plp_mark_as_police";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
+					id=1561;
 				};
 			};
 			id=1292;
@@ -35108,7 +35131,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=6;
+				items=7;
 				class Item0
 				{
 					dataType="Object";
@@ -35349,6 +35372,17 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item6
+				{
+					dataType="Marker";
+					position[]={13215.312,341.95001,17664.377};
+					name="marker_299";
+					type="plp_mark_as_embassy";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
+					id=1562;
+				};
 			};
 			id=1325;
 		};
@@ -35359,7 +35393,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
@@ -35441,9 +35475,21 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={11650.265,23.499001,2813.0659};
+					name="marker_300";
+					type="plp_mark_as_embassy";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
+					id=1563;
+					atlOffset=0.00027656555;
+				};
 			};
 			id=1332;
-			atlOffset=0.061479568;
+			atlOffset=0.059804916;
 		};
 		class Item114
 		{
@@ -36677,7 +36723,7 @@ class Mission
 					};
 					id=1405;
 					type="WaterPump_01_forest_F";
-					atlOffset=0.0041732788;
+					atlOffset=0.0051765442;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36714,7 +36760,7 @@ class Mission
 				};
 			};
 			id=1406;
-			atlOffset=0.11328506;
+			atlOffset=0.11278152;
 		};
 		class Item122
 		{
@@ -38300,6 +38346,202 @@ class Mission
 			};
 			id=1546;
 			atlOffset=0.22595978;
+		};
+		class Item146
+		{
+			dataType="Layer";
+			name="Concessionnaire civil KalaeNoowi";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13002.461,342.64401,17664.547};
+						angles[]={0,0.091088727,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="call{this addAction[""Concessionnaire véhicules"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,""NOM_MARKER"",""civ"",""Concessionnaire véhicules""]];}";
+						disableSimulation=1;
+					};
+					id=1548;
+					type="Land_CashDesk_F";
+					atlOffset=0.69400024;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={13001.313,341.95001,17661.842};
+					name="marker_295";
+					type="plp_mark_civ_carDealer";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
+					id=1555;
+				};
+			};
+			id=1549;
+			atlOffset=0.34698486;
+		};
+		class Item147
+		{
+			dataType="Layer";
+			name="Concessionnaire civil Mikis";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9478.6396,162.79633,11719.481};
+						angles[]={0,0.74424326,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[""Concessionnaire véhicules"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,""NOM_MARKER"",""civ"",""Concessionnaire véhicules""]];}";
+						disableSimulation=1;
+					};
+					id=1550;
+					type="Land_CashDesk_F";
+					atlOffset=-0.0019989014;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={9478.3818,162.82227,11721.099};
+					name="marker_296";
+					type="plp_mark_civ_carDealer";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
+					id=1556;
+					atlOffset=-0.010009766;
+				};
+			};
+			id=1551;
+			atlOffset=-0.02166748;
+		};
+		class Item148
+		{
+			dataType="Layer";
+			name="Concessionnaire civil Kinduf";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11389.821,24.121445,2696.9609};
+						angles[]={0,0.86639887,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[""Concessionnaire véhicules"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,""NOM_MARKER"",""civ"",""Concessionnaire véhicules""]];}";
+						disableSimulation=1;
+					};
+					id=1552;
+					type="Land_CashDesk_F";
+					atlOffset=0.00099945068;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={11388.955,24.132,2700.0339};
+					name="marker_294";
+					type="plp_mark_civ_carDealer";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
+					id=1554;
+					atlOffset=0.00012779236;
+				};
+			};
+			id=1553;
+			atlOffset=0.00068664551;
 		};
 	};
 };
