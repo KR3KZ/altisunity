@@ -8,22 +8,22 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1487;
+		nextID=1542;
 	};
 	class MarkerIDProvider
 	{
-		nextID=262;
+		nextID=292;
 	};
 	class LayerIndexProvider
 	{
-		nextID=405;
+		nextID=479;
 	};
 	class Camera
 	{
-		pos[]={13997.68,396.61108,17825.352};
-		dir[]={-0.62557793,-0.32135886,0.71100461};
-		up[]={-0.21229874,0.94693547,0.24128847};
-		aside[]={0.75082016,-4.9825758e-008,0.66060585};
+		pos[]={9468.1338,164.4006,11727.552};
+		dir[]={0.66731417,-0.35982516,0.65212464};
+		up[]={0.25735864,0.9330138,0.25150031};
+		aside[]={0.6989364,2.039742e-007,-0.71521711};
 	};
 };
 binarizationWanted=0;
@@ -41,6 +41,7 @@ addons[]=
 	"ace_concertina_wire",
 	"A3_Structures_F_Mil_BagBunker",
 	"A3_Structures_F_Civ_Lamps",
+	"plp_markers",
 	"A3_Structures_F_Civ_Market",
 	"A3_Structures_F_Furniture",
 	"A3_Structures_F_EPA_Mil_Scrapyard",
@@ -59,13 +60,15 @@ addons[]=
 	"A3_Structures_F_EPB_Furniture",
 	"A3_Structures_F_Ind_Cargo",
 	"ace_cargo",
-	"A3_Structures_F_Argo_Military_Fortifications"
+	"A3_Structures_F_Argo_Military_Fortifications",
+	"Jbad_misc_interior",
+	"A3_Supplies_F_Heli_CargoNets"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=19;
+		items=22;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -123,74 +126,91 @@ class AddonsMetaData
 		};
 		class Item8
 		{
+			className="plp_markers";
+			name="plp_markers";
+		};
+		class Item9
+		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item9
+		class Item10
 		{
 			className="Wall_L";
 			name="Wall_L";
 		};
-		class Item10
+		class Item11
 		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item12
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item13
 		{
 			className="A3_Structures_F_Heli";
 			name="Arma 3 Helicopters - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item14
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item15
 		{
 			className="RHS_US_A2_AirImport";
 			name="RHSUSF A2 Air Ports";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item15
+		class Item16
 		{
 			className="Cargo_Cont";
 			name="Cargo_Cont";
 		};
-		class Item16
+		class Item17
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item17
+		class Item18
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item18
+		class Item19
 		{
 			className="A3_Structures_F_Argo";
 			name="Arma 3 Malden - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item20
+		{
+			className="Jbad_misc_interior";
+			name="Jbad_misc_interior";
+		};
+		class Item21
+		{
+			className="A3_Supplies_F_Heli";
+			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -19385,7 +19405,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=136;
+		items=144;
 		class Item0
 		{
 			dataType="Group";
@@ -30558,7 +30578,7 @@ class Mission
 					position[]={11442.523,25.375,2854.5779};
 					name="civ_spawn_1";
 					type="Empty";
-					angle=55.982094;
+					angle=55.981979;
 					id=1177;
 					atlOffset=0.00039482117;
 				};
@@ -33085,7 +33105,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=39;
+				items=40;
 				class Item0
 				{
 					dataType="Object";
@@ -34657,9 +34677,20 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item39
+				{
+					dataType="Marker";
+					position[]={13858.457,341.95001,17904.158};
+					name="marker_270";
+					type="plp_mark_civc_pharmacy";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
+					id=1512;
+				};
 			};
 			id=1293;
-			atlOffset=0.00030517578;
+			atlOffset=0.00015258789;
 		};
 		class Item108
 		{
@@ -34713,11 +34744,14 @@ class Mission
 				class Item1
 				{
 					dataType="Marker";
-					position[]={13457.05,341.95001,17526.672};
-					name="marker_230";
+					position[]={13457.145,341.95001,17526.604};
+					name="marker_281";
 					text="Vêtements";
-					type="hd_dot";
-					id=1309;
+					type="plp_mark_civ_clothingcasual";
+					colorName="plp_ColorOrangeDark";
+					a=0.69999999;
+					b=0.69999999;
+					id=1525;
 				};
 			};
 			id=1308;
@@ -37362,11 +37396,14 @@ class Mission
 				class Item1
 				{
 					dataType="Marker";
-					position[]={13187.34,341.95001,17403.039};
-					name="marker_255";
+					position[]={13187.968,341.95001,17402.66};
+					name="marker_283";
 					text="Magasin";
-					type="mil_dot";
-					id=1468;
+					type="plp_mark_civ_shoppingcart";
+					colorName="plp_ColorOrangeDark";
+					a=0.69999999;
+					b=0.69999999;
+					id=1527;
 				};
 			};
 			id=1467;
@@ -37423,11 +37460,14 @@ class Mission
 				class Item1
 				{
 					dataType="Marker";
-					position[]={13097.554,341.95001,17649.014};
-					name="marker_256";
+					position[]={13097.539,341.95001,17649.014};
+					name="marker_284";
 					text="Marché";
-					type="mil_dot";
-					id=1471;
+					type="plp_mark_civ_food";
+					colorName="plp_ColorOrangeDark";
+					a=0.69999999;
+					b=0.69999999;
+					id=1528;
 				};
 			};
 			id=1470;
@@ -37485,16 +37525,19 @@ class Mission
 				class Item1
 				{
 					dataType="Marker";
-					position[]={11489.892,23.917999,2713.3701};
-					name="marker_257";
-					text="Magasin";
-					type="mil_dot";
-					id=1475;
-					atlOffset=0.00011634827;
+					position[]={11489.884,23.917,2713.2949};
+					name="marker_285";
+					text="Marché";
+					type="plp_mark_civ_shoppingcart";
+					colorName="plp_ColorOrangeDark";
+					a=0.69999999;
+					b=0.69999999;
+					id=1529;
+					atlOffset=-0.00033950806;
 				};
 			};
 			id=1473;
-			atlOffset=-0.0024414063;
+			atlOffset=-0.0026664734;
 		};
 		class Item132
 		{
@@ -37548,16 +37591,19 @@ class Mission
 				class Item1
 				{
 					dataType="Marker";
-					position[]={11461.582,24.118,2742.7419};
-					name="marker_258";
-					text="Marché";
-					type="mil_dot";
-					id=1478;
-					atlOffset=-0.00034141541;
+					position[]={11461.521,24.118,2742.8201};
+					name="marker_286";
+					text="Magasin";
+					type="plp_mark_civ_food";
+					colorName="plp_ColorOrangeDark";
+					a=0.69999999;
+					b=0.69999999;
+					id=1530;
+					atlOffset=-0.00048828125;
 				};
 			};
 			id=1477;
-			atlOffset=-0.00017166138;
+			atlOffset=-0.00024604797;
 		};
 		class Item133
 		{
@@ -37566,7 +37612,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=1;
+				items=2;
 				class Item0
 				{
 					dataType="Object";
@@ -37610,9 +37656,21 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={10774.811,28.343,2753.8491};
+					name="marker_269";
+					type="plp_mark_civc_pharmacy";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
+					id=1511;
+					atlOffset=0.00046539307;
+				};
 			};
 			id=1481;
-			atlOffset=0.00032043457;
+			atlOffset=0.22082901;
 		};
 		class Item134
 		{
@@ -37678,6 +37736,457 @@ class Mission
 			b=3000;
 			id=1486;
 			atlOffset=233.66891;
+		};
+		class Item136
+		{
+			dataType="Layer";
+			name="Marché - MikisFob";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9510.4502,162.84764,11746.93};
+						angles[]={0,5.5307913,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market""];}";
+						disableSimulation=1;
+					};
+					id=1489;
+					type="Land_CashDesk_F";
+					atlOffset=-0.0030059814;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={9510.4561,162.85001,11746.932};
+					name="marker_287";
+					text="Marché";
+					type="plp_mark_civ_food";
+					colorName="plp_ColorOrangeDark";
+					a=0.69999999;
+					b=0.69999999;
+					id=1531;
+					atlOffset=-0.00033569336;
+				};
+			};
+			id=1490;
+			atlOffset=-0.0016479492;
+		};
+		class Item137
+		{
+			dataType="Layer";
+			name="Magasin - MikisFob";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9250.0869,154.8717,11540.81};
+						angles[]={0,4.9312706,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""genstore""];}";
+						disableSimulation=1;
+					};
+					id=1492;
+					type="Land_CashDesk_F";
+					atlOffset=0.18299866;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={9250.0918,154.689,11540.81};
+					name="marker_288";
+					text="Magasin";
+					type="plp_mark_civ_shoppingcart";
+					colorName="plp_ColorOrangeDark";
+					a=0.69999999;
+					b=0.69999999;
+					id=1532;
+					atlOffset=0.00021362305;
+				};
+			};
+			id=1493;
+			atlOffset=0.09161377;
+		};
+		class Item138
+		{
+			dataType="Layer";
+			name="Vêtement Gouv Kalaenoowie";
+			state=1;
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13251.042,346.28253,17669.953};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="call{this addAction[""Friperie gouvernement"",life_fnc_clothingMenu,""gouv"",0,false,false,"""",'license_civ_gouv && playerSide isEqualTo civilian'];}";
+						disableSimulation=1;
+					};
+					id=1503;
+					type="jbad_water_pipe";
+					atlOffset=3.4629211;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			id=1504;
+			atlOffset=3.4629211;
+		};
+		class Item139
+		{
+			dataType="Layer";
+			name="Vêtement Gouv Kinduf";
+			state=1;
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11674.7,28.286942,2801.512};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[""Friperie gouvernement"",life_fnc_clothingMenu,""gouv"",0,false,false,"""",'license_civ_gouv && playerSide isEqualTo civilian'];}";
+						disableSimulation=1;
+					};
+					id=1506;
+					type="jbad_water_pipe";
+					atlOffset=0.00030899048;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			id=1507;
+			atlOffset=0.00030899048;
+		};
+		class Item140
+		{
+			dataType="Marker";
+			position[]={12109.332,341.944,17924.879};
+			name="marker_271";
+			type="plp_mark_civ_airport";
+			colorName="default";
+			a=0.69999999;
+			b=0.69999999;
+			id=1513;
+		};
+		class Item141
+		{
+			dataType="Layer";
+			name="Armurerie - Tunkuf";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9547.6396,374.60025,14116.342};
+						angles[]={0,4.2788668,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[""Billy Joe's Firearms"",life_fnc_weaponShopMenu,""gun"",0,false,false,"""",'license_civ_gun && playerSide isEqualTo civilian'];}";
+						disableSimulation=1;
+					};
+					id=1514;
+					type="CargoNet_01_box_F";
+					atlOffset=3.0517578e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={9547.6543,373.965,14116.316};
+					name="marker_272";
+					text="Armurerie";
+					type="plp_mark_civ_pistol";
+					colorName="plp_ColorBrownDark";
+					a=0.69999999;
+					b=0.69999999;
+					id=1516;
+					atlOffset=-0.00015258789;
+				};
+			};
+			id=1515;
+			atlOffset=-6.1035156e-005;
+		};
+		class Item142
+		{
+			dataType="Layer";
+			name="Vêtement Civil Kinduf";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12094.002,23.013411,2826.6799};
+						angles[]={0,4.815887,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_MAR_Clothing_Store"",life_fnc_clothingMenu,""civil""];}";
+						disableSimulation=1;
+					};
+					id=1535;
+					type="Land_CratesWooden_F";
+					atlOffset=0.16500282;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={12094,22.108999,2826.7471};
+					name="marker_291";
+					text="Vêtements";
+					type="plp_mark_civ_clothingcasual";
+					colorName="plp_ColorOrangeDark";
+					a=0.69999999;
+					b=0.69999999;
+					id=1541;
+					atlOffset=-0.00041389465;
+				};
+			};
+			id=1536;
+			atlOffset=0.040952682;
+		};
+		class Item143
+		{
+			dataType="Layer";
+			name="Vêtement Civil MikisFob";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9471.0996,163.61342,11729.759};
+						angles[]={0,3.9471669,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_MAR_Clothing_Store"",life_fnc_clothingMenu,""civil""];}";
+						disableSimulation=1;
+					};
+					id=1538;
+					type="Land_CratesWooden_F";
+					atlOffset=0.0018157959;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={9471.1533,162.772,11729.705};
+					name="marker_290";
+					text="Vêtements";
+					type="plp_mark_civ_clothingcasual";
+					colorName="plp_ColorOrangeDark";
+					a=0.69999999;
+					b=0.69999999;
+					id=1540;
+					atlOffset=7.6293945e-005;
+				};
+			};
+			id=1539;
+			atlOffset=0.051513672;
 		};
 	};
 };
