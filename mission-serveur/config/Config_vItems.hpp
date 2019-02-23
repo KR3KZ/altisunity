@@ -327,7 +327,7 @@ class VirtualItems {
         displayName = "STR_Item_OilP";
         weight = 6;
         buyPrice = -1;
-        sellPrice = 3200;
+        sellPrice = 7500;
         illegal = false;
         edible = -1;
         icon = "icons\ico_oilProcessed.paa";
@@ -415,7 +415,7 @@ class VirtualItems {
         displayName = "STR_Item_Glass";
         weight = 1;
         buyPrice = -1;
-        sellPrice = 1450;
+        sellPrice = 2000;
         illegal = false;
         edible = -1;
         icon = "icons\ico_glass.paa";
@@ -466,7 +466,7 @@ class VirtualItems {
     };
 
     //Drugs
-    class heroin_unprocessed {
+    class graine_de_pavot  {
         variable = "heroinUnprocessed";
         displayName = "STR_Item_HeroinU";
         weight = 6;
@@ -482,8 +482,8 @@ class VirtualItems {
         variable = "heroinProcessed";
         displayName = "STR_Item_HeroinP";
         weight = 4;
-        buyPrice = 3500;
-        sellPrice = 2560;
+        buyPrice = 4000;
+        sellPrice = 3700;
         illegal = true;
         edible = -1;
         icon = "icons\ico_heroinProcessed.paa";
@@ -505,8 +505,8 @@ class VirtualItems {
         variable = "marijuana";
         displayName = "STR_Item_Marijuana";
         weight = 3;
-        buyPrice = 2800;
-        sellPrice = 2350;
+        buyPrice = 3100;
+        sellPrice = 2850;
         illegal = true;
         edible = -1;
         icon = "icons\ico_marijuana.paa";
@@ -882,11 +882,11 @@ class VirtualItems {
 	class wood {
 		variable = "wood";
 		displayName = "STR_Item_Wood";
-		weight = 2;
-		buyPrice = 0;
-		sellPrice = 0;
+		weight = 5;
+		buyPrice = -1;
+		sellPrice = 2700;
 		illegal = false;
-		edible = 100;
+		edible = -1;
 		icon = "icons\ico_muttonLeg.paa";
 	};
 
@@ -897,7 +897,7 @@ class VirtualItems {
 		buyPrice = 0;
 		sellPrice = 0;
 		illegal = false;
-		edible = 100;
+		edible = -1;
 		icon = "icons\ico_muttonLeg.paa";
 	};
 
@@ -905,10 +905,10 @@ class VirtualItems {
 		variable = "cereal";
 		displayName = "STR_Item_Cereal";
 		weight = 2;
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = -1;
+		sellPrice = 1600;
 		illegal = false;
-		edible = 100;
+		edible = -1;
 		icon = "icons\ico_muttonLeg.paa";
 	};
 
@@ -916,32 +916,32 @@ class VirtualItems {
 		variable = "cotton";
 		displayName = "STR_Item_Cotton";
 		weight = 2;
-		buyPrice = 0;
-		sellPrice = 0;
+		buyPrice = -1;
+		sellPrice = 2500;
 		illegal = false;
-		edible = 100;
+		edible = -1;
 		icon = "icons\ico_muttonLeg.paa";
 	};
 
 	class fabric {
 		variable = "fabric";
 		displayName = "STR_Item_Fabric";
-		weight = 2;
-		buyPrice = 0;
-		sellPrice = 0;
+		weight = 3;
+		buyPrice = -1;
+		sellPrice = 2900;
 		illegal = false;
-		edible = 100;
+		edible = -1;
 		icon = "icons\ico_muttonLeg.paa";
 	};
 
 	class paper {
 		variable = "paper";
 		displayName = "STR_Item_Paper";
-		weight = 2;
-		buyPrice = 0;
-		sellPrice = 0;
+		weight = 3;
+		buyPrice = -1;
+		sellPrice = 3000;
 		illegal = false;
-		edible = 100;
+		edible = -1;
 		icon = "icons\ico_muttonLeg.paa";
 	};
 };
