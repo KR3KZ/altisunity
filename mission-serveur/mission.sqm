@@ -8,22 +8,22 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1542;
+		nextID=1544;
 	};
 	class MarkerIDProvider
 	{
-		nextID=292;
+		nextID=293;
 	};
 	class LayerIndexProvider
 	{
-		nextID=479;
+		nextID=518;
 	};
 	class Camera
 	{
-		pos[]={9468.1338,164.4006,11727.552};
-		dir[]={0.66731417,-0.35982516,0.65212464};
-		up[]={0.25735864,0.9330138,0.25150031};
-		aside[]={0.6989364,2.039742e-007,-0.71521711};
+		pos[]={9888.7627,56.98917,282.18097};
+		dir[]={-0.020894708,-0.80858499,0.58802986};
+		up[]={-0.028713489,0.58837712,0.80807364};
+		aside[]={0.99938154,-3.2188473e-007,0.035512459};
 	};
 };
 binarizationWanted=0;
@@ -248,6 +248,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -262,24 +280,6 @@ class CustomAttributes
 						};
 					};
 					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -19405,7 +19405,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=144;
+		items=145;
 		class Item0
 		{
 			dataType="Group";
@@ -30578,7 +30578,7 @@ class Mission
 					position[]={11442.523,25.375,2854.5779};
 					name="civ_spawn_1";
 					type="Empty";
-					angle=55.981979;
+					angle=55.981972;
 					id=1177;
 					atlOffset=0.00039482117;
 				};
@@ -36083,6 +36083,9 @@ class Mission
 					name="SLR_wood";
 					text="Bois";
 					type="mil_end";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
 					id=1377;
 					atlOffset=0.00067138672;
 				};
@@ -36496,6 +36499,9 @@ class Mission
 					name="SLR_Corn";
 					text="Blé";
 					type="mil_end";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
 					id=1413;
 					atlOffset=0.00029373169;
 				};
@@ -36759,6 +36765,9 @@ class Mission
 					name="SLR_Cotton";
 					text="Coton";
 					type="mil_end";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
 					id=1412;
 					atlOffset=-0.00026130676;
 				};
@@ -37187,6 +37196,9 @@ class Mission
 					name="SLR_Sand";
 					text="Sable";
 					type="mil_end";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
 					id=1447;
 					atlOffset=7.6293945e-006;
 				};
@@ -37337,6 +37349,9 @@ class Mission
 					name="SLR_Oil";
 					text="Pétrole";
 					type="mil_end";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
 					id=1461;
 					atlOffset=-0.00019073486;
 				};
@@ -37527,7 +37542,7 @@ class Mission
 					dataType="Marker";
 					position[]={11489.884,23.917,2713.2949};
 					name="marker_285";
-					text="Marché";
+					text="Magasin";
 					type="plp_mark_civ_shoppingcart";
 					colorName="plp_ColorOrangeDark";
 					a=0.69999999;
@@ -37593,7 +37608,7 @@ class Mission
 					dataType="Marker";
 					position[]={11461.521,24.118,2742.8201};
 					name="marker_286";
-					text="Magasin";
+					text="Marché";
 					type="plp_mark_civ_food";
 					colorName="plp_ColorOrangeDark";
 					a=0.69999999;
@@ -38119,7 +38134,7 @@ class Mission
 				};
 			};
 			id=1536;
-			atlOffset=0.040952682;
+			atlOffset=0.082292557;
 		};
 		class Item143
 		{
@@ -38187,6 +38202,29 @@ class Mission
 			};
 			id=1539;
 			atlOffset=0.051513672;
+		};
+		class Item144
+		{
+			dataType="Layer";
+			name="Cannabis - Récole Zagun";
+			state=3;
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Marker";
+					position[]={9890.2676,47.521,296.04199};
+					name="res_weed_1";
+					text="Cannabis";
+					type="mil_triangle";
+					colorName="default";
+					id=1542;
+					atlOffset=-0.0004119873;
+				};
+			};
+			id=1543;
+			atlOffset=-0.0004119873;
 		};
 	};
 };
