@@ -466,7 +466,7 @@ class VirtualItems {
     };
 
     //Drugs
-    class heroin_unprocessed {
+    class graine_de_pavot  {
         variable = "heroinUnprocessed";
         displayName = "STR_Item_HeroinU";
         weight = 6;
@@ -482,8 +482,8 @@ class VirtualItems {
         variable = "heroinProcessed";
         displayName = "STR_Item_HeroinP";
         weight = 4;
-        buyPrice = 3500;
-        sellPrice = 2560;
+        buyPrice = 4000;
+        sellPrice = 3700;
         illegal = true;
         edible = -1;
         icon = "icons\ico_heroinProcessed.paa";
@@ -505,8 +505,8 @@ class VirtualItems {
         variable = "marijuana";
         displayName = "STR_Item_Marijuana";
         weight = 3;
-        buyPrice = 2800;
-        sellPrice = 2350;
+        buyPrice = 3100;
+        sellPrice = 2850;
         illegal = true;
         edible = -1;
         icon = "icons\ico_marijuana.paa";
