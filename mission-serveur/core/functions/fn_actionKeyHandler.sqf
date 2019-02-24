@@ -61,10 +61,12 @@ if ((_curObject isKindOf "B_supplyCrate_F" || _curObject isKindOf "Box_IND_Grena
     };
 };
 
+/*
 private _vaultHouse = [[["Altis", "Land_Research_house_V1_F"], ["Tanoa", "Land_Medevac_house_V1_F"]]] call TON_fnc_terrainSort;
 private _altisArray = [16019.5,16952.9,0];
 private _tanoaArray = [11074.2,11501.5,0.00137329];
 private _pos = [[["Altis", _altisArray], ["Tanoa", _tanoaArray]]] call TON_fnc_terrainSort;
+*/
 
 if (_curObject isKindOf "House_F" && {player distance _curObject < 12}) exitWith {
     [_curObject] call life_fnc_houseMenu;
@@ -80,7 +82,7 @@ life_action_inUse = true;
     life_action_inUse = false;
 };
 
-//Check if it's a dead body.
+/*Check if it's a dead body.
 if (_curObject isKindOf "CAManBase" && {!alive _curObject}) exitWith {
     //Hotfix code by ins0
     if ((playerSide isEqualTo west && {(LIFE_SETTINGS(getNumber,"revive_cops") isEqualTo 1)}) || {(playerSide isEqualTo civilian && {(LIFE_SETTINGS(getNumber,"revive_civ") isEqualTo 1)})} || {(playerSide isEqualTo east && {(LIFE_SETTINGS(getNumber,"revive_east") isEqualTo 1)})} || {playerSide isEqualTo independent}) then {
@@ -89,11 +91,12 @@ if (_curObject isKindOf "CAManBase" && {!alive _curObject}) exitWith {
         };
     };
 };
+*/
 
 //If target is a player then check if we can use the cop menu.
 if (isPlayer _curObject && _curObject isKindOf "CAManBase") then {
     if ((_curObject getVariable ["restrained",false]) && !dialog && playerSide isEqualTo west) then {
-        [_curObject] call life_fnc_copInteractionMenu;
+        //[_curObject] call life_fnc_copInteractionMenu;
     };
 } else {
     //OK, it wasn't a player so what is it?
