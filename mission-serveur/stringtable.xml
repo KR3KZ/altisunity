@@ -3889,6 +3889,10 @@
             <Original>Vêtements Milice</Original>
             <French>Vêtements Milice</French>
         </Key>
+        <Key ID="STR_MAR_Weapons_Store_Milice">
+            <Original>Armurerie Milice</Original>
+            <French>Armurerie Milice</French>
+        </Key>
         <Key ID="STR_MAR_Medical_Assistance">
             <Original>Medical Assistance</Original>
             <French>Assistance médicale</French>

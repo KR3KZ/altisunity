@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=687;
+		nextID=730;
 	};
 	class Camera
 	{
@@ -249,24 +249,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -281,6 +263,24 @@ class CustomAttributes
 						};
 					};
 					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -34800,7 +34800,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];" \n "this addAction[""Altis Cop Shop"",life_fnc_weaponShopMenu,""cop"",0,false,false,"""",'playerSide isEqualTo cop'];}";
+						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];" \n "this addAction[localize ""STR_MAR_Weapons_Store_Milice"",life_fnc_weaponShopMenu,""cop_basic""];}";
 						disableSimulation=1;
 					};
 					id=1311;
@@ -35459,7 +35459,7 @@ class Mission
 				};
 			};
 			id=1332;
-			atlOffset=0.059804916;
+			atlOffset=0.061479568;
 		};
 		class Item114
 		{
