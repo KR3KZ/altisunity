@@ -99,6 +99,10 @@
             <Original>APD Item Shop</Original>
             <French>Equipement policier</French>
         </Key>
+        <Key ID="STR_Shops_Milice">
+            <Original>Equipement Milice</Original>
+            <French>Equipement Milice</French>
+        </Key>
         <Key ID="STR_Shops_Cement">
             <Original>Juan's Cement Laying</Original>
             <French>Acheteur de Ciment</French>

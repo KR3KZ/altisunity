@@ -8,22 +8,22 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1568;
+		nextID=1571;
 	};
 	class MarkerIDProvider
 	{
-		nextID=301;
+		nextID=304;
 	};
 	class LayerIndexProvider
 	{
-		nextID=730;
+		nextID=773;
 	};
 	class Camera
 	{
-		pos[]={4616.8218,674.92365,14670.06};
-		dir[]={0.86514908,-0.33281496,0.37534717};
-		up[]={0.3053661,0.9429661,0.13248451};
-		aside[]={0.39802971,-4.3970067e-007,-0.91743737};
+		pos[]={9676.1641,168.15775,11316.164};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -249,6 +249,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -263,24 +281,6 @@ class CustomAttributes
 						};
 					};
 					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -34800,7 +34800,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];" \n "this addAction[localize ""STR_MAR_Weapons_Store_Milice"",life_fnc_weaponShopMenu,""cop_basic""];}";
+						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];" \n "this addAction[localize ""STR_MAR_Weapons_Store_Milice"",life_fnc_weaponShopMenu,""cop_basic""];" \n "this addAction[localize""STR_Shops_Milice"",life_fnc_virt_menu,""cop""];}";
 						disableSimulation=1;
 					};
 					id=1311;
@@ -34911,7 +34911,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];}";
+						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];" \n "this addAction[localize ""STR_MAR_Weapons_Store_Milice"",life_fnc_weaponShopMenu,""cop_basic""];" \n "this addAction[localize""STR_Shops_Milice"",life_fnc_virt_menu,""cop""];}";
 						disableSimulation=1;
 					};
 					id=1314;
@@ -35020,7 +35020,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=3;
+				items=4;
 				class Item0
 				{
 					dataType="Object";
@@ -35033,7 +35033,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];}";
+						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];" \n "this addAction[localize ""STR_MAR_Weapons_Store_Milice"",life_fnc_weaponShopMenu,""cop_basic""];" \n "this addAction[localize""STR_Shops_Milice"",life_fnc_virt_menu,""cop""];}";
 						disableSimulation=1;
 					};
 					id=1317;
@@ -35113,9 +35113,21 @@ class Mission
 					id=1319;
 					atlOffset=-0.00032043457;
 				};
+				class Item3
+				{
+					dataType="Marker";
+					position[]={9676.2051,143.10699,11338.055};
+					name="marker_303";
+					type="plp_mark_as_police";
+					colorName="default";
+					a=0.69999999;
+					b=0.69999999;
+					id=1570;
+					atlOffset=0.00030517578;
+				};
 			};
 			id=1316;
-			atlOffset=-0.0075683594;
+			atlOffset=-0.0037536621;
 		};
 		class Item112
 		{
@@ -37768,15 +37780,16 @@ class Mission
 		class Item135
 		{
 			dataType="Marker";
-			position[]={2818.585,535.83002,13622.147};
+			position[]={3000.675,535.83002,12270.85};
 			name="radioactive";
 			markerType="ELLIPSE";
 			type="ellipse";
-			colorName="default";
+			colorName="plp_ColorRedDark";
+			fillName="DiagGrid";
 			a=3000;
 			b=3000;
 			id=1486;
-			atlOffset=233.66891;
+			atlOffset=117.40039;
 		};
 		class Item136
 		{

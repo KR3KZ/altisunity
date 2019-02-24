@@ -158,13 +158,13 @@ class WeaponShops {
             { "ACE_morphine", "", 0, 0, "" },
 			{ "ACE_CableTie", "", 0, 0, "" },
 			{ "NVGoggles", "", 0, 0, "" },
-            { "rhs_wheap_ak105", "", 0, 0, "call life_coplevel >= 2" },
-			{ "rhs_wheap_ak74m", "", 0, 0, "call life_coplevel >= 3" },
-			{ "rhs_wheap_ak 103", "", 0, 0, "call life_coplevel >= 4" },
+            { "rhs_weap_ak105", "", 0, 0, "call life_coplevel >= 2" },
+			{ "rhs_weap_ak74m", "", 0, 0, "call life_coplevel >= 3" },
+			{ "rhs_weap_ak 103", "", 0, 0, "call life_coplevel >= 4" },
 			{ "srifle_DMR_06_olive_F", "", 0, 0, "call life_coplevel >= 5" },
 			{ "rhs_weap_M320", "", 0, 0, "call life_coplevel >= 5" },
 			{ "rhs_weap_6p53", "", 0, 0, "call life_coplevel >= 1" },
-			{ "rhs_wheap_pkp", "", 0, 0, "call life_coplevel >= 7" }
+			{ "rhs_weap_pkp", "", 0, 0, "call life_coplevel >= 7" }
         };
         mags[] = {
             { "30Rnd_AK-103_57-N-231P_Mag", "", 0, 0, "call life_coplevel >= 3" },

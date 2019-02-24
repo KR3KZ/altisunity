@@ -122,10 +122,10 @@ class VirtualShops {
     };
 
     class cop {
-        name = "STR_Shops_Cop";
+        name = "STR_Shops_Milice";
         side = "cop";
         conditions = "";
-        items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit", "defibrillator" };
+        items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull" };
     };
 
     // Added by Unity
