@@ -160,7 +160,7 @@ class WeaponShops {
 			{ "NVGoggles", "", 0, 0, "" },
             { "rhs_weap_ak105", "", 0, 0, "call life_coplevel >= 2" },
 			{ "rhs_weap_ak74m", "", 0, 0, "call life_coplevel >= 3" },
-			{ "rhs_weap_ak 103", "", 0, 0, "call life_coplevel >= 4" },
+			{ "rhs_weap_ak103", "", 0, 0, "call life_coplevel >= 4" },
 			{ "srifle_DMR_06_olive_F", "", 0, 0, "call life_coplevel >= 5" },
 			{ "rhs_weap_M320", "", 0, 0, "call life_coplevel >= 5" },
 			{ "rhs_weap_6p53", "", 0, 0, "call life_coplevel >= 1" },
