@@ -371,6 +371,7 @@ class CfgVehicles {
                         condition = "";
                         statement = "[_target] spawn life_fnc_searchVehAction";
                     };
+					/*
                     class Cop_ForceUnlock {
                         displayName = "Déverrouiller";
                         distance = 4.0;
@@ -383,6 +384,7 @@ class CfgVehicles {
                         condition = "locked _target == 0";
                         statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
                     };
+					*/
                 };
 				class Med_vehInteraction {
                     displayName = "Interaction Médecin";
@@ -527,6 +529,7 @@ class CfgVehicles {
                         condition = "";
                         statement = "[_target] spawn life_fnc_searchVehAction";
                     };
+					/*
                     class Cop_ForceUnlock {
                         displayName = "Déverrouiller";
                         distance = 4.0;
@@ -539,6 +542,7 @@ class CfgVehicles {
                         condition = "locked _target == 0";
                         statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
                     };
+					*/
                 };
 				class Med_vehInteraction {
                     displayName = "Interaction Médecin";
@@ -686,6 +690,7 @@ class CfgVehicles {
                         condition = "";
                         statement = "[_target] spawn life_fnc_searchVehAction";
                     };
+					/*
                     class Cop_ForceUnlock {
                         displayName = "Déverrouiller";
                         distance = 4.0;
@@ -698,6 +703,7 @@ class CfgVehicles {
                         condition = "locked _target == 0";
                         statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
                     };
+					*/
                 };
 				class Med_vehInteraction {
                     displayName = "Interaction Médecin";
@@ -837,6 +843,7 @@ class CfgVehicles {
                         condition = "";
                         statement = "[_target] spawn life_fnc_searchVehAction";
                     };
+					/*
                     class Cop_ForceUnlock {
                         displayName = "Déverrouiller";
                         distance = 4.0;
@@ -849,6 +856,7 @@ class CfgVehicles {
                         condition = "locked _target == 0";
                         statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
                     };
+					*/
                 };
 				class Med_vehInteraction {
                     displayName = "Interaction Médecin";
@@ -992,6 +1000,7 @@ class CfgVehicles {
                         condition = "";
                         statement = "[_target] spawn life_fnc_searchVehAction";
                     };
+					/*
                     class Cop_ForceUnlock {
                         displayName = "Déverrouiller";
                         distance = 4.0;
@@ -1004,6 +1013,7 @@ class CfgVehicles {
                         condition = "locked _target == 0";
                         statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
                     };
+					*/
                 };
 				class Med_vehInteraction {
                     displayName = "Interaction Médecin";
@@ -1144,6 +1154,7 @@ class CfgVehicles {
                         condition = "";
                         statement = "[_target] spawn life_fnc_searchVehAction";
                     };
+					/*
                     class Cop_ForceUnlock {
                         displayName = "Déverrouiller";
                         distance = 4.0;
@@ -1156,6 +1167,7 @@ class CfgVehicles {
                         condition = "locked _target == 0";
                         statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
                     };
+					*/
                 };
 				class Med_vehInteraction {
                     displayName = "Interaction Médecin";
@@ -1316,6 +1328,7 @@ class CfgVehicles {
                         condition = "";
                         statement = "[_target] spawn life_fnc_searchVehAction";
                     };
+					/*
                     class Cop_ForceUnlock {
                         displayName = "Déverrouiller";
                         distance = 4.0;
@@ -1328,6 +1341,7 @@ class CfgVehicles {
                         condition = "locked _target == 0";
                         statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
                     };
+					*/
                 };
 				class Med_vehInteraction {
                     displayName = "Interaction Médecin";
