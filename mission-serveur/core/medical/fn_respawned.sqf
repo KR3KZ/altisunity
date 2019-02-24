@@ -6,6 +6,7 @@
     Description:
     Sets the player up if he/she used the respawn option.
 */
+diag_log "start fn_respawned.sqf";
 private ["_handle"];
 //Reset our weight and other stuff
 
@@ -104,3 +105,4 @@ if (life_removeWanted) then {
 
 [] call SOCK_fnc_updateRequest;
 [] call life_fnc_hudUpdate; //Request update of hud.
+diag_log "end fn_respawned.sqf";

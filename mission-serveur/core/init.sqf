@@ -178,6 +178,7 @@ if (life_HC_isActive) then {
 [] execVM "unity\taskforce\fn_ts.sqf";
 [] execVM "unity\general\fn_autoUpdate.sqf";
 [] execVM "unity\general\fn_deathScreen.sqf";
+[] execVM "unity\general\fn_combatMode.sqf";
 
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log format ["               End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];

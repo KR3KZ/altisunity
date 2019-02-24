@@ -6,6 +6,7 @@
     When the player dies collect various information about that player
     and pull up the death dialog / camera functionality.
 */
+diag_log "start fn_onPlayerKilled.sqf";
 params [
     ["_unit",objNull,[objNull]],
     ["_killer",objNull,[objNull]]
@@ -165,3 +166,5 @@ if (playerSide isEqualTo civilian) then {
     [4] call SOCK_fnc_updatePartial;
 };
 */
+
+diag_log "end fn_onPlayerKilled.sqf";
