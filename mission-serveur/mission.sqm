@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=644;
+		nextID=687;
 	};
 	class Camera
 	{
-		pos[]={11672.153,61.950775,2749.7009};
-		dir[]={0,-0.70710677,0.70710683};
-		up[]={0,0.70710677,0.70710671};
-		aside[]={0.99999994,0,0};
+		pos[]={4616.8218,674.92365,14670.06};
+		dir[]={0.86514908,-0.33281496,0.37534717};
+		up[]={0.3053661,0.9429661,0.13248451};
+		aside[]={0.39802971,-4.3970067e-007,-0.91743737};
 	};
 };
 binarizationWanted=0;
@@ -249,6 +249,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -263,24 +281,6 @@ class CustomAttributes
 						};
 					};
 					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -34800,7 +34800,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];}";
+						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];" \n "this addAction[""Altis Cop Shop"",life_fnc_weaponShopMenu,""cop"",0,false,false,"""",'playerSide isEqualTo cop'];}";
 						disableSimulation=1;
 					};
 					id=1311;
@@ -35124,7 +35124,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=7;
+				items=6;
 				class Item0
 				{
 					dataType="Object";
@@ -35365,17 +35365,6 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item6
-				{
-					dataType="Marker";
-					position[]={13215.312,341.95001,17664.377};
-					name="marker_299";
-					type="plp_mark_as_embassy";
-					colorName="default";
-					a=0.69999999;
-					b=0.69999999;
-					id=1562;
-				};
 			};
 			id=1325;
 		};
@@ -35386,7 +35375,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=3;
+				items=2;
 				class Item0
 				{
 					dataType="Object";
@@ -35467,18 +35456,6 @@ class Mission
 						};
 						nAttributes=1;
 					};
-				};
-				class Item2
-				{
-					dataType="Marker";
-					position[]={11650.265,23.499001,2813.0659};
-					name="marker_300";
-					type="plp_mark_as_embassy";
-					colorName="default";
-					a=0.69999999;
-					b=0.69999999;
-					id=1563;
-					atlOffset=0.00027656555;
 				};
 			};
 			id=1332;
@@ -36716,7 +36693,7 @@ class Mission
 					};
 					id=1405;
 					type="WaterPump_01_forest_F";
-					atlOffset=0.0051765442;
+					atlOffset=0.0041732788;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36753,7 +36730,7 @@ class Mission
 				};
 			};
 			id=1406;
-			atlOffset=0.11278152;
+			atlOffset=0.11328506;
 		};
 		class Item122
 		{
@@ -37096,18 +37073,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8083.6606,493.32693,16407.789};
+						position[]={8083.6021,492.9111,16407.684};
 						angles[]={0,1.1207107,0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize""STR_Process_Sand"",life_fnc_processAction,""glass"",0,false,false,"""",' life_inv_sand > 0 && !life_is_processing && !life_action_inUse'];}";
+						init="call{this addAction[localize""STR_Process_Sand"",life_fnc_processAction,""sand"",0,false,false,"""",' life_inv_sand > 0 && !life_is_processing && !life_action_inUse'];}";
 						disableSimulation=1;
 					};
 					id=1437;
 					type="Land_JetEngineStarter_01_F";
-					atlOffset=0.39996338;
+					atlOffset=-0.017211914;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37144,7 +37122,7 @@ class Mission
 				};
 			};
 			id=1439;
-			atlOffset=0.20001221;
+			atlOffset=-0.008605957;
 		};
 		class Item125
 		{
@@ -38407,7 +38385,7 @@ class Mission
 		class Item147
 		{
 			dataType="Layer";
-			name="Concessionnaire civil Mikis";
+			name="Concessionnaire civil MikisFob";
 			state=1;
 			class Entities
 			{

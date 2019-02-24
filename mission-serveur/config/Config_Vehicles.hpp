@@ -115,9 +115,7 @@ class CarShops {
 			{ "LOP_TKA_Ural", "call life_coplevel >= 3" },
 			{ "LOP_TKA_UAZ_DshKM", "call life_coplevel >= 4" },
 			{ "LOP_TKA_UAZ", "call life_coplevel >= 2" },
-			{ "rhs_tigr_msv", "call life_coplevel >= 4" },
-			{ "rhs_ural_msv_01", "call life_coplevel >= 2" },
-			{ "LOP_TAKA_Landrover", "call life_coplevel >= 3" }
+			{ "rhs_tigr_msv", "call life_coplevel >= 4" }
         };
     };
 
