@@ -50,7 +50,7 @@ class Licenses {
 
     class gouv {
         variable = "gouv";
-        displayName = "STR_License_gouv";
+        displayName = "STR_License_Gouv";
         price = 2000;
         illegal = false;
         side = "civ";

@@ -180,6 +180,8 @@ if (life_HC_isActive) then {
 [] execVM "unity\general\fn_deathScreen.sqf";
 [] execVM "unity\general\fn_combatMode.sqf";
 
+player setVariable ["combat_mode", 0, false];
+
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log format ["               End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "----------------------------------------------------------------------------------------------------";
