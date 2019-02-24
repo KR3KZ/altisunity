@@ -158,24 +158,33 @@ class WeaponShops {
             { "ACE_morphine", "", 0, 0, "" },
 			{ "ACE_CableTie", "", 0, 0, "" },
 			{ "NVGoggles", "", 0, 0, "" },
+			{ "rhs_weap_6p53", "", 0, 0, "call life_coplevel >= 1" },
             { "rhs_weap_ak105", "", 0, 0, "call life_coplevel >= 2" },
 			{ "rhs_weap_ak74m", "", 0, 0, "call life_coplevel >= 3" },
 			{ "rhs_weap_ak103", "", 0, 0, "call life_coplevel >= 4" },
 			{ "srifle_DMR_06_olive_F", "", 0, 0, "call life_coplevel >= 5" },
 			{ "rhs_weap_M320", "", 0, 0, "call life_coplevel >= 5" },
-			{ "rhs_weap_6p53", "", 0, 0, "call life_coplevel >= 1" },
 			{ "rhs_weap_pkp", "", 0, 0, "call life_coplevel >= 7" }
         };
         mags[] = {
-            { "30Rnd_AK-103_57-N-231P_Mag", "", 0, 0, "call life_coplevel >= 3" },
-			{ "30Rnd_AK-74_7N10_Mag", "", 0, 0, "call life_coplevel >= 1" },
-			{ "7.62mm_20rnd_mag", "", 0, 0, "call life_coplevel >= 4" },
-			{ "GL_Stun_Grenade_Round", "", 0, 0, "call life_coplevel >= 5" },
-			{ "18rnd_SR-1_7N28", "", 0, 0, "call life_coplevel >= 1" },
-			{ "100_PKM_57-N-323S_Mag", "", 0, 0, "call life_coplevel >= 7" }
+			//6P53
+			{ "rhs_18rnd_9x21mm_7N28", "", 0, 0, "call life_coplevel >= 1" },
+			//Ak
+			{ "rhs_30Rnd_545x39_7N10_AK", "", 0, 0, "call life_coplevel >= 2" },
+			//M14
+			{ "20Rnd_762x51_Mag", "", 0, 0, "call life_coplevel >= 2" },
+			//Lance Grenade
+			{ "rhs_mag_m4009", "", 0, 0, "call life_coplevel >= 5" },
+			{ "1Rnd_Smoke_Grenade_shell", "", 0, 0, "call life_coplevel >= 5" },
+			//PKP
+			{ "rhs_100Rnd_762x54mmR", "", 0, 0, "call life_coplevel >= 7" }
         };
         accs[] = {
-            { "rhs_acc_pkas", "", 0, 0, "" }
+            { "rhs_acc_pkas", "", 0, 0, "" },
+			{ "rhs_acc_ekp1", "", 0, 0, "" },
+			{ "rhs_acc_ekp8_02", "", 0, 0, "" },
+			{ "rhs_acc_2dpzenit", "", 0, 0, "" },
+			{ "rhs_acc_ekp8_18", "", 0, 0, "" }
         };
     };
 
