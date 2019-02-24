@@ -117,7 +117,7 @@ class CfgVehicles {
                         icon = QPATHTOF(UI\team\team_white_ca.paa);
                     };
                 };
-
+				/*
                 class ACE_JoinGroup {
                     displayName = CSTRING(JoinGroup);
                     condition = QUOTE(GVAR(EnableTeamManagement) && {[ARR_2(_player,_target)] call DFUNC(canJoinGroup)});
@@ -140,6 +140,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
                 };
+				*/
                 class ACE_Pardon {
                     displayName = CSTRING(Pardon);
                     condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canPardon));
