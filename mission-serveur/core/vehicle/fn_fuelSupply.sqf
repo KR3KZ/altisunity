@@ -52,7 +52,7 @@ private _random = floor((random 11000) + 1500);
                 _fuelFeedState = _random;
             };
         };
-    };   
+    };
 } forEach (nearestObjects [_vehicle, ["Land_FuelStation_Feed_F","Land_fs_feed_F"], 100]);
 if (_fuelFeedState isEqualTo 0) exitWith {titleText [localize "STR_FuelTank_FeedFull","PLAIN"]; life_action_inUse = false;};
 
@@ -95,7 +95,7 @@ waitUntil {
 
     _fuelLevel = (1 / _fuelSpace) * _fuelState;
     _progress progressSetPosition _fuelLevel;
-    _pgText ctrlSetText format ["Tank  %1 Ltr / %2 Ltr  ( $ %3 / Ltr )",_fuelState,_fuelSpace,_price];
+    _pgText ctrlSetText format ["Tank  %1 Ltr / %2 Ltr  ( %3 AFN / Ltr )",_fuelState,_fuelSpace,_price];
 
     if (_fuelState isEqualTo 0 || _fuelFeedState <= 0) exitWith {true};
 
