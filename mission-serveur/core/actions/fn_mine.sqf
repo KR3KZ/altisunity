@@ -17,6 +17,7 @@ _exit = false;
 if (player getVariable "playerSurrender") exitWith {
     hint localize "STR_NOTF_surrender";
 };
+if (currentWeapon player != "") exitWith {hint "Impossible de miner avec une arme en main."};
 life_action_inUse = true;
 _zone = "";
 _requiredItem = "";

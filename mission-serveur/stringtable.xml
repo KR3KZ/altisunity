@@ -2719,6 +2719,10 @@
             <Original>Bois > Papier</Original>
             <French>Bois > Papier</French>
         </Key>
+		<Key ID="STR_License_Gouv">
+            <Original>Gouvernement</Original>
+            <French>Gouvernement</French>
+        </Key>
     </Package>
     <Package name="More_Item_Strings">
         <Key ID="STR_ISTR_Blast_VaultOnly">
