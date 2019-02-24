@@ -108,7 +108,7 @@ switch (_code) do {
         };
     };
 
-    //Space key for Jumping
+    /*Space key for Jumping
     case 57: {
         if (isNil "jumpActionTime") then {jumpActionTime = 0;};
         if (_shift && {!(animationState player isEqualTo "AovrPercMrunSrasWrflDf")} && {isTouchingGround player} && {stance player isEqualTo "STAND"} && {speed player > 2} && {!life_is_arrested} && {((velocity player) select 2) < 2.5} && {time - jumpActionTime > 1.5}) then {
@@ -117,6 +117,7 @@ switch (_code) do {
             _handled = true;
         };
     };
+	*/
 
     //Surrender (Shift + B)
     case 48: {
