@@ -1,3 +1,5 @@
+#include "..\..\script_macros.hpp"
+
 [] spawn {
     diag_log format["spawn while"];
 
