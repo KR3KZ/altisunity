@@ -87,7 +87,7 @@ _unit = _this select 0;
                 missionNamespace setVariable [_itemName,0];
             };
         };
-
+		/*
         case "life_cash": {
             if (CASH > 0) then {
                 _pos = _unit modelToWorld[0,3,0];
@@ -99,7 +99,7 @@ _unit = _this select 0;
                 missionNamespace setVariable ["CASH",0];
             };
         };
-
+		*/
         default {
             if (_value > 0) then {
                 _pos = _unit modelToWorld[0,3,0];
@@ -112,4 +112,4 @@ _unit = _this select 0;
             };
         };
     };
-} forEach (("true" configClasses (missionConfigFile >> "VirtualItems")) + ["life_cash"]);
+} forEach (("true" configClasses (missionConfigFile >> "VirtualItems"))/* + ["life_cash"]*/);
