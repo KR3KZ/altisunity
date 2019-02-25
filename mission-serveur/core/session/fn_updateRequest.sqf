@@ -38,8 +38,6 @@ switch (playerSide) do {
     };
 };
 
-diag_log str _packet;
-
 if (life_HC_isActive) then {
     _packet remoteExecCall ["HC_fnc_updateRequest",HC_Life];
 } else {
