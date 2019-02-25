@@ -8,22 +8,22 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1608;
+		nextID=1610;
 	};
 	class MarkerIDProvider
 	{
-		nextID=316;
+		nextID=318;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1160;
+		nextID=1203;
 	};
 	class Camera
 	{
-		pos[]={9486.04,174.97745,11699.739};
-		dir[]={-0.78355449,-0.60766017,-0.12968796};
-		up[]={-0.5995056,0.79419184,-0.099225253};
-		aside[]={-0.16329308,7.4738637e-008,0.98658913};
+		pos[]={11670.932,37.696548,2819.1296};
+		dir[]={0.048929464,-0.85814315,0.51109296};
+		up[]={0.081780337,0.51340365,0.85423845};
+		aside[]={0.99545527,-2.0887092e-007,-0.09529911};
 	};
 };
 binarizationWanted=0;
@@ -258,6 +258,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -272,24 +290,6 @@ class CustomAttributes
 						};
 					};
 					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -16136,7 +16136,8 @@ class Mission
 					position[]={9677.5654,143.159,11340.122};
 					name="veh_spawn_milice_mikisfob";
 					type="Empty";
-					angle=327.06781;
+					colorName="default";
+					angle=327.06796;
 					id=1319;
 					atlOffset=-0.00032043457;
 				};
@@ -16163,7 +16164,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=6;
+				items=7;
 				class Item0
 				{
 					dataType="Object";
@@ -16336,6 +16337,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this addAction[""Concessionnaire Gouvernemental"",life_fnc_vehicleShopMenu,[""gouv"",civilian,""veh_spawn_gouv_kalaenoowi"",""civ"",""Concessionnaire véhicules""]];}";
 						disableSimulation=1;
 					};
 					id=1330;
@@ -16404,6 +16406,15 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item6
+				{
+					dataType="Marker";
+					position[]={13219.506,341.95001,17668.811};
+					name="veh_spawn_gouv_kalaenoowi";
+					type="Empty";
+					colorName="default";
+					id=1608;
+				};
 			};
 			id=1325;
 		};
@@ -16414,7 +16425,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
@@ -16468,6 +16479,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="call{this addAction[""Concessionnaire Gouvernemental"",life_fnc_vehicleShopMenu,[""gouv"",civilian,""veh_spawn_gouv_kinduf"",""civ"",""Concessionnaire véhicules""]];}";
 						disableSimulation=1;
 					};
 					id=1334;
@@ -16496,9 +16508,19 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={11671.383,23.582001,2827.2129};
+					name="veh_spawn_gouv_kinduf";
+					type="Empty";
+					colorName="default";
+					id=1609;
+					atlOffset=4.5776367e-005;
+				};
 			};
 			id=1332;
-			atlOffset=0.061479568;
+			atlOffset=0.010555267;
 		};
 		class Item114
 		{

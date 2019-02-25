@@ -22,6 +22,7 @@ class CarShops {
         vehicles[] = {
             { "walker_a3_datsun", "" },
             { "walker_a3_gaz", "" },
+            { "walker_a3_hatch", "" },
             { "C_Offroad_01_F", "" },
             { "walker_a3_c_hilux", "" },
             { "walker_a3_hilux", "" },
@@ -327,21 +328,38 @@ class LifeCfgVehicles {
         vItemSpace = 200;
         conditions = "";
         price = 45000;
-        textures[] = {};
+        textures[] = {
+            { "Vert", "Civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_green_co.paa"}
+            { "Bleu", "Civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_blue_co.paa"}
+            { "Rouge", "Civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_red_co.paa"} }
+        };
     };
 
     class walker_a3_skodovka {
-      vItemSpace = 200;
-      conditions = "";
-      price = 45000;
-      textures[] = {};
+        vItemSpace = 200;
+        conditions = "";
+        price = 45000;
+        textures[] = {
+            { "Vert", "Civ", {"\walker_a3_cars\skodovka\data\skodovka_zelena_co.paa"} }
+        };
     };
 
     class walker_a3_SUV {
-      vItemSpace = 200;
-      conditions = "";
-      price = 45000;
-      textures[] = {};
+        vItemSpace = 200;
+        conditions = "";
+        price = 45000;
+        textures[] = {};
+    };
+
+    class walker_a3_hatch {
+        vItemSpace = 200;
+        conditions = "";
+        price = 45000;
+        textures[] = {
+            { "Vert", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_green_co.paa"}
+            { "Bleu", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_blue_co.paa"}
+            { "Rouge", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_red_co.paa"} }
+        };
     };
 
     class LOP_AM_Offroad {
@@ -545,14 +563,18 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vItemSpace = 45;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 40000;
-        textures[] = {};
+        textures[] = {
+            { "Gris", "Civ", {"\walker_a3_vehicles\gazlimo\data_gaz\volha_blue_co.paa"} }
+        };
     };
 
     class walker_a3_datsun {
         vItemSpace = 25;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 2500;
-        textures[] = {};
+        textures[] = {
+            { "Gris", "Civ", {"\walker_a3_vehicles\datsun\data\datsun_trup2_co.paa"} }
+        };
     };
 
     class I_Truck_02_covered_F {
