@@ -3,10 +3,10 @@
 	private["_nb"];
 	_nb = 0;
 	while {true} do {
-		sleep 3;
+		sleep 60;
 		//[] call life_fnc_updateClothing;
 		_nb = _nb+1;
-		if(_nb == 3) then {
+		if(_nb == 5) then {
 			[] call SOCK_fnc_updateRequest;
 			_nb = 0;
 		} else {

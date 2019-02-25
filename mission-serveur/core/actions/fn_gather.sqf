@@ -11,7 +11,6 @@ if (life_action_inUse) exitWith {};
 if !(isNull objectParent player) exitWith {};
 if (player getVariable "restrained") exitWith {hint localize "STR_NOTF_isrestrained";};
 if (player getVariable "playerSurrender") exitWith {hint localize "STR_NOTF_surrender";};
-if (currentWeapon player != "") exitWith {hint "Impossible de récolter avec une arme en main."};
 
 life_action_inUse = true;
 _zone = "";
@@ -49,6 +48,7 @@ if (_requiredItem != "") then {
 };
 
 if (_exit) exitWith {life_action_inUse = false;};
+if (currentWeapon player != "") exitWith {hint "Impossible de récolter avec une arme en main."};
 
 private _itemName = M_CONFIG(getText,"VirtualItems",_resource,"displayName");
 titleText[format["Récolte %1...",(localize _itemName)],"PLAIN"];

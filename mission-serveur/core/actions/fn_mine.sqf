@@ -17,7 +17,6 @@ _exit = false;
 if (player getVariable "playerSurrender") exitWith {
     hint localize "STR_NOTF_surrender";
 };
-if (currentWeapon player != "") exitWith {hint "Impossible de miner avec une arme en main."};
 life_action_inUse = true;
 _zone = "";
 _requiredItem = "";
@@ -81,6 +80,8 @@ if (_requiredItem != "") then {
 if (_exit) exitWith {
     life_action_inUse = false;
 };
+
+if (currentWeapon player != "") exitWith {hint "Impossible de miner avec une arme en main."};
 
 private _itemName = M_CONFIG(getText,"VirtualItems",_mined,"displayName");
 titleText[format["Minage %1...",(localize _itemName)],"PLAIN"];
