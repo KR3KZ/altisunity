@@ -168,16 +168,16 @@ class WeaponShops {
         };
         mags[] = {
 			//6P53
-			{ "rhs_18rnd_9x21mm_7N28", "", 0, 0, "call life_coplevel >= 1" },
+			{ "rhs_18rnd_9x21mm_7N28", "", 0, 0, "" },
 			//Ak
-			{ "rhs_30Rnd_545x39_7N10_AK", "", 0, 0, "call life_coplevel >= 2" },
+			{ "rhs_30Rnd_545x39_7N10_AK", "", 0, 0, "" },
 			//M14
-			{ "20Rnd_762x51_Mag", "", 0, 0, "call life_coplevel >= 2" },
+			{ "20Rnd_762x51_Mag", "", 0, 0, "" },
 			//Lance Grenade
-			{ "rhs_mag_m4009", "", 0, 0, "call life_coplevel >= 5" },
-			{ "1Rnd_Smoke_Grenade_shell", "", 0, 0, "call life_coplevel >= 5" },
+			{ "rhs_mag_m4009", "", 0, 0, "" },
+			{ "1Rnd_Smoke_Grenade_shell", "", 0, 0, "" },
 			//PKP
-			{ "rhs_100Rnd_762x54mmR", "", 0, 0, "call life_coplevel >= 7" }
+			{ "rhs_100Rnd_762x54mmR", "", 0, 0, "" }
         };
         accs[] = {
             { "rhs_acc_pkas", "", 0, 0, "" },
