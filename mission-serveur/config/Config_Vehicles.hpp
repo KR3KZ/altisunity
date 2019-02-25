@@ -329,9 +329,9 @@ class LifeCfgVehicles {
         conditions = "";
         price = 45000;
         textures[] = {
-            { "Vert", "Civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_green_co.paa"} },
-            { "Bleu", "Civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_blue_co.paa"} },
-            { "Rouge", "Civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_red_co.paa"} }
+            { "Vert", "Civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_green_co.paa"}, "" },
+            { "Bleu", "Civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_blue_co.paa"}, "" },
+            { "Rouge", "Civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_red_co.paa"}, "" }
         };
     };
 
@@ -340,7 +340,7 @@ class LifeCfgVehicles {
         conditions = "";
         price = 45000;
         textures[] = {
-            { "Vert", "Civ", {"\walker_a3_cars\skodovka\data\skodovka_zelena_co.paa"} }
+            { "Vert", "Civ", {"\walker_a3_cars\skodovka\data\skodovka_zelena_co.paa"}, "" }
         };
     };
 
@@ -356,9 +356,9 @@ class LifeCfgVehicles {
         conditions = "";
         price = 45000;
         textures[] = {
-            { "Vert", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_green_co.paa"} },
-            { "Bleu", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_blue_co.paa"} },
-            { "Rouge", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_red_co.paa"} }
+            { "Vert", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_green_co.paa"}, "" },
+            { "Bleu", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_blue_co.paa"}, "" },
+            { "Rouge", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_red_co.paa"}, "" }
         };
     };
 
@@ -564,7 +564,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 40000;
         textures[] = {
-            { "Gris", "Civ", {"\walker_a3_vehicles\gazlimo\data_gaz\volha_blue_co.paa"} }
+            { "Gris", "Civ", {"\walker_a3_vehicles\gazlimo\data_gaz\volha_blue_co.paa"}, "" }
         };
     };
 
@@ -573,7 +573,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 2500;
         textures[] = {
-            { "Gris", "Civ", {"\walker_a3_vehicles\datsun\data\datsun_trup2_co.paa"} }
+            { "Gris", "Civ", {"\walker_a3_vehicles\datsun\data\datsun_trup2_co.paa"}, "" }
         };
     };
 
