@@ -65,15 +65,8 @@ class CfgSpawnPoints {
 			};
 
 			class spawn_med2 {
-				displayName = "";
+				displayName = "Kinduf";
 				spawnMarker = "medic_spawn_2";
-				icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
-				conditions = "";
-			};
-
-			class spawn_med3 {
-				displayName = "";
-				spawnMarker = "medic_spawn_3";
 				icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
 				conditions = "";
 			};
