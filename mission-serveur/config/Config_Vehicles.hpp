@@ -329,8 +329,8 @@ class LifeCfgVehicles {
         conditions = "";
         price = 45000;
         textures[] = {
-            { "Vert", "Civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_green_co.paa"}
-            { "Bleu", "Civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_blue_co.paa"}
+            { "Vert", "Civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_green_co.paa"} },
+            { "Bleu", "Civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_blue_co.paa"} },
             { "Rouge", "Civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_red_co.paa"} }
         };
     };
@@ -356,8 +356,8 @@ class LifeCfgVehicles {
         conditions = "";
         price = 45000;
         textures[] = {
-            { "Vert", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_green_co.paa"}
-            { "Bleu", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_blue_co.paa"}
+            { "Vert", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_green_co.paa"} },
+            { "Bleu", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_blue_co.paa"} },
             { "Rouge", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_red_co.paa"} }
         };
     };
