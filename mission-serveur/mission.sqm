@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=138;
+	toggles=10;
 	class ItemIDProvider
 	{
 		nextID=1628;
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1289;
+		nextID=1332;
 	};
 	class Camera
 	{
-		pos[]={10773.325,77.683838,2747.7546};
-		dir[]={-0.42662743,-0.46868658,0.77354109};
-		up[]={-0.22635543,0.88336056,0.41041735};
-		aside[]={0.87566745,-1.4377292e-008,0.48295489};
+		pos[]={10716.3,36.223259,2724.4812};
+		dir[]={-0.9587841,-0.23797935,0.15547825};
+		up[]={-0.23494065,0.97126687,0.03809854};
+		aside[]={0.16007611,-9.6824806e-008,0.9871406};
 	};
 };
 binarizationWanted=0;
@@ -258,24 +258,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -290,6 +272,24 @@ class CustomAttributes
 						};
 					};
 					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -12755,7 +12755,7 @@ class Mission
 					position[]={12316.602,33.196999,1957.817};
 					name="marker_297";
 					type="plp_mark_as_police";
-					colorName="default";
+					colorName="plp_ColorBlueDark";
 					a=0.69999999;
 					b=0.69999999;
 					id=1557;
@@ -14141,7 +14141,7 @@ class Mission
 					position[]={12161.564,341.95001,17254.887};
 					name="marker_298";
 					type="plp_mark_as_police";
-					colorName="default";
+					colorName="plp_ColorBlueDark";
 					a=0.69999999;
 					b=0.69999999;
 					id=1561;
@@ -16137,7 +16137,7 @@ class Mission
 					name="veh_spawn_milice_mikisfob";
 					type="Empty";
 					colorName="default";
-					angle=327.0679;
+					angle=327.06787;
 					id=1319;
 					atlOffset=-0.00032043457;
 				};
@@ -16147,7 +16147,7 @@ class Mission
 					position[]={9676.2051,143.10699,11338.055};
 					name="marker_303";
 					type="plp_mark_as_police";
-					colorName="default";
+					colorName="plp_ColorBlueDark";
 					a=0.69999999;
 					b=0.69999999;
 					id=1570;
@@ -19752,7 +19752,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Concessionnaire hélicoptères"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""hel_spawn_medic_kalaenoowi_1"",""med"",""Concessionnaire hélicoptères""]];}";
+						init="call{this addAction[localize""STR_MAR_Helicopter_Shop"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""hel_spawn_medic_kalaenoowi_1"",""med"",""Concessionnaire hélicoptères""]];}";
 					};
 					id=1620;
 					type="Land_CashDesk_F";
