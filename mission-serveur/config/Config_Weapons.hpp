@@ -113,6 +113,8 @@ class WeaponShops {
             { "ACE_FieldDressing", "", 0, 0, "" },
             { "ACE_morphine", "", 0, 0, "" },
             { "ACE_EarPlugs", "", 0, 0, "" },
+            { "murshun_cigs_cigpack", "", 0, 0, "" },
+            { "murshun_cigs_matches", "", 0, 0, "" },
             { "Chemlight_red", "", 300, 150, "" },
             { "Chemlight_yellow", "", 300, 150, "" },
             { "Chemlight_green", "", 300, 150, "" },
