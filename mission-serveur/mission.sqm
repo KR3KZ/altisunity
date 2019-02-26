@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1461;
+		nextID=1504;
 	};
 	class Camera
 	{
-		pos[]={13880.027,360.86386,17913.965};
-		dir[]={0.10980676,-0.37315592,-0.92125899};
-		up[]={0.044165324,0.92776382,-0.37053749};
-		aside[]={-0.9929772,-3.6441634e-008,-0.11835574};
+		pos[]={13939.271,422.31985,17915.564};
+		dir[]={-0.9668746,-0.23766787,-0.093146376};
+		up[]={-0.23657404,0.97134656,-0.022790961};
+		aside[]={-0.095893949,6.7246219e-008,0.99539548};
 	};
 };
 binarizationWanted=0;
@@ -258,24 +258,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -290,6 +272,24 @@ class CustomAttributes
 						};
 					};
 					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -11686,7 +11686,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1264;
 					type="Land_BarGate_F";
@@ -11726,7 +11725,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1280;
 					type="Land_BarGate_F";
@@ -12604,7 +12602,7 @@ class Mission
 					};
 					id=1287;
 					type="Land_BagFence_Long_F";
-					atlOffset=0.8238678;
+					atlOffset=0.89999962;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12644,7 +12642,7 @@ class Mission
 					};
 					id=1288;
 					type="Land_BagFence_Long_F";
-					atlOffset=1.2519989;
+					atlOffset=1.3309975;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12684,7 +12682,7 @@ class Mission
 					};
 					id=1289;
 					type="Land_BagFence_Long_F";
-					atlOffset=0.88536453;
+					atlOffset=1.2109985;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12724,7 +12722,7 @@ class Mission
 					};
 					id=1290;
 					type="Land_BagFence_Long_F";
-					atlOffset=0.32880211;
+					atlOffset=0.65799904;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12905,7 +12903,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1192;
 					type="Land_BarGate_F";
@@ -12945,7 +12942,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1193;
 					type="Land_BarGate_F";
@@ -12985,7 +12981,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1217;
 					type="Land_BarGate_F";
@@ -14326,7 +14321,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1245;
 					type="Land_BarGate_F";
@@ -14366,7 +14360,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1260;
 					type="Land_BarGate_F";
@@ -14406,7 +14399,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1263;
 					type="Land_BarGate_F";
@@ -16209,7 +16201,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1327;
 					type="Land_BarGate_F";
@@ -16428,11 +16419,9 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1333;
 					type="Land_BarGate_F";
-					atlOffset=-1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16509,7 +16498,7 @@ class Mission
 				};
 			};
 			id=1332;
-			atlOffset=0.010555267;
+			atlOffset=0.010557175;
 		};
 		class Item114
 		{
@@ -19924,7 +19913,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{this addAction[localize""STR_Shops_C_Gouv"",life_fnc_clothingMenu,""gouv"",0,false,false,"""",'license_civ_gouv && playerSide isEqualTo civilian'];}";
+						init="call{this addAction[localize""STR_Shops_C_Gouv"",life_fnc_clothingMenu,""gouv"",0,false,false,"""",'license_civ_gouv && playerSide isEqualTo civilian'];" \n "this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""gouv""];" \n "this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market""];}";
 						disableSimulation=1;
 					};
 					id=1503;
@@ -19977,7 +19966,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize""STR_Shops_C_Gouv"",life_fnc_clothingMenu,""gouv"",0,false,false,"""",'license_civ_gouv && playerSide isEqualTo civilian'];}";
+						init="call{this addAction[localize""STR_Shops_C_Gouv"",life_fnc_clothingMenu,""gouv"",0,false,false,"""",'license_civ_gouv && playerSide isEqualTo civilian'];" \n "this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""gouv""];" \n "this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market""];}";
 						disableSimulation=1;
 					};
 					id=1506;

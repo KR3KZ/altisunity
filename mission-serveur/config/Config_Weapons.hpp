@@ -99,7 +99,7 @@ class WeaponShops {
 
     //Basic Shops
     class genstore {
-        name = "Altis General Store";
+        name = "Magasin";
         side = "civ";
         conditions = "";
         items[] = {
@@ -114,6 +114,33 @@ class WeaponShops {
             { "ACE_morphine", "", 0, 0, "" },
             { "ACE_EarPlugs", "", 0, 0, "" },
             { "murshun_cigs_cigpack", "", 0, 0, "" },
+            { "murshun_cigs_matches", "", 0, 0, "" },
+            { "Chemlight_red", "", 300, 150, "" },
+            { "Chemlight_yellow", "", 300, 150, "" },
+            { "Chemlight_green", "", 300, 150, "" },
+            { "Chemlight_blue", "", 300, 150, "" }
+        };
+        mags[] = {};
+        accs[] = {};
+    };
+
+    class gouv {
+        name = "Magasin";
+        side = "civ";
+        conditions = "";
+        items[] = {
+            { "Binocular", "", 150, 75, "" },
+            { "ItemGPS", "", 100, 50, "" },
+            { "ItemMap", "", 50, 25, "" },
+            { "ACE_Flashlight_XL50", "", 50, 25, "" },
+            { "ItemCompass", "", 50, 25, "" },
+            { "ItemWatch", "", 50, 25, "" },
+            { "FirstAidKit", "", 150, 75, "" },
+            { "ACE_FieldDressing", "", 0, 0, "" },
+            { "ACE_morphine", "", 0, 0, "" },
+            { "ACE_EarPlugs", "", 0, 0, "" },
+            { "murshun_cigs_cigpack", "", 0, 0, "" },
+            { "murshun_cigs_lighter", "", 0, 0, "" },
             { "murshun_cigs_matches", "", 0, 0, "" },
             { "Chemlight_red", "", 300, 150, "" },
             { "Chemlight_yellow", "", 300, 150, "" },
@@ -159,6 +186,7 @@ class WeaponShops {
             { "ACE_FieldDressing", "", 0, 0, "" },
             { "ACE_morphine", "", 0, 0, "" },
 			{ "ACE_CableTie", "", 0, 0, "" },
+            { "ACE_EarPlugs", "", 0, 0, "" },
             { "murshun_cigs_cigpack", "", 0, 0, "" },
             { "murshun_cigs_matches", "", 0, 0, "" },
 			{ "NVGoggles", "", 0, 0, "" },

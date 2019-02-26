@@ -145,7 +145,8 @@ class Clothing {
         };
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
-            { "G_Squares_Tinted", "", 500, "" }
+            { "G_Squares_Tinted", "", 500, "" },
+            { "immersion_cigs_cigar0", "", 500, "" }
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
