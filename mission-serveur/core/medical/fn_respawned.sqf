@@ -33,6 +33,7 @@ if (_unit getVariable ["ACE_isUnconscious", false]) then {
 };
 player setVariable["ACE_medical_bloodVolume",100,true];
 player setDamage 0;
+player setVariable ["combat_mode", 0, false];
 
 life_corpse setVariable ["Revive",nil,true];
 life_corpse setVariable ["name",nil,true];

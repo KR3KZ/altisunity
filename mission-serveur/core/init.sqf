@@ -8,12 +8,12 @@
 */
 
 private ["_handle","_timeStamp","_extDB_notLoaded"];
-life_firstSpawn = true;
-life_session_completed = false;
+life_firstSpawn 					= true;
+life_session_completed 				= false;
 0 cutText[localize "STR_Init_ClientSetup","BLACK FADED"];
 0 cutFadeOut 9999999;
-_timeStamp = diag_tickTime;
-_extDB_notLoaded = "";
+_timeStamp 							= diag_tickTime;
+_extDB_notLoaded 					= "";
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log "--------------------------------- Starting Altis Life Client Init ----------------------------------";
 diag_log format["------------------------------------------ Version %1 -------------------------------------------",(LIFE_SETTINGS(getText,"framework_version"))];
@@ -121,8 +121,8 @@ player addRating 99999999;
 [] call life_fnc_hudSetup;
 
 /* Set up frame-by-frame handlers */
-LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
-LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObjects"] call BIS_fnc_addStackedEventHandler;
+LIFE_ID_PlayerTags 					= ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
+LIFE_ID_RevealObjects 				= ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObjects"] call BIS_fnc_addStackedEventHandler;
 
 player setVariable ["steam64ID",getPlayerUID player];
 player setVariable ["realname",profileName,true];
@@ -134,7 +134,7 @@ life_fnc_moveIn = compileFinal
     life_disable_getOut = true;
 ";
 
-life_fnc_RequestClientId = player;
+life_fnc_RequestClientId 			= player;
 publicVariableServer "life_fnc_RequestClientId"; //Variable OwnerID for HeadlessClient
 
 [] spawn life_fnc_survival;
@@ -179,8 +179,6 @@ if (life_HC_isActive) then {
 [] execVM "unity\general\fn_autoUpdate.sqf";
 [] execVM "unity\general\fn_deathScreen.sqf";
 [] execVM "unity\general\fn_combatMode.sqf";
-
-player setVariable ["combat_mode", 0, false];
 
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log format ["               End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
