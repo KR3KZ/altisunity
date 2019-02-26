@@ -8,7 +8,7 @@
     Description:
     Saves the players gear for syncing to the database for persistence..
 */
-private ["_return","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_vMags","_bMags","_pMag","_hMag","_uni","_ves","_bag","_handled","_savedVirtualItems"];
+private ["_return","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_vMags","_bMags","_pMag","_hMag","_uni","_ves","_bag","_handled"];
 _return = [];
 
 _return pushBack uniform player;
@@ -133,9 +133,10 @@ if (count (handgunItems player) > 0) then {
 };
 
 {
-    _val = ITEM_VALUE(_x);
+    _val = ITEM_VALUE(configName _x);
     if (_val > 0) then {
-        _yItems pushBack [_x,_val];
+		_var = getText (_x >> 'variable');
+        _yItems pushBack [_var,_val];
     };
 } forEach ("true" configClasses (missionConfigFile >> "VirtualItems"));
 
