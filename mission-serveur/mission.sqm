@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1246;
+		nextID=1289;
 	};
 	class Camera
 	{
-		pos[]={10800.41,30.607145,2709.1299};
-		dir[]={0.41925898,-0.54275894,0.72778463};
-		up[]={0.27093413,0.83988601,0.47031036};
-		aside[]={0.86651778,-1.9936124e-007,-0.49917775};
+		pos[]={10773.325,77.683838,2747.7546};
+		dir[]={-0.42662743,-0.46868658,0.77354109};
+		up[]={-0.22635543,0.88336056,0.41041735};
+		aside[]={0.87566745,-1.4377292e-008,0.48295489};
 	};
 };
 binarizationWanted=0;
@@ -258,6 +258,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -272,24 +290,6 @@ class CustomAttributes
 						};
 					};
 					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -16137,7 +16137,7 @@ class Mission
 					name="veh_spawn_milice_mikisfob";
 					type="Empty";
 					colorName="default";
-					angle=327.06793;
+					angle=327.0679;
 					id=1319;
 					atlOffset=-0.00032043457;
 				};
@@ -19369,7 +19369,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Concessionnaire véhicules"",life_fnc_vehicleShopMenu,[""med_shop"",east,[""veh_spawn_medic_kinduf_1"",""veh_spawn_medic_kinduf_2"",""veh_spawn_medic_kinduf_3""],""med"",""Concessionnaire véhicules""]];}";
+						init="call{this addAction[""Concessionnaire véhicules"",life_fnc_vehicleShopMenu,[""med_shop"",independent,[""veh_spawn_medic_kinduf_1"",""veh_spawn_medic_kinduf_2"",""veh_spawn_medic_kinduf_3""],""med"",""Concessionnaire véhicules""]];}";
 						disableSimulation=1;
 					};
 					id=1612;
@@ -19441,7 +19441,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Concessionnaire hélicoptères"",life_fnc_vehicleShopMenu,[""med_air_hs"",east,""hel_spawn_medic_kinduf_1"",""med"",""Concessionnaire hélicoptères""]];}";
+						init="call{this addAction[""Concessionnaire hélicoptères"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""hel_spawn_medic_kinduf_1"",""med"",""Concessionnaire hélicoptères""]];}";
 					};
 					id=1626;
 					type="Land_CashDesk_F";
@@ -19459,7 +19459,7 @@ class Mission
 				};
 			};
 			id=1481;
-			atlOffset=0.0033740997;
+			atlOffset=0.0070476532;
 		};
 		class Item134
 		{
@@ -19711,7 +19711,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Concessionnaire véhicules"",life_fnc_vehicleShopMenu,[""med_shop"",east,[""veh_spawn_medic_kalaenoowi_1"",""veh_spawn_medic_kalaenoowi_2"",""veh_spawn_medic_kalaenoowi_3""],""med"",""Concessionnaire véhicules""]];}";
+						init="call{this addAction[""Concessionnaire véhicules"",life_fnc_vehicleShopMenu,[""med_shop"",independent,[""veh_spawn_medic_kalaenoowi_1"",""veh_spawn_medic_kalaenoowi_2"",""veh_spawn_medic_kalaenoowi_3""],""med"",""Concessionnaire véhicules""]];}";
 						disableSimulation=1;
 					};
 					id=1616;
@@ -19752,7 +19752,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Concessionnaire hélicoptères"",life_fnc_vehicleShopMenu,[""med_air_hs"",east,""hel_spawn_medic_kalaenoowi_1"",""med"",""Concessionnaire hélicoptères""]];}";
+						init="call{this addAction[""Concessionnaire hélicoptères"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""hel_spawn_medic_kalaenoowi_1"",""med"",""Concessionnaire hélicoptères""]];}";
 					};
 					id=1620;
 					type="Land_CashDesk_F";
