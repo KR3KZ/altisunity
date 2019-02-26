@@ -10,7 +10,6 @@
 */
 private ["_return","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_vMags","_bMags","_pMag","_hMag","_uni","_ves","_bag","_handled","_savedVirtualItems"];
 _return = [];
-_savedVirtualItems = LIFE_SETTINGS(getArray,"saved_virtualItems");
 
 _return pushBack uniform player;
 _return pushBack vest player;
@@ -138,7 +137,7 @@ if (count (handgunItems player) > 0) then {
     if (_val > 0) then {
         _yItems pushBack [_x,_val];
     };
-} forEach _savedVirtualItems;
+} forEach ("true" configClasses (missionConfigFile >> "VirtualItems"));
 
 _return pushBack _uItems;
 _return pushBack _uMags;
