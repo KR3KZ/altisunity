@@ -5,25 +5,25 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=10;
+	toggles=138;
 	class ItemIDProvider
 	{
-		nextID=1610;
+		nextID=1628;
 	};
 	class MarkerIDProvider
 	{
-		nextID=318;
+		nextID=329;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1203;
+		nextID=1246;
 	};
 	class Camera
 	{
-		pos[]={11670.932,37.696548,2819.1296};
-		dir[]={0.048929464,-0.85814315,0.51109296};
-		up[]={0.081780337,0.51340365,0.85423845};
-		aside[]={0.99545527,-2.0887092e-007,-0.09529911};
+		pos[]={10800.41,30.607145,2709.1299};
+		dir[]={0.41925898,-0.54275894,0.72778463};
+		up[]={0.27093413,0.83988601,0.47031036};
+		aside[]={0.86651778,-1.9936124e-007,-0.49917775};
 	};
 };
 binarizationWanted=0;
@@ -258,24 +258,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -290,6 +272,24 @@ class CustomAttributes
 						};
 					};
 					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -16137,7 +16137,7 @@ class Mission
 					name="veh_spawn_milice_mikisfob";
 					type="Empty";
 					colorName="default";
-					angle=327.06796;
+					angle=327.06793;
 					id=1319;
 					atlOffset=-0.00032043457;
 				};
@@ -18713,7 +18713,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=17;
+				items=23;
 				class Item0
 				{
 					dataType="Object";
@@ -19357,9 +19357,109 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item17
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10819.421,28.342438,2755.751};
+						angles[]={0,1.0162703,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[""Concessionnaire véhicules"",life_fnc_vehicleShopMenu,[""med_shop"",east,[""veh_spawn_medic_kinduf_1"",""veh_spawn_medic_kinduf_2"",""veh_spawn_medic_kinduf_3""],""med"",""Concessionnaire véhicules""]];}";
+						disableSimulation=1;
+					};
+					id=1612;
+					type="Land_CashDesk_F";
+					atlOffset=1.9073486e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item18
+				{
+					dataType="Marker";
+					position[]={10801.324,28.343,2758.395};
+					name="veh_spawn_medic_kinduf_3";
+					type="Empty";
+					colorName="default";
+					id=1614;
+					atlOffset=0.00046730042;
+				};
+				class Item19
+				{
+					dataType="Marker";
+					position[]={10795.243,28.343,2766.2339};
+					name="veh_spawn_medic_kinduf_2";
+					type="Empty";
+					colorName="default";
+					id=1615;
+					atlOffset=0.00046539307;
+				};
+				class Item20
+				{
+					dataType="Marker";
+					position[]={10806.596,28.343,2750.6909};
+					name="veh_spawn_medic_kinduf_1";
+					type="Empty";
+					colorName="default";
+					id=1613;
+					atlOffset=0.00047111511;
+				};
+				class Item21
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10803.392,28.342155,2707.2041};
+						angles[]={0,3.1193223,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[""Concessionnaire hélicoptères"",life_fnc_vehicleShopMenu,[""med_air_hs"",east,""hel_spawn_medic_kinduf_1"",""med"",""Concessionnaire hélicoptères""]];}";
+					};
+					id=1626;
+					type="Land_CashDesk_F";
+					atlOffset=-1.9073486e-006;
+				};
+				class Item22
+				{
+					dataType="Marker";
+					position[]={10798.941,28.341999,2721.9839};
+					name="hel_spawn_medic_kinduf_1";
+					type="Empty";
+					colorName="default";
+					id=1627;
+					atlOffset=-0.00039482117;
+				};
 			};
 			id=1481;
-			atlOffset=0.017791748;
+			atlOffset=0.0033740997;
 		};
 		class Item134
 		{
@@ -19368,7 +19468,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=5;
+				items=11;
 				class Item0
 				{
 					dataType="Object";
@@ -19572,9 +19672,103 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item5
+				{
+					dataType="Marker";
+					position[]={13840.106,341.95001,17918.893};
+					name="veh_spawn_medic_kalaenoowi_1";
+					type="Empty";
+					colorName="default";
+					id=1617;
+				};
+				class Item6
+				{
+					dataType="Marker";
+					position[]={13838.017,341.95001,17927.926};
+					name="veh_spawn_medic_kalaenoowi_3";
+					type="Empty";
+					colorName="default";
+					id=1618;
+				};
+				class Item7
+				{
+					dataType="Marker";
+					position[]={13835.758,341.95001,17937.877};
+					name="veh_spawn_medic_kalaenoowi_2";
+					type="Empty";
+					colorName="default";
+					id=1619;
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13848.126,341.95001,17940.891};
+						angles[]={0,1.3773789,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[""Concessionnaire véhicules"",life_fnc_vehicleShopMenu,[""med_shop"",east,[""veh_spawn_medic_kalaenoowi_1"",""veh_spawn_medic_kalaenoowi_2"",""veh_spawn_medic_kalaenoowi_3""],""med"",""Concessionnaire véhicules""]];}";
+						disableSimulation=1;
+					};
+					id=1616;
+					type="Land_CashDesk_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13826.456,341.95001,17873.979};
+						angles[]={0,2.910511,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[""Concessionnaire hélicoptères"",life_fnc_vehicleShopMenu,[""med_air_hs"",east,""hel_spawn_medic_kalaenoowi_1"",""med"",""Concessionnaire hélicoptères""]];}";
+					};
+					id=1620;
+					type="Land_CashDesk_F";
+				};
+				class Item10
+				{
+					dataType="Marker";
+					position[]={13823.104,341.95001,17895.25};
+					name="hel_spawn_medic_kalaenoowi_1";
+					type="Empty";
+					colorName="default";
+					id=1622;
+				};
 			};
 			id=1483;
-			atlOffset=0.72857666;
+			atlOffset=0.011383057;
 		};
 		class Item135
 		{
