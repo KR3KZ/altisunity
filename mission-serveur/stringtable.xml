@@ -36,8 +36,8 @@
             <French>Vêtements de plongée de Steve</French>
         </Key>
         <Key ID="STR_Shops_C_Gouv">
-            <Original>Friperie gouvernement</Original>
-            <French>Friperie gouvernement</French>
+            <Original>Friperie Gouvernement</Original>
+            <French>Friperie Gouvernement</French>
         </Key>
         <Key ID="STR_Shops_C_Gun">
             <Original>Billy Joe's Clothing</Original>
@@ -3665,9 +3665,25 @@
             <Original>Car Shop</Original>
             <French>Concessionnaire</French>
         </Key>
+		<Key ID="STR_MAR_Car_Shop_Civilian">
+            <Original>Véhicules Civils</Original>
+            <French>Véhicules Civils</French>
+        </Key>
 		<Key ID="STR_MAR_Car_Shop_Milice">
             <Original>Véhicules Milice</Original>
             <French>Véhicules Milice</French>
+        </Key>
+		<Key ID="STR_MAR_Car_Shop_Gouv">
+            <Original>Véhicules Gouvernment</Original>
+            <French>Véhicules Gouvernment</French>
+        </Key>
+		<Key ID="STR_MAR_Car_Shop_Med">
+            <Original>Véhicules Médecin</Original>
+            <French>Véhicules Médecin</French>
+        </Key>
+		<Key ID="STR_MAR_Heli_Shop_Med">
+            <Original>Hélicoptères Médecin</Original>
+            <French>Hélicoptères Médecin</French>
         </Key>
         <Key ID="STR_MAR_Hospital_Clinic">
             <Original>Hospital/Clinic</Original>
@@ -3886,7 +3902,7 @@
             <French>Service d'hélicoptère</French>
         </Key>
         <Key ID="STR_MAR_Clothing_Store">
-            <Original>Clothing Store</Original>
+            <Original>Magasin de Vêtements</Original>
             <French>Magasin de Vêtements</French>
         </Key>
 		<Key ID="STR_MAR_Clothing_Store_Milice">
@@ -3896,6 +3912,10 @@
         <Key ID="STR_MAR_Weapons_Store_Milice">
             <Original>Armurerie Milice</Original>
             <French>Armurerie Milice</French>
+        </Key>
+		<Key ID="STR_MAR_Weapons_Store_Civilian">
+            <Original>Armurerie Civile</Original>
+            <French>Armurerie Civile</French>
         </Key>
         <Key ID="STR_MAR_Medical_Assistance">
             <Original>Medical Assistance</Original>

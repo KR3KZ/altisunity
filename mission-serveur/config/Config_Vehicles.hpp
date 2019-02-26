@@ -98,7 +98,7 @@ class CarShops {
         };
     };
 
-    class med_air_hs {
+    class med_heli {
         side = "med";
         conditions = "";
         vehicles[] = {

@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1375;
+		nextID=1461;
 	};
 	class Camera
 	{
-		pos[]={11517,91.693939,2959.8286};
-		dir[]={-0.92843103,-0.35769427,0.10082144};
-		up[]={-0.35562852,0.93383199,0.03861887};
-		aside[]={0.10796356,-1.9351137e-007,0.99420333};
+		pos[]={13880.027,360.86386,17913.965};
+		dir[]={0.10980676,-0.37315592,-0.92125899};
+		up[]={0.044165324,0.92776382,-0.37053749};
+		aside[]={-0.9929772,-3.6441634e-008,-0.11835574};
 	};
 };
 binarizationWanted=0;
@@ -13827,7 +13827,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1199;
 					type="Land_LampHalogen_F";
@@ -13867,7 +13866,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1200;
 					type="Land_LampHalogen_F";
@@ -13907,7 +13905,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1224;
 					type="Land_LampHalogen_F";
@@ -14691,7 +14688,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1234;
 					type="Land_LampHalogen_F";
@@ -14731,7 +14727,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1240;
 					type="Land_LampHalogen_F";
@@ -14771,7 +14766,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1243;
 					type="Land_LampHalogen_F";
@@ -14811,7 +14805,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1248;
 					type="Land_LampHalogen_F";
@@ -14851,7 +14844,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1255;
 					type="Land_LampHalogen_F";
@@ -15868,7 +15860,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""veh_spawn_milice_kalaenoowi_1"",""veh_spawn_milice_kalaenoowi_2""],""cop"",""Concessionnaire véhicules Milice""]];}";
+						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""veh_spawn_milice_kalaenoowi_1"",""veh_spawn_milice_kalaenoowi_2""],""cop"",localize ""STR_MAR_Car_Shop_Milice""]];}";
 						disableSimulation=1;
 					};
 					id=1312;
@@ -15979,7 +15971,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""veh_spawn_milice_kinduf_1"",""veh_spawn_milice_kinduf_2"",""veh_spawn_milice_kinduf_3""],""cop"",""Concessionnaire véhicules Milice""]];}";
+						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""veh_spawn_milice_kinduf_1"",""veh_spawn_milice_kinduf_2"",""veh_spawn_milice_kinduf_3""],""cop"",localize ""STR_MAR_Car_Shop_Milice""]];}";
 						disableSimulation=1;
 					};
 					id=1315;
@@ -16101,7 +16093,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,""veh_spawn_milice_mikisfob"",""cop"",""Concessionnaire véhicules Milice""]];}";
+						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,""veh_spawn_milice_mikisfob"",""cop"",localize ""STR_MAR_Car_Shop_Milice""]];}";
 						disableSimulation=1;
 					};
 					id=1318;
@@ -16137,7 +16129,7 @@ class Mission
 					name="veh_spawn_milice_mikisfob";
 					type="Empty";
 					colorName="default";
-					angle=327.06784;
+					angle=327.06781;
 					id=1319;
 					atlOffset=-0.00032043457;
 				};
@@ -16338,7 +16330,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this addAction[""Concessionnaire Gouvernemental"",life_fnc_vehicleShopMenu,[""gouv"",civilian,""veh_spawn_gouv_kalaenoowi"",""civ"",""Concessionnaire véhicules""]];}";
-						disableSimulation=1;
 					};
 					id=1330;
 					type="Land_LampStreet_F";
@@ -16378,7 +16369,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						disableSimulation=1;
 					};
 					id=1331;
 					type="Land_LampStreet_F";
@@ -16479,8 +16469,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this addAction[""Concessionnaire Gouvernemental"",life_fnc_vehicleShopMenu,[""gouv"",civilian,""veh_spawn_gouv_kinduf"",""civ"",""Concessionnaire véhicules""]];}";
-						disableSimulation=1;
+						init="call{this addAction[localize""STR_MAR_Car_Shop_Gouv"",life_fnc_vehicleShopMenu,[""gouv"",civilian,""veh_spawn_gouv_kinduf"",""civ"",localize""STR_MAR_Car_Shop_Gouv""]];}";
 					};
 					id=1334;
 					type="Land_LampStreet_F";
@@ -17615,7 +17604,6 @@ class Mission
 					class Attributes
 					{
 						lock="LOCKED";
-						disableSimulation=1;
 						reportOwnPosition=1;
 					};
 					id=1398;
@@ -19369,7 +19357,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Concessionnaire véhicules"",life_fnc_vehicleShopMenu,[""med_shop"",independent,[""veh_spawn_medic_kinduf_1"",""veh_spawn_medic_kinduf_2"",""veh_spawn_medic_kinduf_3""],""med"",""Concessionnaire véhicules""]];}";
+						init="call{this addAction[localize""STR_MAR_Car_Shop_Med"",life_fnc_vehicleShopMenu,[""med_shop"",independent,[""veh_spawn_medic_kinduf_1"",""veh_spawn_medic_kinduf_2"",""veh_spawn_medic_kinduf_3""],""med"",localize""STR_MAR_Car_Shop_Med""]];}";
 						disableSimulation=1;
 					};
 					id=1612;
@@ -19441,7 +19429,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize""STR_MAR_Helicopter_Shop"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""hel_spawn_medic_kinduf"",""med"",""Concessionnaire hélicoptères""]];}";
+						init="call{this addAction[localize""STR_MAR_Heli_Shop_Med"",life_fnc_vehicleShopMenu,[""med_heli"",independent,""hel_spawn_medic_kinduf"",""med"",localize""STR_MAR_Heli_Shop_Med""]];}";
 					};
 					id=1626;
 					type="Land_CashDesk_F";
@@ -19711,7 +19699,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Concessionnaire véhicules"",life_fnc_vehicleShopMenu,[""med_shop"",independent,[""veh_spawn_medic_kalaenoowi_1"",""veh_spawn_medic_kalaenoowi_2"",""veh_spawn_medic_kalaenoowi_3""],""med"",""Concessionnaire véhicules""]];}";
+						init="call{this addAction[localize""STR_MAR_Car_Shop_Med"",life_fnc_vehicleShopMenu,[""med_shop"",independent,[""veh_spawn_medic_kalaenoowi_1"",""veh_spawn_medic_kalaenoowi_2"",""veh_spawn_medic_kalaenoowi_3""],""med"",localize""STR_MAR_Car_Shop_Med""]];}";
 						disableSimulation=1;
 					};
 					id=1616;
@@ -19752,7 +19740,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize""STR_MAR_Helicopter_Shop"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""hel_spawn_medic_kalaenoowi"",""med"",""Concessionnaire hélicoptères""]];}";
+						init="call{this addAction[localize""STR_MAR_Heli_Shop_Med"",life_fnc_vehicleShopMenu,[""med_heli"",independent,""hel_spawn_medic_kalaenoowi"",""med"",localize""STR_MAR_Heli_Shop_Med""]];}";
 					};
 					id=1620;
 					type="Land_CashDesk_F";
@@ -19936,7 +19924,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{this addAction[""Friperie gouvernement"",life_fnc_clothingMenu,""gouv"",0,false,false,"""",'license_civ_gouv && playerSide isEqualTo civilian'];}";
+						init="call{this addAction[localize""STR_Shops_C_Gouv"",life_fnc_clothingMenu,""gouv"",0,false,false,"""",'license_civ_gouv && playerSide isEqualTo civilian'];}";
 						disableSimulation=1;
 					};
 					id=1503;
@@ -19989,7 +19977,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Friperie gouvernement"",life_fnc_clothingMenu,""gouv"",0,false,false,"""",'license_civ_gouv && playerSide isEqualTo civilian'];}";
+						init="call{this addAction[localize""STR_Shops_C_Gouv"",life_fnc_clothingMenu,""gouv"",0,false,false,"""",'license_civ_gouv && playerSide isEqualTo civilian'];}";
 						disableSimulation=1;
 					};
 					id=1506;
@@ -20054,7 +20042,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Billy Joe's Firearms"",life_fnc_weaponShopMenu,""gun"",0,false,false,"""",'license_civ_gun && playerSide isEqualTo civilian'];}";
+						init="call{this addAction[localize""STR_MAR_Weapons_Store_Civilian"",life_fnc_weaponShopMenu,""gun"",0,false,false,"""",'license_civ_gun && playerSide isEqualTo civilian'];}";
 						disableSimulation=1;
 					};
 					id=1514;
@@ -20343,7 +20331,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{this addAction[""Concessionnaire véhicules"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""veh_spawn_civil_kalaenoowi_1"",""veh_spawn_civil_kalaenoowi_2"",""veh_spawn_civil_kalaenoowi_3""],""civ"",""Concessionnaire véhicules""]];}";
+						init="call{this addAction[localize""STR_MAR_Car_Shop_Civilian"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""veh_spawn_civil_kalaenoowi_1"",""veh_spawn_civil_kalaenoowi_2"",""veh_spawn_civil_kalaenoowi_3""],""civ"",localize""STR_MAR_Car_Shop_Civilian""]];}";
 						disableSimulation=1;
 					};
 					id=1548;
@@ -20437,7 +20425,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Concessionnaire véhicules"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""veh_spawn_civil_mikisfob_1"",""veh_spawn_civil_mikisfob_2"",""veh_spawn_civil_mikisfob_3""],""civ"",""Concessionnaire véhicules""]];}";
+						init="call{this addAction[localize""STR_MAR_Car_Shop_Civilian"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""veh_spawn_civil_mikisfob_1"",""veh_spawn_civil_mikisfob_2"",""veh_spawn_civil_mikisfob_3""],""civ"",localize""STR_MAR_Car_Shop_Civilian""]];}";
 						disableSimulation=1;
 					};
 					id=1550;
@@ -20533,7 +20521,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Concessionnaire véhicules"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""veh_spawn_civil_kinduf_1"",""veh_spawn_civil_kinduf_2"",""veh_spawn_civil_kinduf_3""],""civ"",""Concessionnaire véhicules""]];}";
+						init="call{this addAction[localize""STR_MAR_Car_Shop_Civilian"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""veh_spawn_civil_kinduf_1"",""veh_spawn_civil_kinduf_2"",""veh_spawn_civil_kinduf_3""],""civ"",localize""STR_MAR_Car_Shop_Civilian""]];}";
 						disableSimulation=1;
 					};
 					id=1552;
