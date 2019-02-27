@@ -31,7 +31,7 @@ _iPhone_X_button_SIM_1 = _display displayCtrl 97619;
 _iPhone_X_button_SIM_2 = _display displayCtrl 97620;
 _iPhone_X_button_SIM_3 = _display displayCtrl 97621;
 
-_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_appSIM.paa";
+_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appSIM.paa";
 
 if !(isNil "life_phoneNumberPrimary") then {_iPhone_X_SIM_1 ctrlSetText format["PRINCIPAL : %1", life_phoneNumberPrimary]; ctrlShow [97719,true];};
 if !(isNil "life_phoneNumberSecondary") then {_iPhone_X_SIM_2 ctrlSetText format["SECONDAIRE : %1", life_phoneNumberSecondary]; ctrlShow [97720,true];};

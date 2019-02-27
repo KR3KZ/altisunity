@@ -40,7 +40,7 @@ _iPhone_X_date = _display displayCtrl 98162;
 _iPhone_X_hour = _display displayCtrl 98163;
 _iPhone_X_clock_home = _display displayCtrl 97500;
 
-_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_appAddContact.paa";
+_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appAddContact.paa";
 _iPhone_X_nameOffense ctrlSetText _name;
 _iPhone_X_phoneNumberOffense ctrlSetText "Téléphone";
 _iPhone_X_noteOffense ctrlSetText "Informations";

@@ -35,7 +35,7 @@ _iPhone_X_nameContactAppContact = _display displayCtrl 97609;
 _iPhone_X_phoneNumberContactAppContact = _display displayCtrl 97610;
 _iPhone_X_noteContactAppContact = _display displayCtrl 97659;
 
-_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_appContact.paa";
+_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appContact.paa";
 _iPhone_X_clock_home ctrlSetTextColor [0,0,0,1];
 
 _iPhone_X_nameContactAppContact ctrlSetText _nameContact;

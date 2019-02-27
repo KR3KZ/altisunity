@@ -26,7 +26,7 @@ _iPhone_X_clock_home = _display displayCtrl 97500;
 
 _angle = (ctrlAngle _background_iPhone_X_base select 0);
 
-_wallpaperActive = "nolosharp_textures\phone\iPhone_X_background_%1.paa";
+_wallpaperActive = "unity_iPhone_X\iPhone_X_background_%1.paa";
 
 if (_angle < 0) then {
 	noesckey = (findDisplay 97000) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 1) then { true }"];
@@ -34,7 +34,7 @@ if (_angle < 0) then {
 	_progressTime = 1.5;
 	_startTime = time;
 	_endTime = _startTime + _progressTime;
-	_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_background_OFF.paa";
+	_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_background_OFF.paa";
 
 	while {time <= _endTime} do {
 			_progress = linearConversion[_startTime, _endTime, time, -90, 0];
@@ -49,7 +49,7 @@ if (_angle < 0) then {
 	_background_iPhone_X_base ctrlCommit 0;
 	_background_iPhone_X_background ctrlCommit 0;
 	_background_iPhone_X_background ctrlSetText format[_wallpaperActive, (life_settings select 0)];
-	//_background_iPhone_X_background ctrlSetText "nolosharp_images\x_phone\iPhone_X_background_noel.paa";
+	//_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_background_noel.paa";
 
 	(findDisplay 97000) displayRemoveEventHandler ["KeyDown", noesckey];
 };
@@ -83,7 +83,7 @@ if !(isNil "life_phoneNumberEnterprise") then
 };
 
 _background_iPhone_X_background ctrlSetText format[_wallpaperActive, (life_settings select 0)];
-//_background_iPhone_X_background ctrlSetText "nolosharp_images\x_phone\iPhone_X_background_noel.paa";
+//_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_background_noel.paa";
 _iPhone_X_clock_home ctrlSetTextColor [1,1,1,1];
 
 player setVariable ["iPhone_X_lastSMS", []];

@@ -25,7 +25,7 @@ _iPhone_X_phoneNumberContact = _display displayCtrl 97606;
 _iPhone_X_noteContact = _display displayCtrl 97658;
 _iPhone_X_clock_home = _display displayCtrl 97500;
 
-_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_appAddContact.paa";
+_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appAddContact.paa";
 _iPhone_X_nameContact ctrlSetText "Identité";
 _iPhone_X_phoneNumberContact ctrlSetText "Numéro";
 _iPhone_X_noteContact ctrlSetText "Note";

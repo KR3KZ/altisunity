@@ -36,7 +36,7 @@ _iPhone_X_dateEvent = _display displayCtrl 98283;
 _iPhone_X_positionEvent = _display displayCtrl 98284;
 _iPhone_X_priceEvent = _display displayCtrl 98285;
 
-_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_appAddEvent.paa";
+_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appAddEvent.paa";
 _iPhone_X_clock_home ctrlSetTextColor [0,0,0,1];
 _iPhone_X_nameEvent ctrlSetText  _eventName ;
 _iPhone_X_descriptionEvent ctrlSetText  _eventDesc;

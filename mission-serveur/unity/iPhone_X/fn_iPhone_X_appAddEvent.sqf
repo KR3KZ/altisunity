@@ -99,7 +99,7 @@ _iPhone_X_price = _display displayCtrl 98295;
 _iPhone_X_position = _display displayCtrl 98297;
 
 
-_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_appAddEvent.paa";
+_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appAddEvent.paa";
 _iPhone_X_clock_home ctrlSetTextColor [0,0,0,1];
 _iPhone_X_nameEvent ctrlSetText "Votre événement";
 _iPhone_X_description ctrlSetText "Description";

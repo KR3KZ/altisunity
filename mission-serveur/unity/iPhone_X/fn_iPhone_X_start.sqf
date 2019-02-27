@@ -19,9 +19,9 @@ _background_iPhone_X_base = _display displayCtrl 97001;
 _background_iPhone_X_background = _display displayCtrl 97002;
 _background_iPhone_X_shadow = _display displayCtrl 97114;
 
-_background_iPhone_X_base ctrlSetText "nolosharp_textures\phone\iPhone_X_base.paa";
-_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_background_ON.paa";
-_background_iPhone_X_shadow ctrlSetText "nolosharp_textures\phone\iPhone_X_background_OFF.paa";
+_background_iPhone_X_base ctrlSetText "unity_iPhone_X\iPhone_X_base.paa";
+_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_background_ON.paa";
+_background_iPhone_X_shadow ctrlSetText "unity_iPhone_X\iPhone_X_background_OFF.paa";
 
 ctrlShow [97114, true];
 
@@ -43,7 +43,7 @@ _background_iPhone_X_shadow ctrlSetTextColor [0,0,0,1];
 _background_iPhone_X_shadow ctrlCommit 0;
 
 _background_iPhone_X_bottom = _display displayCtrl 97004;
-_background_iPhone_X_bottom ctrlSetText "nolosharp_textures\phone\iPhone_X_bottom.paa";
+_background_iPhone_X_bottom ctrlSetText "unity_iPhone_X\iPhone_X_bottom.paa";
 
 ctrlShow [97004, true];
 ctrlShow [97116, true];

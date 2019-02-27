@@ -22,17 +22,17 @@ _iPhone_X_SMS_notifications = _display displayCtrl 97803;
 _iPhone_X_time_notifications = _display displayCtrl 97804;
 _iPhone_X_snowflake_01 = _display displayCtrl 99001;
 
-_wallpaperActive = "nolosharp_textures\phone\iPhone_X_background_%1.paa";
+_wallpaperActive = "unity_iPhone_X\iPhone_X_background_%1.paa";
 
 _lastSMS = player getVariable ["iPhone_X_lastSMS", []];
 
-_background_iPhone_X_base ctrlSetText "nolosharp_textures\phone\iPhone_X_base.paa";
-_background_iPhone_X_bottom ctrlSetText "nolosharp_textures\phone\iPhone_X_bottom.paa";
+_background_iPhone_X_base ctrlSetText "unity_iPhone_X\iPhone_X_base.paa";
+_background_iPhone_X_bottom ctrlSetText "unity_iPhone_X\iPhone_X_bottom.paa";
 
 if (life_phoneOn && life_phoneCallOn) exitWith {[] spawn unity_fnc_iPhone_X_appCall; [] spawn unity_fnc_iPhone_X_clock;};
 
 if !(life_phoneOn) then {
-	_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_background_OFF.paa";
+	_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_background_OFF.paa";
 } else {
 
 	_myRadio = call TFAR_fnc_activeSwPhone;
@@ -47,8 +47,8 @@ if !(life_phoneOn) then {
 
 
 	_background_iPhone_X_background ctrlSetText format[_wallpaperActive, (life_settings select 0)];
-	//_background_iPhone_X_background ctrlSetText "nolosharp_images\x_phone\iPhone_X_background_noel.paa";
-	_background_iPhone_X_shadow_home ctrlSetText "nolosharp_textures\phone\iPhone_X_background_OFF.paa";
+	//_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_background_noel.paa";
+	_background_iPhone_X_shadow_home ctrlSetText "unity_iPhone_X\iPhone_X_background_OFF.paa";
 	ctrlShow [97115, true];
 	ctrlShow [97501, true];
 	ctrlShow [97800, true];

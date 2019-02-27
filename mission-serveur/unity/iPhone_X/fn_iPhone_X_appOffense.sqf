@@ -44,7 +44,7 @@ _iPhone_X_hourAppOffense = _display displayCtrl 98130;
 _iPhone_X_amendeListAppOffense = _display displayCtrl 98131;
 _iPhone_X_namePlayerAppOffense = _display displayCtrl 98132;
 
-_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_appContact.paa";
+_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appContact.paa";
 _iPhone_X_clock_home ctrlSetTextColor [0,0,0,1];
 
 _iPhone_X_nameOffenseAppOffense ctrlSetText _nameOffense;

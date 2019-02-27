@@ -23,5 +23,5 @@ ctrlShow [98240,true];
 _background_iPhone_X_background = _display displayCtrl 97002;
 _iPhone_X_clock_home = _display displayCtrl 97500;
 
-_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_appContactsList.paa";
+_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appContactsList.paa";
 _iPhone_X_clock_home ctrlSetTextColor [0,0,0,1];

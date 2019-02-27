@@ -24,7 +24,7 @@ _iPhone_X_nameConversation = _display displayCtrl 97607;
 _iPhone_X_phoneNumberConversation = _display displayCtrl 97608;
 _iPhone_X_clock_home = _display displayCtrl 97500;
 
-_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_appAddConversations.paa";
+_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appAddConversations.paa";
 _iPhone_X_nameConversation ctrlSetText "Identité";
 _iPhone_X_phoneNumberConversation ctrlSetText "Numéro";
 _iPhone_X_clock_home ctrlSetTextColor [0,0,0,1];

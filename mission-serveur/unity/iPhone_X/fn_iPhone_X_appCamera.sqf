@@ -22,7 +22,7 @@ _startTime = time;
 _endTime = _startTime + _progressTime;
 _background_iPhone_X_base = _display displayCtrl 97001;
 _background_iPhone_X_background = _display displayCtrl 97002;
-_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_background_OFF.paa";
+_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_background_OFF.paa";
 
 _angle = (ctrlAngle _background_iPhone_X_base select 0);
 

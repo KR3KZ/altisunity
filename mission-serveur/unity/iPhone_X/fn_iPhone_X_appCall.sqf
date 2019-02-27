@@ -28,7 +28,7 @@ _ctrl2 = [97667,97663,97668,97664,97669,97665,97671,97672,97673,97674,97675,9767
 _background_iPhone_X_background = _display displayCtrl 97002;
 _iPhone_X_clock_home = _display displayCtrl 97500;
 
-_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_appCall.paa";
+_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appCall.paa";
 _iPhone_X_clock_home ctrlSetTextColor [1,1,1,1];
 
 _callSettings = player getVariable ["iPhone_X_callSettings", ""];

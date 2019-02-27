@@ -28,7 +28,7 @@ if (!(life_SMS isEqualTo [])) then {
 		_message 							= _x select 2;
 		_datereception 				= _x select 3;
 		_toFind 							= "<3";
-		_replaceBy 						= "<img size='1' color='#FFFFFF' image='nolosharp_textures\phone\iPhone_X_emoji_ht.paa'/>";
+		_replaceBy 						= "<img size='1' color='#FFFFFF' image='unity_iPhone_X\iPhone_X_emoji_ht.paa'/>";
 		_numberCharToReplace = count _toFind;
 		_numberFind = _message find _toFind;
 		while {_numberFind != -1} do

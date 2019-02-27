@@ -32,7 +32,7 @@ diag_log "------------- SOUND ACTIVE CLIENT -------------";
 diag_log format ["Result : %1", _soundActive];
 diag_log "-----------------------------------------";
 
-_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_appSound.paa";
+_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appSound.paa";
 _iPhone_X_clock_home ctrlSetTextColor [0,0,0,1];
 
 if (_soundActive == 1) then {_iPhone_X_sound_1 ctrlSetTextColor [0.027,0.576,0.047,1];} else {_iPhone_X_sound_1 ctrlSetTextColor [0,0,0,1];};
@@ -40,7 +40,7 @@ if (_soundActive == 2) then {_iPhone_X_sound_2 ctrlSetTextColor [0.027,0.576,0.0
 if (_soundActive == 3) then {_iPhone_X_sound_3 ctrlSetTextColor [0.027,0.576,0.047,1];} else {_iPhone_X_sound_3 ctrlSetTextColor [0,0,0,1];};
 
 if ((life_settings select 2) isEqualTo 0) then {
-	_iphone_X_silent ctrlSetText "nolosharp_images\x_phone\iPhone_X_icon_silentOFF.paa";
+	_iphone_X_silent ctrlSetText "unity_iPhone_X\iPhone_X_icon_silentOFF.paa";
 } else {
-	_iphone_X_silent ctrlSetText "nolosharp_images\x_phone\iPhone_X_icon_silentON.paa";
+	_iphone_X_silent ctrlSetText "unity_iPhone_X\iPhone_X_icon_silentON.paa";
 };

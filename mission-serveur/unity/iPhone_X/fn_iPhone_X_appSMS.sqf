@@ -48,7 +48,7 @@ if !(isNil "life_phoneNumberEnterprise") then
 		ctrlShow [97621,false];
 		ctrlEnable [97622,false];
 		ctrlEnable [97623,false];
-		_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_appSMSEnterprise.paa";
+		_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appSMSEnterprise.paa";
 	};
 };
 
@@ -56,10 +56,10 @@ if !(isNil "life_phoneNumberEnterprise") then
 {
 	if !(life_phoneNumberEnterprise isEqualTo _phoneNumberContact) then
 	{
-		_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_appSMS.paa";
+		_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appSMS.paa";
 	};
 } else {
-	_background_iPhone_X_background ctrlSetText "nolosharp_textures\phone\iPhone_X_appSMS.paa";
+	_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appSMS.paa";
 };
 
 _iPhone_X_clock_home ctrlSetTextColor [0,0,0,1];
