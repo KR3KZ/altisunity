@@ -20,4 +20,4 @@ if(_distance == -1) then { _targets = -2; } else {
 		diag_log format["DEBUG PLAYSOUNDCHECK %1 - %2 - %3",_source,_sound,_distance];
 	};
 };
-[_source, _sound] remoteExec ["life_fnc_playSound",_targets];
+[_source, _sound] remoteExec ["unity_fnc_playSound",_targets];

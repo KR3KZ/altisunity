@@ -180,6 +180,19 @@ iPhone_X_switchboardCOMPANY 				= [];
 diag_log "GET PHONE NUMBERS";
 [] call unity_srv_fnc_iPhone_X_getPhoneNumber;
 
+//Get all phone numbers (services & company) and stored them in 2 global arrays.
+//Services
+_query = format ["SELECT CONVERT(number_ic,CHAR) FROM iphone_company WHERE type_id=1"];
+life_phoneNumber_services 					= [_query,2,true] call DB_fnc_asyncCall;
+life_phoneNumber_services 					= parseSimpleArray ("[" + (str life_phoneNumber_services splitString "[,]" joinString ",") + "]");
+publicVariable "life_phoneNumber_services";
+
+//Entreprises
+_query = format ["SELECT CONVERT(number_ic,CHAR) FROM iphone_company WHERE type_id=2"];
+life_phoneNumber_company 					= [_query,2,true] call DB_fnc_asyncCall;
+life_phoneNumber_company 					= parseSimpleArray ("[" + (str life_phoneNumber_company splitString "[,]" joinString ",") + "]");
+publicVariable "life_phoneNumber_company";
+
 //Set every player with online = 0
 _query 										= format ["UPDATE players SET online='0'"];
 [_query,1] call DB_fnc_asyncCall;

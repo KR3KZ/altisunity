@@ -17,16 +17,16 @@ if (_message isEqualTo "Message...") exitWith {hint "Message incorrect."};
 _message 						= _message splitString "'%" joinString " ";
 _message 						= _message splitString '"' joinString " ";
 
-_SMS 								= life_SMS;
+_SMS 							= life_SMS;
 _phoneNumberContact = player getVariable ["iPhone_X_currentConversation", ""];
 
 
 _date 							= date;
-_day								= str (_date select 2);
+_day							= str (_date select 2);
 _month							= str (_date select 1);
 _hour 							= str (_date select 3);
 _minute  						= str (_date select 4);
-_datesend 					= format["%1/%2 à %3:%4",_day,_month, if(count _hour == 1) then {("0" + _hour)} else {_hour}, if(count _minute == 1) then {("0" + _minute)} else {_minute}];
+_datesend 						= format["%1/%2 à %3:%4",_day,_month, if(count _hour == 1) then {("0" + _hour)} else {_hour}, if(count _minute == 1) then {("0" + _minute)} else {_minute}];
 _datesend						= str("Maintenant");
 
 [player,"smssend",10] spawn unity_fnc_playsoundcheck;

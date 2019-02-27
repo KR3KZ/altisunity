@@ -103,6 +103,12 @@ life_phoneInCall 							= false;
 life_SMS 									= [];
 iPhone_X_checkPhoneNumberIsUse 				= [];
 iPhone_X_checkPhoneNumberSubscription 		= [];
+life_valueAmendeTotal 						= 0;
+life_amende_01 								= false;
+life_amende_02 								= false;
+life_amende_03 								= false;
+life_amende_04 								= false;
+life_onTheRun 								= false;
 
 /*
     Master Array of items?
