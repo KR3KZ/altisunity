@@ -175,7 +175,7 @@ if (life_HC_isActive) then {
     [getPlayerUID player,player getVariable ["realname",name player]] remoteExec ["life_fnc_wantedProfUpdate",RSERV];
 };
 
-[] execVM "unity\taskforce\fn_ts.sqf";
+[] execVM "unity\taskforce\fn_init_tfr.sqf";
 [] execVM "unity\general\fn_autoUpdate.sqf";
 [] execVM "unity\general\fn_deathScreen.sqf";
 [] execVM "unity\general\fn_combatMode.sqf";

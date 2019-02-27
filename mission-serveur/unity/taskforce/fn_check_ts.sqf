@@ -2,7 +2,9 @@
 
 private _ts 		= LIFE_SETTINGS(getText,"teamspeak");
 private _channel 	= LIFE_SETTINGS(getText,"channel");
-private _pass 		= LIFE_SETTINGS(getText,"pass");
+
+serverts 			= [] call TFAR_fnc_getTeamSpeakServerName;
+channelts 			= [] call TFAR_fnc_getTeamSpeakChannelName;
 
 life_tfr_plugin_disabled = !(call TFAR_fnc_isTeamSpeakPluginEnabled);
 
