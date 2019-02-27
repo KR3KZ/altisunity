@@ -180,6 +180,11 @@ if (life_HC_isActive) then {
 [] execVM "unity\general\fn_deathScreen.sqf";
 [] execVM "unity\general\fn_combatMode.sqf";
 
+//iPhone_X
+[player] remoteExec ["unity_srv_fnc_iPhone_X_getPhoneNumber",2];
+[player] remoteExec ["unity_srv_fnc_iPhone_X_getSettings",2];
+[player] remoteExec ["unity_srv_fnc_iPhone_X_getAmende",2];
+
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log format ["               End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "----------------------------------------------------------------------------------------------------";

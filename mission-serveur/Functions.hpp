@@ -381,6 +381,8 @@ class Unity_Client_Core {
 		file = "unity\general";
 		class autoUpdate {};
 		class deathScreen {};
+		class playSound {};
+		class playSoundCheck {};
 		class radioactive {};
 	};
 

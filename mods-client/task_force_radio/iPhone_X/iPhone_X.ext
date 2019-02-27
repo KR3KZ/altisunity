@@ -1,0 +1,23 @@
+class iPhone_X_radio_dialog
+{
+	idd = IDD_iPhone_X_RADIO_DIALOG;
+	movingEnable = 1;
+	controlsBackground[] = { };
+	objects[] = { };
+	onLoad = "[] spawn life_fnc_iPhone_X_master";
+	controls[]=
+{
+	background
+};
+
+class background: RscBackPicture
+{
+	idc = IDC_IPHONE_X_BACKGROUND;
+	text = "";
+	x = 0.0138687 * safezoneW + safezoneX;
+	y = -1.28145 * safezoneH + safezoneY;
+	w = 0.335981 * safezoneW;
+	h = 2.2902 * safezoneH;
+	moving = 0;
+};
+};

@@ -96,6 +96,14 @@ mode_combat 								= 0;
 life_chemlist 								= ["Chemlight_red","Chemlight_yellow","Chemlight_green","Chemlight_blue","SmokeShell","SmokeShellRed","SmokeShellGreen","SmokeShellYellow","SmokeShellPurple","SmokeShellBlue","SmokeShellOrange","ACE_HandFlare_White","ACE_HandFlare_Red","ACE_HandFlare_Green","ACE_HandFlare_Yellow","DDOPP_B_Taser","fantasma_ammo_45ACP_MHP_medic","B_762x54_Ball"];
 player setVariable ["combat_mode", 0, false];
 
+//iPhone_X
+life_phoneOn 								= false;
+life_phoneCallOn 							= false;
+life_phoneInCall 							= false;
+life_SMS 									= [];
+iPhone_X_checkPhoneNumberIsUse 				= [];
+iPhone_X_checkPhoneNumberSubscription 		= [];
+
 /*
     Master Array of items?
 */

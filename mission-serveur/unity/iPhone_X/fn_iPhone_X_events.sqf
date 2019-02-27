@@ -9,4 +9,3 @@ life_events = _events;
 
 diag_log str "Calling Events";
 diag_log str life_contacts;
-

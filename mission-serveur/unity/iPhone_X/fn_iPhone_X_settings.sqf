@@ -12,17 +12,17 @@ disableSerialization;
 
 _display = findDisplay 97000;
 
-_background_iPhone_X_base = _display displayCtrl 97001;
-_background_iPhone_X_background = _display displayCtrl 97002;
-_background_iPhone_X_shadow_home = _display displayCtrl 97115;
-_background_iPhone_X_bottom = _display displayCtrl 97004;
-_iPhone_X_SIM_active = _display displayCtrl 97800;
-_iPhone_X_nameContact_notifications = _display displayCtrl 97802;
-_iPhone_X_SMS_notifications = _display displayCtrl 97803;
-_iPhone_X_time_notifications = _display displayCtrl 97804;
-_iPhone_X_snowflake_01 = _display displayCtrl 99001;
+_background_iPhone_X_base 				= _display displayCtrl 97001;
+_background_iPhone_X_background 		= _display displayCtrl 97002;
+_background_iPhone_X_shadow_home 		= _display displayCtrl 97115;
+_background_iPhone_X_bottom 			= _display displayCtrl 97004;
+_iPhone_X_SIM_active 					= _display displayCtrl 97800;
+_iPhone_X_nameContact_notifications 	= _display displayCtrl 97802;
+_iPhone_X_SMS_notifications 			= _display displayCtrl 97803;
+_iPhone_X_time_notifications 			= _display displayCtrl 97804;
+_iPhone_X_snowflake_01 					= _display displayCtrl 99001;
 
-_wallpaperActive = "unity_iPhone_X\iPhone_X_background_%1.paa";
+_wallpaperActive 						= "unity_iPhone_X\iPhone_X_background_%1.paa";
 
 _lastSMS = player getVariable ["iPhone_X_lastSMS", []];
 

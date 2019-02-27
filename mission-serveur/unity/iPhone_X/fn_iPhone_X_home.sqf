@@ -60,7 +60,7 @@ _ctrl2 = [97004,97118,97006,97007,97008,97009,97010,97011,97012,97016,97017,9710
 	(_display displayCtrl _x) ctrlShow true;
 } forEach _ctrl2;
 
-if ((playerSide == west) AND (life_coplevel > 0)) then
+if ((playerSide == west) AND (call life_coplevel > 0)) then
 {
 	ctrlShow [97013,true];
 	ctrlShow [97113,true];
@@ -68,7 +68,7 @@ if ((playerSide == west) AND (life_coplevel > 0)) then
 	ctrlShow [97015,true];
 };
 
-if ((playerSide == independent) AND (life_mediclevel > 0)) then
+if ((playerSide == independent) AND (call life_mediclevel > 0)) then
 {
 	ctrlShow [97014,true];
 	ctrlShow [97015,true];

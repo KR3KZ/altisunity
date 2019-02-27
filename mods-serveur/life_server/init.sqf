@@ -10,11 +10,11 @@
     Initialize the server and required systems.
 */
 private ["_dome","_rsb","_timeStamp","_extDBNotLoaded"];
-DB_Async_Active = false;
-DB_Async_ExtraLock = false;
-life_server_isReady = false;
-_extDBNotLoaded = "";
-serv_sv_use = [];
+DB_Async_Active 							= false;
+DB_Async_ExtraLock 							= false;
+life_server_isReady 						= false;
+_extDBNotLoaded 							= "";
+serv_sv_use 								= [];
 publicVariable "life_server_isReady";
 life_save_civilian_position = if (LIFE_SETTINGS(getNumber,"save_civilian_position") isEqualTo 0) then {false} else {true};
 fn_whoDoneIt = compile preprocessFileLineNumbers "\life_server\Functions\Systems\fn_whoDoneIt.sqf";
@@ -22,9 +22,9 @@ fn_whoDoneIt = compile preprocessFileLineNumbers "\life_server\Functions\Systems
 /*
     Prepare the headless client.
 */
-life_HC_isActive = false;
+life_HC_isActive 							= false;
 publicVariable "life_HC_isActive";
-HC_Life = false;
+HC_Life 									= false;
 publicVariable "HC_Life";
 
 if (EXTDB_SETTING(getNumber,"HeadlessSupport") isEqualTo 1) then {
@@ -63,7 +63,7 @@ if (_extDBNotLoaded isEqualType []) exitWith {
     life_server_extDB_notLoaded = true;
     publicVariable "life_server_extDB_notLoaded";
 };
-life_server_extDB_notLoaded = false;
+life_server_extDB_notLoaded 				= false;
 publicVariable "life_server_extDB_notLoaded";
 
 /* Run stored procedures for SQL side cleanup */
@@ -72,7 +72,7 @@ publicVariable "life_server_extDB_notLoaded";
 ["CALL deleteOldHouses",1] call DB_fnc_asyncCall;
 ["CALL deleteOldGangs",1] call DB_fnc_asyncCall;
 
-_timeStamp = diag_tickTime;
+_timeStamp 									= diag_tickTime;
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log "---------------------------------- Starting Altis Life Server Init ---------------------------------";
 diag_log format["------------------------------------------ Version %1 -------------------------------------------",(LIFE_SETTINGS(getText,"framework_version"))];
@@ -99,15 +99,15 @@ if (LIFE_SETTINGS(getNumber,"save_civilian_position_restart") isEqualTo 1) then 
 
 [8,true,12] execFSM "\life_server\FSM\timeModule.fsm";
 
-life_adminLevel = 0;
-life_medicLevel = 0;
-life_copLevel = 0;
+life_adminLevel 							= 0;
+life_medicLevel 							= 0;
+life_copLevel 								= 0;
 CONST(JxMxE_PublishVehicle,"false");
 
 /* Setup radio channels for west/independent/civilian */
-life_radio_west = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
-life_radio_civ = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
-life_radio_indep = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
+life_radio_west 							= radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
+life_radio_civ 								= radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
+life_radio_indep 							= radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
 
 /* Set the amount of gold in the federal reserve at mission start
 fed_bank setVariable ["safe",count playableUnits,true];
@@ -130,9 +130,9 @@ TON_fnc_requestClientID =
 "advanced_log" addPublicVariableEventHandler {diag_log (_this select 1)};
 
 /* Miscellaneous mission-required stuff */
-life_wanted_list = [];
+life_wanted_list 							= [];
 
-cleanupFSM = [] execFSM "\life_server\FSM\cleanup.fsm";
+cleanupFSM 									= [] execFSM "\life_server\FSM\cleanup.fsm";
 
 [] spawn {
     for "_i" from 0 to 1 step 0 do {
@@ -144,10 +144,10 @@ cleanupFSM = [] execFSM "\life_server\FSM\cleanup.fsm";
 };
 
 [] spawn TON_fnc_initHouses;
-cleanup = [] spawn TON_fnc_cleanup;
+cleanup 									= [] spawn TON_fnc_cleanup;
 
-TON_fnc_playtime_values = [];
-TON_fnc_playtime_values_request = [];
+TON_fnc_playtime_values 					= [];
+TON_fnc_playtime_values_request 			= [];
 
 //Just incase the Headless Client connects before anyone else
 publicVariable "TON_fnc_playtime_values";
@@ -171,15 +171,28 @@ _dome allowDamage false;
 _rsb allowDamage false;
 */
 
+//iPhone_X
+iPhone_X_listNumber 						= [];
+iPhone_X_TFARNumber 						= 500;
+iPhone_X_switchboardPMC 					= [];
+iPhone_X_switchboardIDAP 					= [];
+iPhone_X_switchboardCOMPANY 				= [];
+diag_log "GET PHONE NUMBERS";
+[] call unity_srv_fnc_iPhone_X_getPhoneNumber;
+
+//Set every player with online = 0
+_query 										= format ["UPDATE players SET online='0'"];
+[_query,1] call DB_fnc_asyncCall;
+
 /* Tell clients that the server is ready and is accepting queries */
-life_server_isReady = true;
+life_server_isReady 						= true;
 publicVariable "life_server_isReady";
 
 /* Initialize hunting zone(s)
 aiSpawn = ["hunting_zone",30] spawn TON_fnc_huntingZone;
 */
 
-server_corpses = [];
+server_corpses 								= [];
 addMissionEventHandler ["EntityRespawned", {_this call TON_fnc_entityRespawned}];
 
 diag_log "----------------------------------------------------------------------------------------------------";
