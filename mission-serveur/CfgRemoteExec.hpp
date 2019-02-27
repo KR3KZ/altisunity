@@ -258,5 +258,12 @@ class CfgRemoteExec {
         F(addPrimaryWeaponItem,ANYONE)
         F(addWeapon,ANYONE)
         F(setFuel,ANYONE)
+		F(call,ANYONE)
+        F(hint, ANYONE)
+		F(switchmove,ANYONE)
+		F(playmove,ANYONE)
+		F(attachto,ANYONE)
+		F(setvectordirandup,ANYONE)
+		F(hideobjectglobal,ANYONE)
     };
 };

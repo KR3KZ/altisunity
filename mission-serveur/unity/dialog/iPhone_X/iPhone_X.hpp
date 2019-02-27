@@ -1841,7 +1841,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.375;
 					w = safeZoneW * 0.041;
 					h = safeZoneH * 0.148;
-					action = "[player, [1]] remoteExec [""unity_srv_iPhone_X_saveWallpaper"",2];";
+					action = "[player, [1]] remoteExec [""unity_srv_fnc_iphone_x_savewallpaper"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -1854,7 +1854,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.375;
 					w = safeZoneW * 0.041;
 					h = safeZoneH * 0.148;
-					action = "[player, [2]] remoteExec [""unity_srv_iPhone_X_saveWallpaper"",2];";
+					action = "[player, [2]] remoteExec [""unity_srv_fnc_iphone_x_savewallpaper"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -1867,7 +1867,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.375;
 					w = safeZoneW * 0.041;
 					h = safeZoneH * 0.148;
-					action = "[player, [3]] remoteExec [""unity_srv_iPhone_X_saveWallpaper"",2];";
+					action = "[player, [3]] remoteExec [""unity_srv_fnc_iphone_x_savewallpaper"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -1880,7 +1880,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.5275;
 					w = safeZoneW * 0.041;
 					h = safeZoneH * 0.148;
-					action = "[player, [4]] remoteExec [""unity_srv_iPhone_X_saveWallpaper"",2];";
+					action = "[player, [4]] remoteExec [""unity_srv_fnc_iphone_x_savewallpaper"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -1893,7 +1893,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.5275;
 					w = safeZoneW * 0.041;
 					h = safeZoneH * 0.148;
-					action = "[player, [5]] remoteExec [""unity_srv_iPhone_X_saveWallpaper"",2];";
+					action = "[player, [5]] remoteExec [""unity_srv_fnc_iphone_x_savewallpaper"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -1906,7 +1906,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.5275;
 					w = safeZoneW * 0.041;
 					h = safeZoneH * 0.148;
-					action = "[player, [6]] remoteExec [""unity_srv_iPhone_X_saveWallpaper"",2];";
+					action = "[player, [6]] remoteExec [""unity_srv_fnc_iphone_x_savewallpaper"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -1919,7 +1919,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.68;
 					w = safeZoneW * 0.041;
 					h = safeZoneH * 0.148;
-					action = "[player, [7]] remoteExec [""unity_srv_iPhone_X_saveWallpaper"",2];";
+					action = "[player, [7]] remoteExec [""unity_srv_fnc_iphone_x_savewallpaper"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -1932,7 +1932,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.68;
 					w = safeZoneW * 0.041;
 					h = safeZoneH * 0.148;
-					action = "[player, [8]] remoteExec [""unity_srv_iPhone_X_saveWallpaper"",2];";
+					action = "[player, [8]] remoteExec [""unity_srv_fnc_iphone_x_savewallpaper"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -1945,7 +1945,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.68;
 					w = safeZoneW * 0.041;
 					h = safeZoneH * 0.148;
-					action = "[player, [9]] remoteExec [""unity_srv_iPhone_X_saveWallpaper"",2];";
+					action = "[player, [9]] remoteExec [""unity_srv_fnc_iphone_x_savewallpaper"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -2050,7 +2050,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.40163889;
 					w = safeZoneW * 0.118;
 					h = safeZoneH * 0.03;
-					action = "[player, [1]] remoteExec [""unity_srv_iPhone_X_saveSound"",2];";
+					action = "[player, [1]] remoteExec [""unity_srv_fnc_iphone_x_savesound"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -2063,7 +2063,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.43663889;
 					w = safeZoneW * 0.118;
 					h = safeZoneH * 0.03;
-					action = "[player, [2]] remoteExec [""unity_srv_iPhone_X_saveSound"",2];";
+					action = "[player, [2]] remoteExec [""unity_srv_fnc_iphone_x_savesound"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -2076,7 +2076,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.4716;
 					w = safeZoneW * 0.118;
 					h = safeZoneH * 0.03;
-					action = "[player, [3]] remoteExec [""unity_srv_iPhone_X_saveSound"",2];";
+					action = "[player, [3]] remoteExec [""unity_srv_fnc_iphone_x_savesound"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -2218,7 +2218,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.37263889;
 					w = safeZoneW * 0.135;
 					h = safeZoneH * 0.03;
-					action = "[player, life_phoneNumberPrimary] remoteExec [""unity_srv_iPhone_X_updatePhoneNumberActive"",2];";
+					action = "[player, life_phoneNumberPrimary] remoteExec [""unity_srv_fnc_iPhone_X_updatePhoneNumberActive"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -2231,7 +2231,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.40763889;
 					w = safeZoneW * 0.135;
 					h = safeZoneH * 0.03;
-					action = "[player, life_phoneNumberSecondary] remoteExec [""unity_srv_iPhone_X_updatePhoneNumberActive"",2];";
+					action = "[player, life_phoneNumberSecondary] remoteExec [""unity_srv_fnc_iPhone_X_updatePhoneNumberActive"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -2244,7 +2244,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.44263889;
 					w = safeZoneW * 0.135;
 					h = safeZoneH * 0.03;
-					action = "[player, life_phoneNumberEnterprise] remoteExec [""unity_srv_iPhone_X_updatePhoneNumberActive"",2];";
+					action = "[player, life_phoneNumberEnterprise] remoteExec [""unity_srv_fnc_iPhone_X_updatePhoneNumberActive"",2];";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -2693,7 +2693,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.41;
 					w = safeZoneW * 0.135;
 					h = safeZoneH * 0.02;
-					action = "[] spawn unity_fnc_iPhone_X_appOffenseList; if (life_coplevel > 0) then {[player] remoteExec [""unity_srv_iPhone_X_getOffense"",2];};";
+					action = "[] spawn unity_fnc_iPhone_X_appOffenseList; if (life_coplevel > 0) then {[player] remoteExec [""unity_srv_fnc_iPhone_X_getOffense"",2];};";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -2731,7 +2731,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.43;
 					w = safeZoneW * 0.135;
 					h = safeZoneH * 0.02;
-					action = "[] spawn unity_fnc_iPhone_X_appOnTheRunList; if (life_coplevel > 0) then {[player] remoteExec [""unity_srv_iPhone_X_getOnTheRun"",2];};";
+					action = "[] spawn unity_fnc_iPhone_X_appOnTheRunList; if (life_coplevel > 0) then {[player] remoteExec [""unity_srv_fnc_iPhone_X_getOnTheRun"",2];};";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
@@ -2845,7 +2845,7 @@ class iPhone_X
 					y = safeZoneY + safeZoneH * 0.49;
 					w = safeZoneW * 0.135;
 					h = safeZoneH * 0.02;
-					action = "[] spawn unity_fnc_iPhone_X_appRapportsList; if (life_coplevel > 0) then {[player] remoteExec [""unity_srv_iPhone_X_getRapports"",2];};";
+					action = "[] spawn unity_fnc_iPhone_X_appRapportsList; if (life_coplevel > 0) then {[player] remoteExec [""unity_srv_fnc_iPhone_X_getRapports"",2];};";
 					colorBackground[] = {0,0,0,0};
 					colorBackground2[] = {0,0,0,0};
 					colorBackgroundFocused[] = {0,0,0,0};
