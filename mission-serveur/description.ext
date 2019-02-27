@@ -11,6 +11,7 @@ forceRotorLibSimulation = 1;
 #include "config\Config_SpyGlass.hpp"
 #include "CfgRemoteExec.hpp"
 #include "dialog\MasterHandler.hpp"
+#include "unity\dialog\MasterHandler.hpp"
 #include "config\Config_Master.hpp"
 
 class CfgServer {
