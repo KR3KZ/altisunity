@@ -33,7 +33,7 @@ if ((_to in life_phoneNumber_company) || (_to in life_phoneNumber_services)) the
 		if ((life_settings select 2) isEqualTo 0) then
 		{
 			playsound "emergency_sound";
-			//[player,"notification_sound",10] spawn life_fnc_playSoundCheck;
+			//[player,"notification_sound",10] spawn unity_fnc_playsoundcheck;
 		};
 
 		if (_to in life_phoneNumber_company) then
@@ -99,7 +99,7 @@ if ((_to in life_phoneNumber_company) || (_to in life_phoneNumber_services)) the
 
 		player setVariable ["iPhone_X_lastSMS",[_namecontact, _message, _time, _from]];
 
-		if ((life_settings select 2) isEqualTo 0) then {[player,"notification_sound",10] spawn life_fnc_playSoundCheck};
+		if ((life_settings select 2) isEqualTo 0) then {[player,"notification_sound",10] spawn unity_fnc_playsoundcheck};
 		["Nouveau SMS",format["› %1 <br/>› %2", _nameContact, _message],[1, 1, 1, 1],""] call life_fnc_showNotification;
 	};
 };

@@ -29,7 +29,7 @@ _minute  						= str (_date select 4);
 _datesend 					= format["%1/%2 à %3:%4",_day,_month, if(count _hour == 1) then {("0" + _hour)} else {_hour}, if(count _minute == 1) then {("0" + _minute)} else {_minute}];
 _datesend						= str("Maintenant");
 
-[player,"smssend",10] spawn life_fnc_playSoundCheck;
+[player,"smssend",10] spawn unity_fnc_playsoundcheck;
 sleep random 0.2;
 
 
