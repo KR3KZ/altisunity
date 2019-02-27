@@ -18,8 +18,7 @@ _message 						= _message splitString "'%" joinString " ";
 _message 						= _message splitString '"' joinString " ";
 
 _SMS 							= life_SMS;
-_phoneNumberContact = player getVariable ["iPhone_X_currentConversation", ""];
-
+_phoneNumberContact 			= player getVariable ["iPhone_X_currentConversation", ""];
 
 _date 							= date;
 _day							= str (_date select 2);
@@ -32,9 +31,13 @@ _datesend						= str("Maintenant");
 [player,"smssend",10] spawn unity_fnc_playsoundcheck;
 sleep random 0.2;
 
-
 _SMS pushBack [life_phoneNumberActive, _phoneNumbercontact, _message, _datesend];
-[player, life_phoneNumberActive, _phoneNumberContact, _message, life_phoneNumberSecondary] remoteExec ["unity_srv_fnc_iPhone_X_sendSMS", 2];
+
+if !(isNil "life_phoneNumberSecondary") then {
+	[player, life_phoneNumberActive, _phoneNumberContact, _message, life_phoneNumberSecondary] remoteExec ["unity_srv_fnc_iPhone_X_sendSMS", 2];
+} else {
+	[player, life_phoneNumberActive, _phoneNumberContact, _message] remoteExec ["unity_srv_fnc_iPhone_X_sendSMS", 2];
+};
 
 {
 	ctrlDelete _x;

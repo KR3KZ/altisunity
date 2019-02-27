@@ -20,8 +20,8 @@ if !(isNil "life_phoneNumberEnterprise") then
 
 		if (!(_exists isEqualTo [])) then {
 			life_switchboard = ([life_switchboard, (_exists select 0)] call BIS_fnc_removeIndex);
-			if ((playerSide == west) AND (life_coplevel > 0)) then {[life_switchboard] remoteExec ["unity_srv_fnc_iPhone_X_setSwitchboardPMC",2];};
-			if ((playerSide == independent) AND (life_mediclevel > 0)) then {[life_switchboard] remoteExec ["unity_srv_fnc_iPhone_X_setSwitchboardIDAP",2];};
+			if ((playerSide == west) AND (call life_coplevel > 0)) then {[life_switchboard] remoteExec ["unity_srv_fnc_iPhone_X_setSwitchboardPMC",2];};
+			if ((playerSide == independent) AND (call life_mediclevel > 0)) then {[life_switchboard] remoteExec ["unity_srv_fnc_iPhone_X_setSwitchboardIDAP",2];};
 			if (playerSide == civilian) then {[life_switchboard] remoteExec ["unity_srv_fnc_iPhone_X_setSwitchboardCOMPANY",2];};
 		};
 	};

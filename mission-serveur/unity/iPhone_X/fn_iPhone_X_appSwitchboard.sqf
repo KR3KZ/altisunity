@@ -29,8 +29,8 @@ if (life_phoneNumberActive isEqualTo []) exitWith {};
 
 if !(isNil "life_phoneNumberActive") then
 {
-	if ((playerSide == west) AND (life_coplevel > 0)) then {[player] remoteExec ["unity_srv_fnc_iPhone_X_getSwitchboardPMC",2]; diag_log "------------- APP SB 1 -------------";};
-	if ((playerSide == independent) AND (life_mediclevel > 0)) then {[player] remoteExec ["unity_srv_fnc_iPhone_X_getSwitchboardIDAP",2]; diag_log "------------- APP SB 2 -------------";};
+	if ((playerSide == west) AND (call life_coplevel > 0)) then {[player] remoteExec ["unity_srv_fnc_iPhone_X_getSwitchboardPMC",2]; diag_log "------------- APP SB 1 -------------";};
+	if ((playerSide == independent) AND (call life_mediclevel > 0)) then {[player] remoteExec ["unity_srv_fnc_iPhone_X_getSwitchboardIDAP",2]; diag_log "------------- APP SB 2 -------------";};
 	if !(isNil "life_phoneNumberEnterprise") then
 	{
 		if ((life_phoneNumberEnterprise in life_phoneNumber_company || life_phoneNumberEnterprise in life_phoneNumber_services ) &&  playerSide == civilian) then {[player] remoteExec ["unity_srv_fnc_iPhone_X_getSwitchboardCOMPANY",2]; diag_log "------------- APP SB 3 -------------";};

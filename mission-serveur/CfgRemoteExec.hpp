@@ -173,6 +173,9 @@ class CfgRemoteExec {
         F(life_fnc_simDisable,ANYONE)
         F(SPY_fnc_notifyAdmins,ANYONE)
 
+		//Unity
+		F(unity_fnc_playsound,ANYONE)
+
 		//iPhone_X
 		F(unity_srv_fnc_iPhone_X_addPhoneNumber,ANYONE)
 		F(unity_srv_fnc_iPhone_X_checkPhoneNumberIsUse,ANYONE)
