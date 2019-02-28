@@ -313,7 +313,7 @@ class iPhone_X
 			y = safeZoneY + safeZoneH * 0.34541667;
 			w = safeZoneW * 0.02246094;
 			h = safeZoneH * 0.03993056;
-			action = "closeDialog 0; createDialog ""playerSettings"";";
+			action = "closeDialog 0; [] spawn life_fnc_p_openMenu;";
 			colorBackground[] = {0,0,0,0};
 			colorBackground2[] = {0,0,0,0};
 			colorBackgroundFocused[] = {0,0,0,0};
