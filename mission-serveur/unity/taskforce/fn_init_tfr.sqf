@@ -32,7 +32,9 @@ life_wrongTS 								= false;
 
 if(FETCH_CONST(life_adminlevel) < 1) then {
     [_ts, _channel] spawn {
-		    sleep 30;
+		_ts 			= _this select 0;
+		_channel 		= _this select 1;
+		sleep 30;
         while {true} do {
       		waitUntil {life_wrongTs || life_wrongChan || life_tfr_plugin_disabled};
 
