@@ -1,5 +1,6 @@
 #include "..\..\script_macros.hpp"
 
+private _ts 								= LIFE_SETTINGS(getText,"teamspeak");
 private _channel 							= LIFE_SETTINGS(getText,"channel");
 private _pass 								= LIFE_SETTINGS(getText,"pass");
 
@@ -54,11 +55,11 @@ if(FETCH_CONST(life_adminlevel) < 1) then {
               waitUntil {!life_tfr_plugin_disabled};
               disableUserInput false;
               0 cutText ["","BLACK IN"];
-              hint "Merci de rester dans le channel TASK FORCE RADIO, bon jeu !";
+              hint format["Merci de rester dans le channel %1, bon jeu !", _channel];
             };
 
             if (life_wrongChan) then {
-                0 cutText ["Merci de vous rendre sur le channel TASK FORCE RADIO pour pouvoir jouer ou vous serez éjecté après 5 minutes.","BLACK FADED"];
+                0 cutText [format["Merci de vous rendre sur le channel %1 pour pouvoir jouer ou vous serez éjecté après 5 minutes.", _channel],"BLACK FADED"];
                 0 cutFadeOut 99999999;
                 disableUserInput true;
 
@@ -75,13 +76,13 @@ if(FETCH_CONST(life_adminlevel) < 1) then {
                 waitUntil {!life_wrongChan};
                 disableUserInput false;
                 0 cutText ["","BLACK IN"];
-                hint "Merci de rester dans le channel TASK FORCE RADIO, bon jeu !";
+                hint format["Merci de rester dans le channel %1, bon jeu !", _channel];
             };
 
             if (life_wrongTS) then {
                 hint "Le TASK FORCE RADIO est obligatoire ! Vous devez être sur notre onglet/serveur TeamSpeak pour jouer ! Vous serez immobilisé dans 30 secondes";
                 sleep 30;
-                0 cutText ["Merci de vous rendre sur le TeamSpeak Unity pour pouvoir jouer ou vous serez éjecté après 5 minutes.","BLACK FADED"];
+                0 cutText [format["Merci de vous rendre sur le TeamSpeak %1 pour pouvoir jouer ou vous serez éjecté après 5 minutes.", _ts],"BLACK FADED"];
                 0 cutFadeOut 99999999;
                 disableUserInput true;
 
@@ -99,7 +100,7 @@ if(FETCH_CONST(life_adminlevel) < 1) then {
                 waitUntil {!life_wrongTS};
                 disableUserInput false;
                 0 cutText ["","BLACK IN"];
-                hint "Merci de rester dans le channel TASK FORCE RADIO, bon jeu !";
+                hint format ["Merci de rester dans le channel %1, bon jeu !", _channel];
             };
         };
     };

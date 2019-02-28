@@ -2517,6 +2517,10 @@
             <Original>Pickaxe</Original>
             <French>Pioche</French>
         </Key>
+		<Key ID="STR_Item_Axe">
+            <Original>Hache</Original>
+            <French>Hache</French>
+        </Key>
         <Key ID="STR_Item_CopperOre">
             <Original>Copper Ore</Original>
             <French>Minerai de Cuivre</French>

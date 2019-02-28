@@ -879,6 +879,17 @@ class VirtualItems {
     };
 
 	//Added by Unity
+	class axe {
+        variable = "axe";
+        displayName = "STR_Item_Axe";
+        weight = 2;
+        buyPrice = 750;
+        sellPrice = 350;
+        illegal = false;
+        edible = -1;
+        icon = "\unity_icons\ico_axe.paa";
+    };
+
 	class wood {
 		variable = "wood";
 		displayName = "STR_Item_Wood";
@@ -887,51 +898,7 @@ class VirtualItems {
 		sellPrice = 2700;
 		illegal = false;
 		edible = -1;
-		icon = "\unity_icons\ico_muttonLeg.paa";
-	};
-
-	class corn {
-		variable = "corn";
-		displayName = "STR_Item_Corn";
-		weight = 2;
-		buyPrice = 0;
-		sellPrice = 0;
-		illegal = false;
-		edible = -1;
-		icon = "\unity_icons\ico_muttonLeg.paa";
-	};
-
-  class cereal {
-		variable = "cereal";
-		displayName = "STR_Item_Cereal";
-		weight = 2;
-		buyPrice = -1;
-		sellPrice = 1600;
-		illegal = false;
-		edible = -1;
-		icon = "\unity_icons\ico_muttonLeg.paa";
-	};
-
-  class cotton {
-		variable = "cotton";
-		displayName = "STR_Item_Cotton";
-		weight = 2;
-		buyPrice = -1;
-		sellPrice = 2500;
-		illegal = false;
-		edible = -1;
-		icon = "\unity_icons\ico_muttonLeg.paa";
-	};
-
-	class fabric {
-		variable = "fabric";
-		displayName = "STR_Item_Fabric";
-		weight = 3;
-		buyPrice = -1;
-		sellPrice = 2900;
-		illegal = false;
-		edible = -1;
-		icon = "\unity_icons\ico_muttonLeg.paa";
+		icon = "\unity_icons\ico_wood.paa";
 	};
 
 	class paper {
@@ -942,6 +909,50 @@ class VirtualItems {
 		sellPrice = 3000;
 		illegal = false;
 		edible = -1;
-		icon = "\unity_icons\ico_muttonLeg.paa";
+		icon = "\unity_icons\ico_paper.paa";
+	};
+
+	class corn {
+		variable = "corn";
+		displayName = "STR_Item_Corn";
+		weight = 2;
+		buyPrice = 0;
+		sellPrice = 0;
+		illegal = false;
+		edible = -1;
+		icon = "\unity_icons\ico_corn.paa";
+	};
+
+  class cereal {
+		variable = "cereal";
+		displayName = "STR_Item_Cereal";
+		weight = 2;
+		buyPrice = -1;
+		sellPrice = 1600;
+		illegal = false;
+		edible = -1;
+		icon = "\unity_icons\ico_cereal.paa";
+	};
+
+  class cotton {
+		variable = "cotton";
+		displayName = "STR_Item_Cotton";
+		weight = 2;
+		buyPrice = -1;
+		sellPrice = 2500;
+		illegal = false;
+		edible = -1;
+		icon = "\unity_icons\ico_cotton.paa";
+	};
+
+	class fabric {
+		variable = "fabric";
+		displayName = "STR_Item_Fabric";
+		weight = 3;
+		buyPrice = -1;
+		sellPrice = 2900;
+		illegal = false;
+		edible = -1;
+		icon = "\unity_icons\ico_fabric.paa";
 	};
 };
