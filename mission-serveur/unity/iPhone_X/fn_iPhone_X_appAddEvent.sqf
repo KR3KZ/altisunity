@@ -91,17 +91,17 @@ ctrlShow [982904,true];
 //Affichage Mins
 ctrlShow [982905,true];
 
-_background_iPhone_X_background = _display displayCtrl 97002;
-_iPhone_X_clock_home = _display displayCtrl 97500;
-_iPhone_X_nameEvent = _display displayCtrl 98291;
-_iPhone_X_description = _display displayCtrl 98296;
-_iPhone_X_price = _display displayCtrl 98295;
-_iPhone_X_position = _display displayCtrl 98297;
+_background_iPhone_X_background 	= _display displayCtrl 97002;
+_iPhone_X_clock_home 				= _display displayCtrl 97500;
+_iPhone_X_nameEvent 				= _display displayCtrl 98291;
+_iPhone_X_description 				= _display displayCtrl 98296;
+_iPhone_X_price 					= _display displayCtrl 98295;
+_iPhone_X_position 					= _display displayCtrl 98297;
 
 
-_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appAddEvent.paa";
-_iPhone_X_clock_home ctrlSetTextColor [0,0,0,1];
-_iPhone_X_nameEvent ctrlSetText "Votre événement";
-_iPhone_X_description ctrlSetText "Description";
-_iPhone_X_position ctrlSetText "Position";
-_iPhone_X_price ctrlSetText "Tarif";
+_background_iPhone_X_background 	ctrlSetText "unity_iPhone_X\iPhone_X_appAddEvent.paa";
+_iPhone_X_clock_home 				ctrlSetTextColor [0,0,0,1];
+_iPhone_X_nameEvent 				ctrlSetText "Votre événement";
+_iPhone_X_description 				ctrlSetText "Description";
+_iPhone_X_position 					ctrlSetText "Position";
+_iPhone_X_price 					ctrlSetText "Tarif";

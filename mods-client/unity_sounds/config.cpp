@@ -169,7 +169,7 @@ class CfgSounds {
         sound[] = {"unity_sounds\tabletStartSound.ogg", 1.0, 1};
         titles[] = {};
     };
-	
+
     class tabletStartSoundM {
         name = "tabletStartSoundM";
         sound[] = {"unity_sounds\tabletStartSoundM.ogg", 1.0, 1};

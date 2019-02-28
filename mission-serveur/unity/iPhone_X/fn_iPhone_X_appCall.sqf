@@ -10,8 +10,8 @@
 private["_display","_ctrl","_background_iPhone_X_background","_iPhone_X_phoneNumber","_iPhone_X_clock_home"];
 disableSerialization;
 
-_display = findDisplay 97000;
-_ctrl = [97004,97005,97118,97006,97007,97008,97009,97010,97011,97012,97013,97014,97015,97016,97017,97106,97107,97108,97109,97110,97111,97112,97113,97117,97115,97501,97503,97509,97800,97801,97805,98260];
+_display 							= findDisplay 97000;
+_ctrl 								= [97004,97005,97118,97006,97007,97008,97009,97010,97011,97012,97013,97014,97015,97016,97017,97106,97107,97108,97109,97110,97111,97112,97113,97117,97115,97501,97503,97509,97800,97801,97805,98260];
 
 {
 	(_display displayCtrl _x) ctrlShow false;
@@ -19,29 +19,29 @@ _ctrl = [97004,97005,97118,97006,97007,97008,97009,97010,97011,97012,97013,97014
 
 ctrlShow [97517,true];
 
-_ctrl2 = [97667,97663,97668,97664,97669,97665,97671,97672,97673,97674,97675,97676,97677,97678];
+_ctrl2 								= [97667,97663,97668,97664,97669,97665,97671,97672,97673,97674,97675,97676,97677,97678];
 
 {
 	(_display displayCtrl _x) ctrlShow false;
 } forEach _ctrl2;
 
-_background_iPhone_X_background = _display displayCtrl 97002;
-_iPhone_X_clock_home = _display displayCtrl 97500;
+_background_iPhone_X_background 	= _display displayCtrl 97002;
+_iPhone_X_clock_home = _display 	displayCtrl 97500;
 
-_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appCall.paa";
-_iPhone_X_clock_home ctrlSetTextColor [1,1,1,1];
+_background_iPhone_X_background 	ctrlSetText "unity_iPhone_X\iPhone_X_appCall.paa";
+_iPhone_X_clock_home 				ctrlSetTextColor [1,1,1,1];
 
-_callSettings = player getVariable ["iPhone_X_callSettings", ""];
+_callSettings 						= player getVariable ["iPhone_X_callSettings", ""];
 
 if !(isNil "_callSettings") then
 {
 	if !(_callSettings isEqualTo []) then
 	{
 			diag_log format["Je suis dans appCall.SQF et voila _callSettings %1",_callSettings];
-		_display 								= findDisplay 97000;
+		_display 					= findDisplay 97000;
 
-		_iPhone_X_phoneNumber 	= _display displayCtrl 97661;
-		_iPhone_X_informations 	= _display displayCtrl 97670;
+		_iPhone_X_phoneNumber 		= _display displayCtrl 97661;
+		_iPhone_X_informations 		= _display displayCtrl 97670;
 
 		_phoneNumberContact 		= _callSettings select 1;
 		_phoneNameContact 			= _callSettings select 2;

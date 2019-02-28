@@ -36,6 +36,10 @@ class CfgFunctions {
 
 class CfgSounds {
     sounds[] = {};
+};
+/*
+class CfgSounds {
+    sounds[] = {};
     class sirenLong {
         name = "sirenLong";
         sound[] = {"\sounds\sirenLong.ogg", 1.0, 1};
@@ -84,6 +88,7 @@ class CfgSounds {
         titles[] = {};
     };
 };
+*/
 
 class CfgDebriefing {
     class NotWhitelisted {

@@ -1,7 +1,7 @@
 /*
     File: fn_iPhone_X_addPhoneNumberPrimary.sqf
     Author: Neyzhak
-    
+
     Description:
     Add phone number primary
 
@@ -10,9 +10,9 @@
 private["_uid","_type","_price","_phoneNumber"];
 disableSerialization;
 
-_uid = getPlayerUID player;
-_type = "1";
-_price = 15000;
+_uid 				= getPlayerUID player;
+_type 				= "1";
+_price 				= 15000;
 
 _phoneNumber = [0,6];
 while {(count _phoneNumber < 10)} do {
@@ -22,7 +22,7 @@ while {(count _phoneNumber < 10)} do {
 	};
 };
 
-_phoneNumber = _phoneNumber joinString "";
+_phoneNumber 		= _phoneNumber joinString "";
 
 if((time - life_action_delay) < 10) exitWith {hint "Merci de patienter quelques instants avant d'acheter un abonnement."};
 life_action_delay = time;
@@ -46,9 +46,9 @@ sleep 5;
 
 [player] remoteExec ["unity_srv_fnc_iPhone_X_getPhoneNumber",2];
 
-iPhone_X_checkPhoneNumberSubscription = [];
-iPhone_X_checkPhoneNumberIsUse = [];
-life_cash = life_cash - _price;
+iPhone_X_checkPhoneNumberSubscription 	= [];
+iPhone_X_checkPhoneNumberIsUse 			= [];
+life_cash 								= life_cash - _price;
 
 hint format["Abonnement finalisé et opérationnel. Votre numéro principal est : %1", _phoneNumber];
 
