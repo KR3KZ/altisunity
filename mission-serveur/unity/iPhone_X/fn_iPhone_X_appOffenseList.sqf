@@ -11,7 +11,6 @@ private["_display","_ctrlDisplay","_ctrlGrp","_ctrlList","_ctrl","_background_iP
 disableSerialization;
 
 _display 							= findDisplay 97000;
-
 _ctrl 								= [97004,97118,97006,97007,97008,97009,97010,97011,97012,97013,97014,97015,97016,97017,97106,97107,97108,97109,97110,97111,97112,97113,97117,98122,98133,98166];
 
 {

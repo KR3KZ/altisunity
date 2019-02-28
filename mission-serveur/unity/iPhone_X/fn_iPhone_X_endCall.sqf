@@ -10,12 +10,12 @@
 private["_type","_display","_iPhone_X_phoneNumber","_oldRadio"];
 disableSerialization;
 
-_display = findDisplay 97000;
+_display 								= findDisplay 97000;
 
-_iPhone_X_phoneNumber = _display displayCtrl 97661;
-_iPhone_X_informations = _display displayCtrl 97670;
+_iPhone_X_phoneNumber 					= _display displayCtrl 97661;
+_iPhone_X_informations 					= _display displayCtrl 97670;
 
-_sound = player getVariable ["iPhone_X_soundCall",""];
+_sound 									= player getVariable ["iPhone_X_soundCall",""];
 
 if !(_sound isEqualTo []) then {deleteVehicle _sound;};
 
@@ -32,16 +32,16 @@ if (life_phoneInCall) then {
 	};
 };
 
-_iPhone_X_phoneNumber ctrlSetText "";
-_iPhone_X_informations ctrlSetText "";
-iPhone_X_listNumberClient = [];
+_iPhone_X_phoneNumber 					ctrlSetText "";
+_iPhone_X_informations 					ctrlSetText "";
+iPhone_X_listNumberClient 				= [];
 player setVariable ["iPhone_X_phoneNumberSendCall", []];
 player setVariable ["iPhone_X_phoneNumberReceiveCall", []];
 player setVariable ["iPhone_X_callSettings", []];
 player setVariable ["iPhone_X_soundCall", []];
 player setVariable ["iPhone_X_oldRadio", []];
 player setVariable ["iPhone_X_radio", []];
-life_phoneCallOn = false;
-life_phoneInCall = false;
+life_phoneCallOn 						= false;
+life_phoneInCall 						= false;
 
 if (!isNull (findDisplay 97000)) then {[] spawn unity_fnc_iPhone_X_home;};

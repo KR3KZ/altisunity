@@ -10,11 +10,11 @@
 private["_display","_ctrlDisplay","_ctrlGrp","_ctrlList","_ctrl","_background_iPhone_X_background","_iPhone_X_clock_home","_nameContact","_phoneNumberContact","_tmp","_ctrlList","_pos"];
 disableSerialization;
 
-_display = findDisplay 97000;
-_ctrlDisplay = (_display displayCtrl 97506);
-_ctrlGrp = (_ctrlDisplay controlsGroupCtrl 97516);
-_ctrlList = [];
-_ctrl = [97004,97006,97118,97007,97008,97009,97010,97011,97012,97013,97014,97015,97016,97017,97106,97107,97108,97109,97110,97111,97112,97113,97117,97507,97510];
+_display 								= findDisplay 97000;
+_ctrlDisplay 							= (_display displayCtrl 97506);
+_ctrlGrp 								= (_ctrlDisplay controlsGroupCtrl 97516);
+_ctrlList 								= [];
+_ctrl 									= [97004,97006,97118,97007,97008,97009,97010,97011,97012,97013,97014,97015,97016,97017,97106,97107,97108,97109,97110,97111,97112,97113,97117,97507,97510];
 
 {
 	(_display displayCtrl _x) ctrlShow false;
@@ -22,16 +22,15 @@ _ctrl = [97004,97006,97118,97007,97008,97009,97010,97011,97012,97013,97014,97015
 
 ctrlShow [97506,true];
 
-if (isNil "life_phoneNumberActive") then
-{
+if (isNil "life_phoneNumberActive") then {
 	ctrlEnable [97655,false];
 };
 
-_background_iPhone_X_background = _display displayCtrl 97002;
-_iPhone_X_clock_home = _display displayCtrl 97500;
+_background_iPhone_X_background 		= _display displayCtrl 97002;
+_iPhone_X_clock_home 					= _display displayCtrl 97500;
 
-_background_iPhone_X_background ctrlSetText "unity_iPhone_X\iPhone_X_appSMSList.paa";
-_iPhone_X_clock_home ctrlSetTextColor [0,0,0,1];
+_background_iPhone_X_background 		ctrlSetText "unity_iPhone_X\iPhone_X_appSMSList.paa";
+_iPhone_X_clock_home 					ctrlSetTextColor [0,0,0,1];
 
 {
 	ctrlDelete _x;
@@ -50,11 +49,10 @@ if (!(life_conversations isEqualTo [])) then {
 		_nameContact = [life_contacts, _phoneNumberContact] call BIS_fnc_findNestedElement;
 		if (_nameContact isEqualTo []) then {
 			_nameContact = _x select 0;;
-		}
-		else
-		{
+		} else {
 			_nameContact = [life_contacts, [(_nameContact select 0), 0]] call BIS_fnc_returnNestedElement;
 		};
+
 		_lastSMS = _x select 2;
 		_tmp = _display ctrlCreate ["iPhone_X_conversations", -1, _ctrlGrp];
 		_ctrlList pushBack _tmp;

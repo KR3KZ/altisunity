@@ -10,15 +10,14 @@
 private["_uid","_nameContact","_phoneNumberContact","_conversations","_exists"];
 disableSerialization;
 
-_uid = getPlayerUID player;
-_nameContact = _this select 0;
-_phoneNumberContact = _this select 1;
-_conversations = life_conversations;
-_message = "Aucun message reçu";
+_uid 									= getPlayerUID player;
+_nameContact 							= _this select 0;
+_phoneNumberContact 					= _this select 1;
+_conversations 							= life_conversations;
+_message 								= "Aucun message reçu";
 
-_exists = [_conversations, _phoneNumberContact] call BIS_fnc_findNestedElement;
-if (_exists isEqualTo []) then
-{
+_exists 								= [_conversations, _phoneNumberContact] call BIS_fnc_findNestedElement;
+if (_exists isEqualTo []) then {
 	reverse _conversations;
 	_conversations pushBack [_nameContact, _phoneNumberContact];
 	reverse _conversations;
