@@ -50,8 +50,6 @@ disableSerialization;
 
 ctrlSetText [3103,localize _shopTitle];
 
-(findDisplay 3100) displaySetEventHandler ["KeyDown","if ((_this select 1) isEqualTo 1) then {closeDialog 0; [] call life_fnc_playerSkins;}"]; //Fix Custom Skin after ESC
-
 sliderSetRange [3107, 0, 360];
 
 //Cop / Civ Pre Check
@@ -117,7 +115,7 @@ if (LIFE_SETTINGS(getNumber,"clothing_noTP") isEqualTo 1) then {
         if (_x != player) then {_x hideObject true;};
         true
     } count playableUnits;
-    
+
     if (LIFE_SETTINGS(getNumber,"clothing_box") isEqualTo 0) then {
         {
             if (_x != player && _x != _light) then {_x hideObject true;};
@@ -179,8 +177,6 @@ _filter lbAdd localize "STR_Shop_UI_Vests";
 _filter lbAdd localize "STR_Shop_UI_Backpack";
 
 _filter lbSetCurSel 0;
-
-[] call life_fnc_playerSkins;
 
 waitUntil {isNull (findDisplay 3100)};
 if (LIFE_SETTINGS(getNumber,"clothing_noTP") isEqualTo 0) then {
@@ -253,7 +249,6 @@ if (isNil "life_clothesPurchased") exitWith {
             };
         };
     };
-    [] call life_fnc_playerSkins;
 };
 life_clothesPurchased = nil;
 
