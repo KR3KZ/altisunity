@@ -10,14 +10,14 @@
 private["_uid","_contacts","_nameContact","_phoneNumberContact","_exists"];
 disableSerialization;
 
-_nameRapport = ctrlText 98200;
-_phoneNumberRapport = ctrlText 98201;
-_noteRapport = ctrlText 98202;
-_date = ctrlText 98203;
-_hour = ctrlText 98204;
+_nameRapport 			= ctrlText 98200;
+_phoneNumberRapport 	= ctrlText 98201;
+_noteRapport 			= ctrlText 98202;
+_date 					= ctrlText 98203;
+_hour 					= ctrlText 98204;
 
-_nameRapport = _nameRapport splitString "'" joinString " ";
-_noteRapport = _noteRapport splitString "'" joinString " ";
+_nameRapport 			= _nameRapport splitString "'" joinString " ";
+_noteRapport 			= _noteRapport splitString "'" joinString " ";
 
 if (_nameRapport in ["Identité", ""]) exitWith {hint "Identité invalide.";};
 if ((_phoneNumberRapport isEqualTo "Téléphone") OR (_phoneNumberRapport isEqualTo "")) then {_phoneNumberRapport = "Inconnu"};

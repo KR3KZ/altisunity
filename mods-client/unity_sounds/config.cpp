@@ -1,7 +1,7 @@
 #define _ARMA_
 class CfgPatches
 {
-	class unity
+	class unity_sounds
 	{
 		units[] = {"cba_xeh"};
 		weapons[] = {};

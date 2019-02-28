@@ -1,7 +1,7 @@
 /*
     File: fn_iPhone_X_addPhoneNumberEnterprise.sqf
     Author: Neyzhak
-    
+
     Description:
     Add phone number enterprise
 
@@ -10,11 +10,11 @@
 private["_uid","_type","_price","_phoneNumber"];
 disableSerialization;
 
-_uid = getPlayerUID player;
-_type = "3";
-_price = 1000000;
+_uid 					= getPlayerUID player;
+_type 					= "3";
+_price 					= 1000000;
 
-_phoneNumber = [4];
+_phoneNumber 			= [4];
 while {(count _phoneNumber < 4)} do {
 	_phoneNumber = [4];
 	for "_i" from 0 to 2 do {
@@ -22,10 +22,10 @@ while {(count _phoneNumber < 4)} do {
 	};
 };
 
-_phoneNumber = _phoneNumber joinString "";
+_phoneNumber 			= _phoneNumber joinString "";
 
 if((time - life_action_delay) < 10) exitWith {hint "Merci de patienter quelques instants avant d'acheter un abonnement."};
-life_action_delay = time;
+life_action_delay 		= time;
 
 [player, _type] remoteExec ["unity_srv_fnc_iPhone_X_checkPhoneNumberSubscription",2];
 waitUntil {!(iPhone_X_checkPhoneNumberSubscription isEqualTo [])};
@@ -46,9 +46,9 @@ sleep 5;
 
 [player] remoteExec ["unity_srv_fnc_iPhone_X_getPhoneNumber",2];
 
-iPhone_X_checkPhoneNumberSubscription = [];
-iPhone_X_checkPhoneNumberIsUse = [];
-life_cash = life_cash - _price;
+iPhone_X_checkPhoneNumberSubscription 	= [];
+iPhone_X_checkPhoneNumberIsUse 			= [];
+life_cash 								= life_cash - _price;
 
 hint format["Abonnement finalisé et opérationnel. Votre numéro entreprise est : %1", _phoneNumber];
 
