@@ -32,8 +32,8 @@ if ((_to in life_phoneNumber_company) || (_to in life_phoneNumber_services)) the
 
 		if ((life_settings select 2) isEqualTo 0) then
 		{
-			playsound "emergency_sound";
-			//[player,"notification_sound",10] spawn unity_fnc_playsoundcheck;
+			//playsound "emergency_sound";
+			[player,"notification_sound",10] spawn unity_fnc_playsoundcheck;
 		};
 
 		if (_to in life_phoneNumber_company) then

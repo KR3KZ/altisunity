@@ -28,7 +28,7 @@ switch (_randsound) do {
     default { hint "kick1" };
 };
 
- _target say3D _sound;
+[_target,_sound,10] spawn unity_fnc_playSoundCheck;
 
  // play appropriate anim
  private "_fnc_playAnim";
