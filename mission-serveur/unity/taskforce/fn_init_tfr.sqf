@@ -33,9 +33,8 @@ life_wrongTS 								= false;
 if(FETCH_CONST(life_adminlevel) < 1) then {
     [] spawn {
 		    sleep 30;
-        while {true} do
-        {
-      			waitUntil {life_wrongTs || life_wrongChan || life_tfr_plugin_disabled};
+        while {true} do {
+      		waitUntil {life_wrongTs || life_wrongChan || life_tfr_plugin_disabled};
 
             if (life_tfr_plugin_disabled) then {
               0 cutText ["Merci d'activer le plugin TeamSpeak TASK FORCE RADIO ou vous serez éjecté après 5 minutes.","BLACK FADED"];
