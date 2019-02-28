@@ -17,7 +17,6 @@ if !(_target isEqualTo player) exitWith {};
 if (_who isEqualTo "") exitWith {};
 if(dialog) then {closeDialog 0;};
 
-/*
 _randsound = floor random 6;
 switch (_randsound) do {
     case 0: { _sound = "kick1" };
@@ -30,7 +29,6 @@ switch (_randsound) do {
 };
 
  _target say3D _sound;
- */
 
  // play appropriate anim
  private "_fnc_playAnim";
