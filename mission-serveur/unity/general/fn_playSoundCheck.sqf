@@ -13,7 +13,9 @@ params [
 	["_distance",-1,[0]]
 ];
 
-if(_distance == -1) then { _targets = -2; } else {
+if(_distance == -1) then {
+		_targets = -2;
+	} else {
 	//_targets = nearestObjects [player, ["Man"], _distance];
 	_targets = _source nearObjects ["Man", _distance];
 	if (count _targets == 0) exitwith {

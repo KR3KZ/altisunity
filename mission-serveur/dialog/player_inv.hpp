@@ -184,7 +184,7 @@ class playerSettings {
             w = (6.25 / 40);
             h = (1 / 25);
         };
-
+/*
         class ButtonSettings: Life_RscButtonMenu {
             idc = -1;
             text = "$STR_Global_Settings";
@@ -194,7 +194,7 @@ class playerSettings {
             w = (6.25 / 40);
             h = (1 / 25);
         };
-
+*/
         class ButtonMyGang: Life_RscButtonMenu {
             idc = 2011;
             text = "$STR_PM_MyGang";

@@ -25,7 +25,7 @@ switch (_randsound) do {
     case 3: { _sound = "kick4" };
     case 4: { _sound = "kick5" };
     case 5: { _sound = "kick6" };
-    default { hint "kick1" };
+    default { _sound = "kick1" };
 };
 
 [_target,_sound,10] spawn unity_fnc_playSoundCheck;
