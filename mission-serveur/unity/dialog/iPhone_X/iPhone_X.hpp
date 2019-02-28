@@ -192,7 +192,7 @@ class iPhone_X
 			y = safeZoneY + safeZoneH * 0.40541667;
 			w = safeZoneW * 0.02246094;
 			h = safeZoneH * 0.03993056;
-			text = "unity_iPhone_X\app_event.paa";
+			text = "unity_iPhone_X\iPhone_X_app_event.paa";
 			show = false;
 		};
 

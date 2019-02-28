@@ -7,7 +7,7 @@ class CfgPatches
 		weapons[] = {};
 		requiredVersion = 1.0;
 		version = 1.0;
-		requiredAddons[] = {"A3_Characters_F","A3_Soft_F","A3_Soft_F_Truck","A3_Soft_F_SUV","rds_a2port_cman","SP_Craig_JackEllis1"};
+		requiredAddons[] = {"A3_Characters_F","A3_Soft_F","A3_Soft_F_Truck","A3_Soft_F_SUV"};
 	};
 };
 
@@ -44,17 +44,17 @@ class CfgSounds {
     };
 
 
-		class scythe {
-				name = "scythe";
-				sound[] = {"nolosharp_sounds\use_scythe.ogg", 1.0, 1};
-				titles[] = {};
-		};
+	class scythe {
+			name = "scythe";
+			sound[] = {"nolosharp_sounds\use_scythe.ogg", 1.0, 1};
+			titles[] = {};
+	};
 
-		class hammer {
-				name = "hammer";
-				sound[] = {"nolosharp_sounds\use_hammer.ogg", 1.0, 1};
-				titles[] = {};
-		};
+	class hammer {
+			name = "hammer";
+			sound[] = {"nolosharp_sounds\use_hammer.ogg", 1.0, 1};
+			titles[] = {};
+	};
 
     class harvest {
         name = "harvest";
@@ -86,99 +86,85 @@ class CfgSounds {
         titles[] = {};
     };
 
-	class smssend
-	{
+	class smssend {
 		name = "smssend";
 		sound[] = {"nolosharp_sounds\smssend.ogg", 1, 1};
 		titles[] = {};
 	};
 
-	class kick1
-	{
+	class kick1 {
 		name = "kick1";
 		sound[] = {"nolosharp_sounds\kick1.ogg", 1, 1};
 		titles[] = {};
 	};
 
-	class kick2
-	{
+	class kick2	{
 		name = "kick2";
 		sound[] = {"nolosharp_sounds\kick2.ogg", 1, 1};
 		titles[] = {};
 	};
 
-	class kick3
-	{
+	class kick3	{
 		name = "kick3";
 		sound[] = {"nolosharp_sounds\kick3.ogg", 1, 1};
 		titles[] = {};
 	};
 
-	class kick4
-	{
+	class kick4	{
 		name = "kick4";
 		sound[] = {"nolosharp_sounds\kick4.ogg", 1, 1};
 		titles[] = {};
 	};
 
-	class kick5
-	{
+	class kick5	{
 		name = "kick5";
 		sound[] = {"nolosharp_sounds\kick5.ogg", 1, 1};
 		titles[] = {};
 	};
 
-	class kick6
-	{
+	class kick6	{
 		name = "kick6";
 		sound[] = {"nolosharp_sounds\kick6.ogg", 1, 1};
 		titles[] = {};
 	};
 
-    class action_repair
-	{
+    class action_repair	{
 		name = "action_repair";
 		sound[] = {"nolosharp_sounds\action_repair.ogg", 1, 1};
 		titles[] = {};
 	};
 
-    class open_backpack
-	{
+    class open_backpack	{
 		name = "open_backpack";
 		sound[] = {"nolosharp_sounds\open_backpack.ogg", 1, 1};
 		titles[] = {};
 	};
 
-    class open_inventory
-	{
+    class open_inventory {
 		name = "open_inventory";
 		sound[] = {"nolosharp_sounds\open_inventory.ogg", 1, 1};
 		titles[] = {};
 	};
 
-    class truck_reverse
-	{
+    class truck_reverse	{
 		name = "truck_reverse";
 		sound[] = {"nolosharp_sounds\truck_reverse.ogg", 1, 1};
 		titles[] = {};
 	};
 
-    class introsong
-	{
+    class introsong	{
 		name = "introsong";
 		sound[] = {"nolotis\sounds\introsong.ogg", 1, 1};
 		titles[] = {};
 	};
 
-    class smsreceive_iphone
-	{
+    class smsreceive_iphone	{
 		name = "smsreceive_iphone";
 		sound[] = {"nolosharp_sounds\smsreceive_iphone.ogg", 1, 1};
 		titles[] = {};
 	};
 
-    class smsreceive_samsung
-	{
+    class smsreceive_samsung {
 		name = "smsreceive_samsung";
 		sound[] = {"nolosharp_sounds\smsreceive_samsung.ogg", 1, 1};
 		titles[] = {};
@@ -189,6 +175,7 @@ class CfgSounds {
         sound[] = {"nolosharp_sounds\tabletStartSound.ogg", 1.0, 1};
         titles[] = {};
     };
+	
     class tabletStartSoundM {
         name = "tabletStartSoundM";
         sound[] = {"nolosharp_sounds\tabletStartSoundM.ogg", 1.0, 1};
@@ -682,252 +669,4 @@ class cfgWeapons
 
 		};
 	}
-}
-
-class CfgVehicles
-{
-	class Car;
-	class Car_F;
-	/*class Truck_F: Car_F
-	{
-		class EventHandlers;
-	};
-	class Van_01_base_F: Truck_F
-	{
-		class EventHandlers: EventHandlers
-		{
-			init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;};";
-		};
-	};
-	class Van_01_fuel_base_F: Van_01_base_F {};
-	class C_Van_01_fuel_F: Van_01_fuel_base_F
-	{
-		class EventHandlers: EventHandlers
-		{
-			init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;};";
-		};
-	};
-
-	class SUV_01_base_F;
-	class C_SUV_01_F: SUV_01_base_F
-	{
-		class EventHandlers: DefaultEventhandlers
-		{
-			init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;};";
-		};
-	}*/
-
-	class B_Truck_01_mover_F;
-	class B_Truck_01_mover_F_RP: B_Truck_01_mover_F
-	{
-		displayName = "Dépanneur - HEMTT";
-		enginePower = 1500;
-		hiddenSelectionsTextures[] = {"\nolosharp_textures\vehicules\hemttdep.paa","\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa","\A3\Soft_F_Gamma\Truck_01\Data\truck_01_mprimer_CO.paa"};
-	};
-
-	class Land;
-	class Man;
-	class CAManBase;
-	class Civilian;
-	/*class Civilian_F : Civilian
-	{
-		class EventHandlers;
-	};
-
-	class C_man_1 : Civilian_F
-	{
-		class EventHandlers: EventHandlers
-		{
-			init = "(_this select 0) execVM ""\nolosharp\fix_headgear.sqf""";
-		};
-	};*/
-	class C_man_polo_1_F;
-	class B_noloshav_F: C_man_polo_1_F
-	{
-		author = "Sergio Tero";
-		_generalMacro = "B_noloshav_F";
-		uniformClass = "U_noloshav_b";
-		Items[] = {};
-		respawnItems[] = {};
-		hiddenSelectionsTextures[] = {"nolosharp_textures\tenues\c-noloshav-co.jpg"};
-		magazines[] = {};
-		respawnMagazines[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-	};
-
-	class B_poloshirtb_F: C_man_polo_1_F
-	{
-		author = "Hugo";
-		_generalMacro = "B_poloshirtb_F";
-		uniformClass = "U_poloshirt_b";
-		Items[] = {};
-		respawnItems[] = {};
-		hiddenSelectionsTextures[] = {"nolosharp_textures\tenues\lacoste\c_poloshirt_blanc_co.paa"};
-		magazines[] = {};
-		respawnMagazines[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-	};
-
-	class B_poloshirtk_F: C_man_polo_1_F
-	{
-		author = "Hugo";
-		_generalMacro = "B_poloshirtk_F";
-		uniformClass = "U_poloshirt_k";
-		Items[] = {};
-		respawnItems[] = {};
-		hiddenSelectionsTextures[] = {"nolosharp_textures\tenues\lacoste\c_poloshirt_kaki_co.paa"};
-		magazines[] = {};
-		respawnMagazines[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-	};
-
-	class B_poloshirtn_F: C_man_polo_1_F
-	{
-		author = "Hugo";
-		_generalMacro = "B_poloshirtn_F";
-		uniformClass = "U_poloshirt_n";
-		Items[] = {};
-		respawnItems[] = {};
-		hiddenSelectionsTextures[] = {"nolosharp_textures\tenues\lacoste\c_poloshirt_noir_co.paa"};
-		magazines[] = {};
-		respawnMagazines[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-	};
-
-	class B_poloshirto_F: C_man_polo_1_F
-	{
-		author = "Hugo";
-		_generalMacro = "B_poloshirto_F";
-		uniformClass = "U_poloshirt_o";
-		Items[] = {};
-		respawnItems[] = {};
-		hiddenSelectionsTextures[] = {"nolosharp_textures\tenues\lacoste\c_poloshirt_orange_co.paa"};
-		magazines[] = {};
-		respawnMagazines[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-	};
-
-	class B_poloshirtr_F: C_man_polo_1_F
-	{
-		author = "Hugo";
-		_generalMacro = "B_poloshirtr_F";
-		uniformClass = "U_poloshirt_r";
-		Items[] = {};
-		respawnItems[] = {};
-		hiddenSelectionsTextures[] = {"nolosharp_textures\tenues\lacoste\c_poloshirt_rose_co.paa"};
-		magazines[] = {};
-		respawnMagazines[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-	};
-
-	class B_poloshirtro_F: C_man_polo_1_F
-	{
-		author = "Hugo";
-		_generalMacro = "B_poloshirtro_F";
-		uniformClass = "U_poloshirt_ro";
-		Items[] = {};
-		respawnItems[] = {};
-		hiddenSelectionsTextures[] = {"nolosharp_textures\tenues\lacoste\c_poloshirt_rouge_co.paa"};
-		magazines[] = {};
-		respawnMagazines[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-	};
-
-	class B_poloshirtrb_F: C_man_polo_1_F
-	{
-		author = "Hugo";
-		_generalMacro = "B_poloshirtrb_F";
-		uniformClass = "U_poloshirtr_b";
-		Items[] = {};
-		respawnItems[] = {};
-		hiddenSelectionsTextures[] = {"nolosharp_textures\tenues\ralphlauren\c_poloshirt_blanc_co.paa"};
-		magazines[] = {};
-		respawnMagazines[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-	};
-
-	class B_poloshirtrbl_F: C_man_polo_1_F
-	{
-		author = "Hugo";
-		_generalMacro = "B_poloshirtrbl_F";
-		uniformClass = "U_poloshirtr_bl";
-		Items[] = {};
-		respawnItems[] = {};
-		hiddenSelectionsTextures[] = {"nolosharp_textures\tenues\ralphlauren\c_poloshirt_bleu_co.paa"};
-		magazines[] = {};
-		respawnMagazines[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-	};
-
-	class B_poloshirtrj_F: C_man_polo_1_F
-	{
-		author = "Hugo";
-		_generalMacro = "B_poloshirtrj_F";
-		uniformClass = "U_poloshirtr_j";
-		Items[] = {};
-		respawnItems[] = {};
-		hiddenSelectionsTextures[] = {"nolosharp_textures\tenues\ralphlauren\c_poloshirt_jaune_co.paa"};
-		magazines[] = {};
-		respawnMagazines[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-	};
-
-	class B_poloshirtrn_F: C_man_polo_1_F
-	{
-		author = "Hugo";
-		_generalMacro = "B_poloshirtrn_F";
-		uniformClass = "U_poloshirtr_n";
-		Items[] = {};
-		respawnItems[] = {};
-		hiddenSelectionsTextures[] = {"nolosharp_textures\tenues\ralphlauren\c_poloshirt_noir_co.paa"};
-		magazines[] = {};
-		respawnMagazines[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-	};
-
-	class B_poloshirtrro_F: C_man_polo_1_F
-	{
-		author = "Hugo";
-		_generalMacro = "B_poloshirtrro_F";
-		uniformClass = "U_poloshirtr_ro";
-		Items[] = {};
-		respawnItems[] = {};
-		hiddenSelectionsTextures[] = {"nolosharp_textures\tenues\ralphlauren\c_poloshirt_rose_co.paa"};
-		magazines[] = {};
-		respawnMagazines[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-	};
-
-	class B_poloshirtrv_F: C_man_polo_1_F
-	{
-		author = "Hugo";
-		_generalMacro = "B_poloshirtrv_F";
-		uniformClass = "U_poloshirtr_v";
-		Items[] = {};
-		respawnItems[] = {};
-		hiddenSelectionsTextures[] = {"nolosharp_textures\tenues\ralphlauren\c_poloshirt_vert_co.paa"};
-		magazines[] = {};
-		respawnMagazines[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-	};
-
-	class C_Offroad_01_F;
-	class C_Offroad_01_DEP_F: C_Offroad_01_F
-	{
-		displayName = "Dépanneur - Offroad";
-	};
-
 }
