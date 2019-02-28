@@ -38,7 +38,7 @@ class iPhone_X_addPhoneNumber
 			y = safeZoneY + safeZoneH * 0.34722223;
 			w = safeZoneW * 0.21679688;
 			h = safeZoneH * 0.03819445;
-			text = "NOLOTÉLÉCOM";
+			text = "AFGHANI TÉLÉCOM";
 			colorBackground[] = {0,0,0,0.5};
 		};
 
