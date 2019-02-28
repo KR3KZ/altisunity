@@ -167,7 +167,7 @@ class CfgNotifications {
 
     class TextMessage {
         title = "$STR_TextMessage_Title";
-        iconPicture = "icons\ico_messageNew.paa";
+        iconPicture = "\unity_icons\ico_messageNew.paa";
         description = "%1";
         duration = 10;
         priority = 6;
@@ -175,7 +175,7 @@ class CfgNotifications {
 
     class PoliceDispatch {
         title = "$STR_PoliceDispatch_Title";
-        iconPicture = "icons\ico_messagePolice.paa";
+        iconPicture = "\unity_icons\ico_messagePolice.paa";
         description = "%1";
         duration = 10;
         priority = 6;
@@ -183,7 +183,7 @@ class CfgNotifications {
 
     class AdminDispatch {
         title = "$STR_AdminDispatch_Title";
-        iconPicture = "icons\ico_messageAdmin.paa";
+        iconPicture = "\unity_icons\ico_messageAdmin.paa";
         description = "%1";
         duration = 10;
         priority = 6;
@@ -191,7 +191,7 @@ class CfgNotifications {
 
     class AdminMessage {
         title = "$STR_AdminMessage_Title";
-        iconPicture = "icons\ico_messageAdmin.paa";
+        iconPicture = "\unity_icons\ico_messageAdmin.paa";
         description = "%1";
         duration = 10;
         priority = 5;
