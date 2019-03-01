@@ -6,7 +6,8 @@
     Description:
     Starts and monitors the knocked out state.
 */
-private "_obj";
+
+private ["_obj", "_sound"];
 params [
     ["_target",objNull,[objNull]],
     ["_who","",[""]]
