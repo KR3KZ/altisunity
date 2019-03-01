@@ -230,9 +230,9 @@ randomSeed=2639488;
 class ScenarioData
 {
 	author="3rk";
-	overViewPicture="\unity_textures\armalife.paa";
-	overViewPictureLocked="\unity_textures\armalife.paa";
-	loadScreen="\unity_textures\armalife.paa";
+	overViewPicture="\unity_textures\armalife.jpg";
+	overViewPictureLocked="\unity_textures\armalife.jpg";
+	loadScreen="\unity_textures\armalife.jpg";
 	saving=0;
 	respawnDialog=0;
 	disabledAI=1;
