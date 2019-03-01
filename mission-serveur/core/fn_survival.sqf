@@ -119,7 +119,7 @@ for "_i" from 0 to 1 step 0 do {
     };
 
 	//Added by Unity
-	[] call unity_fnc_survivalFix;
+	[] call unity_fnc_iPhone_X_survivalFix;
 	[] call unity_fnc_check_ts;
 	[] spawn unity_fnc_radioactive;
 
