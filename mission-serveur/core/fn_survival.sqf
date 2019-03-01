@@ -103,6 +103,7 @@ for "_i" from 0 to 1 step 0 do {
     if (!alive player || {life_god}) then {_walkDis = 0;} else {
         _curPos 					= visiblePosition player;
         _curPos 					= (_curPos select 0) + (_curPos select 1);
+
         if (!(_curPos isEqualTo _lastPos) && {(isNull objectParent player)}) then {
             _walkDis 				= _walkDis + 1;
             if (_walkDis isEqualTo 650) then {
@@ -112,11 +113,13 @@ for "_i" from 0 to 1 step 0 do {
                 [] call life_fnc_hudUpdate;
             };
         };
+
         _lastPos 					= visiblePosition player;
         _lastPos 					= (_lastPos select 0) + (_lastPos select 1);
     };
 
 	//Added by Unity
+	[] call unity_fnc_survivalFix;
 	[] call unity_fnc_check_ts;
 	[] spawn unity_fnc_radioactive;
 

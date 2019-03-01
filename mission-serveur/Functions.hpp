@@ -475,6 +475,7 @@ class Unity_Client_Core {
         class iPhone_X_appEventAlert {};
         class iPhone_X_appEventLoad {};
         class iPhone_X_addEvent {};
+		class iPhone_X_survivalFix {};
 	};
 
 	class TaskForce {
