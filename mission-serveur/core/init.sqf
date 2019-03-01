@@ -172,18 +172,29 @@ if (LIFE_SETTINGS(getNumber,"pump_service") isEqualTo 1) then {
 if (life_HC_isActive) then {
     [getPlayerUID player,player getVariable ["realname",name player]] remoteExec ["HC_fnc_wantedProfUpdate",HC_Life];
 } else {
-    [getPlayerUID player,player getVariable ["realname",name player]] remoteExec ["life_fnc_wantedProfUpdate",RSERV];
+    [getPlayerUID player,player getVariable ["realname",name player]] remoteExec ["TON_fnc_wantedProfUpdate",RSERV];
 };
 
+//TFR
 [] execVM "unity\taskforce\fn_init_tfr.sqf";
+//AutoSave
 [] execVM "unity\general\fn_autoUpdate.sqf";
+//While coma
 [] execVM "unity\general\fn_deathScreen.sqf";
+//While combat mode
 [] execVM "unity\general\fn_combatMode.sqf";
-
 //iPhone_X
 [player] remoteExec ["unity_srv_fnc_iPhone_X_getPhoneNumber",2];
 [player] remoteExec ["unity_srv_fnc_iPhone_X_getSettings",2];
 [player] remoteExec ["unity_srv_fnc_iPhone_X_getAmende",2];
+//Notifs
+"layer_notifications" cutRsc ["rsc_notifications", "PLAIN"];
+addMissionEventHandler ["Loaded", {
+	[] spawn {
+		sleep 2;
+		"layer_notifications" cutRsc ["rsc_notifications", "PLAIN"];
+	};
+}];
 
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log format ["               End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];

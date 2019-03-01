@@ -155,7 +155,7 @@ class SettingsMenu {
             w = .08;
             h = .04;
         };
-
+/*
         class PlayerTagsONOFF: Life_Checkbox {
             tooltip = "$STR_GUI_PlayTags";
             idc = 2970;
@@ -186,7 +186,7 @@ class SettingsMenu {
             onCheckedChanged = "['broadcast',_this select 1] call life_fnc_s_onCheckedChange;";
             y = 0.58;
         };
-
+*/
         class ButtonClose: Life_RscButtonMenu {
             idc = -1;
             //shortcuts[] = {0x00050000 + 2};

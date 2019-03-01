@@ -4628,4 +4628,18 @@
             <French>%1 - %2 a déposé %3 AFN dans son compte. Argent en banque : %4 AFN Cash : %5 AFN</French>
         </Key>
     </Package>
+	<Package name="Notifications">
+		<Key ID="STR_author">
+			<English>Haz</English>
+		</Key>
+		<Key ID="STR_notification_queueCount">
+			<English>Queue count: %1</English>
+		</Key>
+		<Key ID="STR_notification_title_example">
+			<English>New Notification</English>
+		</Key>
+		<Key ID="STR_notification_message_example">
+			<English>This is a notification!</English>
+		</Key>
+	</Package>
 </Project>
