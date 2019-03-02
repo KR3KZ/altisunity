@@ -196,6 +196,7 @@ class WeaponShops {
 			{ "rhs_weap_ak103", "", 0, 0, "call life_coplevel >= 4" },
 			{ "srifle_DMR_06_olive_F", "", 0, 0, "call life_coplevel >= 5" },
 			{ "rhs_weap_M320", "", 0, 0, "call life_coplevel >= 5" },
+			{ "rhs_weap_ak103_zenitco01_b33", "", 0, 0, "call life_coplevel >= 6" },
 			{ "rhs_weap_pkp", "", 0, 0, "call life_coplevel >= 7" }
         };
         mags[] = {
@@ -203,6 +204,8 @@ class WeaponShops {
 			{ "rhs_18rnd_9x21mm_7N28", "", 0, 0, "" },
 			//Ak
 			{ "rhs_30Rnd_545x39_7N10_AK", "", 0, 0, "" },
+			//Ak-103
+			{ "rhs_30Rnd_762x39_57-N-231_AK", "", 0, 0, "" },
 			//M14
 			{ "20Rnd_762x51_Mag", "", 0, 0, "" },
 			//Lance Grenade
@@ -216,6 +219,9 @@ class WeaponShops {
 			{ "rhs_acc_ekp1", "", 0, 0, "" },
 			{ "rhs_acc_ekp8_02", "", 0, 0, "" },
 			{ "rhs_acc_2dpzenit", "", 0, 0, "" },
+			{ "rhsusf_acc_eotech_xps3", "", 0, 0, "" },
+			{ "rhs_acc_perst3", "", 0, 0, "" },
+			{ "rhs_acc_grip_rk2", "", 0, 0, "" },
 			{ "rhs_acc_ekp8_18", "", 0, 0, "" }
         };
     };
