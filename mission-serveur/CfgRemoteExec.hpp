@@ -149,6 +149,7 @@ class CfgRemoteExec {
         F(HC_fnc_wantedRemove,HC)
 
         /* Functions for everyone */
+		F(ar_rappel_from_heli,ANYONE)
 		F(mocap_fnc_dropweapon,ANYONE)
 		F(mocap_fnc_strokeeffects,ANYONE)
 		F(murshun_cigs_fnc_smoke,ANYONE)
