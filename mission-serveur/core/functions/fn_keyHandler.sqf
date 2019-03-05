@@ -157,15 +157,16 @@ switch (_code) do {
         };
     };
 
-    //Restraining (Shift + R)
+    /*Restraining (Shift + R)
     case 19: {
         if (_shift) then {_handled = true};
         if (_shift && playerSide isEqualTo west && {!isNull cursorObject} && {cursorObject isKindOf "CAManBase"} && {(isPlayer cursorObject)} && {(side cursorObject in [civilian,independent])} && {alive cursorObject} && {cursorObject distance player < 3.5} && {!(cursorObject getVariable "Escorting")} && {!(cursorObject getVariable "restrained")} && {speed cursorObject < 1}) then {
             [] call life_fnc_restrainAction;
         };
     };
+	*/
 
-    //Knock out, this is experimental and yeah... (Shift + G)
+    /*Knock out, this is experimental and yeah... (Shift + G)
     case 34: {
         if (_shift) then {_handled = true};
         if (_shift && playerSide isEqualTo civilian && !isNull cursorObject && cursorObject isKindOf "CAManBase" && isPlayer cursorObject && alive cursorObject && cursorObject distance player < 4 && speed cursorObject < 1) then {
@@ -174,6 +175,7 @@ switch (_code) do {
             };
         };
     };
+	*/
 
     //T Key (Trunk)
     case 20: {
