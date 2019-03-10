@@ -8,22 +8,22 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1628;
+		nextID=1641;
 	};
 	class MarkerIDProvider
 	{
-		nextID=329;
+		nextID=334;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1504;
+		nextID=1548;
 	};
 	class Camera
 	{
-		pos[]={13939.271,422.31985,17915.564};
-		dir[]={-0.9668746,-0.23766787,-0.093146376};
-		up[]={-0.23657404,0.97134656,-0.022790961};
-		aside[]={-0.095893949,6.7246219e-008,0.99539548};
+		pos[]={13048.83,346.65775,17508.328};
+		dir[]={0.7359919,-0.61429316,0.28457981};
+		up[]={0.57295924,0.78907382,0.22154209};
+		aside[]={0.36064351,2.0309744e-007,-0.93271661};
 	};
 };
 binarizationWanted=0;
@@ -66,13 +66,14 @@ addons[]=
 	"A3_Structures_F_EPA_Items_Medical",
 	"Jbad_misc_interior",
 	"A3_Supplies_F_Heli_CargoNets",
-	"A3_Structures_F_Exp_Infrastructure_WaterSupply"
+	"A3_Structures_F_Exp_Infrastructure_WaterSupply",
+	"A3_Structures_F_EPC_Civ_Accessories"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=23;
+		items=24;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -224,6 +225,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item23
+		{
+			className="A3_Structures_F_EPC";
+			name="Arma 3 Win Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=2639488;
@@ -258,6 +266,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -272,24 +298,6 @@ class CustomAttributes
 						};
 					};
 					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -423,7 +431,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=153;
+		items=154;
 		class Item0
 		{
 			dataType="Group";
@@ -12602,7 +12610,7 @@ class Mission
 					};
 					id=1287;
 					type="Land_BagFence_Long_F";
-					atlOffset=0.89999962;
+					atlOffset=0.8238678;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12642,7 +12650,7 @@ class Mission
 					};
 					id=1288;
 					type="Land_BagFence_Long_F";
-					atlOffset=1.3309975;
+					atlOffset=1.2519989;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12682,7 +12690,7 @@ class Mission
 					};
 					id=1289;
 					type="Land_BagFence_Long_F";
-					atlOffset=1.2109985;
+					atlOffset=0.88536453;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12722,7 +12730,7 @@ class Mission
 					};
 					id=1290;
 					type="Land_BagFence_Long_F";
-					atlOffset=0.65799904;
+					atlOffset=0.32880211;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16422,6 +16430,7 @@ class Mission
 					};
 					id=1333;
 					type="Land_BarGate_F";
+					atlOffset=-1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16498,7 +16507,7 @@ class Mission
 				};
 			};
 			id=1332;
-			atlOffset=0.010557175;
+			atlOffset=0.010555267;
 		};
 		class Item114
 		{
@@ -17731,7 +17740,7 @@ class Mission
 					};
 					id=1405;
 					type="WaterPump_01_forest_F";
-					atlOffset=0.0041732788;
+					atlOffset=0.0051765442;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17768,7 +17777,7 @@ class Mission
 				};
 			};
 			id=1406;
-			atlOffset=0.11328506;
+			atlOffset=0.11278152;
 		};
 		class Item122
 		{
@@ -20620,6 +20629,135 @@ class Mission
 			type="Empty";
 			id=1567;
 			atlOffset=54.565308;
+		};
+		class Item153
+		{
+			dataType="Layer";
+			name="Distributeur";
+			state=1;
+			class Entities
+			{
+				items=8;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11253.782,27.256636,2883.4109};
+						angles[]={0,0.85707879,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];}";
+					};
+					id=1630;
+					type="Land_Atm_01_F";
+					atlOffset=0.0020008087;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10525.167,88.310181,9198.8691};
+						angles[]={0,2.8912599,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];}";
+					};
+					id=1633;
+					type="Land_Atm_01_F";
+					atlOffset=0.0020065308;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={16842.951,31.839104,5927.4009};
+						angles[]={0,3.1332674,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];}";
+					};
+					id=1634;
+					type="Land_Atm_01_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13053.96,343.23059,17509.66};
+						angles[]={0,0.070860364,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];}";
+					};
+					id=1635;
+					type="Land_Atm_01_F";
+				};
+				class Item4
+				{
+					dataType="Marker";
+					position[]={16843.061,30.559,5927.542};
+					name="marker_331";
+					type="loc_Tourism";
+					colorName="default";
+					a=0.5;
+					b=0.5;
+					id=1638;
+					atlOffset=0.00048828125;
+				};
+				class Item5
+				{
+					dataType="Marker";
+					position[]={13054.176,341.95001,17509.627};
+					name="marker_330";
+					type="loc_Tourism";
+					colorName="default";
+					a=0.5;
+					b=0.5;
+					id=1637;
+				};
+				class Item6
+				{
+					dataType="Marker";
+					position[]={10525.281,87.027,9198.8906};
+					name="marker_332";
+					type="loc_Tourism";
+					colorName="default";
+					a=0.5;
+					b=0.5;
+					id=1639;
+					atlOffset=-0.00039672852;
+				};
+				class Item7
+				{
+					dataType="Marker";
+					position[]={11253.91,25.974001,2883.6379};
+					name="marker_333";
+					type="loc_Tourism";
+					colorName="default";
+					a=0.5;
+					b=0.5;
+					id=1640;
+					atlOffset=0.00035667419;
+				};
+			};
+			id=1631;
+			atlOffset=77.86261;
 		};
 	};
 };
