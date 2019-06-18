@@ -127,8 +127,11 @@ class Clothing {
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
-            { "B_Carryall_oucamo", "", 0, "call life_coplevel >= 3" },
-			{ "B_FieldPack_blk", "", 0, "call life_coplevel >= 1" }
+            { "tf_rt1523g_green", "", 0, "call life_coplevel >= 1" },
+			{ "tf_anprc155_coyote", "", 0, "call life_coplevel >= 1" },
+			{ "B_FieldPack_oli", "", 0, "call life_coplevel >= 1" },
+			{ "B_Kitbag_sgg", "", 0, "call life_coplevel >= 1" },
+			{ "rhs_sidor", "", 0, "call life_coplevel >= 1" }
         };
     };
 
