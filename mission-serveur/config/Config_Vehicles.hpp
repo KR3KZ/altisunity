@@ -110,12 +110,12 @@ class CarShops {
         conditions = "";
         vehicles[] = {
 			{ "RHS_UAZ_MSV_01", "call life_coplevel >= 1" },
-            { "LOP_AM_Offroad", "call life_coplevel >= 2" },
+            { "LOP_PESH_IND_Offroad", "call life_coplevel >= 2" },
 			{ "LOP_TKA_Ural", "call life_coplevel >= 3" },
 			{ "rhs_tigr_msv", "call life_coplevel >= 4" },
 			{ "LOP_UKR_UAZ_DshKM", "call life_coplevel >= 5" },
 			{ "rhs_uaz_open_MSV_01", "call life_coplevel >= 6" },
-			{ "LOP_AFR_Landrover", "call life_coplevel >= 6" },
+			{ "LOP_NAPA_Landrover", "call life_coplevel >= 6" },
             { "rhs_btr70_vmf", "call life_coplevel >= 7" }
         };
     };
@@ -365,7 +365,7 @@ class LifeCfgVehicles {
         };
     };
 
-    class LOP_AM_Offroad {
+    class LOP_PESH_IND_Offroad {
         vItemSpace = 200;
         conditions = "";
         price = 0;
@@ -377,7 +377,7 @@ class LifeCfgVehicles {
 		};
     };
 
-    class LOP_TAKA_Landrover {
+    class LOP_NAPA_Landrover {
         vItemSpace = 200;
         conditions = "";
         price = 0;
