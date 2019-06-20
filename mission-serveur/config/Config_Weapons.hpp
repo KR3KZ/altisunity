@@ -67,11 +67,11 @@ class WeaponShops {
             { "rhs_30Rnd_545x39_7N10_AK", "", 1800, 150, "" }
         };
         accs[] = {
-            { "optic_Yorris", "", 3500, 1750, "" },
-            { "rhs_acc_ekp8_02", "", 3500, 1750, "" },
-            { "optic_ACO_grn", "", 3500, 1750, "" },
-            { "optic_Aco", "", 3500, 1750, "" },
-            { "optic_Holosight_blk_F", "", 4500, 1750, "" }
+            { "Item_optic_Yorris", "", 3500, 1750, "" },
+            { "Item_rhs_acc_ekp8_02", "", 3500, 1750, "" },
+            { "Item_optic_ACO_grn", "", 3500, 1750, "" },
+            { "Item_optic_Aco", "", 3500, 1750, "" },
+            { "Item_optic_Holosight_blk_F", "", 4500, 1750, "" }
         };
     };
 
@@ -92,8 +92,8 @@ class WeaponShops {
             { "30Rnd_9x21_Mag", "", 250, 125, "" }
         };
         accs[] = {
-            { "acc_flashlight_pistol", "", 500, 250, "" },//Pistol Flashlight
-            { "optic_ACO_grn_smg", "", 950, 475, "" }
+            { "Item_acc_flashlight_pistol", "", 500, 250, "" },//Pistol Flashlight
+            { "Item_optic_ACO_grn_smg", "", 950, 475, "" }
         };
     };
 
@@ -197,9 +197,6 @@ class WeaponShops {
 			{ "srifle_DMR_06_olive_F", "", 0, 0, "call life_coplevel >= 5" },
 			{ "rhs_weap_M320", "", 0, 0, "call life_coplevel >= 5" },
 			{ "rhs_weap_ak103_zenitco01_b33", "", 0, 0, "call life_coplevel >= 6" },
-			{ "optic_MRCO", "", 0, 0, "call life_coplevel >= 6" },
-			{ "rhs_acc_dtk1", "", 0, 0, "call life_coplevel >= 6" },
-			{ "rhs_acc_grip_rk2", "", 0, 0, "call life_coplevel >= 6" },
 			{ "rhs_weap_pkp", "", 0, 0, "call life_coplevel >= 7" }
         };
         mags[] = {
@@ -208,7 +205,7 @@ class WeaponShops {
 			//Ak
 			{ "rhs_30Rnd_545x39_7N10_AK", "", 0, 0, "" },
 			//Ak-103
-			{ "rhs_30Rnd_762x39_57N231_AK", "", 0, 0, "" },
+			{ "rhs_magazine_rhs_30Rnd_762x39mm_polymer", "", 0, 0, "" },
 			//M14
 			{ "20Rnd_762x51_Mag", "", 0, 0, "" },
 			//Lance Grenade
@@ -219,11 +216,12 @@ class WeaponShops {
         };
         accs[] = {
 			//Ak-103
-            { "optic_MRCO", "", 0, 0, "call life_coplevel >= 6" },
-			{ "rhs_acc_dtk1", "", 0, 0, "call life_coplevel >= 6" },
-			{ "rhs_acc_grip_rk2", "", 0, 0, "call life_coplevel >= 6" },
+            { "Item_optic_MRCO", "", 0, 0, "call life_coplevel >= 6" },
+			{ "Item_rhs_acc_dtk1", "", 0, 0, "call life_coplevel >= 6" },
+			{ "Item_rhs_acc_grip_rk2", "", 0, 0, "call life_coplevel >= 6" },
 			//M14
-			{ "Ace_optic_MRCO_2D", "", 0, 0, "call life_coplevel >= 5" }
+			{ "Item_Ace_optic_MRCO_2D", "", 0, 0, "call life_coplevel >= 5" },
+			{ "Item_optic_MRCO", "", 0, 0, "call life_coplevel >= 5" }
         };
     };
 
