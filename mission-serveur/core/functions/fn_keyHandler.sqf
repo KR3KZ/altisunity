@@ -227,6 +227,9 @@ switch (_code) do {
 
     //Y Player Menu
     case 21: {
+		if (_shift && FETCH_CONST(life_adminlevel) > 0) then {
+			createDialog "life_admin_menu";
+		};
         if (!_alt && !_ctrlKey && !dialog && !(player getVariable ["restrained",false]) && {!life_action_inUse}) then {
 			[] spawn unity_fnc_iPhone_X_master;
 			//[] call life_fnc_p_openMenu;

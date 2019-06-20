@@ -99,34 +99,39 @@ class Clothing {
         side = "cop";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "LOP_U_AA_Fatigue_03", "", 0, "call life_coplevel >= 1" },
-            { "LOP_U_AA_Fatigue_03_slv", "", 0, "call life_coplevel >= 1" }
+            { "LOP_U_US_FATIGUE_03", "", 0, "call life_coplevel >= 1" },
+            { "rhs_uniform_mflora_patchless", "", 0, "call life_coplevel >= 7" }
 
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
-            { "LOP_H_chDKZ_Beret", "", 0, "call life_coplevel >= 4" },
-            { "H_PASGT_basic_black_F", "", 0, "call life_coplevel >= 3" },
-			{ "H_Watchcap_blk", "", 0, "call life_coplevel >= 1" },
+            { "LOP_H_chDKZ_Beret", "", 0, "call life_coplevel >= 5" },
+            { "rhs_6b7_1m", "", 0, "call life_coplevel >= 2" },
+			{ "rhs_fieldcap_khk", "", 0, "call life_coplevel >= 4" },
 			{ "LOP_H_SLA_Beret", "", 0, "call life_coplevel >= 7" }
         };
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
-            { "G_Aviator", "", 0, "" }
+			{ "immersion_cigs_cigar0", "", 0, "call life_coplevel >= 7" },
+			{ "murshun_cigs_cig0", "", 0, "call life_coplevel >= 2" },
+			{ "G_Aviator", "", 0, "call life_coplevel >= 1" }
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
-            { "LOP_V_CarrierLite_BLK", "", 0, "call life_coplevel >= 2" },
-            { "LOP_V_CarrierRig_BLK", "", 0, "call life_coplevel >= 3" },
-            { "V_PlateCarrier1_blk", "", 0, "call life_coplevel >= 4" },
-            { "LOP_V_Chestrig_Black", "", 0, "call life_coplevel >= 1" },
-			{ "LOP_V_Carrier_BLK", "", 0, "call life_coplevel >= 3" },
-			{ "V_PlateCarrier2_blk", "", 0, "call life_coplevel >= 5" }
+            { "LOP_V_6B23_OLV", "", 0, "call life_coplevel >= 1" },
+            { "LOP_V_6B23_Rifleman_OLV", "", 0, "call life_coplevel >= 2" },
+            { "LOP_V_6B23_6Sh92_OLV", "", 0, "call life_coplevel >= 3" },
+            { "rhs_6b23_6sh116_od", "", 0, "call life_coplevel >= 4" },
+			{ "rhs_6b43", "", 0, "call life_coplevel >= 6" },
+			{ "rhs_6b13_6sh92_radio", "", 0, "call life_coplevel >= 5" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
-            { "B_Carryall_oucamo", "", 0, "call life_coplevel >= 3" },
-			{ "B_FieldPack_blk", "", 0, "call life_coplevel >= 1" }
+            { "tf_rt1523g_green", "", 0, "call life_coplevel >= 1" },
+			{ "tf_anprc155_coyote", "", 0, "call life_coplevel >= 1" },
+			{ "B_FieldPack_oli", "", 0, "call life_coplevel >= 1" },
+			{ "B_Kitbag_sgg", "", 0, "call life_coplevel >= 1" },
+			{ "rhs_sidor", "", 0, "call life_coplevel >= 1" }
         };
     };
 

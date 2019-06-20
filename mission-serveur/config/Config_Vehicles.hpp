@@ -111,11 +111,13 @@ class CarShops {
         side = "cop";
         conditions = "";
         vehicles[] = {
-            { "LOP_AM_Offroad", "call life_coplevel >= 1" },
+            { "LOP_AM_Offroad", "call life_coplevel >= 2" },
             { "rhs_btr70_vmf", "call life_coplevel >= 7" },
 			{ "LOP_TKA_Ural", "call life_coplevel >= 3" },
-			{ "LOP_TKA_UAZ_DshKM", "call life_coplevel >= 4" },
-			{ "LOP_TKA_UAZ", "call life_coplevel >= 2" },
+			{ "LOP_UKR_UAZ_DshKM", "call life_coplevel >= 5" },
+			{ "RHS_UAZ_MSV_01", "call life_coplevel >= 1" },
+			{ "rhs_uaz_open_MSV_01", "call life_coplevel >= 6" },
+			{ "LOP_AFR_Landrover", "call life_coplevel >= 6" },
 			{ "rhs_tigr_msv", "call life_coplevel >= 4" }
         };
     };

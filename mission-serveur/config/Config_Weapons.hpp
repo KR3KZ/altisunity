@@ -205,7 +205,7 @@ class WeaponShops {
 			//Ak
 			{ "rhs_30Rnd_545x39_7N10_AK", "", 0, 0, "" },
 			//Ak-103
-			{ "rhs_30Rnd_762x39_57-N-231_AK", "", 0, 0, "" },
+			{ "rhs_30Rnd_762x39_57N231_AK", "", 0, 0, "" },
 			//M14
 			{ "20Rnd_762x51_Mag", "", 0, 0, "" },
 			//Lance Grenade
@@ -215,14 +215,12 @@ class WeaponShops {
 			{ "rhs_100Rnd_762x54mmR", "", 0, 0, "" }
         };
         accs[] = {
-            { "rhs_acc_pkas", "", 0, 0, "" },
-			{ "rhs_acc_ekp1", "", 0, 0, "" },
-			{ "rhs_acc_ekp8_02", "", 0, 0, "" },
-			{ "rhs_acc_2dpzenit", "", 0, 0, "" },
-			{ "rhsusf_acc_eotech_xps3", "", 0, 0, "" },
-			{ "rhs_acc_perst3", "", 0, 0, "" },
-			{ "rhs_acc_grip_rk2", "", 0, 0, "" },
-			{ "rhs_acc_ekp8_18", "", 0, 0, "" }
+			//Ak-103
+            { "optic_MRCO", "", 0, 0, "call life_coplevel >= 6" },
+			{ "rhs_acc_dtk1", "", 0, 0, "call life_coplevel >= 6" },
+			{ "rhs_acc_grip_rk2", "", 0, 0, "call life_coplevel >= 6" },
+			//M14
+			{ "Ace_optic_MRCO_2D", "", 0, 0, "call life_coplevel >= 5" },
         };
     };
 
