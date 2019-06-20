@@ -21,7 +21,6 @@ class CarShops {
         conditions = "";
         vehicles[] = {
             { "walker_a3_datsun", "" },
-            { "walker_a3_gaz", "" },
             { "walker_a3_hatch", "" },
             { "C_Offroad_01_F", "" },
             { "walker_a3_c_hilux", "" },
@@ -50,7 +49,7 @@ class CarShops {
         vehicles[] = {
             { "C_Van_01_box_F", "" },
             { "C_Van_02_vehicle_F", "" },
-            { "I_Truck_02_covered_F", "" },
+            { "C_Truck_02_covered_F", "" },
             { "RHS_Ural_Open_Civ_01", "" }
         };
     };
@@ -92,7 +91,7 @@ class CarShops {
         conditions = "";
         vehicles[] = {
             { "C_Offroad_01_F", "" },
-            { "I_C_Offroad_02_unarmed_F", "" },
+            { "C_Offroad_02_unarmed_F", "" },
             { "O_T_LSV_02_unarmed_F", "" },
             { "rhsusf_m998_w_4dr", "" }
         };
@@ -102,8 +101,7 @@ class CarShops {
         side = "med";
         conditions = "";
         vehicles[] = {
-            { "RHS_UH60M_MEV", "" },
-            { "O_Heli_Light_02_unarmed_F", "" }
+            { "RHS_UH60M_MEV", "" }
         };
     };
 
@@ -111,14 +109,14 @@ class CarShops {
         side = "cop";
         conditions = "";
         vehicles[] = {
-            { "LOP_AM_Offroad", "call life_coplevel >= 2" },
-            { "rhs_btr70_vmf", "call life_coplevel >= 7" },
-			{ "LOP_TKA_Ural", "call life_coplevel >= 3" },
-			{ "LOP_UKR_UAZ_DshKM", "call life_coplevel >= 5" },
 			{ "RHS_UAZ_MSV_01", "call life_coplevel >= 1" },
+            { "LOP_AM_Offroad", "call life_coplevel >= 2" },
+			{ "LOP_TKA_Ural", "call life_coplevel >= 3" },
+			{ "rhs_tigr_msv", "call life_coplevel >= 4" },
+			{ "LOP_UKR_UAZ_DshKM", "call life_coplevel >= 5" },
 			{ "rhs_uaz_open_MSV_01", "call life_coplevel >= 6" },
 			{ "LOP_AFR_Landrover", "call life_coplevel >= 6" },
-			{ "rhs_tigr_msv", "call life_coplevel >= 4" }
+            { "rhs_btr70_vmf", "call life_coplevel >= 7" }
         };
     };
 
@@ -139,8 +137,8 @@ class CarShops {
             { "B_Boat_Transport_01_F", "" },
             { "C_Boat_Civil_01_police_F", "" },
             { "C_Boat_Transport_02_F", "" }, //Apex DLC
-            { "B_Boat_Armed_01_minigun_F", "call life_coplevel >= 3" },
-            { "B_SDV_01_F", "" }
+            { "B_SDV_01_F", "" },
+            { "B_Boat_Armed_01_minigun_F", "call life_coplevel >= 3" }
         };
     };
 };
@@ -331,9 +329,10 @@ class LifeCfgVehicles {
         conditions = "";
         price = 45000;
         textures[] = {
-            { "Vert", "Civ", {"\A3\walker_a3_vehicles\sedan\data\sedan_ext_green_co.paa"}, "" },
-            { "Bleu", "Civ", {"\A3\walker_a3_vehicles\sedan\data\sedan_ext_blue_co.paa"}, "" },
-            { "Rouge", "Civ", {"\A3\walker_a3_vehicles\sedan\data\sedan_ext_red_co.paa"}, "" }
+            { "Blanc", "civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_co.paa"}, "" },
+            { "Vert", "civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_green_co.paa"}, "" },
+            { "Bleu", "civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_blue_co.paa"}, "" },
+            { "Rouge", "civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_red_co.paa"}, "" }
         };
     };
 
@@ -342,7 +341,8 @@ class LifeCfgVehicles {
         conditions = "";
         price = 45000;
         textures[] = {
-            { "Vert", "Civ", {"\walker_a3_cars\skodovka\data\skodovka_zelena_co.paa"}, "" }
+			{ "Blanc", "civ", {"\walker_a3_cars\skodovka\data\skodovka_bila_co.paa"}, "" }
+            { "Vert", "civ", {"\walker_a3_cars\skodovka\data\skodovka_zelena_co.paa"}, "" },
         };
     };
 
@@ -358,9 +358,10 @@ class LifeCfgVehicles {
         conditions = "";
         price = 45000;
         textures[] = {
-            { "Vert", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_green_co.paa"}, "" },
-            { "Bleu", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_blue_co.paa"}, "" },
-            { "Rouge", "Civ", {"\walker_a3_vehicles\hatchback\data\hatchback_red_co.paa"}, "" }
+			{ "Jaune", "civ", {"\walker_a3_vehicles\hatchback\data\hatchback_co.paa"}, ""},
+            { "Vert", "civ", {"\walker_a3_vehicles\hatchback\data\hatchback_green_co.paa"}, "" },
+            { "Bleu", "civ", {"\walker_a3_vehicles\hatchback\data\hatchback_blue_co.paa"}, "" },
+            { "Rouge", "civ", {"\walker_a3_vehicles\hatchback\data\hatchback_red_co.paa"}, "" }
         };
     };
 
@@ -368,7 +369,12 @@ class LifeCfgVehicles {
         vItemSpace = 200;
         conditions = "";
         price = 0;
-        textures[] = {};
+        textures[] = {
+			{ "Milice", "civ", {
+                "\po_vehicles\data\camo\offroad\offroad_green_co.paa",
+                "\po_vehicles\data\camo\offroad\offroad_green_co.paa"
+            }, "" }
+		};
     };
 
     class LOP_TAKA_Landrover {
@@ -566,7 +572,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 40000;
         textures[] = {
-            { "Gris", "Civ", {"\walker_a3_vehicles\gazlimo\data_gaz\volha_blue_co.paa"}, "" }
+            { "Gris", "civ", {"\walker_a3_vehicles\gazlimo\data_gaz\volha_blue_co.paa"}, "" }
         };
     };
 
@@ -575,11 +581,15 @@ will modify the virtual space and the price of the vehicle, but other informatio
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 2500;
         textures[] = {
-            { "Gris", "Civ", {"\walker_a3_vehicles\datsun\data\datsun_trup2_co.paa"}, "" }
+            { "Gris", "civ", {"\walker_a3_vehicles\datsun\data\datsun_trup2_co.paa"}, "" },
+			{ "Bleu", "civ", {"\walker_a3_vehicles\datsun\data\datsun_trup1_co.paa"}, "" },
+			{ "Savane", "civ", {"\walker_a3_vehicles\datsun\data\datsun_trup1_eins_co.paa"}, "" },
+			{ "Tigre", "civ", {"\walker_a3_vehicles\datsun\data\datsun_trup2_eins_co.paa"}, "" },
+			{ "Forêt", "civ", {"\walker_a3_vehicles\datsun\data\datsun_trup3_eins_co.paa"}, "" }
         };
     };
 
-    class I_Truck_02_covered_F {
+    class C_Truck_02_covered_F {
         vItemSpace = 250;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
         price = 100000;
@@ -612,7 +622,11 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vItemSpace = 40;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 9500;
-        textures[] = {};
+        textures[] = {
+			{ "Blanc", "civ", {"\walker_a3_vehicles\hilux\data\coyota_trup3.paa"}, "" },
+			{ "Forêt", "civ", {"\walker_a3_vehicles\hilux\data\coyota_trup4_co.paa"}, "" },
+			{ "Pêcheur", "civ", {"\walker_a3_vehicles\hilux\data\coyota_trup1_co.paa"}, "" }
+		};
     };
 
     class walker_a3_c_hilux {
@@ -626,7 +640,10 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vItemSpace = 100;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 45000;
-        textures[] = {};
+        textures[] = {
+			{ "Blanc", "civ", {"\walker_a3_vehicles\lada\data\lada_white_co.paa"}, "" },
+			{ "Rouge", "civ", {"\walker_a3_vehicles\lada\data\lada_red_co.paa"}, "" }
+		};
     };
 
     class C_Van_01_box_F {
@@ -650,7 +667,35 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
 
-     class B_Heli_Light_01_stripped_F {
+	class LOP_UKR_UAZ_DshKM {
+        vItemSpace = 65;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+	class RHS_UAZ_MSV_01 {
+        vItemSpace = 65;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+	class rhs_uaz_open_MSV_01 {
+        vItemSpace = 65;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+	class LOP_AFR_Landrover {
+        vItemSpace = 65;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+	class B_Heli_Light_01_stripped_F {
         vItemSpace = 90;
         conditions = "";
         price = 275000;
@@ -761,6 +806,17 @@ will modify the virtual space and the price of the vehicle, but other informatio
         vFuelSpace = 19500;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
         price = 120000;
-        textures[] = {};
+        textures[] = {
+            { "Bleu", "civ", {
+                "\rhsafrf\addons\rhs_a2port_car\ural\data\ural_kabina_civil_co.paa",
+                "\rhsafrf\addons\rhs_a2port_car\ural\data\ural_plachta_civil_co.paa",
+                "\rhsafrf\addons\rhs_decals\data\labels\misc\no_ca.paa"
+            }, "" },
+            { "Jaune", "civ", {
+                "\rhsafrf\addons\rhs_a2port_car\ural\data\ural_kabina_civ1_co.paa",
+                "\rhsafrf\addons\rhs_a2port_car\ural\data\ural_plachta_civ1_co.paa",
+                "\rhsafrf\addons\rhs_decals\data\labels\misc\no_ca.paa"
+            }, "" }
+		};
     };
 };
