@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=138;
+	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1648;
+		nextID=1650;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1550;
+		nextID=1597;
 	};
 	class Camera
 	{
-		pos[]={11349.878,28.246794,2770.1382};
-		dir[]={0.3297601,-0.90495962,0.26892498};
-		up[]={0.70131665,0.42549393,0.57193607};
-		aside[]={0.63200563,4.6403147e-007,-0.77497602};
+		pos[]={16843.061,55.558998,5902.542};
+		dir[]={0,-0.70710677,0.70710683};
+		up[]={0,0.70710677,0.70710671};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -267,24 +267,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -299,6 +281,24 @@ class CustomAttributes
 						};
 					};
 					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -432,7 +432,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=156;
+		items=157;
 		class Item0
 		{
 			dataType="Group";
@@ -19760,16 +19760,16 @@ class Mission
 		class Item135
 		{
 			dataType="Marker";
-			position[]={3000.675,535.83002,12270.85};
+			position[]={4023.9031,535.83002,11712.88};
 			name="radioactive";
-			markerType="ELLIPSE";
+			markerType="RECTANGLE";
 			type="ellipse";
 			colorName="plp_ColorRedDark";
 			fillName="DiagGrid";
-			a=3000;
-			b=3000;
+			a=4000;
+			b=4000;
 			id=1486;
-			atlOffset=117.40039;
+			atlOffset=209.68018;
 		};
 		class Item136
 		{
@@ -20250,7 +20250,7 @@ class Mission
 		{
 			dataType="Layer";
 			name="Cannabis - Traitement Anyakar";
-			state=3;
+			state=1;
 			class Entities
 			{
 				items=2;
@@ -20270,7 +20270,7 @@ class Mission
 					};
 					id=1545;
 					type="Land_WaterTank_01_F";
-					atlOffset=0.072975159;
+					atlOffset=0.031486511;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20716,8 +20716,8 @@ class Mission
 					name="marker_331";
 					type="loc_Tourism";
 					colorName="default";
-					a=0.5;
-					b=0.5;
+					a=0.89999998;
+					b=0.89999998;
 					id=1638;
 					atlOffset=0.00048828125;
 				};
@@ -20728,8 +20728,8 @@ class Mission
 					name="marker_330";
 					type="loc_Tourism";
 					colorName="default";
-					a=0.5;
-					b=0.5;
+					a=0.89999998;
+					b=0.89999998;
 					id=1637;
 				};
 				class Item6
@@ -20739,8 +20739,8 @@ class Mission
 					name="marker_332";
 					type="loc_Tourism";
 					colorName="default";
-					a=0.5;
-					b=0.5;
+					a=0.89999998;
+					b=0.89999998;
 					id=1639;
 					atlOffset=-0.00039672852;
 				};
@@ -20751,14 +20751,14 @@ class Mission
 					name="marker_333";
 					type="loc_Tourism";
 					colorName="default";
-					a=0.5;
-					b=0.5;
+					a=0.89999998;
+					b=0.89999998;
 					id=1640;
 					atlOffset=0.00035667419;
 				};
 			};
 			id=1631;
-			atlOffset=77.86261;
+			atlOffset=78.704453;
 		};
 		class Item154
 		{
@@ -20842,6 +20842,34 @@ class Mission
 			};
 			id=1646;
 			atlOffset=0.39416504;
+		};
+		class Item156
+		{
+			dataType="Layer";
+			name="Shop Rebelle - Anyakar";
+			state=1;
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={19014.939,110.29427,10512.414};
+						angles[]={0,4.8574781,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Shops_C_Rebel"",life_fnc_clothingMenu,""reb"",0,false,false,"""",'license_civ_rebel && playerSide isEqualTo civilian'];" \n "this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""rebel""];" \n "this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market""];}";
+					};
+					id=1648;
+					type="Land_Metal_rack_F";
+				};
+			};
+			id=1649;
 		};
 	};
 };
