@@ -341,8 +341,8 @@ class LifeCfgVehicles {
         conditions = "";
         price = 45000;
         textures[] = {
-			{ "Blanc", "civ", {"\walker_a3_cars\skodovka\data\skodovka_bila_co.paa"}, "" }
-            { "Vert", "civ", {"\walker_a3_cars\skodovka\data\skodovka_zelena_co.paa"}, "" },
+			{ "Blanc", "civ", {"\walker_a3_cars\skodovka\data\skodovka_bila_co.paa"}, "" },
+            { "Vert", "civ", {"\walker_a3_cars\skodovka\data\skodovka_zelena_co.paa"}, "" }
         };
     };
 
