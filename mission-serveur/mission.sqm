@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1650;
+		nextID=1651;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1597;
+		nextID=1644;
 	};
 	class Camera
 	{
-		pos[]={16843.061,55.558998,5902.542};
-		dir[]={0,-0.70710677,0.70710683};
-		up[]={0,0.70710677,0.70710671};
-		aside[]={0.99999994,0,-0};
+		pos[]={11884.901,40.510357,2261.7666};
+		dir[]={-0.96872103,-0.23633845,0.077011928};
+		up[]={-0.23564905,0.97165203,0.018733218};
+		aside[]={0.079256706,-1.9470735e-007,0.99695629};
 	};
 };
 binarizationWanted=0;
@@ -267,6 +267,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -281,24 +299,6 @@ class CustomAttributes
 						};
 					};
 					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -17741,7 +17741,7 @@ class Mission
 					};
 					id=1405;
 					type="WaterPump_01_forest_F";
-					atlOffset=0.0051765442;
+					atlOffset=0.0041732788;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17778,7 +17778,7 @@ class Mission
 				};
 			};
 			id=1406;
-			atlOffset=0.11278152;
+			atlOffset=0.11328506;
 		};
 		class Item122
 		{
@@ -20856,20 +20856,46 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={19014.939,110.29427,10512.414};
-						angles[]={0,4.8574781,0};
+						position[]={19019.865,110.42724,10511.644};
+						angles[]={0,0.15526448,0};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
 						init="call{this addAction[localize""STR_Shops_C_Rebel"",life_fnc_clothingMenu,""reb"",0,false,false,"""",'license_civ_rebel && playerSide isEqualTo civilian'];" \n "this addAction[localize ""STR_MAR_General_Store"",life_fnc_weaponShopMenu,""rebel""];" \n "this addAction[localize""STR_Shops_Market"",life_fnc_virt_menu,""market""];}";
+						disableSimulation=1;
 					};
-					id=1648;
-					type="Land_Metal_rack_F";
+					id=1650;
+					type="Land_WoodenCrate_01_stack_x3_F";
+					atlOffset=0.10530853;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			id=1649;
+			atlOffset=0.13208771;
 		};
 	};
 };

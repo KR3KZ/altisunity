@@ -256,7 +256,6 @@ class Clothing {
         side = "civ";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "U_B_T_Soldier_F", "", 50000, "" }, //Apex DLC
             { "U_I_C_Soldier_Bandit_1_F", "", 50000, "" }, //Apex DLC
             { "U_I_C_Soldier_Bandit_2_F", "", 51000, "" }, //Apex DLC
             { "U_I_C_Soldier_Bandit_3_F", "", 50032, "" }, //Apex DLC
@@ -286,7 +285,9 @@ class Clothing {
             { "LOP_U_AM_Fatigue_04_2", "", 52000, "" },
             { "LOP_U_AM_Fatigue_04_2", "", 52000, "" },
             { "LOP_U_AM_Fatigue_04_2", "", 52000, "" },
-            { "LOP_U_AM_Fatigue_04_5", "", 52000, "" }
+            { "LOP_U_AM_Fatigue_04_5", "", 52000, "" },
+            { "LOP_U_IRA_Fatigue_GRK_BLK", "", 52000, "" },
+            { "LOP_U_UVF_Fatigue_BL", "", 52000, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
@@ -310,7 +311,7 @@ class Clothing {
             { "rhsusf_shemagh2_od", "", 30, "" },
             { "rhsusf_shemagh2_tan", "", 30, "" },
             { "G_Balaclava_blk", "", 30, "" },
-            { "tG_Bandanna_blk", "", 30, "" },
+            { "G_Bandanna_blk", "", 30, "" },
             { "rhsusf_shemagh2_white", "", 30, "" }
         };
         vests[] = {
@@ -318,7 +319,6 @@ class Clothing {
             { "V_TacVest_khk", "", 4500, "" },
             { "V_TacVest_blk", "", 7500, "" },
             { "LOP_V_CarrierRig_BLK", "", 12500, "" },
-            { "V_PlateCarrier1_blk", "", 17500, "" },
             { "rhsusf_spc_patchless_radio", "", 17500, "" },
             { "V_PlateCarrier2_blk", "", 17500, "" },
             { "V_PlateCarrier1_blk", "", 17500, "" },
