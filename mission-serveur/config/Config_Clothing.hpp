@@ -297,7 +297,6 @@ class Clothing {
             { "LOP_H_Shemag_RED1", "", 2500, "" },
             { "LOP_H_Shemag_RED2", "", 2500, "" },
             { "LOP_H_Shemag_TAN", "", 2500, "" },
-            { "H_HelmetSpecB_blk", "", 2500, "" },
             { "H_Beret_blk", "", 30, "" }
         };
         goggles[] = {
