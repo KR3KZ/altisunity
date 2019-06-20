@@ -371,7 +371,7 @@ class LifeCfgVehicles {
         price = 0;
         textures[] = {
 			{ "Milice", "civ", {
-                "\po_vehicles\data\camo\offroad\offroad_green_co.paa",
+                "\po_vehicles\data\camo\offroad\offroad_beige_co.paa",
                 "\po_vehicles\data\camo\offroad\offroad_green_co.paa"
             }, "" }
 		};
