@@ -134,6 +134,7 @@ life_wanted_list 							= [];
 
 cleanupFSM 									= [] execFSM "\life_server\FSM\cleanup.fsm";
 
+/*
 [] spawn {
     for "_i" from 0 to 1 step 0 do {
         uiSleep (30 * 60);
@@ -142,6 +143,7 @@ cleanupFSM 									= [] execFSM "\life_server\FSM\cleanup.fsm";
         } forEach [Dealer_1,Dealer_2,Dealer_3];
     };
 };
+*/
 
 [] spawn TON_fnc_initHouses;
 cleanup 									= [] spawn TON_fnc_cleanup;
