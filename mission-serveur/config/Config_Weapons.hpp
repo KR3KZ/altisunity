@@ -72,11 +72,11 @@ class WeaponShops {
             { "rhs_30Rnd_545x39_7N10_AK", "", 1800, 150, "" }
         };
         accs[] = {
-            { "Item_optic_Yorris", "", 3500, 1750, "" },
-            { "Item_rhs_acc_ekp8_02", "", 3500, 1750, "" },
-            { "Item_optic_ACO_grn", "", 3500, 1750, "" },
-            { "Item_optic_Aco", "", 3500, 1750, "" },
-            { "Item_optic_Holosight_blk_F", "", 4500, 1750, "" }
+            { "optic_Yorris", "", 3500, 1750, "" },
+            { "rhs_acc_ekp8_02", "", 3500, 1750, "" },
+            { "optic_ACO_grn", "", 3500, 1750, "" },
+            { "optic_Aco", "", 3500, 1750, "" },
+            { "optic_Holosight_blk_F", "", 4500, 1750, "" }
         };
     };
 
