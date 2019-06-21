@@ -54,7 +54,8 @@ if ((life_settings select 2) isEqualTo 0) then {
 	_soundReceive = format[_soundReceive, (life_settings select 1)];
 	_sound = "Land_HelipadEmpty_F" createVehicle position player;
 	_sound attachTo [player, [0, 0, 0]];
-	_sound say3D [_soundReceive,10,1];
+	//_sound say3D [_soundReceive,10,1];
+	[_sound,_soundReceive,10] spawn unity_fnc_playsoundcheck;
 	player setVariable ["iPhone_X_soundCall",_sound];
 };
 
