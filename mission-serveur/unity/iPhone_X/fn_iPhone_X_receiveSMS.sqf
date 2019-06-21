@@ -39,11 +39,11 @@ if ((_to in life_phoneNumber_company) || (_to in life_phoneNumber_services)) the
 		if (_to in life_phoneNumber_company) then
 		{
 			_position = "•••";
-			["SMS ENTREPRISE",format["› %1<br/>› %2", _nameContact, _message],[0.368, 0.368, 0.368, 1]] call life_fnc_showNotification;
+			//["SMS ENTREPRISE",format["› %1<br/>› %2", _nameContact, _message],[0.368, 0.368, 0.368, 1]] call life_fnc_showNotification;
 		}
 		else
 		{
-			["SMS URGENCE",format["› %1 <br/>› %2 <br/>› %3", _nameContact, _message, _position],[0.980, 1, 0.101, 1]] call life_fnc_showNotification;
+			//["SMS URGENCE",format["› %1 <br/>› %2 <br/>› %3", _nameContact, _message, _position],[0.980, 1, 0.101, 1]] call life_fnc_showNotification;
 		};
 
 		_SMS pushBack [_from, _message, _position];
@@ -100,6 +100,6 @@ if ((_to in life_phoneNumber_company) || (_to in life_phoneNumber_services)) the
 		player setVariable ["iPhone_X_lastSMS",[_namecontact, _message, _time, _from]];
 
 		if ((life_settings select 2) isEqualTo 0) then {[player,"notification_sound",10] spawn unity_fnc_playsoundcheck};
-		["Nouveau SMS", format["› %1 <br/>› %2", _nameContact, _message], [0, 0, 0, 1], [1, 1, 0, 1]] spawn Haz_fnc_createNotification;
+		//["Nouveau SMS", format["› %1 <br/>› %2", _nameContact, _message], [0, 0, 0, 1], [1, 1, 0, 1]] spawn Haz_fnc_createNotification;
 	};
 };

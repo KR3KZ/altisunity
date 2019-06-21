@@ -32,11 +32,11 @@ if ((_to in life_phoneNumber_company) || (_to in life_phoneNumber_services)) the
 		{
 			if (_to in life_phoneNumber_company) then
 			{
-					[format["Appel au %1",_to],format["› %1 essaye de joindre le standard", _nameContact],[0.368, 0.368, 0.368, 1]] call life_fnc_showNotification;
+					//[format["Appel au %1",_to],format["› %1 essaye de joindre le standard", _nameContact],[0.368, 0.368, 0.368, 1]] call life_fnc_showNotification;
 			}
 			else
 			{
-					[format["Urgence au %1",_to],format["› %1 essaye de vous joindre <br/>› %2", _nameContact, _position],[0.980, 1, 0.101, 1]] call life_fnc_showNotification;
+					//[format["Urgence au %1",_to],format["› %1 essaye de vous joindre <br/>› %2", _nameContact, _position],[0.980, 1, 0.101, 1]] call life_fnc_showNotification;
 			};
 
 			if ((life_settings select 2) isEqualTo 0) then

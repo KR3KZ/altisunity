@@ -52,12 +52,13 @@ player setVariable ["iPhone_X_callSettings", ["2", _from, _nameContact, "Appel e
 if ((life_settings select 2) isEqualTo 0) then {
 	_soundReceive = "receivecall_sound_%1";
 	_soundReceive = format[_soundReceive, (life_settings select 1)];
-	_sound = "Land_HelipadEmpty_F" createVehicle position player;
-	_sound attachTo [player, [0, 0, 0]];
-	_sound say3D [_soundReceive,10,1];
+	//_sound = "Land_HelipadEmpty_F" createVehicle position player;
+	//_sound attachTo [player, [0, 0, 0]];
+	//_sound say3D [_soundReceive,10,1];
+	[player,_soundReceive,10] spawn unity_fnc_playsoundcheck;
 	player setVariable ["iPhone_X_soundCall",_sound];
 };
 
-["Appel Entrant", format["%1, essaye de vous joindre.", _nameContact], [0, 0, 0, 1], [1, 1, 0, 1]] spawn Haz_fnc_createNotification;
+//["Appel Entrant", format["%1, essaye de vous joindre.", _nameContact], [0, 0, 0, 1], [1, 1, 0, 1]] spawn Haz_fnc_createNotification;
 
 if (!isNull (findDisplay 97000)) then {[] spawn unity_fnc_iPhone_X_appCall};
