@@ -58,8 +58,6 @@ if ((life_settings select 2) isEqualTo 0) then {
 	player setVariable ["iPhone_X_soundCall",_sound];
 };
 
-
-
-["Appel Entrant",format["%1, essaye de vous joindre.", _nameContact],[1, 1, 1, 1],""] call life_fnc_showNotification;
+["Appel Entrant", format["%1, essaye de vous joindre.", _nameContact], [0, 0, 0, 1], [1, 1, 0, 1]] spawn Haz_fnc_createNotification;
 
 if (!isNull (findDisplay 97000)) then {[] spawn unity_fnc_iPhone_X_appCall};
