@@ -16,12 +16,12 @@ switch (playerSide) do
 		_old_level = life_coplevel;
 		if(_type == "prom") then {
 			life_coplevel = _old_level + 1;
-			player setVariable ["rankCop",(FETCH_CONST(life_coplevel)),true];
+			player setVariable ["rankCop",(life_coplevel),true];
 			_txt = "Vous avez reçu une promotion !";
 		};
 		if(_type == "dem") then {
 			life_coplevel = _old_level - 1;
-			player setVariable ["rankCop",(FETCH_CONST(life_coplevel)),true];
+			player setVariable ["rankCop",(life_coplevel),true];
 			_txt = "Vous avez été rétrogradé !";
 		};
 		switch ( life_coplevel ) do
@@ -39,12 +39,12 @@ switch (playerSide) do
 		_old_level = life_medicLevel;
 		if(_type == "prom") then {
 			life_medicLevel = _old_level + 1;
-			player setVariable ["rankMedic",(FETCH_CONST(life_medicLevel)),true];
+			player setVariable ["rankMedic",(life_medicLevel),true];
 			_txt = "Vous avez reçu une promotion !";
 		};
 		if(_type == "dem") then {
 			life_medicLevel = _old_level - 1;
-			player setVariable ["rankMedic",(FETCH_CONST(life_medicLevel)),true];
+			player setVariable ["rankMedic",(life_medicLevel),true];
 			_txt = "Vous avez été rétrogradé.";
 		};
 		switch ( life_medicLevel ) do
