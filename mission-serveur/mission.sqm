@@ -5,25 +5,25 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=10;
+	toggles=138;
 	class ItemIDProvider
 	{
-		nextID=1651;
+		nextID=1657;
 	};
 	class MarkerIDProvider
 	{
-		nextID=336;
+		nextID=340;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1644;
+		nextID=1692;
 	};
 	class Camera
 	{
-		pos[]={11884.901,40.510357,2261.7666};
-		dir[]={-0.96872103,-0.23633845,0.077011928};
-		up[]={-0.23564905,0.97165203,0.018733218};
-		aside[]={0.079256706,-1.9470735e-007,0.99695629};
+		pos[]={19017.098,111.37996,10511.241};
+		dir[]={-0.96248394,-0.20244513,0.18117498};
+		up[]={-0.19900283,0.97928143,0.037459563};
+		aside[]={0.18500584,5.4319389e-007,0.98283011};
 	};
 };
 binarizationWanted=0;
@@ -267,24 +267,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -299,6 +281,24 @@ class CustomAttributes
 						};
 					};
 					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -432,7 +432,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=157;
+		items=159;
 		class Item0
 		{
 			dataType="Group";
@@ -17741,7 +17741,7 @@ class Mission
 					};
 					id=1405;
 					type="WaterPump_01_forest_F";
-					atlOffset=0.0041732788;
+					atlOffset=0.0051765442;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17778,7 +17778,7 @@ class Mission
 				};
 			};
 			id=1406;
-			atlOffset=0.11328506;
+			atlOffset=0.11278152;
 		};
 		class Item122
 		{
@@ -20383,12 +20383,11 @@ class Mission
 				class Item3
 				{
 					dataType="Marker";
-					position[]={12990.379,341.94995,17677.055};
+					position[]={12990.379,341.95001,17677.055};
 					name="veh_spawn_civil_kalaenoowi_3";
 					type="Empty";
 					colorName="default";
 					id=1601;
-					atlOffset=-6.1035156e-005;
 				};
 				class Item4
 				{
@@ -20895,7 +20894,102 @@ class Mission
 				};
 			};
 			id=1649;
-			atlOffset=0.13208771;
+			atlOffset=0.10530853;
+		};
+		class Item157
+		{
+			dataType="Layer";
+			name="Concessionaire rebelle - Anyakar";
+			state=1;
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={19014.914,110.16175,10512.129};
+						angles[]={0,4.9227362,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Rebel_Car"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""veh_spawn_rebel_anyakar_1"",""veh_spawn_rebel_anyakar_2"",""veh_spawn_rebel_anyakar_3""],""civ"",localize""STR_Rebel_Car""]];this addAction" \n "[""Garage"", { if (life_HC_isActive) then { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];}; life_garage_type = ""Car""; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Fetching Vehicles....""]; life_garage_sp =""veh_spawn_civil_kalaenoowi_1""; }]; " \n "this addAction[""Ranger au garage"",life_fnc_RangerGarageOpen,"""",0,false,false,"""",'!life_garage_store && _this distance _target < 5 && cursorObject == _target'];}";
+						disableSimulation=1;
+					};
+					id=1651;
+					type="Land_InfoStand_V1_F";
+					atlOffset=0.12651825;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="hideObject";
+							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={19003.684,109.168,10515.111};
+					name="veh_spawn_rebel_anyakar_1";
+					type="Empty";
+					colorName="default";
+					alpha=0;
+					id=1653;
+					atlOffset=-0.015090942;
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={19005.391,109.442,10528.729};
+					name="veh_spawn_rebel_anyakar_2";
+					type="Empty";
+					colorName="default";
+					alpha=0;
+					id=1654;
+					atlOffset=-0.0004196167;
+				};
+				class Item3
+				{
+					dataType="Marker";
+					position[]={19002.121,109.024,10502.47};
+					name="veh_spawn_rebel_anyakar_3";
+					type="Empty";
+					colorName="default";
+					alpha=0;
+					id=1656;
+					atlOffset=0.00084686279;
+				};
+			};
+			id=1652;
+			atlOffset=0.034667969;
+		};
+		class Item158
+		{
+			dataType="Marker";
+			position[]={18967.225,108.28,10501.3};
+			name="marker_338";
+			type="Empty";
+			id=1655;
 		};
 	};
 };
