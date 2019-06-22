@@ -83,7 +83,7 @@ class Licenses {
 
     class wood {
         variable = "wood";
-        displayName = "STR_License_Wood";
+        displayName = "STR_License_Paper";
         price = 15000;
         illegal = false;
         side = "civ";
