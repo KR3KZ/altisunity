@@ -59,12 +59,7 @@ class WeaponShops {
             { "rhsusf_weap_MP7A2_grip1", "", 25000, 12500, "" },
             { "rhs_weap_aks74un", "", 50000, 12500, "" },
             { "rhs_weap_ak74m_desert_npz", "", 50000, 12500, "" },
-            { "rhs_weap_ak74m_fullplum_npz", "", 50000, 12500, "" },
-            { "optic_Yorris", "", 3500, 1750, "" },
-            { "rhs_acc_ekp8_02", "", 3500, 1750, "" },
-            { "optic_ACO_grn", "", 3500, 1750, "" },
-            { "optic_Aco", "", 3500, 1750, "" },
-            { "optic_Holosight_blk_F", "", 4500, 1750, "" }
+            { "rhs_weap_ak74m_fullplum_npz", "", 50000, 12500, "" }
         };
         mags[] = {
             { "30Rnd_9x21_Mag_SMG_02", "", 800, 150, "" },
@@ -72,11 +67,11 @@ class WeaponShops {
             { "rhs_30Rnd_545x39_7N10_AK", "", 1800, 150, "" }
         };
         accs[] = {
-            { "optic_Yorris", "", 3500, 1750, "" },
-            { "rhs_acc_ekp8_02", "", 3500, 1750, "" },
-            { "optic_ACO_grn", "", 3500, 1750, "" },
-            { "optic_Aco", "", 3500, 1750, "" },
-            { "optic_Holosight_blk_F", "", 4500, 1750, "" }
+            { "Item_optic_Yorris", "", 3500, 1750, "" },
+            { "Item_rhs_acc_ekp8_02", "", 3500, 1750, "" },
+            { "Item_optic_ACO_grn", "", 3500, 1750, "" },
+            { "Item_optic_Aco", "", 3500, 1750, "" },
+            { "Item_optic_Holosight_blk_F", "", 4500, 1750, "" }
         };
     };
 
@@ -202,7 +197,12 @@ class WeaponShops {
 			{ "srifle_DMR_06_olive_F", "", 0, 0, "call life_coplevel >= 5" },
 			{ "rhs_weap_M320", "", 0, 0, "call life_coplevel >= 5" },
 			{ "rhs_weap_ak103_zenitco01_b33", "", 0, 0, "call life_coplevel >= 6" },
-			{ "rhs_weap_pkp", "", 0, 0, "call life_coplevel >= 7" }
+			{ "Item_optic_MRCO", "", 0, 0, "call life_coplevel >= 6" },
+			{ "Item_rhs_acc_dtk1", "", 0, 0, "call life_coplevel >= 6" },
+			{ "Item_rhs_acc_grip_rk2", "", 0, 0, "call life_coplevel >= 6" },
+			{ "Item_Ace_optic_MRCO_2D", "", 0, 0, "call life_coplevel >= 5" },
+			{ "rhs_weap_pkp", "", 0, 0, "call life_coplevel >= 7" },
+			{ "Item_optic_MRCO", "", 0, 0, "call life_coplevel >= 5" }
         };
         mags[] = {
 			//6P53
