@@ -187,14 +187,6 @@ if (life_HC_isActive) then {
 [player] remoteExec ["unity_srv_fnc_iPhone_X_getPhoneNumber",2];
 [player] remoteExec ["unity_srv_fnc_iPhone_X_getSettings",2];
 [player] remoteExec ["unity_srv_fnc_iPhone_X_getAmende",2];
-//Notifs
-"layer_notifications" cutRsc ["rsc_notifications", "PLAIN"];
-addMissionEventHandler ["Loaded", {
-	[] spawn {
-		sleep 2;
-		"layer_notifications" cutRsc ["rsc_notifications", "PLAIN"];
-	};
-}];
 
 //Lock backpacks
 player addEventHandler ["InventoryOpened",{

@@ -28,11 +28,6 @@ class RscTitles {
     #include "dialog\progress.hpp"
     #include "dialog\hud_nameTags.hpp"
     #include "dialog\hud_stats.hpp"
-	#include "notificationSystem\rsc\rsc_notifications.hpp"
-};
-
-class notificationSystem {
-	#include "notificationSystem\config\config_master.hpp"
 };
 
 class CfgFunctions {
