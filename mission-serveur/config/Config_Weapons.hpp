@@ -204,7 +204,8 @@ class WeaponShops {
 			{ "rhs_18rnd_9x21mm_7N28", "", 0, 0, "" },
 			//Ak
 			{ "rhs_30Rnd_545x39_7N10_AK", "", 0, 0, "" },
-			{ "rhs_magazine_rhs_30Rnd_762x39mm_polymer", "", 0, 0, "" },
+			{ "rhs_30Rnd_762x39mm_polymer", "", 0, 0, "" },
+			{ "rhs_30Rnd_762x39mm_bakelite", "", 0, 0, "" },
 			//Ak
 			{ "rhs_magazine_rhs_30Rnd_762x39mm_polymer", "", 0, 0, "" },
 			//M14
