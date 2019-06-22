@@ -42,6 +42,33 @@ class CfgVehicles {
                 icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
                 selection = "pelvis";
 
+                class ACE_UNITY_showMenu {
+                    displayName = "Montrer";
+                    condition = "";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 9.5;
+
+                    class ACE_UNITY_showID_eii {
+                        displayName = "Carte d'identité E.I.I";
+                        distance = 4;
+                        condition = "_target isKindOf 'Man' && {alive _target} && {!(_target getVariable [""ACE_isUnconscious"", false])} && ""yl_Item_civcard_eii"" in items player";
+                        statement = "[_target,'civ_eii'] spawn life_fnc_showCard";
+                        exceptions[] = {"isNotSwimming"};
+                        showDisabled = 0;
+                        priority = 9;
+                    };
+
+                    class ACE_UNITY_showLicenses {
+                        displayName = "Licences";
+                        condition = "side _target isEqualTo west";
+                        statement = "[_target] remoteExecCall [""life_fnc_licenseCheck"",player];";
+                        showDisabled = 0;
+                        priority = 7;
+                        distance = 2.0;
+                    };
+                };
+
                 class ACE_PassMagazine {
                     displayName = CSTRING(PassMagazine);
                     condition = "";
