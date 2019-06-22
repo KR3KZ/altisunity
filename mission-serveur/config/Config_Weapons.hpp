@@ -218,6 +218,9 @@ class WeaponShops {
         accs[] = {
 			//Ak
             { "Item_optic_MRCO", "", 0, 0, "call life_coplevel >= 6" },
+			{ "rhs_acc_dtk1", "", 0, 0, "call life_coplevel >= 6" },
+			{ "optic_MRCO", "", 0, 0, "call life_coplevel >= 6" },
+			{ "rhsusf_acc_rvg_blk", "", 0, 0, "call life_coplevel >= 6" },
 			{ "Item_rhs_acc_dtk1", "", 0, 0, "call life_coplevel >= 6" },
 			{ "Item_rhs_acc_grip_rk2", "", 0, 0, "call life_coplevel >= 6" },
 			//M14
