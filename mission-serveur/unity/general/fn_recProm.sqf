@@ -13,18 +13,18 @@ _txt = "";
 switch (playerSide) do
 {
 	case west: {
-		_old_level = life_coplevel;
+		_old_level = call(life_coplevel);
 		if(_type == "prom") then {
 			life_coplevel = _old_level + 1;
-			player setVariable ["rankCop",(life_coplevel),true];
+			player setVariable ["rankCop",call(life_coplevel),true];
 			_txt = "Vous avez reçu une promotion !";
 		};
 		if(_type == "dem") then {
 			life_coplevel = _old_level - 1;
-			player setVariable ["rankCop",(life_coplevel),true];
+			player setVariable ["rankCop",call(life_coplevel),true];
 			_txt = "Vous avez été rétrogradé !";
 		};
-		switch ( life_coplevel ) do
+		switch ( call(life_coplevel) ) do
 		{
 			case 1: { _grade = "Recrue"; };
 			case 2: { _grade = "Caporal"; };
@@ -36,18 +36,18 @@ switch (playerSide) do
 		};
 	};
 	case independent:{
-		_old_level = life_medicLevel;
+		_old_level = call(life_medicLevel);
 		if(_type == "prom") then {
 			life_medicLevel = _old_level + 1;
-			player setVariable ["rankMedic",(life_medicLevel),true];
+			player setVariable ["rankMedic",call(life_medicLevel),true];
 			_txt = "Vous avez reçu une promotion !";
 		};
 		if(_type == "dem") then {
 			life_medicLevel = _old_level - 1;
-			player setVariable ["rankMedic",(life_medicLevel),true];
+			player setVariable ["rankMedic",call(life_medicLevel),true];
 			_txt = "Vous avez été rétrogradé.";
 		};
-		switch ( life_medicLevel ) do
+		switch ( call(life_medicLevel) ) do
 		{
 			case 1: { _grade = "Secouriste"; };
 			case 2: { _grade = "Responsable"; };
