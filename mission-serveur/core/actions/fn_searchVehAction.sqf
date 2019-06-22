@@ -6,8 +6,8 @@
     Description:
 
 */
-private ["_vehicle","_data"];
-_vehicle = cursorObject;
+private _vehicle = cursorObject;
+
 if ((_vehicle isKindOf "Car") || !(_vehicle isKindOf "Air") || !(_vehicle isKindOf "Ship")) then {
     _owners = _vehicle getVariable "vehicle_info_owners";
     if (isNil "_owners") exitWith {hint localize "STR_NOTF_VehCheat"; deleteVehicle _vehicle;};
@@ -19,8 +19,11 @@ if ((_vehicle isKindOf "Car") || !(_vehicle isKindOf "Air") || !(_vehicle isKind
     life_action_inUse = false;
 
     if (player distance _vehicle > 10 || !alive player || !alive _vehicle) exitWith {hint localize "STR_NOTF_SearchVehFail";};
-    //_inventory = [(_vehicle getVariable "vehicle_info_inv")] call fnc_veh_inv;
-    //if (isNil {_inventory}) then {_inventory = "Nothing in storage."};
+
+    if (_vehicle getVariable ["vehicle_plate_break", 0] != 0) exitWith {
+        hint parseText format [localize "STR_NOTF_SearchVeh","Plaque illisible..."];
+    };
+
     _owners = [_owners] call life_fnc_vehicleOwners;
 
     if (_owners == "any<br/>") then {

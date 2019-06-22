@@ -383,6 +383,7 @@ class Unity_Client_Core {
 		class playSound {};
 		class playSoundCheck {};
 		class radioactive {};
+        class breakPlate {};
 	};
 
 	class iPhone_X {

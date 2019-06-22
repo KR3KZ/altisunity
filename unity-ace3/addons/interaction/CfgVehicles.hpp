@@ -617,6 +617,13 @@ class CfgVehicles {
                         statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
                     };
                 };
+                class ACE_unity_breakPlate {
+                    displayName = "Effacer la plaque d'immatriculation";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_boltCutter > 0)}";
+                    statement = "[_target] spawn unity_fnc_breakPlate";
+                    showDisabled = 0;
+                };
             };
         };
     };
