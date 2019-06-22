@@ -59,7 +59,12 @@ class WeaponShops {
             { "rhsusf_weap_MP7A2_grip1", "", 25000, 12500, "" },
             { "rhs_weap_aks74un", "", 50000, 12500, "" },
             { "rhs_weap_ak74m_desert_npz", "", 50000, 12500, "" },
-            { "rhs_weap_ak74m_fullplum_npz", "", 50000, 12500, "" }
+            { "rhs_weap_ak74m_fullplum_npz", "", 50000, 12500, "" },
+            { "optic_Yorris", "", 3500, 1750, "" },
+            { "rhs_acc_ekp8_02", "", 3500, 1750, "" },
+            { "optic_ACO_grn", "", 3500, 1750, "" },
+            { "optic_Aco", "", 3500, 1750, "" },
+            { "optic_Holosight_blk_F", "", 4500, 1750, "" }
         };
         mags[] = {
             { "30Rnd_9x21_Mag_SMG_02", "", 800, 150, "" },

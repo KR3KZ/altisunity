@@ -80,9 +80,10 @@ class CarShops {
             { "B_Quadbike_01_F", "" },
             { "B_G_Offroad_01_F", "" },
             { "O_MRAP_02_F", "" },
-            { "B_Heli_Light_01_stripped_F", "" },
+            { "max_Dodge_multy", "" },
+            { "LOP_AFR_Nissan_PKM", "" },
             { "B_G_Offroad_01_armed_F", "" },
-            { "O_T_LSV_02_unarmed_F", "" } //Apex DLC
+            { "walker_a3_hiluxhmg", "" }
         };
     };
 
@@ -689,6 +690,27 @@ will modify the virtual space and the price of the vehicle, but other informatio
     };
 
 	class LOP_AFR_Landrover {
+        vItemSpace = 65;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+    class max_Dodge_multy {
+        vItemSpace = 65;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+    class LOP_AFR_Nissan_PKM {
+        vItemSpace = 65;
+        conditions = "";
+        price = 0;
+        textures[] = {};
+    };
+
+    class walker_a3_hiluxhmg {
         vItemSpace = 65;
         conditions = "";
         price = 0;
