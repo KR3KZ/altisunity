@@ -353,6 +353,13 @@ class CfgVehicles {
                     condition = "alive _target && {speed _target == 0} && {!(typeOf (_target) in [""C_Kart_01_Blu_F"",""C_Kart_01_Red_F"",""C_Kart_01_Fuel_F"",""C_Kart_01_Vrana_F""])} && {!(canMove _target)} && {count crew _target == 0}";
                     statement = "_target setPos [getPos _target select 0, getPos _target select 1, (getPos _target select 2)+0.5];";
                 };
+                class ACE_unity_breakPlate {
+                    displayName = "Effacer la plaque d'immatriculation";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_boltCutter > 0)}";
+                    statement = "[_target] spawn unity_fnc_breakPlate";
+                    showDisabled = 0;
+                };
 				class Cop_vehInterraction {
                     displayName = "Interaction Milice";
                     condition = "(playerSide isEqualTo west) && alive _target";
@@ -511,6 +518,13 @@ class CfgVehicles {
                     condition = "alive _target && {speed _target == 0} && {!(typeOf (_target) in [""C_Kart_01_Blu_F"",""C_Kart_01_Red_F"",""C_Kart_01_Fuel_F"",""C_Kart_01_Vrana_F""])} && {!(canMove _target)} && {count crew _target == 0}";
                     statement = "_target setPos [getPos _target select 0, getPos _target select 1, (getPos _target select 2)+0.5];";
                 };
+                class ACE_unity_breakPlate {
+                    displayName = "Effacer la plaque d'immatriculation";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_boltCutter > 0)}";
+                    statement = "[_target] spawn unity_fnc_breakPlate";
+                    showDisabled = 0;
+                };
 				class Cop_vehInterraction {
                     displayName = "Interaction Milice";
                     condition = "(playerSide isEqualTo west) && alive _target";
@@ -617,13 +631,6 @@ class CfgVehicles {
                         statement = "[_target,2] remoteExecCall [""life_fnc_lockVehicle"",_target]; _target setVariable [""locked"",true,true];";
                     };
                 };
-                class ACE_unity_breakPlate {
-                    displayName = "Effacer la plaque d'immatriculation";
-                    distance = 4;
-                    condition = "alive _target && {speed _target == 0} && {(life_inv_boltCutter > 0)}";
-                    statement = "[_target] spawn unity_fnc_breakPlate";
-                    showDisabled = 0;
-                };
             };
         };
     };
@@ -678,6 +685,13 @@ class CfgVehicles {
                     distance = 4;
                     condition = "alive _target && {speed _target == 0} && {!(typeOf (_target) in [""C_Kart_01_Blu_F"",""C_Kart_01_Red_F"",""C_Kart_01_Fuel_F"",""C_Kart_01_Vrana_F""])} && {!(canMove _target)} && {count crew _target == 0}";
                     statement = "_target setPos [getPos _target select 0, getPos _target select 1, (getPos _target select 2)+0.5];";
+                };
+                class ACE_unity_breakPlate {
+                    displayName = "Effacer la plaque d'immatriculation";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_boltCutter > 0)}";
+                    statement = "[_target] spawn unity_fnc_breakPlate";
+                    showDisabled = 0;
                 };
 				class Cop_vehInterraction {
                     displayName = "Interaction Milice";
@@ -831,6 +845,13 @@ class CfgVehicles {
                     distance = 4;
                     condition = "alive _target && {speed _target == 0} && {!(typeOf (_target) in [""C_Kart_01_Blu_F"",""C_Kart_01_Red_F"",""C_Kart_01_Fuel_F"",""C_Kart_01_Vrana_F""])} && {!(canMove _target)} && {count crew _target == 0}";
                     statement = "_target setPos [getPos _target select 0, getPos _target select 1, (getPos _target select 2)+0.5];";
+                };
+                class ACE_unity_breakPlate {
+                    displayName = "Effacer la plaque d'immatriculation";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_boltCutter > 0)}";
+                    statement = "[_target] spawn unity_fnc_breakPlate";
+                    showDisabled = 0;
                 };
 				class Cop_vehInterraction {
                     displayName = "Interaction Milice";
@@ -989,6 +1010,13 @@ class CfgVehicles {
                     condition = "alive _target && {speed _target == 0} && {!(typeOf (_target) in [""C_Kart_01_Blu_F"",""C_Kart_01_Red_F"",""C_Kart_01_Fuel_F"",""C_Kart_01_Vrana_F""])} && {!(canMove _target)} && {count crew _target == 0}";
                     statement = "_target setPos [getPos _target select 0, getPos _target select 1, (getPos _target select 2)+0.5];";
                 };
+                class ACE_unity_breakPlate {
+                    displayName = "Effacer la plaque d'immatriculation";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_boltCutter > 0)}";
+                    statement = "[_target] spawn unity_fnc_breakPlate";
+                    showDisabled = 0;
+                };
 				class Cop_vehInterraction {
                     displayName = "Interaction Milice";
                     condition = "(playerSide isEqualTo west) && alive _target";
@@ -1142,6 +1170,13 @@ class CfgVehicles {
                     distance = 4;
                     condition = "alive _target && {speed _target == 0} && {!(typeOf (_target) in [""C_Kart_01_Blu_F"",""C_Kart_01_Red_F"",""C_Kart_01_Fuel_F"",""C_Kart_01_Vrana_F""])} && {!(canMove _target)} && {count crew _target == 0}";
                     statement = "_target setPos [getPos _target select 0, getPos _target select 1, (getPos _target select 2)+0.5];";
+                };
+                class ACE_unity_breakPlate {
+                    displayName = "Effacer la plaque d'immatriculation";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_boltCutter > 0)}";
+                    statement = "[_target] spawn unity_fnc_breakPlate";
+                    showDisabled = 0;
                 };
 				class Cop_vehInterraction {
                     displayName = "Interaction Milice";
@@ -1316,6 +1351,13 @@ class CfgVehicles {
                     distance = 4;
                     condition = "alive _target && {speed _target == 0} && {!(typeOf (_target) in [""C_Kart_01_Blu_F"",""C_Kart_01_Red_F"",""C_Kart_01_Fuel_F"",""C_Kart_01_Vrana_F""])} && {!(canMove _target)} && {count crew _target == 0}";
                     statement = "_target setPos [getPos _target select 0, getPos _target select 1, (getPos _target select 2)+0.5];";
+                };
+                class ACE_unity_breakPlate {
+                    displayName = "Effacer la plaque d'immatriculation";
+                    distance = 4;
+                    condition = "alive _target && {speed _target == 0} && {(life_inv_boltCutter > 0)}";
+                    statement = "[_target] spawn unity_fnc_breakPlate";
+                    showDisabled = 0;
                 };
 				class Cop_vehInterraction {
                     displayName = "Interaction Milice";
