@@ -194,7 +194,15 @@ class WeaponShops {
             { "ACE_EarPlugs", "", 0, 0, "" },
             { "murshun_cigs_cigpack", "", 0, 0, "" },
             { "murshun_cigs_matches", "", 0, 0, "" },
+			{ "murshun_cigs_lighter", "", 0, 0, "" },
 			{ "NVGoggles", "", 0, 0, "" },
+			{ "SmokeShellBlue", "", 0, 0, "" },
+			{ "SmokeShellYellow", "", 0, 0, "" },
+			{ "SmokeShellOrange", "", 0, 0, "" },
+			{ "SmokeShellPurple", "", 0, 0, "" },
+			{ "SmokeShellRed", "", 0, 0, "" },
+			{ "SmokeShellGreen", "", 0, 0, "" },
+			{ "ACE_M84", "", 0, 0, "call life_coplevel >= 4" },			
 			{ "rhs_weap_6p53", "", 0, 0, "call life_coplevel >= 1" },
             { "rhs_weap_ak105", "", 0, 0, "call life_coplevel >= 2" },
 			{ "rhs_weap_ak74m", "", 0, 0, "call life_coplevel >= 3" },
@@ -222,16 +230,7 @@ class WeaponShops {
 			{ "rhs_100Rnd_762x54mmR", "", 0, 0, "" }
         };
         accs[] = {
-			//Ak
-            { "Item_optic_MRCO", "", 0, 0, "call life_coplevel >= 6" },
-			{ "rhs_acc_dtk1", "", 0, 0, "call life_coplevel >= 6" },
-			{ "optic_MRCO", "", 0, 0, "call life_coplevel >= 6" },
-			{ "rhsusf_acc_rvg_blk", "", 0, 0, "call life_coplevel >= 6" },
-			{ "Item_rhs_acc_dtk1", "", 0, 0, "call life_coplevel >= 6" },
-			{ "Item_rhs_acc_grip_rk2", "", 0, 0, "call life_coplevel >= 6" },
-			//M14
-			{ "Item_Ace_optic_MRCO_2D", "", 0, 0, "call life_coplevel >= 5" },
-			{ "Item_optic_MRCO", "", 0, 0, "call life_coplevel >= 5" }
+
         };
     };
 

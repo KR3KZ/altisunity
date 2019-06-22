@@ -175,6 +175,7 @@ class CfgRemoteExec {
         F(SPY_fnc_notifyAdmins,ANYONE)
 
 		//Unity
+        F(unity_fnc_recProm,CLIENT)
 		F(unity_fnc_playsound,ANYONE)
 
 		//iPhone_X
