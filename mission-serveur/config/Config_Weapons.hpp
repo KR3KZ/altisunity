@@ -197,19 +197,15 @@ class WeaponShops {
 			{ "srifle_DMR_06_olive_F", "", 0, 0, "call life_coplevel >= 5" },
 			{ "rhs_weap_M320", "", 0, 0, "call life_coplevel >= 5" },
 			{ "rhs_weap_ak103_zenitco01_b33", "", 0, 0, "call life_coplevel >= 6" },
-			{ "Item_optic_MRCO", "", 0, 0, "call life_coplevel >= 6" },
-			{ "Item_rhs_acc_dtk1", "", 0, 0, "call life_coplevel >= 6" },
-			{ "Item_rhs_acc_grip_rk2", "", 0, 0, "call life_coplevel >= 6" },
-			{ "Item_Ace_optic_MRCO_2D", "", 0, 0, "call life_coplevel >= 5" },
-			{ "rhs_weap_pkp", "", 0, 0, "call life_coplevel >= 7" },
-			{ "Item_optic_MRCO", "", 0, 0, "call life_coplevel >= 5" }
+			{ "rhs_weap_pkp", "", 0, 0, "call life_coplevel >= 7" }
         };
         mags[] = {
 			//6P53
 			{ "rhs_18rnd_9x21mm_7N28", "", 0, 0, "" },
 			//Ak
 			{ "rhs_30Rnd_545x39_7N10_AK", "", 0, 0, "" },
-			//Ak-103
+			{ "rhs_magazine_rhs_30Rnd_762x39mm_polymer", "", 0, 0, "" },
+			//Ak
 			{ "rhs_magazine_rhs_30Rnd_762x39mm_polymer", "", 0, 0, "" },
 			//M14
 			{ "20Rnd_762x51_Mag", "", 0, 0, "" },
@@ -220,7 +216,7 @@ class WeaponShops {
 			{ "rhs_100Rnd_762x54mmR", "", 0, 0, "" }
         };
         accs[] = {
-			//Ak-103
+			//Ak
             { "Item_optic_MRCO", "", 0, 0, "call life_coplevel >= 6" },
 			{ "Item_rhs_acc_dtk1", "", 0, 0, "call life_coplevel >= 6" },
 			{ "Item_rhs_acc_grip_rk2", "", 0, 0, "call life_coplevel >= 6" },
