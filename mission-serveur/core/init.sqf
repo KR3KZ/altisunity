@@ -196,6 +196,17 @@ addMissionEventHandler ["Loaded", {
 	};
 }];
 
+//Lock backpacks
+player addEventHandler ["InventoryOpened",{
+	params ["_unit","_container"];
+	_override = false;
+	_allUnitBackpackContainers = allUnits select {alive _x} apply {backpackContainer _x};
+	if (_container in _allUnitBackpackContainers) then {
+		_override = true;
+	};
+	_override
+}];
+
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log format ["               End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "----------------------------------------------------------------------------------------------------";

@@ -490,11 +490,3 @@ class Unity_Client_Core {
 		class repair_vehicle {};
 	};
 };
-
-class Haz {
-	tag = "Haz";
-	class notificationSystem {
-		file = "notificationSystem\functions";
-		class createNotification {};
-	};
-};
