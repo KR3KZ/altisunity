@@ -42,6 +42,30 @@ class CfgVehicles {
                 icon = "\a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa";
                 selection = "pelvis";
 
+                class ACE_UNITY_promo  {
+                    displayName = "Gérer grade";
+                    condition = "!(playerSide isEqualTo civilian) && {alive _target}";
+                    statement = "";
+                    showDisabled = 0;
+                    priority = 9.5;
+                    class ACE_UNITY_promote {
+                        displayName = "Accorder une promotion";
+                        distance = 4;
+                        condition = "[_player,_target] call yl_ace_fnc_canPromote";
+                        statement = "[_target,'prom'] remoteExecCall [""unity_fnc_recProm"",_target]";
+                        showDisabled = 0;
+                        priority = 9;
+                    };
+                    class ACE_UNITY_demote {
+                        displayName = "Rétrograder";
+                        distance = 4;
+                        condition = "[_player,_target] call yl_ace_fnc_canDemote";
+                        statement = "[_target,'dem'] remoteExecCall [""unity_fnc_recProm"",_target]";
+                        showDisabled = 0;
+                        priority = 9;
+                    };
+                };
+
                 class ACE_UNITY_showMenu {
                     displayName = "Montrer";
                     condition = "";

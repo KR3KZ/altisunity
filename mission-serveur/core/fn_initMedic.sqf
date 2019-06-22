@@ -13,6 +13,8 @@ if ((FETCH_CONST(life_medicLevel)) < 1 && (FETCH_CONST(life_adminlevel) isEqualT
     sleep 35;
 };
 
+player setVariable ["rankMedic",(FETCH_CONST(life_medicLevel)),true];
+
 if (life_is_alive) then {
     /* Spawn at our last position */
     player setVehiclePosition [life_position, [], 0, "CAN_COLLIDE"];

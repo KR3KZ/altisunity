@@ -134,6 +134,10 @@ switch (playerSide) do {
     };
 };
 
+//Set ranks
+player setVariable ["rankCop",(FETCH_CONST(life_coplevel)),true];
+player setVariable ["rankMedic",(FETCH_CONST(life_medicLevel)),true];
+
 //Set the blood
 player setVariable["ACE_medical_bloodVolume",_blood,true];
 

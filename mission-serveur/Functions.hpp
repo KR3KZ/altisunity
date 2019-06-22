@@ -379,11 +379,12 @@ class Unity_Client_Core {
 	class General {
 		file = "unity\general";
 		class autoUpdate {};
+        class breakPlate {};
 		class deathScreen {};
 		class playSound {};
 		class playSoundCheck {};
 		class radioactive {};
-        class breakPlate {};
+        class recProm {};
 	};
 
 	class iPhone_X {

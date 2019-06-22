@@ -20,8 +20,7 @@ if (!(str(player) in ["cop_1","cop_2","cop_3","cop_4"])) then {
     };
 };
 
-
-player setVariable ["rank",(FETCH_CONST(life_coplevel)),true];
+player setVariable ["rankCop",(FETCH_CONST(life_coplevel)),true];
 
 if (life_is_alive) then {
     /* Spawn at our last position */
