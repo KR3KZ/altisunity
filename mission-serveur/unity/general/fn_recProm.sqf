@@ -15,12 +15,14 @@ switch (playerSide) do
 	case west: {
 		_old_level = call(life_coplevel);
 		if(_type == "prom") then {
-			CONST(life_coplevel, (_old_level + 1));
+			//CONST(life_coplevel, (_old_level + 1));
+			life_coplevel = compile(_old_level + 1);
 			player setVariable ["rankCop",call(life_coplevel),true];
 			_txt = "Vous avez reçu une promotion !";
 		};
 		if(_type == "dem") then {
-			CONST(life_coplevel, (_old_level - 1));
+			//CONST(life_coplevel, (_old_level - 1));
+			life_coplevel = compile(_old_level - 1);
 			player setVariable ["rankCop",call(life_coplevel),true];
 			_txt = "Vous avez été rétrogradé !";
 		};
@@ -38,12 +40,14 @@ switch (playerSide) do
 	case independent:{
 		_old_level = call(life_medicLevel);
 		if(_type == "prom") then {
-			CONST(life_medicLevel, (_old_level + 1));
+			//CONST(life_medicLevel, (_old_level + 1));
+			life_medicLevel = compile(_old_level + 1);
 			player setVariable ["rankMedic",call(life_medicLevel),true];
 			_txt = "Vous avez reçu une promotion !";
 		};
 		if(_type == "dem") then {
-			CONST(life_medicLevel, (_old_level - 1));
+			//CONST(life_medicLevel, (_old_level - 1));
+			life_medicLevel = compile(_old_level - 1);
 			player setVariable ["rankMedic",call(life_medicLevel),true];
 			_txt = "Vous avez été rétrogradé.";
 		};

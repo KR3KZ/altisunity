@@ -51,7 +51,7 @@ if (count (_this select 6) > 0) then {
 switch (playerSide) do {
     case west: {
         //CONST(life_coplevel,(_this select 7));
-        life_coplevel = (_this select 7);
+        life_coplevel = compile(_this select 7);
         CONST(life_medicLevel,0);
         life_blacklisted = _this select 9;
         if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
@@ -112,7 +112,7 @@ switch (playerSide) do {
 
     case independent: {
         //CONST(life_medicLevel,(_this select 7));
-        life_medicLevel = (_this select 7);
+        life_medicLevel = compile(_this select 7);
         CONST(life_coplevel,0);
         if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
             life_hunger = ((_this select 9) select 0);
@@ -137,8 +137,8 @@ switch (playerSide) do {
 };
 
 //Set ranks
-player setVariable ["rankCop",call(life_coplevel),true];
-player setVariable ["rankMedic",call(life_medicLevel),true];
+player setVariable ["rankCop",(call(life_coplevel)),true];
+player setVariable ["rankMedic",(call(life_medicLevel)),true];
 
 //Set the blood
 player setVariable["ACE_medical_bloodVolume",_blood,true];
