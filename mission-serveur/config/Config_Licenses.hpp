@@ -81,14 +81,6 @@ class Licenses {
         side = "civ";
     };
 
-    class wood {
-        variable = "wood";
-        displayName = "STR_License_Paper";
-        price = 15000;
-        illegal = false;
-        side = "civ";
-    };
-
     class fabric {
         variable = "fabric";
         displayName = "STR_License_Fabric";
