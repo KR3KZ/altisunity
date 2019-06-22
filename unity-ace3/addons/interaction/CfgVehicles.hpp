@@ -51,7 +51,7 @@ class CfgVehicles {
                     class ACE_UNITY_promote {
                         displayName = "Accorder une promotion";
                         distance = 4;
-                        condition = "[_player,_target] call yl_ace_fnc_canPromote";
+                        condition = "[_player,_target] call unity_ace_fnc_canPromote";
                         statement = "[_target,'prom'] remoteExecCall [""unity_fnc_recProm"",_target]";
                         showDisabled = 0;
                         priority = 9;
@@ -59,7 +59,7 @@ class CfgVehicles {
                     class ACE_UNITY_demote {
                         displayName = "Rétrograder";
                         distance = 4;
-                        condition = "[_player,_target] call yl_ace_fnc_canDemote";
+                        condition = "[_player,_target] call unity_ace_fnc_canDemote";
                         statement = "[_target,'dem'] remoteExecCall [""unity_fnc_recProm"",_target]";
                         showDisabled = 0;
                         priority = 9;
