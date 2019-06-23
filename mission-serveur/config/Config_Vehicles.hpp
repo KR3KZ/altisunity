@@ -127,7 +127,8 @@ class CarShops {
         vehicles[] = {
             { "B_Heli_Light_01_F", "call life_coplevel >= 2" },
             { "B_Heli_Transport_01_F", "call life_coplevel >= 3" },
-			{ "LOP_SLA_Mi8MT_Cargo", "call life_coplevel >= 4" }
+			{ "LOP_SLA_Mi8MT_Cargo", "call life_coplevel >= 4" },
+			{ "RHS_MELB_MH6M", "call life_coplevel >= 3" }
         };
     };
 
