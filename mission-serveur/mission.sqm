@@ -8,22 +8,22 @@ class EditorData
 	toggles=138;
 	class ItemIDProvider
 	{
-		nextID=1657;
+		nextID=1662;
 	};
 	class MarkerIDProvider
 	{
-		nextID=340;
+		nextID=342;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1788;
+		nextID=1838;
 	};
 	class Camera
 	{
-		pos[]={19017.098,111.37996,10511.241};
-		dir[]={-0.96248394,-0.20244513,0.18117498};
-		up[]={-0.19900283,0.97928143,0.037459563};
-		aside[]={0.18500584,5.4319389e-007,0.98283011};
+		pos[]={12143.216,343.68832,17234.998};
+		dir[]={0.4560166,-0.62945819,-0.62918568};
+		up[]={0.36941525,0.77700567,-0.50969684};
+		aside[]={-0.80971533,-2.3243774e-007,-0.5868572};
 	};
 };
 binarizationWanted=0;
@@ -267,6 +267,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -281,24 +299,6 @@ class CustomAttributes
 						};
 					};
 					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -432,7 +432,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=159;
+		items=160;
 		class Item0
 		{
 			dataType="Group";
@@ -16130,7 +16130,7 @@ class Mission
 					name="veh_spawn_milice_mikisfob";
 					type="Empty";
 					colorName="default";
-					angle=327.06781;
+					angle=327.06796;
 					id=1319;
 					atlOffset=-0.00032043457;
 				};
@@ -17741,7 +17741,7 @@ class Mission
 					};
 					id=1405;
 					type="WaterPump_01_forest_F";
-					atlOffset=0.0041732788;
+					atlOffset=0.0051765442;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17778,7 +17778,7 @@ class Mission
 				};
 			};
 			id=1406;
-			atlOffset=0.11328506;
+			atlOffset=0.11278152;
 		};
 		class Item122
 		{
@@ -20810,7 +20810,7 @@ class Mission
 					position[]={16843.061,30.559,5927.542};
 					name="marker_331";
 					type="loc_Tourism";
-					colorName="default";
+					colorName="plp_ColorGreenDark";
 					a=0.89999998;
 					b=0.89999998;
 					id=1638;
@@ -20822,7 +20822,7 @@ class Mission
 					position[]={13054.176,341.95001,17509.627};
 					name="marker_330";
 					type="loc_Tourism";
-					colorName="default";
+					colorName="plp_ColorGreenDark";
 					a=0.89999998;
 					b=0.89999998;
 					id=1637;
@@ -20833,7 +20833,7 @@ class Mission
 					position[]={10525.281,87.027,9198.8906};
 					name="marker_332";
 					type="loc_Tourism";
-					colorName="default";
+					colorName="plp_ColorGreenDark";
 					a=0.89999998;
 					b=0.89999998;
 					id=1639;
@@ -20845,7 +20845,7 @@ class Mission
 					position[]={11253.91,25.974001,2883.6379};
 					name="marker_333";
 					type="loc_Tourism";
-					colorName="default";
+					colorName="plp_ColorGreenDark";
 					a=0.89999998;
 					b=0.89999998;
 					id=1640;
@@ -21050,6 +21050,36 @@ class Mission
 				items=4;
 				class Item0
 				{
+					dataType="Marker";
+					position[]={19003.684,109.168,10515.111};
+					name="veh_spawn_rebel_anyakar_1";
+					type="Empty";
+					colorName="default";
+					id=1653;
+					atlOffset=-0.015090942;
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={19005.391,109.442,10528.729};
+					name="veh_spawn_rebel_anyakar_2";
+					type="Empty";
+					colorName="default";
+					id=1654;
+					atlOffset=-0.0004196167;
+				};
+				class Item2
+				{
+					dataType="Marker";
+					position[]={19002.121,109.024,10502.47};
+					name="veh_spawn_rebel_anyakar_3";
+					type="Empty";
+					colorName="default";
+					id=1656;
+					atlOffset=0.00084686279;
+				};
+				class Item3
+				{
 					dataType="Object";
 					class PositionInfo
 					{
@@ -21109,39 +21139,9 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item1
-				{
-					dataType="Marker";
-					position[]={19003.684,109.168,10515.111};
-					name="veh_spawn_rebel_anyakar_1";
-					type="Empty";
-					colorName="default";
-					id=1653;
-					atlOffset=-0.015090942;
-				};
-				class Item2
-				{
-					dataType="Marker";
-					position[]={19005.391,109.442,10528.729};
-					name="veh_spawn_rebel_anyakar_2";
-					type="Empty";
-					colorName="default";
-					id=1654;
-					atlOffset=-0.0004196167;
-				};
-				class Item3
-				{
-					dataType="Marker";
-					position[]={19002.121,109.024,10502.47};
-					name="veh_spawn_rebel_anyakar_3";
-					type="Empty";
-					colorName="default";
-					id=1656;
-					atlOffset=0.00084686279;
-				};
 			};
 			id=1652;
-			atlOffset=0.034667969;
+			atlOffset=-20.39856;
 		};
 		class Item158
 		{
@@ -21150,6 +21150,42 @@ class Mission
 			name="marker_338";
 			type="Empty";
 			id=1655;
+		};
+		class Item159
+		{
+			dataType="Layer";
+			name="Heliport Milice - KalaeNoowi";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12178.031,341.95001,17251.783};
+						angles[]={0,0.70949382,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction[localize ""STR_Milice_Heli"",life_fnc_vehicleShopMenu,[""cop_air"",west,""heli_spawn_milice_kalaenoowi"",""cop"",localize ""STR_Milice_Heli""]];}";
+					};
+					id=1658;
+					type="Land_CashDesk_F";
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={12144.14,341.95001,17233.848};
+					name="heli_spawn_milice_kalaenoowi";
+					type="Empty";
+					colorName="default";
+					id=1661;
+				};
+			};
+			id=1659;
 		};
 	};
 };
