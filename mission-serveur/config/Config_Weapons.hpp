@@ -43,11 +43,10 @@ class WeaponShops {
     };
 
     class rebel {
-        name = "Mohammed's Jihadi Shop";
+        name = "Marché Noir";
         side = "civ";
         conditions = "license_civ_rebel";
         items[] = {
-            { "ACE_CableTie", "", 0, 0, "" },
             { "SmokeShellBlue", "", 0, 0, "" },
             { "SmokeShellYellow", "", 0, 0, "" },
             { "SmokeShellOrange", "", 0, 0, "" },
@@ -55,6 +54,8 @@ class WeaponShops {
             { "SmokeShellRed", "", 0, 0, "" },
             { "SmokeShellGreen", "", 0, 0, "" },
             { "NVGoggles", "", 1200, 600, "" },
+            { "ACE_EarPlugs", "", 0, 0, "" },
+            { "ACE_CableTie", "", 0, 0, "" },
             { "SMG_02_F", "", 25000, 12500, "" },
             { "rhsusf_weap_MP7A2_grip1", "", 25000, 12500, "" },
             { "rhs_weap_aks74un", "", 50000, 12500, "" },
@@ -202,7 +203,7 @@ class WeaponShops {
 			{ "SmokeShellPurple", "", 0, 0, "" },
 			{ "SmokeShellRed", "", 0, 0, "" },
 			{ "SmokeShellGreen", "", 0, 0, "" },
-			{ "ACE_M84", "", 0, 0, "call life_coplevel >= 4" },			
+			{ "ACE_M84", "", 0, 0, "call life_coplevel >= 4" },
 			{ "rhs_weap_6p53", "", 0, 0, "call life_coplevel >= 1" },
             { "rhs_weap_ak105", "", 0, 0, "call life_coplevel >= 2" },
 			{ "rhs_weap_ak74m", "", 0, 0, "call life_coplevel >= 3" },

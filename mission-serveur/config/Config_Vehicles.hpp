@@ -79,7 +79,6 @@ class CarShops {
         vehicles[] = {
             { "B_Quadbike_01_F", "" },
             { "B_G_Offroad_01_F", "" },
-            { "O_MRAP_02_F", "" },
             { "max_Dodge_multy", "" },
             { "LOP_AFR_Nissan_PKM", "" },
             { "B_G_Offroad_01_armed_F", "" },
@@ -195,9 +194,9 @@ class LifeCfgVehicles {
 
     // Apex DLC
     class LOP_AFR_Civ_Landrover {
-        vItemSpace = 65;
+        vItemSpace = 150;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
-        price = 12500;
+        price = 22500;
         textures[] = {};
     };
 
@@ -327,9 +326,9 @@ class LifeCfgVehicles {
     };
 
     class walker_a3_sedan {
-        vItemSpace = 200;
+        vItemSpace = 40;
         conditions = "";
-        price = 45000;
+        price = 10000;
         textures[] = {
             { "Blanc", "civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_co.paa"}, "" },
             { "Vert", "civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_green_co.paa"}, "" },
@@ -339,9 +338,9 @@ class LifeCfgVehicles {
     };
 
     class walker_a3_skodovka {
-        vItemSpace = 200;
+        vItemSpace = 40;
         conditions = "";
-        price = 45000;
+        price = 15000;
         textures[] = {
 			{ "Blanc", "civ", {"\walker_a3_cars\skodovka\data\skodovka_bila_co.paa"}, "" },
             { "Vert", "civ", {"\walker_a3_cars\skodovka\data\skodovka_zelena_co.paa"}, "" }
@@ -356,9 +355,9 @@ class LifeCfgVehicles {
     };
 
     class walker_a3_hatch {
-        vItemSpace = 200;
+        vItemSpace = 60;
         conditions = "";
-        price = 45000;
+        price = 18500;
         textures[] = {
 			{ "Jaune", "civ", {"\walker_a3_vehicles\hatchback\data\hatchback_co.paa"}, ""},
             { "Vert", "civ", {"\walker_a3_vehicles\hatchback\data\hatchback_green_co.paa"}, "" },
@@ -513,9 +512,9 @@ class LifeCfgVehicles {
     };
 
     class C_Offroad_01_F {
-        vItemSpace = 65;
+        vItemSpace = 120;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
-        price = 12500;
+        price = 23500;
         textures[] = {
             { "Red", "civ", {
                 "\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa",
@@ -579,9 +578,9 @@ will modify the virtual space and the price of the vehicle, but other informatio
     };
 
     class walker_a3_datsun {
-        vItemSpace = 25;
+        vItemSpace = 120;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
-        price = 2500;
+        price = 25050;
         textures[] = {
             { "Gris", "civ", {"\walker_a3_vehicles\datsun\data\datsun_trup2_co.paa"}, "" },
 			{ "Bleu", "civ", {"\walker_a3_vehicles\datsun\data\datsun_trup1_co.paa"}, "" },
@@ -621,9 +620,9 @@ will modify the virtual space and the price of the vehicle, but other informatio
     };
 
     class walker_a3_hilux {
-        vItemSpace = 40;
+        vItemSpace = 150;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
-        price = 9500;
+        price = 30000;
         textures[] = {
 			{ "Blanc", "civ", {"\walker_a3_vehicles\hilux\data\coyota_trup3.paa"}, "" },
 			{ "Forêt", "civ", {"\walker_a3_vehicles\hilux\data\coyota_trup4_co.paa"}, "" },
@@ -632,9 +631,9 @@ will modify the virtual space and the price of the vehicle, but other informatio
     };
 
     class walker_a3_c_hilux {
-        vItemSpace = 50;
+        vItemSpace = 150;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
-        price = 30000;
+        price = 28500;
         textures[] = {};
     };
 
