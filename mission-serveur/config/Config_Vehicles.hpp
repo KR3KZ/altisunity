@@ -638,9 +638,9 @@ will modify the virtual space and the price of the vehicle, but other informatio
     };
 
     class walker_a3_lada {
-        vItemSpace = 100;
+        vItemSpace = 55;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
-        price = 45000;
+        price = 11000;
         textures[] = {
 			{ "Blanc", "civ", {"\walker_a3_vehicles\lada\data\lada_white_co.paa"}, "" },
 			{ "Rouge", "civ", {"\walker_a3_vehicles\lada\data\lada_red_co.paa"}, "" }
