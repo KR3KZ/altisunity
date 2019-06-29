@@ -79,6 +79,14 @@ switch (_mode) do {
         _array = [_this,2,[],[[]]] call BIS_fnc_param;
         [_uid,_side,_array,0] call TON_fnc_keyManagement;
     };
+
+    case 8: {
+        _query = format ["UPDATE players SET coplevel='%1' WHERE pid='%2'",_value,_uid];
+    };
+
+    case 9: {
+        _query = format ["UPDATE players SET mediclevel='%1' WHERE pid='%2'",_value,_uid];
+    };
 };
 
 if (_query isEqualTo "") exitWith {};

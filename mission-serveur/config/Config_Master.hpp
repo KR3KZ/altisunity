@@ -164,7 +164,7 @@ class Life_Settings {
                                  //Commander/tactical view is accessed via pressing . [NUM] by default. It raises the camera significantly higher and steeper above the player in order to give a boarder tactical view of the surrounding area.
 
 	/* Unity settings */
-	teamspeak 									= "NON RESPECTE PAR LA MISE A JOUR TS";
+	teamspeak 									= "Unity RP";
 	channel 									= "TASK FORCE RADIO";
 	pass 										= "df546qf65d";
 
