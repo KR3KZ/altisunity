@@ -28,7 +28,9 @@ class CarShops {
             { "walker_a3_lada", "" },
             { "LOP_AFR_Civ_Landrover", "" },
             { "walker_a3_sedan", "" },
-            { "walker_a3_skodovka", "" }
+            { "walker_a3_skodovka", "" },
+            { "max_suv_black", "" },
+            { "C_SUV_01_F", "" }
         };
     };
 
@@ -441,6 +443,13 @@ class LifeCfgVehicles {
         textures[] = {};
     };
 
+    class C_SUV_01_F {
+        vItemSpace = 80;
+        conditions = "";
+        price = 22500;
+        textures[] = {};
+    };
+
     class B_Boat_Armed_01_minigun_F {
         vItemSpace = 175;
         conditions = "license_cop_cg || {!(playerSide isEqualTo west)}";
@@ -637,10 +646,17 @@ will modify the virtual space and the price of the vehicle, but other informatio
         textures[] = {};
     };
 
-    class walker_a3_lada {
+    class max_suv_black {
         vItemSpace = 100;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
-        price = 45000;
+        price = 24500;
+        textures[] = {};
+    };
+
+    class walker_a3_lada {
+        vItemSpace = 55;
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 11000;
         textures[] = {
 			{ "Blanc", "civ", {"\walker_a3_vehicles\lada\data\lada_white_co.paa"}, "" },
 			{ "Rouge", "civ", {"\walker_a3_vehicles\lada\data\lada_red_co.paa"}, "" }
