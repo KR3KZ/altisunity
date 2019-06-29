@@ -8,22 +8,22 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1662;
+		nextID=1676;
 	};
 	class MarkerIDProvider
 	{
-		nextID=342;
+		nextID=347;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1936;
+		nextID=2090;
 	};
 	class Camera
 	{
-		pos[]={13478.817,404.52774,17667.352};
-		dir[]={-0.92918485,-0.32579899,-0.17478411};
-		up[]={-0.3202368,0.94541699,-0.060238425};
-		aside[]={-0.18486553,-7.1979593e-007,0.98279995};
+		pos[]={10393.08,2080.8247,14432.071};
+		dir[]={-0.90247673,-0.42974213,0.033363007};
+		up[]={-0.42947862,0.90291864,0.015874652};
+		aside[]={0.036950789,6.8340159e-007,0.99943262};
 	};
 };
 binarizationWanted=0;
@@ -68,7 +68,8 @@ addons[]=
 	"A3_Supplies_F_Heli_CargoNets",
 	"A3_Structures_F_Exp_Infrastructure_WaterSupply",
 	"A3_Structures_F_EPC_Civ_Accessories",
-	"A3_Structures_F_Civ_InfoBoards"
+	"A3_Structures_F_Civ_InfoBoards",
+	"A3_Structures_F_Items_Vessels"
 };
 class AddonsMetaData
 {
@@ -267,24 +268,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -299,6 +282,24 @@ class CustomAttributes
 						};
 					};
 					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -432,7 +433,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=160;
+		items=164;
 		class Item0
 		{
 			dataType="Group";
@@ -16130,7 +16131,7 @@ class Mission
 					name="veh_spawn_milice_mikisfob";
 					type="Empty";
 					colorName="default";
-					angle=327.0679;
+					angle=327.06781;
 					id=1319;
 					atlOffset=-0.00032043457;
 				};
@@ -17741,7 +17742,7 @@ class Mission
 					};
 					id=1405;
 					type="WaterPump_01_forest_F";
-					atlOffset=0.0051765442;
+					atlOffset=0.0041732788;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17778,7 +17779,7 @@ class Mission
 				};
 			};
 			id=1406;
-			atlOffset=0.11278152;
+			atlOffset=0.11328506;
 		};
 		class Item122
 		{
@@ -19760,16 +19761,16 @@ class Mission
 		class Item135
 		{
 			dataType="Marker";
-			position[]={4023.9031,535.83002,11712.88};
+			position[]={4351.1582,535.83002,11599.599};
 			name="radioactive";
 			markerType="RECTANGLE";
 			type="ellipse";
 			colorName="plp_ColorRedDark";
 			fillName="DiagGrid";
-			a=4000;
-			b=4000;
+			a=4350;
+			b=4350;
 			id=1486;
-			atlOffset=209.68018;
+			atlOffset=210.56766;
 		};
 		class Item136
 		{
@@ -21145,14 +21146,6 @@ class Mission
 		};
 		class Item158
 		{
-			dataType="Marker";
-			position[]={18967.225,108.28,10501.3};
-			name="marker_338";
-			type="Empty";
-			id=1655;
-		};
-		class Item159
-		{
 			dataType="Layer";
 			name="Heliport Milice - KalaeNoowi";
 			state=1;
@@ -21187,6 +21180,109 @@ class Mission
 				};
 			};
 			id=1659;
+		};
+		class Item159
+		{
+			dataType="Layer";
+			name="Héroine - Récolte Razbula";
+			state=3;
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Marker";
+					position[]={17756.379,23.245117,9314.8838};
+					name="res_heroin_1";
+					text="Heroine";
+					type="mil_triangle";
+					colorName="default";
+					id=1665;
+					atlOffset=-0.042221069;
+				};
+			};
+			id=1664;
+			atlOffset=-0.042221069;
+		};
+		class Item160
+		{
+			dataType="Layer";
+			name="Héroine - Traitement Zarath";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={17370.818,80.797234,14866.237};
+						angles[]={0,0.60767132,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="call{this addAction[localize""STR_Process_Heroin"",life_fnc_processAction,""heroin"",0,false,false,"""",' life_inv_heroin > 0 && !life_is_processing && !life_action_inUse'];}";
+					};
+					id=1670;
+					type="Land_WaterTank_F";
+					atlOffset=0.33435822;
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={17370.805,79.609001,14866.284};
+					name="TRT_Heroin";
+					text="Heroin";
+					type="mil_box";
+					colorName="default";
+					alpha=0;
+					id=1672;
+					atlOffset=-0.00035095215;
+				};
+			};
+			id=1671;
+			atlOffset=0.082817078;
+		};
+		class Item161
+		{
+			dataType="Marker";
+			position[]={51.650002,142.882,184.63499};
+			name="marker_344";
+			text="Récolte";
+			type="mil_triangle";
+			colorName="default";
+			a=2.5;
+			b=2.5;
+			id=1673;
+			atlOffset=-0.0002746582;
+		};
+		class Item162
+		{
+			dataType="Marker";
+			position[]={50.237263,142.16458,142.24358};
+			name="marker_345";
+			text="Traitement";
+			type="mil_box";
+			colorName="default";
+			a=2.5;
+			b=2.5;
+			id=1674;
+			atlOffset=-0.012039185;
+		};
+		class Item163
+		{
+			dataType="Marker";
+			position[]={51.324219,141.48021,101.58591};
+			name="marker_346";
+			text="Point de vente";
+			type="mil_end";
+			colorName="default";
+			a=1.5;
+			b=1.5;
+			id=1675;
+			atlOffset=-0.0078735352;
 		};
 	};
 };

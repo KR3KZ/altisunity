@@ -146,11 +146,14 @@ class Clothing {
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
-            { "rhs_beret_milp", "", 500, "" }
+            { "rhs_beret_milp", "", 500, "" },
+            { "H_Hat_brown", "", 500, "" },
+            { "H_Hat_tan", "", 500, "" }
         };
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
             { "G_Squares_Tinted", "", 500, "" },
+            { "G_Spectacles", "", 500, "" },
             { "immersion_cigs_cigar0", "", 500, "" }
         };
         vests[] = {

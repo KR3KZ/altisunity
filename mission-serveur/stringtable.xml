@@ -3685,6 +3685,10 @@
             <Original>Véhicules Milice</Original>
             <French>Véhicules Milice</French>
         </Key>
+        <Key ID="STR_Milice_Heli">
+            <Original>Héliport de Milice</Original>
+            <French>Héliport de Milice</French>
+        </Key>
 		<Key ID="STR_MAR_Car_Shop_Gouv">
             <Original>Véhicules Gouvernment</Original>
             <French>Véhicules Gouvernment</French>
