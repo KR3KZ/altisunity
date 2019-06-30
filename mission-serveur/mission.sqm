@@ -8,22 +8,22 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1678;
+		nextID=1685;
 	};
 	class MarkerIDProvider
 	{
-		nextID=347;
+		nextID=348;
 	};
 	class LayerIndexProvider
 	{
-		nextID=2192;
+		nextID=2245;
 	};
 	class Camera
 	{
-		pos[]={12622.175,83.983932,3002.0623};
-		dir[]={-0.78051662,-0.1411535,-0.60907906};
-		up[]={-0.11131305,0.98997533,-0.086864002};
-		aside[]={-0.61523461,-4.1056774e-007,0.78840357};
+		pos[]={13402.537,343.46152,17584.277};
+		dir[]={-0.98592854,-0.15389238,0.065394484};
+		up[]={-0.1536734,0.98806942,0.010192764};
+		aside[]={0.06618312,8.934876e-008,0.99781537};
 	};
 };
 binarizationWanted=0;
@@ -276,6 +276,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -290,24 +308,6 @@ class CustomAttributes
 						};
 					};
 					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -441,7 +441,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=164;
+		items=165;
 		class Item0
 		{
 			dataType="Group";
@@ -17652,7 +17652,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[2,20,4]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[30,8,2,2,4]],[[""ToolKit""],[1]],[[""B_Parachute""],[14]]],false]";
+									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 								};
 							};
 						};
@@ -17750,7 +17750,7 @@ class Mission
 					};
 					id=1405;
 					type="WaterPump_01_forest_F";
-					atlOffset=0.0041732788;
+					atlOffset=0.0051765442;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17787,7 +17787,7 @@ class Mission
 				};
 			};
 			id=1406;
-			atlOffset=0.11328506;
+			atlOffset=0.11278152;
 		};
 		class Item122
 		{
@@ -21285,7 +21285,7 @@ class Mission
 				};
 			};
 			id=1671;
-			atlOffset=0.082679749;
+			atlOffset=-72.738098;
 		};
 		class Item161
 		{
@@ -21325,6 +21325,45 @@ class Mission
 			b=1.5;
 			id=1675;
 			atlOffset=-0.0078735352;
+		};
+		class Item164
+		{
+			dataType="Layer";
+			name="Carte SIM - Kalaenoowi";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13399.598,341.95001,17584.498};
+						angles[]={0,4.8120646,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction [""Acheter un abonnement"", { [] spawn unity_fnc_iPhone_X_masterAddPhoneNumber;}];}";
+					};
+					id=1682;
+					type="Land_CashDesk_F";
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={13399.413,341.95001,17584.324};
+					name="marker_347";
+					type="plp_mark_civ_telephone";
+					colorName="plp_ColorGreenLight";
+					a=0.69999999;
+					b=0.69999999;
+					id=1684;
+				};
+			};
+			id=1683;
 		};
 	};
 };
