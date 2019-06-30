@@ -330,7 +330,7 @@ class LifeCfgVehicles {
     class walker_a3_sedan {
         vItemSpace = 40;
         conditions = "";
-        price = 10000;
+        price = 7500;
         textures[] = {
             { "Blanc", "civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_co.paa"}, "" },
             { "Vert", "civ", {"\walker_a3_vehicles\sedan\data\sedan_ext_green_co.paa"}, "" },
