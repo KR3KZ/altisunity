@@ -12,7 +12,7 @@ disableSerialization;
 
 _uid 				= getPlayerUID player;
 _type 				= "1";
-_price 				= 15000;
+_price 				= 950;
 
 _phoneNumber = [0,6];
 while {(count _phoneNumber < 10)} do {

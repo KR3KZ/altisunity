@@ -8,22 +8,22 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1685;
+		nextID=1689;
 	};
 	class MarkerIDProvider
 	{
-		nextID=348;
+		nextID=349;
 	};
 	class LayerIndexProvider
 	{
-		nextID=2245;
+		nextID=2299;
 	};
 	class Camera
 	{
-		pos[]={13402.537,343.46152,17584.277};
-		dir[]={-0.98592854,-0.15389238,0.065394484};
-		up[]={-0.1536734,0.98806942,0.010192764};
-		aside[]={0.06618312,8.934876e-008,0.99781537};
+		pos[]={11422.231,39.924461,2974.9026};
+		dir[]={0.88401353,-0.46731171,-0.012931374};
+		up[]={0.4672637,0.8840884,-0.0068348297};
+		aside[]={-0.014626196,4.7525418e-008,-0.99990422};
 	};
 };
 binarizationWanted=0;
@@ -276,24 +276,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -308,6 +290,24 @@ class CustomAttributes
 						};
 					};
 					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -441,7 +441,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=165;
+		items=166;
 		class Item0
 		{
 			dataType="Group";
@@ -17750,7 +17750,7 @@ class Mission
 					};
 					id=1405;
 					type="WaterPump_01_forest_F";
-					atlOffset=0.0051765442;
+					atlOffset=0.0041732788;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17787,7 +17787,7 @@ class Mission
 				};
 			};
 			id=1406;
-			atlOffset=0.11278152;
+			atlOffset=0.11328506;
 		};
 		class Item122
 		{
@@ -21285,7 +21285,7 @@ class Mission
 				};
 			};
 			id=1671;
-			atlOffset=-72.738098;
+			atlOffset=0.082679749;
 		};
 		class Item161
 		{
@@ -21347,9 +21347,33 @@ class Mission
 					class Attributes
 					{
 						init="call{this addAction [""Acheter un abonnement"", { [] spawn unity_fnc_iPhone_X_masterAddPhoneNumber;}];}";
+						disableSimulation=1;
 					};
 					id=1682;
 					type="Land_CashDesk_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
@@ -21364,6 +21388,73 @@ class Mission
 				};
 			};
 			id=1683;
+			atlOffset=-151.01678;
+		};
+		class Item165
+		{
+			dataType="Layer";
+			name="Carte Sim - Kinduf";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11424.88,27.09959,2976.2361};
+						angles[]={0,0.023734415,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="call{this addAction [""Acheter un abonnement"", { [] spawn unity_fnc_iPhone_X_masterAddPhoneNumber;}];}";
+						disableSimulation=1;
+					};
+					id=1686;
+					type="Land_CashDesk_F";
+					atlOffset=0.12500191;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Marker";
+					position[]={11424.914,26.974001,2976.1851};
+					name="marker_348";
+					type="plp_mark_civc_telephone";
+					colorName="plp_ColorGreenDark";
+					a=0.69999999;
+					b=0.69999999;
+					id=1688;
+					atlOffset=-0.00024986267;
+				};
+			};
+			id=1687;
+			atlOffset=0.062374115;
 		};
 	};
 };
