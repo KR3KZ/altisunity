@@ -895,7 +895,7 @@ class VirtualItems {
 		displayName = "STR_Item_Wood";
 		weight = 5;
 		buyPrice = -1;
-		sellPrice = 2700;
+		sellPrice = 1950;
 		illegal = false;
 		edible = -1;
 		icon = "\unity_icons\ico_wood.paa";
@@ -906,7 +906,7 @@ class VirtualItems {
 		displayName = "STR_Item_Paper";
 		weight = 3;
 		buyPrice = -1;
-		sellPrice = 3000;
+		sellPrice = 1752;
 		illegal = false;
 		edible = -1;
 		icon = "\unity_icons\ico_paper.paa";
@@ -939,7 +939,7 @@ class VirtualItems {
 		displayName = "STR_Item_Cotton";
 		weight = 2;
 		buyPrice = -1;
-		sellPrice = 2500;
+		sellPrice = 1800;
 		illegal = false;
 		edible = -1;
 		icon = "\unity_icons\ico_cotton.paa";
@@ -950,7 +950,7 @@ class VirtualItems {
 		displayName = "STR_Item_Fabric";
 		weight = 3;
 		buyPrice = -1;
-		sellPrice = 2900;
+		sellPrice = 1450;
 		illegal = false;
 		edible = -1;
 		icon = "\unity_icons\ico_fabric.paa";
