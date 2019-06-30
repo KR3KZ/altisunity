@@ -955,4 +955,15 @@ class VirtualItems {
 		edible = -1;
 		icon = "\unity_icons\ico_fabric.paa";
 	};
+
+	class heroin_unprocessed {
+		variable = "heroin_unprocessed";
+		displayName = "STR_Item_HeroinU";
+		weight = 3;
+		buyPrice = -1;
+		sellPrice = 2900;
+		illegal = false;
+		edible = -1;
+		icon = "\unity_icons\ico_heroinUnprocessed.paa";
+	};
 };
