@@ -26,27 +26,28 @@ class WeaponShops {
         side = "civ";
         conditions = "license_civ_gun";
         items[] = {
-            { "rhs_weap_6p53", "", 5000, 0, "" },
-            { "hgun_Pistol_01_F", "", 7000, 0, "" }, //Apex DLC
-            { "hgun_Pistol_heavy_02_F", "", 10000, 0, "" },
-            { "hgun_Rook40_F", "", 4500, 0, "" },
-            { "rhs_weap_makarov_pm", "", 6000, 0, "" }
+            { "rhs_weap_6p53", "", 0, 0, "" },
+            { "hgun_Pistol_01_F", "", 0, 0, "" }, //Apex DLC
+            { "hgun_Pistol_heavy_02_F", "", 0, 0, "" },
+            { "hgun_Rook40_F", "", 0, 0, "" },
+            { "rhs_weap_makarov_pm", "", 0, 0, "" }
         };
         mags[] = {
-            { "rhs_18rnd_9x21mm_7N28", "", 120, 0, "" },
-            { "6Rnd_45ACP_Cylinder", "", 120, 0, "" },
-            { "16Rnd_9x21_Mag", "", 120, 0, "" },
-            { "10Rnd_9x21_Mag", "", 120, 0, "" },
-            { "rhs_mag_9x18_8_57N181S", "", 120, 0, "" }
+            { "rhs_18rnd_9x21mm_7N28", "", 0, 0, "" },
+            { "6Rnd_45ACP_Cylinder", "", 0, 0, "" },
+            { "16Rnd_9x21_Mag", "", 0, 0, "" },
+            { "10Rnd_9x21_Mag", "", 0, 0, "" },
+            { "rhs_mag_9x18_8_57N181S", "", 0, 0, "" }
         };
         accs[] = {};
     };
 
     class rebel {
-        name = "Marché Noir";
+        name = "Mohammed's Jihadi Shop";
         side = "civ";
         conditions = "license_civ_rebel";
         items[] = {
+            { "ACE_CableTie", "", 0, 0, "" },
             { "SmokeShellBlue", "", 0, 0, "" },
             { "SmokeShellYellow", "", 0, 0, "" },
             { "SmokeShellOrange", "", 0, 0, "" },
@@ -54,14 +55,11 @@ class WeaponShops {
             { "SmokeShellRed", "", 0, 0, "" },
             { "SmokeShellGreen", "", 0, 0, "" },
             { "NVGoggles", "", 1200, 600, "" },
-            { "ACE_EarPlugs", "", 0, 0, "" },
-            { "ACE_CableTie", "", 0, 0, "" },
             { "SMG_02_F", "", 25000, 12500, "" },
             { "rhsusf_weap_MP7A2_grip1", "", 25000, 12500, "" },
-            { "rhs_weap_aks74un", "", 40000, 12500, "" },
-            { "rhs_weap_aks74n", "", 65000, 12500, "" },
-            { "rhs_weap_ak74m_desert_npz", "", 78000, 12500, "" },
-            { "rhs_weap_ak74m_fullplum_npz", "", 78000, 12500, "" },
+            { "rhs_weap_aks74un", "", 50000, 12500, "" },
+            { "rhs_weap_ak74m_desert_npz", "", 50000, 12500, "" },
+            { "rhs_weap_ak74m_fullplum_npz", "", 50000, 12500, "" },
             { "optic_Yorris", "", 3500, 1750, "" },
             { "rhs_acc_ekp8_02", "", 3500, 1750, "" },
             { "optic_ACO_grn", "", 3500, 1750, "" },
@@ -170,9 +168,10 @@ class WeaponShops {
             { "ItemCompass", "", 250, 25, "" },
             { "ItemWatch", "", 250, 25, "" },
             { "FirstAidKit", "", 750, 75, "" },
-            { "ACE_FieldDressing", "", 0, 0, "" },
-            { "ACE_morphine", "", 0, 0, "" },
-            { "ACE_EarPlugs", "", 0, 0, "" },
+            { "ACE_FieldDressing", "", 100, 0, "" },
+            { "ACE_morphine", "", 150, 0, "" },
+            { "ACE_EarPlugs", "", 50, 0, "" },
+			{ "tf_anprc148jem", "", 300, 50, "" },
             { "Chemlight_red", "", 1500, 150, "" },
             { "Chemlight_yellow", "", 1500, 150, "" },
             { "Chemlight_green", "", 1500, 150, "" },
