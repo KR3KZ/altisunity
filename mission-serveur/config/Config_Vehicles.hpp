@@ -342,7 +342,7 @@ class LifeCfgVehicles {
     class walker_a3_skodovka {
         vItemSpace = 40;
         conditions = "";
-        price = 15000;
+        price = 9500;
         textures[] = {
 			{ "Blanc", "civ", {"\walker_a3_cars\skodovka\data\skodovka_bila_co.paa"}, "" },
             { "Vert", "civ", {"\walker_a3_cars\skodovka\data\skodovka_zelena_co.paa"}, "" }
@@ -359,7 +359,7 @@ class LifeCfgVehicles {
     class walker_a3_hatch {
         vItemSpace = 60;
         conditions = "";
-        price = 18500;
+        price = 15500;
         textures[] = {
 			{ "Jaune", "civ", {"\walker_a3_vehicles\hatchback\data\hatchback_co.paa"}, ""},
             { "Vert", "civ", {"\walker_a3_vehicles\hatchback\data\hatchback_green_co.paa"}, "" },
@@ -629,7 +629,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
     };
 
     class walker_a3_hilux {
-        vItemSpace = 150;
+        vItemSpace = 180;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 30000;
         textures[] = {
