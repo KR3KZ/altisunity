@@ -505,8 +505,8 @@ class VirtualItems {
         variable = "marijuana";
         displayName = "STR_Item_Marijuana";
         weight = 3;
-        buyPrice = 3100;
-        sellPrice = 2850;
+        buyPrice = 15000;
+        sellPrice = 12560;
         illegal = true;
         edible = -1;
         icon = "\unity_icons\ico_marijuana.paa";
@@ -965,5 +965,6 @@ class VirtualItems {
 		illegal = false;
 		edible = -1;
 		icon = "\unity_icons\ico_heroinUnprocessed.paa";
+        processedItem = "heroin_processed";
 	};
 };

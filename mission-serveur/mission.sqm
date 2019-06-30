@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2141;
+		nextID=2192;
 	};
 	class Camera
 	{
-		pos[]={9562.5537,376.66293,14117.056};
-		dir[]={-0.19404508,-0.27158532,-0.94269955};
-		up[]={-0.054761454,0.96240211,-0.26604187};
-		aside[]={-0.97950947,1.531298e-007,0.20162097};
+		pos[]={12622.175,83.983932,3002.0623};
+		dir[]={-0.78051662,-0.1411535,-0.60907906};
+		up[]={-0.11131305,0.98997533,-0.086864002};
+		aside[]={-0.61523461,-4.1056774e-007,0.78840357};
 	};
 };
 binarizationWanted=0;
@@ -276,24 +276,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -308,6 +290,24 @@ class CustomAttributes
 						};
 					};
 					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -21235,7 +21235,7 @@ class Mission
 					dataType="Marker";
 					position[]={17756.379,23.245001,9314.8838};
 					name="res_heroin_1";
-					text="Heroine";
+					text="graine_de_pavot";
 					type="mil_triangle";
 					colorName="default";
 					alpha=0;
@@ -21259,17 +21259,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={17370.818,80.797234,14866.237};
+						position[]={17370.818,80.796959,14866.237};
 						angles[]={0,0.60767132,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						init="call{this addAction[localize""STR_Process_Heroin"",life_fnc_processAction,""heroin"",0,false,false,"""",' life_inv_heroin > 0 && !life_is_processing && !life_action_inUse'];}";
+						init="call{this addAction[localize""STR_Process_Heroin"",life_fnc_processAction,""heroin_processed"",0,false,false,"""",' life_inv_heroin_unprocessed > 0 && !life_is_processing && !life_action_inUse'];}";
 					};
 					id=1670;
 					type="Land_WaterTank_F";
-					atlOffset=0.33435822;
+					atlOffset=0.33408356;
 				};
 				class Item1
 				{
@@ -21285,7 +21285,7 @@ class Mission
 				};
 			};
 			id=1671;
-			atlOffset=0.082817078;
+			atlOffset=0.082679749;
 		};
 		class Item161
 		{
