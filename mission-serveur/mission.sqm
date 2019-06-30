@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1676;
+		nextID=1678;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2090;
+		nextID=2141;
 	};
 	class Camera
 	{
-		pos[]={10393.08,2080.8247,14432.071};
-		dir[]={-0.90247673,-0.42974213,0.033363007};
-		up[]={-0.42947862,0.90291864,0.015874652};
-		aside[]={0.036950789,6.8340159e-007,0.99943262};
+		pos[]={9562.5537,376.66293,14117.056};
+		dir[]={-0.19404508,-0.27158532,-0.94269955};
+		up[]={-0.054761454,0.96240211,-0.26604187};
+		aside[]={-0.97950947,1.531298e-007,0.20162097};
 	};
 };
 binarizationWanted=0;
@@ -66,6 +66,7 @@ addons[]=
 	"A3_Structures_F_EPA_Items_Medical",
 	"Jbad_misc_interior",
 	"A3_Supplies_F_Heli_CargoNets",
+	"A3_Structures_F_Mark_Training",
 	"A3_Structures_F_Exp_Infrastructure_WaterSupply",
 	"A3_Structures_F_EPC_Civ_Accessories",
 	"A3_Structures_F_Civ_InfoBoards",
@@ -75,7 +76,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=24;
+		items=25;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -222,12 +223,19 @@ class AddonsMetaData
 		};
 		class Item22
 		{
+			className="A3_Structures_F_Mark";
+			name="Arma 3 Marksmen - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item23
+		{
 			className="A3_Structures_F_Exp_Infrastructure";
 			name="Arma 3 Apex - Infrastructure Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item23
+		class Item24
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
@@ -268,6 +276,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -282,24 +308,6 @@ class CustomAttributes
 						};
 					};
 					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -12612,7 +12620,7 @@ class Mission
 					};
 					id=1287;
 					type="Land_BagFence_Long_F";
-					atlOffset=0.89999962;
+					atlOffset=0.8238678;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12652,7 +12660,7 @@ class Mission
 					};
 					id=1288;
 					type="Land_BagFence_Long_F";
-					atlOffset=1.3309975;
+					atlOffset=1.2519989;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12692,7 +12700,7 @@ class Mission
 					};
 					id=1289;
 					type="Land_BagFence_Long_F";
-					atlOffset=1.2109985;
+					atlOffset=0.88536453;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12732,7 +12740,7 @@ class Mission
 					};
 					id=1290;
 					type="Land_BagFence_Long_F";
-					atlOffset=0.65799904;
+					atlOffset=0.32880211;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20029,7 +20037,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=2;
+				items=4;
 				class Item0
 				{
 					dataType="Object";
@@ -20085,9 +20093,42 @@ class Mission
 					id=1516;
 					atlOffset=-0.00015258789;
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9561.5029,374.84549,14110.738};
+						angles[]={0,2.6088831,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=1677;
+					type="Target_PopUp4_Moving_90deg_Acc1_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9562.6494,374.79614,14111.459};
+						angles[]={0,2.5904119,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=1676;
+					type="Target_PopUp4_Moving_90deg_Acc1_F";
+					atlOffset=-0.00018310547;
+				};
 			};
 			id=1515;
-			atlOffset=-6.1035156e-005;
+			atlOffset=-0.073120117;
 		};
 		class Item142
 		{
@@ -21192,17 +21233,18 @@ class Mission
 				class Item0
 				{
 					dataType="Marker";
-					position[]={17756.379,23.245117,9314.8838};
+					position[]={17756.379,23.245001,9314.8838};
 					name="res_heroin_1";
 					text="Heroine";
 					type="mil_triangle";
 					colorName="default";
+					alpha=0;
 					id=1665;
-					atlOffset=-0.042221069;
+					atlOffset=-0.042337418;
 				};
 			};
 			id=1664;
-			atlOffset=-0.042221069;
+			atlOffset=-0.042337418;
 		};
 		class Item160
 		{
