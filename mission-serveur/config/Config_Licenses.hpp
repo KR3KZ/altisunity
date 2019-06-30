@@ -11,7 +11,7 @@ class Licenses {
     class driver {
         variable = "driver";
         displayName = "STR_License_Driver";
-        price = 1500;
+        price = 700;
         illegal = false;
         side = "civ";
     };
