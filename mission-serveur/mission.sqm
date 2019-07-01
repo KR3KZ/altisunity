@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2299;
+		nextID=2352;
 	};
 	class Camera
 	{
-		pos[]={11422.231,39.924461,2974.9026};
-		dir[]={0.88401353,-0.46731171,-0.012931374};
-		up[]={0.4672637,0.8840884,-0.0068348297};
-		aside[]={-0.014626196,4.7525418e-008,-0.99990422};
+		pos[]={12095.656,564.07849,2450.9639};
+		dir[]={0.056409132,-0.68984377,-0.721789};
+		up[]={0.053749513,0.72395432,-0.68774664};
+		aside[]={-0.99697924,-4.7787034e-007,-0.077917241};
 	};
 };
 binarizationWanted=0;
@@ -276,6 +276,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -290,24 +308,6 @@ class CustomAttributes
 						};
 					};
 					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -20561,7 +20561,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize""STR_MAR_Car_Shop_Civilian"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""veh_spawn_civil_kinduf_1"",""veh_spawn_civil_kinduf_2"",""veh_spawn_civil_kinduf_3""],""civ"",localize""STR_MAR_Car_Shop_Civilian""]];" \n "this addAction[""Garage"", { if (life_HC_isActive) then { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];}; life_garage_type = ""Car""; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Fetching Vehicles....""]; life_garage_sp =""veh_spawn_civil_kinduf_1""; }]; " \n "this addAction[""Ranger au garage"",life_fnc_RangerGarageOpen,"""",0,false,false,"""",'!life_garage_store && _this distance _target < 5 && cursorObject == _target'];}";
+						init="call{this addAction[localize""STR_MAR_Car_Shop_Civilian"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""veh_spawn_civil_kinduf_1"",""veh_spawn_civil_kinduf_2"",""veh_spawn_civil_kinduf_3""],""civ"",localize""STR_MAR_Car_Shop_Civilian""]];" \n "this addAction[""Garage"", { if (life_HC_isActive) then { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""HC_fnc_getVehicles"",HC_Life]; } else { [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];}; life_garage_type = ""Car""; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Fetching Vehicles....""]; life_garage_sp =""veh_spawn_civil_kinduf_1""; }]; " \n "this addAction[""Ranger au garage"",life_fnc_RangerGarageOpen,"""",0,false,false,"""",'!life_garage_store && _this distance _target < 0 && cursorObject == _target'];}";
 						disableSimulation=1;
 					};
 					id=1552;
@@ -21388,7 +21388,6 @@ class Mission
 				};
 			};
 			id=1683;
-			atlOffset=-151.01678;
 		};
 		class Item165
 		{
