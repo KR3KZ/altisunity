@@ -17,7 +17,7 @@ _vehicleData = _vehicle getVariable ["vehicle_info_owners",[]];
 if (_vehicleData isEqualTo 0) exitWith {deleteVehicle _vehicle}; //Bad vehicle.
 _vehicleName = FETCH_CONFIG2(getText,"CfgVehicles",(typeOf _vehicle),"displayName");
 _price = M_CONFIG(getNumber,"LifeCfgVehicles",(typeOf _vehicle),"price");
-[0,"STR_NOTF_BeingImpounded",true,[((_vehicleData select 0) select 1),_vehicleName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+//[0,"STR_NOTF_BeingImpounded",true,[((_vehicleData select 0) select 1),_vehicleName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 life_action_inUse = true;
 
 _upp = localize "STR_NOTF_Impounding";

@@ -48,7 +48,7 @@ if (count _invs > 0) then {
         [getPlayerUID _civ,_civ getVariable ["realname",name _civ],"481"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
     };
 
-    [0,"STR_Cop_Contraband",true,[(_civ getVariable ["realname",name _civ]),[_illegal] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
+    //[0,"STR_Cop_Contraband",true,[(_civ getVariable ["realname",name _civ]),[_illegal] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
 } else {
     _inv = localize "STR_Cop_NoIllegal";
 };
@@ -59,5 +59,5 @@ hint parseText format ["<t color='#FF0000'><t size='2'>%1</t></t><br/><t color='
 ,(_civ getVariable ["realname",name _civ]),_inv,if (_robber) then {"Robbed the bank"} else {""}];
 
 if (_robber) then {
-    [0,"STR_Cop_Robber",true,[(_civ getVariable ["realname",name _civ])]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+    //[0,"STR_Cop_Robber",true,[(_civ getVariable ["realname",name _civ])]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 };

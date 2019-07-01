@@ -91,6 +91,6 @@ private _flagTexture = [
         "\A3\Data_F\Flags\flag_fd_orange_CO.paa"
     ] call BIS_fnc_selectRandom;
 _this select 0 setFlagTexture _flagTexture;
-[[0,1],"STR_GNOTF_CaptureSuccess",true,[name player,(group player) getVariable "gang_name"]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+//[[0,1],"STR_GNOTF_CaptureSuccess",true,[name player,(group player) getVariable "gang_name"]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 _hideout setVariable ["inCapture",false,true];
 _hideout setVariable ["gangOwner",group player,true];
