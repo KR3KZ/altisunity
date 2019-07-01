@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2564;
+		nextID=2617;
 	};
 	class Camera
 	{
@@ -276,24 +276,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -308,6 +290,24 @@ class CustomAttributes
 						};
 					};
 					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -18130,7 +18130,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8083.6021,492.9111,16407.684};
+						position[]={8083.6021,492.91129,16407.684};
 						angles[]={0,1.1207107,0};
 					};
 					side="Empty";
@@ -18142,7 +18142,7 @@ class Mission
 					};
 					id=1437;
 					type="Land_JetEngineStarter_01_F";
-					atlOffset=-0.017211914;
+					atlOffset=-0.017028809;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18174,12 +18174,13 @@ class Mission
 					name="TRT_Sand";
 					text="Sable";
 					type="mil_box";
+					colorName="default";
 					id=1440;
 					atlOffset=3.0517578e-005;
 				};
 			};
 			id=1439;
-			atlOffset=-0.008605957;
+			atlOffset=-0.0084838867;
 		};
 		class Item125
 		{
@@ -18303,6 +18304,7 @@ class Mission
 					name="res_oil_1";
 					text="Pétrole";
 					type="mil_triangle";
+					colorName="default";
 					id=1452;
 					atlOffset=8.5830688e-005;
 				};
@@ -18330,7 +18332,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize""STR_Process_Oil"",life_fnc_processAction,""oil"",0,false,false,"""",' life_inv_oil > 0 && !life_is_processing && !life_action_inUse'];}";
+						init="call{this addAction[localize""STR_Process_Oil"",life_fnc_processAction,""oil_unprocessed"",0,false,false,"""",' life_inv_oil > 0 && !life_is_processing && !life_action_inUse'];}";
 						disableSimulation=1;
 					};
 					id=1456;
