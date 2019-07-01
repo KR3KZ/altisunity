@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1706;
+		nextID=1708;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2352;
+		nextID=2405;
 	};
 	class Camera
 	{
-		pos[]={13069.769,343.84482,17255.27};
-		dir[]={0.97407222,-0.18505821,-0.13022929};
-		up[]={0.18343376,0.98272181,-0.024524197};
-		aside[]={-0.13251728,-9.6828444e-008,-0.99118698};
+		pos[]={13003.172,344.19714,17659.295};
+		dir[]={-0.060261529,-0.21795754,0.97409964};
+		up[]={-0.013458097,0.97595775,0.21754387};
+		aside[]={0.99809355,8.1263352e-009,0.061745908};
 	};
 };
 binarizationWanted=0;
@@ -276,24 +276,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -308,6 +290,24 @@ class CustomAttributes
 						};
 					};
 					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -441,7 +441,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=166;
+		items=167;
 		class Item0
 		{
 			dataType="Group";
@@ -11688,6 +11688,7 @@ class Mission
 		{
 			dataType="Layer";
 			name="Comico Sud";
+			state=1;
 			class Entities
 			{
 				items=28;
@@ -15869,7 +15870,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""veh_spawn_milice_kalaenoowi_1"",""veh_spawn_milice_kalaenoowi_2""],""cop"",localize ""STR_MAR_Car_Shop_Milice""]];}";
+						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""veh_spawn_milice_kalaenoowi_1"",""veh_spawn_milice_kalaenoowi_2""],""cop"",localize ""STR_MAR_Car_Shop_Milice""]]; this addAction[""Ranger au garage"",life_fnc_RangerGarageOpen,"""",0,false,false,"""",'!life_garage_store && _this distance _target < 5 && cursorObject == _target'];}";
 						disableSimulation=1;
 					};
 					id=1312;
@@ -15980,7 +15981,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""veh_spawn_milice_kinduf_1"",""veh_spawn_milice_kinduf_2"",""veh_spawn_milice_kinduf_3""],""cop"",localize ""STR_MAR_Car_Shop_Milice""]];}";
+						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""veh_spawn_milice_kinduf_1"",""veh_spawn_milice_kinduf_2"",""veh_spawn_milice_kinduf_3""],""cop"",localize ""STR_MAR_Car_Shop_Milice""]]; this addAction[""Ranger au garage"",life_fnc_RangerGarageOpen,"""",0,false,false,"""",'!life_garage_store && _this distance _target < 5 && cursorObject == _target'];}";
 						disableSimulation=1;
 					};
 					id=1315;
@@ -16102,7 +16103,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,""veh_spawn_milice_mikisfob"",""cop"",localize ""STR_MAR_Car_Shop_Milice""]];}";
+						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,""veh_spawn_milice_mikisfob"",""cop"",localize ""STR_MAR_Car_Shop_Milice""]]; this addAction[""Ranger au garage"",life_fnc_RangerGarageOpen,"""",0,false,false,"""",'!life_garage_store && _this distance _target < 5 && cursorObject == _target'];}";
 						disableSimulation=1;
 					};
 					id=1318;
@@ -17749,7 +17750,7 @@ class Mission
 					};
 					id=1405;
 					type="WaterPump_01_forest_F";
-					atlOffset=0.0051765442;
+					atlOffset=0.0041732788;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17786,7 +17787,7 @@ class Mission
 				};
 			};
 			id=1406;
-			atlOffset=0.11278152;
+			atlOffset=0.11328506;
 		};
 		class Item122
 		{
@@ -21314,7 +21315,7 @@ class Mission
 				};
 			};
 			id=1631;
-			atlOffset=-0.83575439;
+			atlOffset=-0.8352356;
 		};
 		class Item154
 		{
@@ -21873,6 +21874,37 @@ class Mission
 			};
 			id=1687;
 			atlOffset=0.062374115;
+		};
+		class Item166
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11629.074,434.34332,19065.674};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=1707;
+					type="B_Soldier_F";
+					atlOffset=0.00076293945;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1706;
+			atlOffset=0.00076293945;
 		};
 	};
 };
