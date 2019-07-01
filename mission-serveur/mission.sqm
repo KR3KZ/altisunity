@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1689;
+		nextID=1708;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2299;
+		nextID=2405;
 	};
 	class Camera
 	{
-		pos[]={11422.231,39.924461,2974.9026};
-		dir[]={0.88401353,-0.46731171,-0.012931374};
-		up[]={0.4672637,0.8840884,-0.0068348297};
-		aside[]={-0.014626196,4.7525418e-008,-0.99990422};
+		pos[]={13003.172,344.19714,17659.295};
+		dir[]={-0.060261529,-0.21795754,0.97409964};
+		up[]={-0.013458097,0.97595775,0.21754387};
+		aside[]={0.99809355,8.1263352e-009,0.061745908};
 	};
 };
 binarizationWanted=0;
@@ -441,7 +441,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=166;
+		items=167;
 		class Item0
 		{
 			dataType="Group";
@@ -15829,7 +15829,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];" \n "this addAction[localize ""STR_MAR_Weapons_Store_Milice"",life_fnc_weaponShopMenu,""cop_basic""];" \n "this addAction[localize""STR_Shops_Milice"",life_fnc_virt_menu,""cop""];}";
+						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];" \n "this addAction[localize ""STR_MAR_Weapons_Store_Milice"",life_fnc_weaponShopMenu,""cop_basic""];" \n "this addAction[localize""STR_Shops_Milice"",life_fnc_virt_menu,""cop""]; this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];}";
 						disableSimulation=1;
 					};
 					id=1311;
@@ -15870,7 +15870,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""veh_spawn_milice_kalaenoowi_1"",""veh_spawn_milice_kalaenoowi_2""],""cop"",localize ""STR_MAR_Car_Shop_Milice""]];}";
+						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""veh_spawn_milice_kalaenoowi_1"",""veh_spawn_milice_kalaenoowi_2""],""cop"",localize ""STR_MAR_Car_Shop_Milice""]]; this addAction[""Ranger au garage"",life_fnc_RangerGarageOpen,"""",0,false,false,"""",'!life_garage_store && _this distance _target < 5 && cursorObject == _target'];}";
 						disableSimulation=1;
 					};
 					id=1312;
@@ -15940,7 +15940,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];" \n "this addAction[localize ""STR_MAR_Weapons_Store_Milice"",life_fnc_weaponShopMenu,""cop_basic""];" \n "this addAction[localize""STR_Shops_Milice"",life_fnc_virt_menu,""cop""];}";
+						init="call{this addAction[localize ""STR_MAR_Clothing_Store_Milice"",life_fnc_clothingMenu,""milice""];" \n "this addAction[localize ""STR_MAR_Weapons_Store_Milice"",life_fnc_weaponShopMenu,""cop_basic""];" \n "this addAction[localize""STR_Shops_Milice"",life_fnc_virt_menu,""cop""];this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];}";
 						disableSimulation=1;
 					};
 					id=1314;
@@ -15981,7 +15981,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""veh_spawn_milice_kinduf_1"",""veh_spawn_milice_kinduf_2"",""veh_spawn_milice_kinduf_3""],""cop"",localize ""STR_MAR_Car_Shop_Milice""]];}";
+						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""veh_spawn_milice_kinduf_1"",""veh_spawn_milice_kinduf_2"",""veh_spawn_milice_kinduf_3""],""cop"",localize ""STR_MAR_Car_Shop_Milice""]]; this addAction[""Ranger au garage"",life_fnc_RangerGarageOpen,"""",0,false,false,"""",'!life_garage_store && _this distance _target < 5 && cursorObject == _target'];}";
 						disableSimulation=1;
 					};
 					id=1315;
@@ -16103,7 +16103,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,""veh_spawn_milice_mikisfob"",""cop"",localize ""STR_MAR_Car_Shop_Milice""]];}";
+						init="call{this addAction[localize ""STR_MAR_Car_Shop_Milice"",life_fnc_vehicleShopMenu,[""cop_car"",west,""veh_spawn_milice_mikisfob"",""cop"",localize ""STR_MAR_Car_Shop_Milice""]]; this addAction[""Ranger au garage"",life_fnc_RangerGarageOpen,"""",0,false,false,"""",'!life_garage_store && _this distance _target < 5 && cursorObject == _target'];}";
 						disableSimulation=1;
 					};
 					id=1318;
@@ -20679,7 +20679,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=8;
+				items=24;
 				class Item0
 				{
 					dataType="Object";
@@ -20893,9 +20893,429 @@ class Mission
 					id=1640;
 					atlOffset=0.00035667419;
 				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11405.262,26.781897,2845.1094};
+						angles[]={0,0.85707879,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];}";
+						disableSimulation=1;
+					};
+					id=1689;
+					type="Land_Atm_01_F";
+					atlOffset=-0.0015201569;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item9
+				{
+					dataType="Marker";
+					position[]={11405.35,25.502647,2845.21};
+					name="marker_336";
+					type="loc_Tourism";
+					colorName="plp_ColorGreenDark";
+					a=0.89999998;
+					b=0.89999998;
+					id=1691;
+				};
+				class Item10
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11492.688,25.300085,2747.1101};
+						angles[]={0,0.85707879,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];}";
+						disableSimulation=1;
+					};
+					id=1692;
+					type="Land_Atm_01_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item11
+				{
+					dataType="Marker";
+					position[]={11490.971,24.017582,2745.5444};
+					name="marker_337";
+					type="loc_Tourism";
+					colorName="plp_ColorGreenDark";
+					a=0.89999998;
+					b=0.89999998;
+					id=1693;
+				};
+				class Item12
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12091.905,23.395224,2835.365};
+						angles[]={0,3.1285901,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];}";
+						disableSimulation=1;
+					};
+					id=1694;
+					type="Land_Atm_01_F";
+					atlOffset=-0.0039997101;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item13
+				{
+					dataType="Marker";
+					position[]={12091.789,22.119162,2835.675};
+					name="marker_338";
+					type="loc_Tourism";
+					colorName="plp_ColorGreenDark";
+					a=0.89999998;
+					b=0.89999998;
+					id=1695;
+				};
+				class Item14
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9480.0479,164.05791,11718.946};
+						angles[]={0,5.4109573,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];}";
+						disableSimulation=1;
+					};
+					id=1696;
+					type="Land_Atm_01_F";
+					atlOffset=-0.0021362305;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item15
+				{
+					dataType="Marker";
+					position[]={9480.0117,162.78522,11719.01};
+					name="marker_339";
+					type="loc_Tourism";
+					colorName="plp_ColorGreenDark";
+					a=0.89999998;
+					b=0.89999998;
+					id=1697;
+				};
+				class Item16
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13447.853,343.26483,17452.291};
+						angles[]={0,4.7919312,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];}";
+						disableSimulation=1;
+					};
+					id=1698;
+					type="Land_Atm_01_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item17
+				{
+					dataType="Marker";
+					position[]={13447.789,341.98401,17452.348};
+					name="marker_340";
+					type="loc_Tourism";
+					colorName="plp_ColorGreenDark";
+					a=0.89999998;
+					b=0.89999998;
+					id=1699;
+				};
+				class Item18
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13738.42,343.23151,17497.447};
+						angles[]={0,0.079042897,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];}";
+						disableSimulation=1;
+					};
+					id=1700;
+					type="Land_Atm_01_F";
+					atlOffset=-3.0517578e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item19
+				{
+					dataType="Marker";
+					position[]={13738.533,341.95096,17497.439};
+					name="marker_341";
+					type="loc_Tourism";
+					colorName="plp_ColorGreenDark";
+					a=0.89999998;
+					b=0.89999998;
+					id=1701;
+				};
+				class Item20
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13485.226,343.23059,17713.852};
+						angles[]={0,0.079042897,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];}";
+						disableSimulation=1;
+					};
+					id=1702;
+					type="Land_Atm_01_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item21
+				{
+					dataType="Marker";
+					position[]={13485.418,341.95001,17713.846};
+					name="marker_342";
+					type="loc_Tourism";
+					colorName="plp_ColorGreenDark";
+					a=0.89999998;
+					b=0.89999998;
+					id=1703;
+				};
+				class Item22
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13073.904,343.23059,17254.203};
+						angles[]={0,1.5909549,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[localize""STR_NOTF_ATM"",life_fnc_atmMenu,"""",0,false,false,"""",' isNull objectParent player && player distance _target < 4 '];}";
+						disableSimulation=1;
+					};
+					id=1704;
+					type="Land_Atm_01_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item23
+				{
+					dataType="Marker";
+					position[]={13073.627,341.95001,17253.984};
+					name="marker_343";
+					type="loc_Tourism";
+					colorName="plp_ColorGreenDark";
+					a=0.89999998;
+					b=0.89999998;
+					id=1705;
+				};
 			};
 			id=1631;
-			atlOffset=78.704453;
+			atlOffset=-0.8352356;
 		};
 		class Item154
 		{
@@ -21388,7 +21808,6 @@ class Mission
 				};
 			};
 			id=1683;
-			atlOffset=-151.01678;
 		};
 		class Item165
 		{
@@ -21455,6 +21874,37 @@ class Mission
 			};
 			id=1687;
 			atlOffset=0.062374115;
+		};
+		class Item166
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11629.074,434.34332,19065.674};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=1707;
+					type="B_Soldier_F";
+					atlOffset=0.00076293945;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1706;
+			atlOffset=0.00076293945;
 		};
 	};
 };
