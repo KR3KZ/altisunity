@@ -89,6 +89,9 @@ class Clothing {
             { "B_Messenger_Gray_F", "", 990, "" },
             { "B_Messenger_Black_F", "", 995, "" },
             { "B_Messenger_Olive_F", "", 995, "" },
+			{ "B_Kitbag_tan", "", 1500, "" },
+			{ "B_Kitbag_rgr", "", 1500, "" },
+			{ "B_Carryall_cbr", "", 10000, "" },
             { "rhs_sidor", "", 880, "" }
         };
     };
