@@ -36,6 +36,7 @@ switch (playerSide) do
 			case 6: { _grade = "Capitaine"; };
 			case 7: { _grade = "Colonel"; };
 		};
+		[8] call SOCK_fnc_updatePartial;
 	};
 	case independent:{
 		_old_level = call(life_medicLevel);
@@ -59,8 +60,8 @@ switch (playerSide) do
 			case 4: { _grade = "######"; };
 			case 5: { _grade = "######"; };
 		};
+		[9] call SOCK_fnc_updatePartial;
 	};
 };
 
 hint parseText format ["%1 Vous êtes désormais %2.",_txt,_grade];
-[9] call SOCK_fnc_updatePartial;
