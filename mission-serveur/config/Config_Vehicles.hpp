@@ -118,7 +118,7 @@ class CarShops {
 			{ "LOP_UKR_UAZ_DshKM", "call life_coplevel >= 5" },
 			{ "rhs_uaz_open_MSV_01", "call life_coplevel >= 6" },
 			{ "LOP_NAPA_Landrover", "call life_coplevel >= 6" },
-			{ "max_suv_Tan", "call life_coplevel >= 6" },
+			{ "max_suv_Tan", "call life_coplevel >= 4" },
             { "rhs_btr70_vmf", "call life_coplevel >= 7" }
         };
     };
