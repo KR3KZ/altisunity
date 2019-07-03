@@ -213,7 +213,7 @@ class Clothing {
         };
     };
 
-    class onu_clothing {
+    class med_clothing {
         title = "STR_MAR_ONU_Clothing_Shop";
         conditions = "";
         side = "med";
