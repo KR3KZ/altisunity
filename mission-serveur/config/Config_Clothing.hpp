@@ -213,46 +213,31 @@ class Clothing {
         };
     };
 
-    class med_clothing {
-        title = "STR_MAR_EMS_Clothing_Shop";
+    class onu_clothing {
+        title = "STR_MAR_ONU_Clothing_Shop";
         conditions = "";
         side = "med";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "LOP_U_CHR_SchoolTeacher_01", "", 50, "" },
-            { "U_C_Scientist", "", 50, "" },
-            { "U_C_Paramedic_01_F", "", 50, "" }
+			{ "rhs_uniform_cu_ocp", "", 0, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
-            { "H_WirelessEarpiece_F", "", 0, "" },
-            { "H_HeadBandage_bloody_F", "", 0, "" },
-            { "H_HeadBandage_stained_F", "", 0, "" },
-            { "H_HeadBandage_clean_F", "", 0, "" },
-            { "H_Hat_Safari_olive_F", "", 0, "" },
-            { "H_Hat_Safari_sand_F", "", 0, "" }
+            { "LOP_H_6B27M_UN", "", 0, "" },
+			{ "LOP_H_Beret_UN", "", 0, "" }
         };
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
-            { "G_Respirator_white_F", "", 10, "" },
-            { "G_Respirator_blue_F", "", 10, "" },
-            { "G_Respirator_yellow_F", "", 10, "" },
-            { "G_EyeProtectors_F", "", 10, "" },
-            { "G_Spectacles", "", 10, "" },
-            { "G_Squares", "", 10, "" },
-            { "G_Lowprofile", "", 10, "" }
+            { "rhs_googles_black", "", 10, "" },
+			{ "rhsusf_oakley_goggles_blk", "", 10, "" }
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
-            { "V_Plain_crystal_F", "", 10, "" },
-            { "LOP_V_6B23_Medic_OLV", "", 10, "" }
+            { "rhsusf_iotv_ocp_Teamleader", "", 10, "" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
-            { "B_Messenger_Coyote_F", "", 3000, "" },
-            { "B_Messenger_Gray_F", "", 3000, "" },
-            { "B_Messenger_Black_F", "", 3000, "" },
-            { "B_Messenger_Olive_F", "", 3000, "" }
+			{ "tf_anprc155_coyote", "", 0, "" }
         };
     };
 
