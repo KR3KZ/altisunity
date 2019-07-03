@@ -262,8 +262,9 @@ class WeaponShops {
 			{ "rhs_weap_hk416d10_LMT_d", "", 2000, 1, "" },
 			{ "optic_Holosight", "", 600, 2, "" }
         };
-        mags[] = {};
-		{ "rhs_30Rnd_STANAG_M855A1", "", 100, 0, "" }
+        mags[] = {
+		    { "rhs_30Rnd_STANAG_M855A1", "", 100, 0, "" }
+        };
         accs[] = {};
     };
 };
