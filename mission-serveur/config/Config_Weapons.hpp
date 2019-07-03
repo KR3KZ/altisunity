@@ -258,9 +258,12 @@ class WeaponShops {
             { "SmokeShellPurple", "", 0, 0, "" },
             { "SmokeShellRed", "", 0, 0, "" },
             { "SmokeShellGreen", "", 0, 0, "" },
-            { "NVGoggles", "", 1200, 600, "" }
+            { "NVGoggles", "", 1200, 600, "" },
+			{ "rhs_weap_hk416d10_LMT_d", "", 2000, 1, "" },
+			{ "optic_Holosight", "", 600, 2, "" }
         };
         mags[] = {};
+		{ "rhs_30Rnd_STANAG_M855A1", "", 100, 0, "" }
         accs[] = {};
     };
 };
