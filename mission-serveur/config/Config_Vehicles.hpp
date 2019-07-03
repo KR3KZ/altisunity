@@ -92,10 +92,11 @@ class CarShops {
         side = "med";
         conditions = "";
         vehicles[] = {
-            { "C_Offroad_01_F", "" },
-            { "C_Offroad_02_unarmed_F", "" },
-            { "O_T_LSV_02_unarmed_F", "" },
-            { "rhsusf_m998_w_4dr", "" }
+            { "rhsusf_m113d_usarmy", "" },
+            { "rhsusf_M1230a1_usarmy_d", "" },
+            { "rhsusf_M1232_usarmy_d", "" },
+            { "rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy", "" },
+			{ "C_IDAP_UAV_06_antimine_F", "" }
         };
     };
 
