@@ -92,11 +92,12 @@ class CarShops {
         side = "med";
         conditions = "";
         vehicles[] = {
-            { "rhsusf_m113d_usarmy", "" },
-            { "rhsusf_M1230a1_usarmy_d", "" },
-            { "rhsusf_M1232_usarmy_d", "" },
-            { "rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy", "" },
-			{ "C_IDAP_UAV_06_antimine_F", "" }
+            { "rhsusf_m113d_usarmy", "1750000" },
+            { "rhsusf_M1230a1_usarmy_d", "950000" },
+			{ "rhsusf_CGRCAT1A2_usmc_d", "800000" },
+            { "rhsusf_M1232_usarmy_d", "1000000" },
+            { "rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy", "450000" },
+			{ "C_IDAP_UAV_06_antimine_F", "500000" }
         };
     };
 
