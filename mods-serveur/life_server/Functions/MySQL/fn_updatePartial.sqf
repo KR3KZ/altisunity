@@ -81,10 +81,14 @@ switch (_mode) do {
     };
 
     case 8: {
+        _value = [_this,2,0,[0]] call BIS_fnc_param;
+        _value = [_value] call DB_fnc_numberSafe;
         _query = format ["UPDATE players SET coplevel='%1' WHERE pid='%2'",_value,_uid];
     };
 
     case 9: {
+        _value = [_this,2,0,[0]] call BIS_fnc_param;
+        _value = [_value] call DB_fnc_numberSafe;
         _query = format ["UPDATE players SET mediclevel='%1' WHERE pid='%2'",_value,_uid];
     };
 };

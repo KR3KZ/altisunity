@@ -54,6 +54,14 @@ switch (_mode) do {
     case 7: {
         // Tonic is using for keychain..?
     };
+
+    case 8: {
+        _packet set[2,call(life_copLevel)];
+    };
+
+    case 9: {
+        _packet set[2,call(life_medicLevel)];
+    };
 };
 
 if (life_HC_isActive) then {
