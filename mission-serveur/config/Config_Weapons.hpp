@@ -263,6 +263,7 @@ class WeaponShops {
 			{ "optic_Holosight", "", 600, 2, "" }
         };
         mags[] = {
+			//HK416 D10
 		    { "rhs_30Rnd_STANAG_M855A1", "", 100, 0, "" }
         };
         accs[] = {};
